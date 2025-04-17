@@ -113,10 +113,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Seokmin"
+  name             : "LEE"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "No room for **Laziness**"
-  location         : "**Seoul**, Republic of Korea"
+  bio              : "Undergraduate Students, **UOS**"
+  location         : "Seoul, Republic of Korea"
   email            : "2sm9908@gmail.com"
   links:
     - label: "Email"
