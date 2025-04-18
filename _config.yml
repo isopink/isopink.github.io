@@ -118,7 +118,7 @@ author:
   bio              : "Undergraduate Students, **UOS**"
   location         : "Seoul, Republic of Korea"
   email            : "2sm9908@gmail.com"
- # links:
+  links:
     - label: "2sm9908@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:2sm9908@gmail.com"
