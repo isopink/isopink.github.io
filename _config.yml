@@ -117,11 +117,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Undergraduate Students, **UOS**"
   location         : "Seoul, Republic of Korea"
-  #email            : "2sm9908@gmail.com"
-  links:
-    - label: "2sm9908@gmail.com"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:2sm9908@gmail.com"
+  email            : "2sm9908@gmail.com"
+  #links:
+   # - label: "2sm9908@gmail.com"
+    #  icon: "fas fa-fw fa-envelope-square"
+     # url: "mailto:2sm9908@gmail.com"
    # - label: "Website"
     #  icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
