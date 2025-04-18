@@ -324,3 +324,11 @@ defaults:
       comments: # true
       share: false
       related: false
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
