@@ -42,7 +42,7 @@ $base0e: #ff73fd !default;
 $base0f: #b18a3d !default;
 
 .highlight {
-  background: #f5f5f5; // 원하는 배경색으로 수정     // 글자색도 필요에 따라 수정
+  background: $dark-gray // 원하는 배경색으로 수정     // 글자색도 필요에 따라 수정
 }
 
 .page__content {
