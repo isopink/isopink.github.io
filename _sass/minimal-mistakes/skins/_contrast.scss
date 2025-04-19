@@ -3,11 +3,19 @@
    ========================================================================== */
 
 /* Colors */
+$gray                       : #1976d2 !default;
+$dark-gray                  : mix(#000, $gray, 40%) !default;
+$darker-gray                : mix(#000, $gray, 60%) !default;
+$light-gray                 : mix(#fff, $gray, 50%) !default;
+$lighter-gray               : mix(#fff, $gray, 90%) !default;
+
+
 $text-color: #000 !default;
 $muted-text-color: $text-color !default;
 $primary-color: #b60000 !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
-$code-background-color : #d3d3d3 !default;
+$code-background-color      : $lighter-gray !default;
+$code-background-color-dark : $light-gray !default;
 $footer-background-color: #000 !default;
 $link-color: #000 !default;
 $link-color-hover:mix(#fff, $text-color, 80%)!default;
