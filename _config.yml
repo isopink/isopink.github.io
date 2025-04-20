@@ -202,7 +202,9 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
-highlighter: rouge
+highlighter: rouge 
+rouge:
+  theme: thankful_eyes  # 또는 thankful_eyes, colorful 등
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
