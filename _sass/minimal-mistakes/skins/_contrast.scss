@@ -54,3 +54,18 @@ $base0f: #b18a3d !default;
 .page__footer-follow .social-icons .svg-inline--fa  {
   color: inherit;
 }
+.highlight, pre.highlight {
+  background-color: #f9f9f9 !important;
+  color: #333 !important;
+  border-radius: 5px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.highlight .c     { color: #999988; font-style: italic; } /* Comment */
+.highlight .k     { color: #0000ff; }                     /* Keyword */
+.highlight .s     { color: #dd1144; }                     /* String */
+.highlight .o     { color: #000000; }                     /* Operator */
+.highlight .n     { color: #000000; }                     /* Name / plain text */
+.highlight .mi    { color: #009999; }                     /* Integer */
+.highlight .p     { color: #000000; }                     /* Punctuation */
