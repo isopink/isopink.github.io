@@ -53,19 +53,29 @@ $base0f: #b18a3d !default;
 .page__footer-follow .social-icons i,
 .page__footer-follow .social-icons .svg-inline--fa  {
   color: inherit;
+  
 }
 .highlight, pre.highlight {
-  background-color: #f9f9f9 !important;
-  color: #333 !important;
+  background-color: #f8f8f8 !important;
+  color: #2d2d2d !important;
   border-radius: 5px;
   padding: 1em;
   overflow-x: auto;
+  font-size: 0.95em;
 }
 
 .highlight .c     { color: #999988; font-style: italic; } /* Comment */
-.highlight .k     { color: #0000ff; }                     /* Keyword */
-.highlight .s     { color: #dd1144; }                     /* String */
-.highlight .o     { color: #000000; }                     /* Operator */
-.highlight .n     { color: #000000; }                     /* Name / plain text */
-.highlight .mi    { color: #009999; }                     /* Integer */
-.highlight .p     { color: #000000; }                     /* Punctuation */
+.highlight .k     { color: #005cc5; font-weight: bold; }  /* Keyword */
+.highlight .s     { color: #d73a49; }                     /* String */
+.highlight .o     { color: #d73a49; }                     /* Operator */
+.highlight .n     { color: #24292e; }                     /* Name/identifiers */
+.highlight .mi    { color: #005cc5; }                     /* Integer */
+.highlight .p     { color: #444; }                        /* Punctuation */
+.highlight .nt    { color: #22863a; }                     /* Tags (HTML) */
+.highlight .na    { color: #6f42c1; }                     /* Attributes */
+.highlight .nb    { color: #24292e; font-weight: bold; }  /* Builtin */
+
+code {
+  background-color: #f4f4f4;
+  color: #e83e8c;
+}
