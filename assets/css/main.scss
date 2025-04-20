@@ -11,3 +11,15 @@ search: false
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 밝은 배경용 코드 블럭 스타일 덮어쓰기 */
+.highlight {
+  background-color: #f9f9f9 !important;
+  color: #333 !important;
+}
+
+.highlight .c { color: #999988; font-style: italic } /* comments */
+.highlight .k { color: #0086b3 }                     /* keywords */
+.highlight .s { color: #dd1144 }                     /* strings */
+.highlight .n { color: #333 }                        /* normal */
+.highlight .o { color: #000 }                        /* operators */
