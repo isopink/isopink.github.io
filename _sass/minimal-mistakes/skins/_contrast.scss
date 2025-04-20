@@ -3,11 +3,6 @@
    ========================================================================== */
 
 /* Colors */
-$gray                       : #1976d2 !default;
-$dark-gray                  : mix(#000, $gray, 40%) !default;
-$darker-gray                : mix(#000, $gray, 60%) !default;
-$light-gray                 : mix(#fff, $gray, 50%) !default;
-$lighter-gray               : mix(#fff, $gray, 90%) !default;
 
 $background-color : #fff !default;
 $text-color: #000 !default;
@@ -38,7 +33,19 @@ $base0c: #c6c5fe !default;
 $base0d: #96cbfe !default;
 $base0e: #ff73fd !default;
 $base0f: #b18a3d !default; 
-  
+
+
+/* 밝은 배경용 코드 블럭 스타일 덮어쓰기 */
+.highlight {
+  background-color: #f9f9f9 !important;
+  color: #333 !important;
+}
+
+.highlight .c { color: #999988; font-style: italic } /* comments */
+.highlight .k { color: #0086b3 }                     /* keywords */
+.highlight .s { color: #dd1144 }                     /* strings */
+.highlight .n { color: #333 }                        /* normal */
+.highlight .o { color: #000 }                        /* operators */
 }
 
 .page__content {
