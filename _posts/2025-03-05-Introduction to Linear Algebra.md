@@ -4,7 +4,7 @@ title: Introduction to Linear algebra
 ---
 
 
-In this time, I will introduce the central problem of Linear Algebra: *Solving linear equations* with two methods. Let’s start with the simplest case. We have $n$ equations in $n$ unknowns, where $n = 2$ :
+Welcome! This is the first record of my study. In this time, I will introduce the central problem of Linear Algebra: *Solving linear equations* with two methods. Let’s start with the simplest case. We have $n$ equations in $n$ unknowns, where $n = 2$ :
 
 <br>
 
@@ -100,7 +100,7 @@ $$
 <br>
 
 
-These two approaches provide exact same result. However, if $n$ is sufficiently large, solving linear systems by *Cramer's rule* becomes a computational Challenge. Instead, it is better to use *Gaussian Elimination.* This is the algorithm that is constantly used to slove large linear systems, and what we will see in the first Chapter. it's gonna be the basis for half of Linear algebra. Furthermore, During the first Chapter, I want to explain four deeper aspects : 
+These two approaches provide exactly same result. However, if $n$ is sufficiently large, solving linear systems by *Cramer's rule* becomes a computational Challenge. Instead, it is better to use *Gaussian Elimination.* This is the algorithm that is constantly used to slove large linear systems, and what we will see in the first Chapter. it's gonna be the basis for half of Linear algebra. Furthermore, During the first Chapter, I want to explain four deeper aspects : 
 
 1. Matrix notations. 
 
