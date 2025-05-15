@@ -19,6 +19,8 @@ $$
 We can look at this system *by rows* and *by columns*. We will check both of them. 
 
 ---
+
+
 *1. By rows.*  
 Draw a line of two equations($rows$) on the $x-y$ plane. There is a point of intersection lies on both lines. It is the point $x=2$ and $y=3$. This is the only soution to both equations($rows$). 
 
@@ -26,3 +28,16 @@ Draw a line of two equations($rows$) on the $x-y$ plane. There is a point of int
 
 I think you may have already noticed. This is exactly the same method that we learned in high school to solve linear equations.
 
+
+---
+
+
+*2. By columns.*  
+<br>
+$$
+\textbf{Column form} \quad
+x \begin{bmatrix} 2 \\ 1 \end{bmatrix}
++ y \begin{bmatrix} -1 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 1 \\ 5 \end{bmatrix}.
+$$
+<br>
