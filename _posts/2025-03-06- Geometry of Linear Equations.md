@@ -47,3 +47,5 @@ $$
 
 <br>
 
+The problem is to find the combination of the *column vectors* on the left side that produces the vector on the right side. Those column vectors $(2,1)$ and $(-1,1) are represented by red and blue lines below. The unknowns are the numbers $x$ and $y$ that multiply the column vectors. The whole idea can be seen in that figure, where $2$ times (column $1$) is added to $3$ times (column $2$). Geometrically, this produces a famous parallelogram. Algebrically, it produces the correct vector $(1,5)$, the right side of our *column form*. It confirms that $x=2$ and $y=3$. Surprisingly, the result is same when we look at the linear system "$by rows$".  
+
