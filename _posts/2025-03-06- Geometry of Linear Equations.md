@@ -47,7 +47,7 @@ $$
 
 <br>
 
-The problem is to find the combination of the *column vectors* on the left side that produces the vector on the right side. Those column vectors $(2,1)$ and $(-1,1) $are represented by red and blue lines below. The unknowns are the numbers $x$ and $y$ that multiply the column vectors. 
+The problem is to find the combination of the *column vectors* on the left side that produces the vector on the right side. Those column vectors $(2,1)$ and $(-1,1) $ are represented by red and blue lines below. The unknowns are the numbers $x$ and $y$ that multiply the column vectors. 
 
 ![combination](/assets/images/Figure_2.png)
 
