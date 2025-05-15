@@ -37,9 +37,10 @@ I think you may have already noticed. This is exactly the same method that we le
 <br>
 
 $$
-\textbf{Column form} \quad
 x \begin{bmatrix} 2 \\ 1 \end{bmatrix}
 + y \begin{bmatrix} -1 \\ 1 \end{bmatrix}
-= \begin{bmatrix} 1 \\ 5 \end{bmatrix}.
+= \begin{bmatrix} 1 \\ 5 \end{bmatrix}
 $$
+
 <br>
+
