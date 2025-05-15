@@ -19,8 +19,8 @@ $$
 We can look at this system *by rows* and *by columns*. We will check both of them. 
 
 ---
-
-First, look at the *row perspective*. Draw a line of two equations($rows$) on the $x-y$ plane. There is a point of intersection lies on both lines. It is the point $x=2$ and $y=3$. This is the only soution to both equations($rows$). 
+*1. By rows.*  
+Draw a line of two equations($rows$) on the $x-y$ plane. There is a point of intersection lies on both lines. It is the point $x=2$ and $y=3$. This is the only soution to both equations($rows$). 
 
 ![교점 그래프](/assets/images/Figure_1.png)
 
