@@ -51,7 +51,35 @@ The problem is to find the combination of the *column vectors* on the left side 
 
 ![combination](/assets/images/Figure_2.png)
 
-The whole idea can be seen in that figure, where $2$ times (column 1) is added to $3$ times (column 2). Geometrically, this produces a famous parallelogram. Algebrically, it produces the correct vector $(1,5)$, the right side of our *column form*. It confirms that $x=2$ and $y=3$. Surprisingly, the result is same when we look at the linear system "*by rows*". So far, the system has been simple. Now, let’s extend it to three equations with three unknowns.
+The whole idea can be seen in that figure, where $2$ times (column 1) is added to $3$ times (column 2). Geometrically, this produces a famous parallelogram. Algebrically, it produces the correct vector $(1,5)$, the right side of our *column form*. It confirms that $x=2$ and $y=3$. Surprisingly, the result is same when we look at the linear system "*By rows*". 
+
+---
+So far, the system has been simple. Now, let’s extend it to three equations with three unknowns: 
+
+<br>
+
+$$
+\begin{aligned}
+2u &+ v  + w   &= 5 \\
+4u &- 6v       &= -2 \\
+-2u &+ 7v + 2w &= 9
+\end{aligned}
+$$
+
+<br>
+Again, We can look at this system by rows and by columns. We will chekt it out again! 
 
 ---
 
+1. *By rows.*   
+Each equation describes a plane in three dimensions. The first plane is $2u+v+w=5$, and the second plane is $4u-6v=-2$. These two planes make intersection line. 
+
+![intersection](/assets/images/Figure_3.png)
+
+Finally, the third plane intersects the line in at $u=1$, $v=1$, $w=2$. This triple intersection point $(1,1,2)$ solves the linear system. 
+
+![intersection](/assets/images/Figure_4.png)
+
+---
+
+2. *By columns.*  
