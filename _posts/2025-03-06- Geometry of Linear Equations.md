@@ -20,4 +20,4 @@ We can look at this system *by rows* and *by columns*. We will check both of the
 
 ---
 
-Let's look at the *row perspective* first. It is the same as we studided when we were high school students. Draw a line of two equations($rows$) on the $x-y$ plane. There is a point of intersection lies both lines. It is the point $x=2$ and $y=3$. This is the only soution to both equations($rows$). 
+Let's look at the *row perspective* first. It is the same as we studided when we were high school students. Draw a line of two equations($rows$) on the $x-y$ plane. There is a point of intersection lies on both lines. It is the point $x=2$ and $y=3$. This is the only soution to both equations($rows$). 
