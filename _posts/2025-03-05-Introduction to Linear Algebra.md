@@ -8,10 +8,13 @@ In this time, I will introduce the central problem of Linear Algebra: *Solving l
 
 <br>
 
-\begin{align*}
-\text{Two equations} &\quad 1x + 2y = 3 \\
-\text{Two unknowns}  &\quad 4x + 5y = 6
-\end{align*}
+$$
+\begin{array}{rl}
+\textbf{Two equations} & \quad 1x + 2y = 3 \\
+\textbf{Two unknowns}  & \quad 4x + 5y = 6.
+\end{array}
+$$
+
 
 
 <br>
