@@ -4,7 +4,7 @@ title: Introduction to Linear algebra
 ---
 
 
-In this time, I will introduce the central problem of Linear Algebra: *Solving linear equations.* Let’s start with the simplest case. We have $n$ equations in $n$ unknowns, where $n = 2$ :
+In this time, I will introduce the central problem of Linear Algebra: *Solving linear equations* with two methods. Let’s start with the simplest case. We have $n$ equations in $n$ unknowns, where $n = 2$ :
 
 <br>
 
@@ -18,9 +18,6 @@ $$
 
 
 <br>
-
-
-There are two ways of finding $x$ and $y$ : *Elimination and Determinants.* 
 
 ---
 
