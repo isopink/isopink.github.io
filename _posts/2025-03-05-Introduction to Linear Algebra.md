@@ -19,8 +19,10 @@ $$
 
 <br>
 
----
+
 There are two ways of finding $x$ and $y$ : *Elimination and Determinants.* 
+
+---
 
 *1. Elimination.*  
 Subtract 4 times the first equation from the second equation. It leaves one equation for $y$ :
