@@ -32,7 +32,9 @@ I think you may have already noticed. This is exactly the same method that we le
 ---
 
 
-*2. By columns.*  
+*2. By columns.*   
+Look at the *columns* of the linear system. The two separate equations are really *one vector equation*:
+
 
 <br>
 
