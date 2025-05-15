@@ -33,7 +33,9 @@ I think you may have already noticed. This is exactly the same method that we le
 
 
 *2. By columns.*  
+
 <br>
+
 $$
 \textbf{Column form} \quad
 x \begin{bmatrix} 2 \\ 1 \end{bmatrix}
