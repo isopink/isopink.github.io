@@ -51,5 +51,5 @@ The problem is to find the combination of the *column vectors* on the left side 
 
 ![combination](/assets/images/Figure_2.png)
 
-The whole idea can be seen in that figure, where $2$ times (column $1$) is added to $3$ times (column $2$). Geometrically, this produces a famous parallelogram. Algebrically, it produces the correct vector $(1,5)$, the right side of our *column form*. It confirms that $x=2$ and $y=3$. Surprisingly, the result is same when we look at the linear system "*by rows*".  
+The whole idea can be seen in that figure, where $2$ times (column $1$) is added to $3$ times (column $2$). Geometrically, this produces a famous parallelogram. Algebrically, it produces the correct vector $(1,5)$, the right side of our *column form*. It confirms that $x=2$ and $y=3$. Surprisingly, the result is same when we look at the linear system "*by rows*". Up to this point, things have been straightforward. Next, we'll move on to systems with three unknowns and three equations.
 
