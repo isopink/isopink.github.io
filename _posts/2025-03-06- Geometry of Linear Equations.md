@@ -24,5 +24,5 @@ Let's look at the *row perspective* first. Draw a line of two equations($rows$) 
 
 ![교점 그래프](/assets/images/Figure_1.png)
 
-You may have already noticed, this is exactly the same method that we learned in high school to solve linear equations.
+I think you may have already noticed. This is exactly the same method that we learned in high school to solve linear equations.
 
