@@ -83,10 +83,28 @@ Finally, the third plane intersects the line in at $u=1$, $v=1$, $w=2$. This tri
 ---
 
 *2. By columns.*  
-"As we checked earlier in the system with two equations and two unknowns, we are going to make one vector equation: 
+As we checked earlier in the system with two equations and two unknowns, we are going to make one vector equation: 
 <br>
 
 $$ \textbf{Column form} \quad u \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + v \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + w \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix} = b. $$ 
 
 
 <br>
+
+Again, the probelm is to find the combination of the column vectors on the left side that produces the vector on the right side. 
+Three column vectors are represented by red, green, and blue arrows. We want to find the unknowns, $x$, $y$ and $z$. 
+
+![intersection](/assets/images/Figure_5.png)
+
+The answer is same as "*By rows*". The detailed methods for finding the solution will be discussed later. For now, let’s move forward! 
+Our column vectors have been scaled by scalars and then addted together. We call this result **Linear Combination**. 
+
+<br>
+
+$$ \textbf{Linear combination} \quad 1 \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + 1 \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + 2 \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix}. $$ 
+
+<br>
+
+---
+
+We saw from two examples that solving by rows and by columns gives the same result. This leads to a natural question: will this obervation still hold when we have more than three equations and unknowns—say, $n$ of them? Yes, it is. The row picture means finding where $n$ planes (or hyperplanes) intersect. The column picture means combining $n$ column vectors to make vector $b$. This is not just a trick of computation; it is a mathematical fact. Let’s set aside any doubt and move forward.
