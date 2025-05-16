@@ -61,7 +61,7 @@ So far, the system has been simple. Now, let’s extend it to three equations wi
 $$
 \begin{aligned}
 2u &+ v   &+ w   &= 5 \\
-4u &- 6v  &     &= -2 \\
+4u &- 6v  &   &= -2 \\
 -2u &+ 7v &+ 2w &= 9
 \end{aligned}
 $$
