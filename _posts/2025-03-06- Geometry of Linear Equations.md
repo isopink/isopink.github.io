@@ -118,7 +118,7 @@ We saw from two examples that solving by rows and by columns gives the same resu
 Now we understand that solving a linear system is the same as finding a linear combination of column vectors. Here is one more question. **“Does such a combination actually exist? And if so, is it unique?”** — To answer this, let me introduce *the singular case*
 
 ---
-**Singular cases** 
+**Singular cases**   
 If a solution to a linear system both exists and is unique, we call the system *nonsingular*. Else, we call it a *singular system*. We now examine two representative types of singular cases.
 
 *1. No solution*   
@@ -156,7 +156,7 @@ If the vector on the right side is $(2,5,6)$, it agrees with the row perspective
 ![intersection](/assets/images/Figure_6.png)
 
 *2. Too many solutions*   
-If the vector on the right side is $(2,5,7), it agrees with the row perspective, where the points on the intersection line are valid solutions. The system has infinitely many solutions. It happens when all three column vectors lie in the same plane, and $b$ either. 
+If the vector on the right side is $(2,5,7)$, it agrees with the row perspective, where the points on the intersection line are valid solutions. The system has infinitely many solutions. It happens when all three column vectors lie in the same plane, and $b$ either. 
 
 ![intersection](/assets/images/Figure_7.png) 
 
