@@ -83,14 +83,10 @@ Finally, the third plane intersects the line in at $u=1$, $v=1$, $w=2$. This tri
 ---
 
 *2. By columns.*  
+"As we checked earlier in the system with two equations and two unknowns, we are going to make one vector equation: 
 <br>
 
-$$
-\textbf{Column form} \quad
-\( u \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix}
-+ v \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix}
-+ w \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix}
-= \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix} = b \)
+$$ \textbf{Column form} \quad u \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + v \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + w \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix} = b. $$ 
 
-$$
+
 <br>
