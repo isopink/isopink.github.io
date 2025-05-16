@@ -124,7 +124,14 @@ If a solution to a linear system both exists and is unique, we call the system *
 *1. No solution*   
 <br>
 
-$$ \begin{aligned} u + v + w \quad &=\quad 2 \\ 2u \quad\quad + 3w \quad &=\quad 5 \\ 3u + v + 4w \quad &=\quad 6 \end{aligned} $$ 
+$$
+\begin{aligned}
+u &+ v   &+ w   &= 2 \\
+2u  &   &+ 3v  &= 5 \\
+3u &+ v &+ 4w &= 6
+\end{aligned}
+$$
+
 
 <br>
 The system has no solution. This occurs when the three planes($rows$) do not intersect at a single point.(We will discuss it more precisely later with *Gaussian elimination*.)   
@@ -133,7 +140,15 @@ The system has no solution. This occurs when the three planes($rows$) do not int
 
 <br>
 
-$$ \begin{aligned} u + v + w \quad &=\quad 2 \\ 2u \quad\quad + 3w \quad &=\quad 5 \\ 3u + v + 4w \quad &=\quad 7 \end{aligned} $$ 
+$$
+\begin{aligned}
+u &+ v   &+ w   &= 2 \\
+2u  &   &+ 3v  &= 5 \\
+3u &+ v &+ 4w &= 7
+\end{aligned}
+$$
+
+
 
 <br>
 
