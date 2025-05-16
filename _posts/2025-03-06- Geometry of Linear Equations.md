@@ -88,7 +88,7 @@ As we checked earlier in the system with two equations and two unknowns, we are 
 
 <br>
 
-$$ \textbf{Column form} \quad u \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + v \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + w \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix} = b. $$ 
+$$ \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + v \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + w \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix} = b. $$ 
 
 
 <br>
@@ -103,17 +103,22 @@ Our column vectors have been scaled by scalars and then addted together. We call
 
 <br>
 
-$$ \textbf{Linear combination} \quad 1 \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + 1 \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + 2 \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix}. $$ 
+$$ \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix} + 1 \begin{bmatrix} 1 \\ -6 \\ 7 \end{bmatrix} + 2 \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ -2 \\ 9 \end{bmatrix}. $$ 
 
 <br>
 
 ---
 
-We saw from two examples that solving by rows and by columns gives the same result. This leads to a natural question: **Will this obervation still hold when we have more than three equations and unknowns—say, $n$ of them? Yes, it is!** The row picture means finding where $n$ planes (or hyperplanes) intersect. The column picture means combining $n$ column vectors to make vector $b$. This is not just a trick of computation; it is a mathematical fact. Let’s set aside any doubt and move forward. 
+We saw from two examples that solving by rows and by columns gives the same result. This leads to a natural question: **Will this obervation still hold when we have more than three equations and unknowns—say, $n$ of them?** 
+
+
+**Yes, it is!** The row picture means finding where $n$ planes (or hyperplanes) intersect. The column picture means combining $n$ column vectors to make vector $b$. This is not just a trick of computation; it is a mathematical fact. Let’s set aside any doubt and move forward. 
 
 
 Now we understand that solving a linear system is the same as finding a linear combination of column vectors. If you're wondering, **“Does such a combination actually exist? And if so, is it unique?”** — you're asking exactly the right question. To answer this, we now turn to the *singular cases*. 
 
 ---
+**Singular cases** 
 
+It means, 
 
