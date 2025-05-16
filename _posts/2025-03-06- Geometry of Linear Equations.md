@@ -61,7 +61,7 @@ So far, the system has been simple. Now, let’s extend it to three equations wi
 $$
 \begin{aligned}
 2u &+ v   &+ w   &= 5 \\
-4u &- 6v  &   &= -2 \\
+4u &- 6v &   &= -2 \\
 -2u &+ 7v &+ 2w &= 9
 \end{aligned}
 $$
@@ -127,7 +127,7 @@ If a solution to a linear system both exists and is unique, we call the system *
 $$
 \begin{aligned}
 u &+ v   &+ w   &= 2 \\
-2u  &   &+ 3v  &= 5 \\
+2u  &  &+ 3v  &= 5 \\
 3u &+ v &+ 4w &= 6
 \end{aligned}
 $$
@@ -143,7 +143,7 @@ The system has no solution. This occurs when the three planes($rows$) do not int
 $$
 \begin{aligned}
 u &+ v   &+ w   &= 2 \\
-2u  &   &+ 3v  &= 5 \\
+2u  &  &+ 3v  &= 5 \\
 3u &+ v &+ 4w &= 7
 \end{aligned}
 $$
