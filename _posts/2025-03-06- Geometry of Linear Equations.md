@@ -109,4 +109,11 @@ $$ \textbf{Linear combination} \quad 1 \begin{bmatrix} 2 \\ 4 \\ -2 \end{bmatrix
 
 ---
 
-We saw from two examples that solving by rows and by columns gives the same result. This leads to a natural question: **Will this obervation still hold when we have more than three equations and unknowns—say, $n$ of them? Yes, it is!** The row picture means finding where $n$ planes (or hyperplanes) intersect. The column picture means combining $n$ column vectors to make vector $b$. This is not just a trick of computation; it is a mathematical fact. Let’s set aside any doubt and move forward.
+We saw from two examples that solving by rows and by columns gives the same result. This leads to a natural question: **Will this obervation still hold when we have more than three equations and unknowns—say, $n$ of them? Yes, it is!** The row picture means finding where $n$ planes (or hyperplanes) intersect. The column picture means combining $n$ column vectors to make vector $b$. This is not just a trick of computation; it is a mathematical fact. Let’s set aside any doubt and move forward. 
+
+
+Now we understand that solving a linear system is the same as finding a linear combination of column vectors. If you're wondering, **“Does such a combination actually exist? And if so, is it unique?”** — you're asking exactly the right question. To answer this, we now turn to the **singular cases**. 
+
+---
+
+
