@@ -98,7 +98,7 @@ Three column vectors are represented by red, green, and blue arrows. We want to 
 
 ![intersection](/assets/images/Figure_5.png)
 
-The answer is same as "*By rows*". The detailed methods for finding the solution will be discussed later. For now, let’s move forward! 
+The solution is same as "*By rows*". The detailed methods for finding the solution will be discussed later. For now, let’s move forward! 
 Our column vectors have been scaled by scalars and then addted together. We call this result **Linear Combination**. 
 
 <br>
@@ -115,10 +115,57 @@ We saw from two examples that solving by rows and by columns gives the same resu
 **Yes, it is!** The row picture means finding where $n$ planes (or hyperplanes) intersect. The column picture means combining $n$ column vectors to make vector $b$. This is not just a trick of computation; it is a mathematical fact. Let’s set aside any doubt and move forward. 
 
 
-Now we understand that solving a linear system is the same as finding a linear combination of column vectors. If you're wondering, **“Does such a combination actually exist? And if so, is it unique?”** — you're asking exactly the right question. To answer this, we now turn to the *singular cases*. 
+Now we understand that solving a linear system is the same as finding a linear combination of column vectors. Here is one more question. **“Does such a combination actually exist? And if so, is it unique?”** — To answer this, let me introduce *the singular case*
 
 ---
 **Singular cases** 
+If a solution to a linear system both exists and is unique, we call the system *nonsingular*. Else, we call it a *singular system*. We now examine two representative types of singular cases.
 
-It means, 
+*1. No solution*   
+<br>
 
+$$ \begin{aligned} u + v + w \quad &=\quad 2 \\ 2u \quad\quad + 3w \quad &=\quad 5 \\ 3u + v + 4w \quad &=\quad 6 \end{aligned} $$ 
+
+<br>
+The system has no solution. This occurs when the three planes($rows$) do not intersect at a single point.(We will discuss it more precisely later with *Gaussian elimination*.)   
+
+*2. Too many solutions* 
+
+<br>
+
+$$ \begin{aligned} u + v + w \quad &=\quad 2 \\ 2u \quad\quad + 3w \quad &=\quad 5 \\ 3u + v + 4w \quad &=\quad 7 \end{aligned} $$ 
+
+<br>
+
+From the row perspective, the third equation is a linear combination of the first two equations. In this case, all points on the line of intersection between the first two planes are valid solutions. Hence, the system has infinitely many solutions. 
+
+---
+
+Let us now analyze these two cases from the column perspective: 
+
+$$
+u \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
++ v \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
++ w \begin{bmatrix} 1 \\ 3 \\ 4 \end{bmatrix}
+= \mathbf{b}.
+$$
+
+*1. No solution*   
+If the vector on the right side is $(2,5,6)$, it agrees with the row perspective, where the planes has no intersection point. The system has no solution. It happens when all three column vectors lie in the same plane, but $b$ does not. 
+
+![intersection](/assets/images/Figure_6.png)
+
+*2. Too many solutions*   
+If the vector on the right side is $(2,5,7), it agrees with the row perspective, where the points on the intersection line are valid solutions. The system has infinitely many solutions. It happens when all three column vectors lie in the same plane, and $b$ either. 
+
+![intersection](/assets/images/Figure_7.png) 
+
+---
+
+In both singular cases, a common feature emerges: *All column vectors lie within the same plane.* A simple way to detect this is to check whether there exists a nontrivial linear combination. However, as our focus here is geometric, we shall not explore this algebraic condition further. To summerize :   
+
+<br>
+**If the $n$ planes have no point in common, or infinitely many points, then the $n$ columns lie in the same plane.**   
+<br>
+
+We will focus on nonsingular cases first.We should build our familiarity with these, and later turn our attention to singular cases. However, we cannot proceed without understanding matrix notation and the method of elimination. Therefore, in the next session, we will begin exploring these essential tools.
