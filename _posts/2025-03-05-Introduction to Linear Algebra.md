@@ -104,9 +104,9 @@ $$
 
 These two approaches provide exactly same result. However, if $n$ is sufficiently large, solving linear systems by *Cramer's rule* becomes a computational Challenge. Instead, it is better to use *Gaussian Elimination.* This is the algorithm that is constantly used to slove large linear systems, and what we will see in the first Chapter. it's gonna be the basis for half of Linear algebra. Furthermore, During the first Chapter, I want to explain four deeper aspects : 
 
-1. Matrix notations. 
+1. Linear eqautions lead to geomerty of planes. 
 
-2. Linear eqautions lead to geomerty of planes. 
+2. Matrix notations
 
 3. Singular case. 
 
