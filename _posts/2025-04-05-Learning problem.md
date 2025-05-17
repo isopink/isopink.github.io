@@ -15,7 +15,6 @@ In this time, I will introduce the concept of the learning problem in the contex
 4. Types of learning   
 
 5. Puzzle 
-<br>
 ---
 
 #### 1. Example of machine learning.
