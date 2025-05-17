@@ -76,11 +76,11 @@ You have to decide whether to approve or rejecte these applications. To automate
 
 |  Item              | Symbol                                  | Meaning                    |
 |-------------------|---------------------------------------------|--------------------------------------|
-| Input             | **x**                                       | (customer application)              |
-| Output            | *y*                                         | (good/bad customer?)                |
-| Target function   | *f : 𝓧 → 𝓨*                                 | (ideal credit approval formula)     |
-| Data              | *(x₁, y₁), (x₂, y₂), ⋯, (xₙ, yₙ)*             | (historical records)                |
-| Hypothesis        | *g : 𝓧 → 𝓨*                                 | (formula to be used)                |
+| Input             | *x*                                       | customer application              |
+| Output            | *y*                                         | good/bad customer?                |
+| Target function   | *f : 𝓧 → 𝓨*                                 | ideal credit approval formula     |
+| Data              | *(x₁, y₁), (x₂, y₂), ⋯, (xₙ, yₙ)*             | historical records                |
+| Hypothesis        | *g : 𝓧 → 𝓨*                                 | formula to be used                |
 
 
 > **Reference**  
