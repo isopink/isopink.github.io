@@ -55,9 +55,11 @@ Let us now consider a different example. Suppose you are working at a financial 
 
 <div align="center">
 
-| Attribute            | Value       |
-|----------------------|-------------|
-| age                  | 23 years    |
+- 표 그리기
+| 왼쪽 정렬 | 가운데 정렬 | 오른쪽 정렬 |
+|:--------|:--------:|--------:|
+| 내용 11 | 내용 12 | 내용 13 |
+| 내용 21 | 내용 22 | 내용 23 |
 
 </div>
 
