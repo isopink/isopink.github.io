@@ -3,7 +3,7 @@ layout: single
 title: "Lecture 1 : The Learning Problem" 
 ---
 
-In this time, I will introduce the concept of the learning problem in the context of machine learning. The discussion will proceed in the following five parts : 
+In this time, I will introduce the concept of the learning problem in the context of machine learning. The discussion will proceed in the following four parts : 
 <br>
 
 1. Example of machine learning   
@@ -13,8 +13,6 @@ In this time, I will introduce the concept of the learning problem in the contex
 3. A simple model   
 
 4. Types of Learning   
-
-5. Puzzle
 
 
 ---
@@ -206,28 +204,41 @@ This definition is intentionally broad, and it is difficult to encapsulate all l
 
 ##### 4.1. Supervised Learning.    
 
-Think about a vending machine that recognizes coins. In the first image, we see a bunch of coins represented as dots, based on two features, *mass* and *size*. Each coin is colored and clustered. This is our *training examples*, where the correct label is already known. 
-
 ![solution](/assets/images/fig_5.svg)
 
-The second image represent the model has learned where to draw a *decision boundares* between the coin types. Now we can recognize the coins. To simplify: 
+Think about a vending machine that recognizes coins. We see a bunch of coins represented as dots, based on two features, *mass* and *size*. Each coin is colored and clustered. This is our *training examples*, where the correct label is already known. 
 
+![solution](/assets/images/fig_6.svg)
 
-**Learn a function from labeled examples.**
-
+This represent the model has learned where to draw a *decision boundares* between the coin types. Now we can recognize the coins. To simplify, supervised learning is **Learn a function from labeled examples.**
 
 ---
 
 ##### 4.2. Unsupervised Learning.    
 
-Discover structure or patterns in data without labels
+![solution](/assets/images/fig_7.svg)
 
+Let's think about a vending machine again. We see a bunch of coins represented as dots, but not sure about what type of coin it is. That is why dots are not colored. Despite the correct label is unknown, we can still *cluster* the coins. 
+
+![solution](/assets/images/fig_8.svg)
+
+This represent the model has learned where to draw a *decision boundaries* between clusters. We cannot recogize the coins, at least we can regonize the *difference* of them. To simplify, unsupervised learning is **Discover structure or patterns in data without labels**.
+
+---
 
 ##### 4.3. Reinforcement Learning.   
 
-Learn a policy to maximize reward through interaction with the environment
+Let’s take a real-world example of reinforcement learning: *Why doesn’t a baby touch boiling water?*
 
 
+Well, maybe the first time the baby does, it’s very painful — a strong negative reward.
+That pain acts as a signal: *touching hot water leads to a bad outcome.*
+
+Over time, the baby learns to avoid that action. There’s no teacher explicitly saying 'don’t do that,' just feedback from the environment. This is exactly how reinforcement learning works — by associating actions with good or bad outcomes through trial and error. To simplify: **Learn a policy to maximize reward through interaction with the environment** We will talk about it later, more precisely. 
+
+---
+
+Next time. We will discuss the feasibility of learnig: **Can we make reliable prediction outside the training data using only what we've seen?**
 
 > **Reference**  
 > Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012    
