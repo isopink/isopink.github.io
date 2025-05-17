@@ -1,5 +1,5 @@
 ---
 layout: single
-title: Is Learning Feasible?
+title: "Lecture 2 : Is Learning Feasible?"
 ---
 
