@@ -84,20 +84,20 @@ You have to decide whether to approve or rejecte these applications. To automate
 <br>
 
 The input vector $\mathbf{x} \in \mathbb{R}^d$ represents an applicant's features:
-
+<br>
 $$
 \mathbf{x} = (\text{Age}, \text{Gender}, \text{Income}, \ldots)
 $$
-
+<br>
 The output $y$ denotes the decision:
-
+<br>
 $$
 y = \begin{cases}
 +1 & \text{(Approved)} \\
 -1 & \text{(Rejected)}
 \end{cases}
 $$
-
+<br>
 We assume the existence of an ideal function $$ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $$ which perfectly maps inputs $\mathbf{x}$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data.
 
 
