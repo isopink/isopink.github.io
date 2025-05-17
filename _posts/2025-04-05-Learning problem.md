@@ -53,7 +53,7 @@ This is the motivation behind the title of the well-known textbook, **Learning f
 #### 2. Components of Learning.
 Let us now consider a different example. Suppose you are working at a financial institution that receives thousands of credit card applications every day. Here is an example of applicant information.    
 
-
+<br>
 <center>
 
 | Attribute            | Value       |
@@ -67,11 +67,11 @@ Let us now consider a different example. Suppose you are working at a financial 
 | ...                  | ...         |
 
 </center>
-
+<br>
 
    
 You have to decide whether to approve or rejecte these applications. To automate this task, we consider learning from historical application records. Let us now formalize the problem more mathematically.
-
+<br>
 <center>
 
 |  Item              | Symbol                                  | Meaning                    |
@@ -83,7 +83,7 @@ You have to decide whether to approve or rejecte these applications. To automate
 | Hypothesis        | *g : 𝓧 → 𝓨*                                 | formula to be used                |
 
 </center>
-
+<br>
 
 
 > **Reference**  
