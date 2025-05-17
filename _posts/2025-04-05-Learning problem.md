@@ -51,7 +51,7 @@ This is the motivation behind the title of the well-known textbook, **Learning f
 
 
 #### 2. Components of Learning.
-Let us now consider a different example. Suppose you are working at a financial institution that receives thousands of credit card applications every day. Here is an example of applicant information.
+Let us now consider a different example. Suppose you are working at a financial institution that receives thousands of credit card applications every day. Here is an example of applicant information.   
 <br>
 | Attribute            | Value       |
 |----------------------|-------------|
@@ -62,7 +62,9 @@ Let us now consider a different example. Suppose you are working at a financial 
 | years in job         | 1 year      |
 | current debt         | $15,000     |
 | ...                  | ...         |
-<br>
+
+
+<br>   
 You have to decide whether to approve or rejecte these applications. To automate this task, we consider learning from historical application records. Let us now formalize the problem more mathematically.
 <br>
 
@@ -93,13 +95,7 @@ y = \begin{cases}
 \end{cases}
 $$
 
-We assume the existence of an ideal function  
-$$
-f : \mathbb{R}^d \rightarrow \{-1, +1\},
-$$  
-which perfectly maps inputs $\mathbf{x}$ to outputs $y$.
-
-We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data.
+We assume the existence of an ideal function $$ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $$ which perfectly maps inputs $\mathbf{x}$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data.
 
 
 
