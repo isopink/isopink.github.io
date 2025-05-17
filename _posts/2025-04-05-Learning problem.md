@@ -54,7 +54,7 @@ This is the motivation behind the title of the well-known textbook, **Learning f
 Let us now consider a different example. Suppose you are working at a financial institution that receives thousands of credit card applications every day. Here is an example of applicant information.    
 
 <br>
-<div align="center">
+
 
 | Attribute            | Value       |
 |----------------------|-------------|
@@ -66,13 +66,13 @@ Let us now consider a different example. Suppose you are working at a financial 
 | current debt         | $15,000     |
 | ...                  | ...         |
 
-</div>
+
 <br>
 
    
 You have to decide whether to approve or rejecte these applications. To automate this task, we consider learning from historical application records. Let us now formalize the problem more mathematically.
 <br>
-<div align="center">
+
 
 |  Item              | Symbol                                  | Meaning                    |
 |-------------------|---------------------------------------------|--------------------------------------|
@@ -82,7 +82,7 @@ You have to decide whether to approve or rejecte these applications. To automate
 | Data              | *(x₁, y₁), ⋯, (xₙ, yₙ)*             | historical records                |
 | Hypothesis        | *g : 𝓧 → 𝓨*                                 | formula to be used                |
 
-</div>
+
 <br>
 
 
