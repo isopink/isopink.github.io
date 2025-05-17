@@ -58,12 +58,6 @@ Let us now consider a different example. Suppose you are working at a financial 
 | Attribute            | Value       |
 |----------------------|-------------|
 | age                  | 23 years    |
-| gender               | male        |
-| annual salary        | $30,000     |
-| years in residence   | 1 year      |
-| years in job         | 1 year      |
-| current debt         | $15,000     |
-| ...                  | ...         |
 
 </div>
 
