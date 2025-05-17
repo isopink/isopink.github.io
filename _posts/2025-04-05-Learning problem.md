@@ -40,3 +40,6 @@ To do so, the following three conditions must be satisfied:
 (c) **We have data on it**    
 
 
+> **Reference**  
+> Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012 
+> Caltech Edu(MOOC)
