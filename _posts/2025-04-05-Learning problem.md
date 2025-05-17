@@ -55,10 +55,10 @@ Let us now consider a different example. Suppose you are working at a financial 
 
 
 
-| Feature   | Description              |
-|-----------|--------------------------|
-| Input     | **x** = applicant data   |
-| Output    | *y* = approved or not    |
+| Feature   | Description              |   
+|-----------|--------------------------|   
+| Input     | **x** = applicant data   |   
+| Output    | *y* = approved or not    |   
 
 
 
