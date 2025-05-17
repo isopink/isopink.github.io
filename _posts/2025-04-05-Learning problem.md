@@ -80,7 +80,7 @@ You have to decide whether to approve or rejecte these applications. To automate
 | Output         | *y*                              | Good or bad customer?                  |   
 | Target function| *f : 𝓧 → 𝓨*                      | Ideal credit approval formula          |   
 | Data           | *(x₁, y₁), … , (xₙ, yₙ)*         | Historical records                     |   
-| Hypothesis     | *g : 𝓧 → 𝓨*                      | Formula to be used (learned model)     |   
+| Hypothesis     | *g : 𝓧 → 𝓨*                      | Formula to be used      |   
 
 </div>
 
