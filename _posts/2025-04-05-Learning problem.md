@@ -234,11 +234,11 @@ Let’s take a real-world example of reinforcement learning: *Why doesn’t a ba
 Well, maybe the first time the baby does, it’s very painful — a strong negative reward.
 That pain acts as a signal: *touching hot water leads to a bad outcome.*
 
-Over time, the baby learns to avoid that action. There’s no teacher explicitly saying 'don’t do that,' just feedback from the environment. This is exactly how reinforcement learning works — by associating actions with good or bad outcomes through trial and error. To simplify: **Learn a policy to maximize reward through interaction with the environment** We will talk about it later, more precisely. 
+Over time, the baby learns to avoid that action. There’s no teacher explicitly saying 'don’t do that,' just feedback from the environment. This is exactly how reinforcement learning works — by associating actions with good or bad outcomes through trial and error. To simplify, Reinforcement learning is **Learn a policy to maximize reward through interaction with the environment**. We will talk about it later, more precisely. 
 
 ---
 
-Next time. We will discuss the feasibility of learnig: **Can we make reliable prediction outside the training data using only what we've seen?**
+Next time. We will discuss the feasibility of learnig: **Can we make reliable prediction outside the training data using only what we have seen?**
 
 > **Reference**  
 > Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012    
