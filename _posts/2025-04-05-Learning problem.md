@@ -41,5 +41,5 @@ To do so, the following three conditions must be satisfied:
 
 
 > **Reference**  
-> Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012 
+> Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012    
 > Caltech Edu(MOOC)
