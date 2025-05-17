@@ -71,7 +71,7 @@ You have to decide whether to approve or rejecte these applications. To automate
 
 <div align="center">
 
-| Item           | Symbol / Definition             | Meaning                                |
+| Item           | Symbol /              | Meaning                                |
 |:--------------:|:-------------------------------:|:--------------------------------------:|
 | Input          | **x**                           | Customer application                   |
 | Output         | *y*                              | Good or bad customer?                  |
