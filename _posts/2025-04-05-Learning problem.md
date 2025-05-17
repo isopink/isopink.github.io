@@ -84,12 +84,15 @@ You have to decide whether to approve or rejecte these applications. To automate
 <br>
 
 The input vector $\mathbf{x} \in \mathbb{R}^d$ represents an applicant's features: 
+
 <br>
 
 $$\mathbf{x} = (\text{Age}, \text{Gender}, \text{Income}, \ldots)$$
 
 <br>
+
 The output $y$ denotes the decision you make.
+
 <br>
 
 $$
@@ -100,13 +103,21 @@ y = \begin{cases}
 $$
 
 <br>
-We assume the existence of an ideal function $ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $ which perfectly maps inputs $x$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data. This whole process can be visualized as follows: 
+
+We assume the existence of an ideal function $ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $ which perfectly maps inputs $x$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data and Learning Algoritm. We define the **Learning Model** as the combination of the Hypothesis Set and the Learning Algorithm. This whole process can be visualized as follows: 
 
 
 ![solution](/assets/images/fig_3.svg)
 
-We define the **Learning Model** as the combination of the Hypothesis Set and the Learning Algorithm. 
+- **Training Examples**: Labeled historical data  
+- **Hypothesis Set** $H$: A set of candidate functions  
+- **Learning Algorithm** $A$: An algorithm that selects a hypothesis $g \in H$  
+- **Final Hypothesis** $g$: The output of the algorithm, ideally approximating $f$
 
+---
+
+#### 3. A simple model   
+As a concrete example of a learning model, we now introduce the **Perceptron Learning Algorithm(PLA)**. It is a foundational linear classifier. It predicts binary labels by computing the sign of the inner product between a feature vector and a weight vector. Let's see how it works.
 
 
 > **Reference**  
