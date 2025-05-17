@@ -56,18 +56,15 @@ Let us now consider a different example. Suppose you are working at a financial 
 
 <div align="center">
 
-  
-| Attribute            | Value       |    
-|----------------------|-------------|    
-| age                  | 23 years    |    
-| gender               | male        |    
-| annual salary        | $30,000     |    
-| years in residence   | 1 year      |    
-| years in job         | 1 year      |    
-| current debt         | $15,000     |    
-| ...                  | ...         |    
-
-
+| Attribute            | Value       |
+|----------------------|-------------|
+| age                  | 23 years    |
+| gender               | male        |
+| annual salary        | $30,000     |
+| years in residence   | 1 year      |
+| years in job         | 1 year      |
+| current debt         | $15,000     |
+| ...                  | ...         |
 
 </div>
 
@@ -77,7 +74,7 @@ You have to decide whether to approve or rejecte these applications. To automate
 
 
 
-| 항목              | 기호/정의                                  | 의미 (영문 주석)                     |
+|  Item              | Symbol                                  | Meaning                    |
 |-------------------|---------------------------------------------|--------------------------------------|
 | Input             | **x**                                       | (customer application)              |
 | Output            | *y*                                         | (good/bad customer?)                |
