@@ -12,7 +12,7 @@ In this time, I will introduce the concept of the learning problem in the contex
 
 3. A simple model   
 
-4. Types of learning   
+4. Types of Learning   
 
 5. Puzzle
 
@@ -104,20 +104,129 @@ $$
 
 <br>
 
-We assume the existence of an ideal function $ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $ which perfectly maps inputs $x$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data and Learning Algoritm. We define the **Learning Model** as the combination of the Hypothesis Set and the Learning Algorithm. This whole process can be visualized as follows: 
+We assume the existence of an ideal function $ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $ which perfectly maps inputs $x$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on **Training Examples** and **Learning Algoritm**. We define the **Learning Model** as the combination of the Hypothesis Set and the Learning Algorithm. This whole process can be visualized as follows: 
 
 
 ![solution](/assets/images/fig_3.svg)
 
-- **Training Examples**: Labeled historical data  
-- **Hypothesis Set** $H$: A set of candidate functions  
-- **Learning Algorithm** $A$: An algorithm that selects a hypothesis $g \in H$  
-- **Final Hypothesis** $g$: The output of the algorithm, ideally approximating $f$
-
 ---
 
 #### 3. A simple model   
-As a concrete example of a learning model, we now introduce the **Perceptron Learning Algorithm(PLA)**. It is a foundational linear classifier. It predicts binary labels by computing the sign of the inner product between a feature vector and a weight vector. Let's see how it works.
+As a concrete example of a learning model, we now introduce the **Perceptron**. It is a foundational linear classifier. It predicts binary labels by computing the sign of the inner product between a input vector and a weight vector. Let's see how it works.
+
+<br>
+
+$$
+\begin{aligned}
+\text{Approve credit if} \quad & \sum_{i=1}^{d} w_i x_i > \text{threshold}, \\
+\text{Deny credit if} \quad & \sum_{i=1}^{d} w_i x_i < \text{threshold}.
+\end{aligned}
+$$
+
+<br>
+
+This formula can be written more compactly as
+<br>
+
+$$h(\mathbf{x}) = \text{sign} \left( \left( \sum_{i=1}^{d} w_i x_i \right) + b \right)$$
+
+<br>
+
+where $x_1, \cdots, x_d$ are the components of the vector $\mathbf{x}$. $h(\mathbf{x}) = +1$ means "approve credit" and $h(\mathbf{x}) = -1$ means "deny credit". $\text{sign}(s) = +1$ if $s > 0$, and $\text{sign}(s) = -1$ if $s < 0$. The weights are $w_1, \cdots, w_d$, and the threshold is determined by the bias term $b$, since credit is approved if:
+
+<br>
+
+$$
+\sum_{i=1}^{d} w_i x_i > -b.
+$$
+
+<br>
+
+Following Figure illustrates what a perceptron does in a two-dimensional case ($d = 2$). The plane is split by a line into two regions, the $+1$ decision region and the $-1$ decision region. Different values for the parameters $w_1, w_2, b$ correspond to different lines defined by the equation $w_1 x_1 + w_2 x_2 + b = 0$. If the data set is *linearly separable*, there will be a choice for these parameters that classifies all the training examples correctly.
+
+![solution](/assets/images/fig_4.svg)
+
+Some data points are misclassified. It indicates that the weight vector has not been properly set, which means our hypothesis $h \in H$ is not close enough to the target funtion *f*. To address this issue, we now introduce the **Perceptron Learning Algorithm (PLA)**. Before doing so, let us first simplify the perceptron formula.
+
+
+To simplify the notation of the perceptron formula, we will treat the bias $b$ as a weight $w_0 = b$ and merge it with the other weights into one vector $\mathbf{w} = [w_0, w_1, \cdots, w_d]^\top$. We also treat $\mathbf{x}$ as a column vector and modify it to become $\mathbf{x} = [x_0, x_1, \cdots, x_d]^\top$, where the added coordinate $x_0$ is fixed at $x_0 = 1$. Formally speaking, the input space is now
+
+<br>
+
+$$
+\mathcal{X} = \{1\} \times \mathbb{R}^d = \{ [x_0, x_1, \cdots, x_d]^\top \mid x_0 = 1,\ x_1 \in \mathbb{R}, \cdots,\ x_d \in \mathbb{R} \}.
+$$
+
+<br>
+
+With this convention, $\mathbf{w}^\top \mathbf{x} = \sum_{i=0}^{d} w_i x_i$, can be rewritten in vector form as 
+
+<br>
+
+$$
+h(\mathbf{x}) = \text{sign}(\mathbf{w}^\top \mathbf{x}).
+$$
+
+<br>
+
+We now introduce the *perceptron learning algorithm* (PLA). The algorithm will determine what $\mathbf{w}$ should be, based on the data. Let us assume that the data set is linearly separable, which means that there is a vector $\mathbf{w}$ that makes the correct decision $h(\mathbf{x}_n) = y_n$ on all the training examples: 
+
+![solution](/assets/images/fig_5.svg)
+
+Our learning algorithm will find this $\mathbf{w}$ using a simple iterative method. At iteration $t$, where $t = 0, 1, 2, \dots$, there is a current value of the weight vector, call it $\mathbf{w}(t)$. The algorithm picks an example from $(\mathbf{x}_1, y_1), \dots, (\mathbf{x}_N, y_N)$ that is currently misclassified, call it $(\mathbf{x}(t), y(t))$, and uses it to update $\mathbf{w}(t)$. Since the example is misclassified, we have $y(t) \ne \text{sign}(\mathbf{w}^\top(t)\mathbf{x}(t))$. The update rule is:
+
+<br>
+
+$$
+\mathbf{w}(t + 1) = \mathbf{w}(t) + y(t)\mathbf{x}(t)
+$$
+
+<br>
+
+This rule moves the boundary in the direction of classfying $(\mathbf{x}(t))$ correctly: 
+
+![solution](/assets/images/fig_5.svg)
+
+The algorithm continues with further iterations until there are no longer misclassified examples in the data set. Despite updating the weights using only one misclassified example at a time, the perceptron learning algorithm is guaranteed to converge to a correct solution, assuming the data is linearly separable.
+It works regardless of which misclassified example is chosen or how the weights are initialized. 
+
+---
+
+#### 4. Types of Learning   
+
+The premise of machine learning can be broadly stated as follows:
+
+
+**Use observations to infer the underlying process that generated them**
+
+
+This definition is intentionally broad, and it is difficult to encapsulate all learning problems within a single framework. As a result, different learning paradigms have emerged to handle different types of data, tasks, and assumptions. Let me introduce three major types. 
+
+---
+
+##### 4.1. Supervised Learning.    
+
+Think about a vending machine that recognizes coins. In the first image, we see a bunch of coins represented as dots, based on two features, *mass* and *size*. Each coin is colored and clustered. This is our *training examples*, where the correct label is already known. 
+
+![solution](/assets/images/fig_5.svg)
+
+The second image represent the model has learned where to draw a *decision boundares* between the coin types. Now we can recognize the coins. To simplify: 
+
+
+**Learn a function from labeled examples.**
+
+
+---
+
+##### 4.2. Unsupervised Learning.    
+
+Discover structure or patterns in data without labels
+
+
+##### 4.3. Reinforcement Learning.   
+
+Learn a policy to maximize reward through interaction with the environment
+
 
 
 > **Reference**  
