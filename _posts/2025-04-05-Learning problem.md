@@ -35,11 +35,51 @@ Here is how it works. You describe a movie as a long array of different factors,
 To do so, the following three conditions must be satisfied: 
 
 
-(a) A pattern exists.   
+(a) A pattern exists.     
+If no underlying pattern exists in the data, then learning is not possible. 
+
+   
 (b) We cannot pin it down mathematically.    
-(c) **We have data on it**    
+If a problem can be fully described with mathematical rules, there is no need to this.
+
+   
+(c) We have data on it   
+Machine learning fundamentally relies on historical data to predict future outcomes. 
+This is the motivation behind the title of the well-known textbook, **Learning from Data** 
+
+---
 
 
+#### 2. Components of Learning.
+Let us now consider a different example. Suppose you are working at a financial institution that receives thousands of credit card applications every day. Here is an example of applicant information. 
+
+<div align="center">
+
+| Attribute            | Value       |
+|----------------------|-------------|
+| age                  | 23 years    |
+| gender               | male        |
+| annual salary        | $30,000     |
+| years in residence   | 1 year      |
+| years in job         | 1 year      |
+| current debt         | $15,000     |
+| ...                  | ...         |
+
+</div>
+
+You have to decide whether to approve or rejecte these applications. To automate this task, we consider learning from historical application records. Let us now formalize the problem more mathematically.
+
+<div align="center">
+
+|      Item       |       Symbol / Definition        |             Meaning              |
+|:---------------:|:--------------------------------:|:--------------------------------:|
+|     Input       |           **x**                  |   Customer application           |
+|     Output      |            *y*                   |   Good or bad customer?          |
+| Target function |       *f : 𝓧 → 𝓨*                | Ideal credit approval formula    |
+|      Data       | *(x₁, y₁), … , (xₙ, yₙ)*          |     Historical records           |
+|   Hypothesis    |       *g : 𝓧 → 𝓨*                | Formula to be used  |
+
+</div>
 > **Reference**  
 > Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012    
 > Caltech Edu(MOOC)
