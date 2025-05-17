@@ -85,6 +85,30 @@ You have to decide whether to approve or rejecte these applications. To automate
 
 <br>
 
+The input vector $\mathbf{x} \in \mathbb{R}^d$ represents an applicant's features:
+
+$$
+\mathbf{x} = (\text{Age}, \text{Gender}, \text{Income}, \ldots)
+$$
+
+The output $y$ denotes the decision:
+
+$$
+y = \begin{cases}
++1 & \text{(Approved)} \\
+-1 & \text{(Rejected)}
+\end{cases}
+$$
+
+We assume the existence of an ideal function  
+$$
+f : \mathbb{R}^d \rightarrow \{-1, +1\},
+$$  
+which perfectly maps inputs $\mathbf{x}$ to outputs $y$.
+
+We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data.
+
+
 
 > **Reference**  
 > Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012    
