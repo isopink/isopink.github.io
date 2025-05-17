@@ -184,3 +184,9 @@ In both singular cases, a common feature emerges: *All column vectors lie within
 <br>
 
 We will focus on nonsingular cases first.We should build our familiarity with these, and later turn our attention to singular cases. However, we cannot proceed without understanding matrix notation and the method of elimination. Therefore, in the next session, we will begin exploring these essential tools.
+
+
+
+> **Reference**  
+> Gilbert Strang, *Linear Algebra and Its Applications*, 4th Edition  
+> MIT OpenCourseWare (MOOC)
