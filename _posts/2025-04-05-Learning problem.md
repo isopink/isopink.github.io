@@ -100,7 +100,7 @@ y = \begin{cases}
 $$
 
 <br>
-We assume the existence of an ideal function $ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $ which perfectly maps inputs $\mathbf{x}$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data. This whole process can be visualized as follows: 
+We assume the existence of an ideal function $ f : \mathbb{R}^d \rightarrow \{-1, +1\}, $ which perfectly maps inputs $x$ to outputs $y$. We refer to this unknown function as the **Target Function**. Since the target function $f$ is unknown, our goal is to find an approximation $g$ — a **Hypothesis** — that best captures the behavior of $f$, based on observed data. This whole process can be visualized as follows: 
 
 
 ![solution](/assets/images/fig_3.svg)
