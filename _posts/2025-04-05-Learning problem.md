@@ -26,7 +26,7 @@ Netflix recommends movies to user. To improve the accuracy of its recommendation
 
 ![solution](/assets/images/fig_1.svg)
 
-Here is how it works. You describe a movie as a long array of different factors, e.g., how much comedy is in it, how complicated is the plot, how handsome is the lead actor, etc. Now, you describe each viewer with corresponding factors; how much do they like comedy, do they prefer simple or complicated plots, how important are the looks of the lead actor, and so on. How this viewer will rate that movie is now estimated based on the match/mismatch of these factors. For example, if the movie is pure comedy and the viewer hates comedies, the chances are he won’t like it. If you take dozens of these factors describing many facets of a movie’s content and a viewer’s taste, the conclusion based on matching all the factors will be a good predictor of how the viewer will rate the movie. This solution represents a straightforward mapping between viewer and movies, but it is not powered by machine learning.
+Here is how it works. You describe a movie as a long array of different factors, e.g., Now, you describe each viewer with corresponding factors; how much do they like comedy, do they prefer simple or complicated plots, how important are the looks of the lead actor, and so on. How this viewer will rate that movie is now estimated based on the match/mismatch of these factors. For example, if the movie is pure comedy and the viewer hates comedies, the chances are he won’t like it. If you take dozens of these factors describing many facets of a movie’s content and a viewer’s taste, the conclusion based on matching all the factors will be a good predictor of how the viewer will rate the movie. This solution represents a straightforward mapping between viewer and movies, but it is not powered by machine learning.
 
 ![solution](/assets/images/fig_2.svg)
 
@@ -35,8 +35,8 @@ Here is how it works. You describe a movie as a long array of different factors,
 To do so, the following three conditions must be satisfied: 
 
 
-(a) A pattern exists. 
-(b) We cannot pin it down mathematically. 
-(c) **We have data on it** 
+(a) A pattern exists.   
+(b) We cannot pin it down mathematically.    
+(c) **We have data on it**    
 
 
