@@ -71,13 +71,13 @@ You have to decide whether to approve or rejecte these applications. To automate
 
 <div align="center">
 
-|      Item       |       Symbol / Definition        |             Meaning              |
-|:---------------:|:--------------------------------:|:--------------------------------:|
-|     Input       |           **x**                  |   Customer application           |
-|     Output      |            *y*                   |   Good or bad customer?          |
-| Target function |       *f : 𝓧 → 𝓨*                | Ideal credit approval formula    |
-|      Data       | *(x₁, y₁), … , (xₙ, yₙ)*          |     Historical records           |
-|   Hypothesis    |       *g : 𝓧 → 𝓨*                | Formula to be used  |
+| Item           | Symbol / Definition             | Meaning                                |
+|:--------------:|:-------------------------------:|:--------------------------------------:|
+| Input          | **x**                           | Customer application                   |
+| Output         | *y*                              | Good or bad customer?                  |
+| Target function| *f : 𝓧 → 𝓨*                      | Ideal credit approval formula          |
+| Data           | *(x₁, y₁), … , (xₙ, yₙ)*         | Historical records                     |
+| Hypothesis     | *g : 𝓧 → 𝓨*                      | Formula to be used (learned model)     |
 
 </div>
 > **Reference**  
