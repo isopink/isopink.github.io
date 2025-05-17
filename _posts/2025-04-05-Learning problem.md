@@ -152,7 +152,7 @@ To simplify the notation of the perceptron formula, we will treat the bias $b$ a
 <br>
 
 $$
-\mathcal{X} = \{1\} \times \mathbb{R}^d = \{ [x_0, x_1, \cdots, x_d]^\top \mid x_0 = 1,\ x_1 \in \mathbb{R}, \cdots,\ x_d \in \mathbb{R} \}.
+\mathcal{X} = \{ [x_0, x_1, \cdots, x_d]^\top \mid x_0 = 1,\ x_1 \in \mathbb{R}, \cdots,\ x_d \in \mathbb{R} \}
 $$
 
 <br>
@@ -183,7 +183,7 @@ $$
 
 This rule moves the boundary in the direction of classfying $(\mathbf{x}(t))$ correctly: 
 
-![solution](/assets/images/fig_5.svg)
+![solution](/assets/images/fig_6.svg)
 
 The algorithm continues with further iterations until there are no longer misclassified examples in the data set. Despite updating the weights using only one misclassified example at a time, the perceptron learning algorithm is guaranteed to converge to a correct solution, assuming the data is linearly separable.
 It works regardless of which misclassified example is chosen or how the weights are initialized. 
@@ -204,11 +204,11 @@ This definition is intentionally broad, and it is difficult to encapsulate all l
 
 ##### 4.1. Supervised Learning.    
 
-![solution](/assets/images/fig_5.svg)
+![solution](/assets/images/fig_7.png)
 
 Think about a vending machine that recognizes coins. We see a bunch of coins represented as dots, based on two features, *mass* and *size*. Each coin is colored and clustered. This is our *training examples*, where the correct label is already known. 
 
-![solution](/assets/images/fig_6.svg)
+![solution](/assets/images/fig_8.png)
 
 This represent the model has learned where to draw a *decision boundares* between the coin types. Now we can recognize the coins. To simplify, supervised learning is **Learn a function from labeled examples.**
 
@@ -216,11 +216,11 @@ This represent the model has learned where to draw a *decision boundares* betwee
 
 ##### 4.2. Unsupervised Learning.    
 
-![solution](/assets/images/fig_7.svg)
+![solution](/assets/images/fig_9.png)
 
 Let's think about a vending machine again. We see a bunch of coins represented as dots, but not sure about what type of coin it is. That is why dots are not colored. Despite the correct label is unknown, we can still *cluster* the coins. 
 
-![solution](/assets/images/fig_8.svg)
+![solution](/assets/images/fig_10.png)
 
 This represent the model has learned where to draw a *decision boundaries* between clusters. We cannot recogize the coins, at least we can regonize the *difference* of them. To simplify, unsupervised learning is **Discover structure or patterns in data without labels**.
 
