@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231815;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #231815;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: .75px;
+      }
+
+      .cls-6 {
+        fill: #727171;
+        opacity: .2;
+      }
+
+      .cls-4 {
+        stroke: #e60012;
+      }
+
+      .cls-5 {
+        stroke: #036eb8;
+      }
+
+      .cls-7 {
+        font-family: AdobeMyungjoStd-Medium-KSCpc-EUC-H, 'Adobe Myungjo Std';
+        font-size: 12px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="_레이어_2" data-name="레이어_2">
+      <rect class="cls-2" x="86.63" y="65.78" width="441.29" height="441.29"/>
+      <line class="cls-4" x1="86.63" y1="255.53" x2="527.92" y2="388.89"/>
+      <line class="cls-4" x1="173.91" y1="128.94" x2="183.67" y2="141.14"/>
+      <line class="cls-4" x1="173.91" y1="141.14" x2="183.67" y2="125.69"/>
+      <line class="cls-4" x1="282.1" y1="173.43" x2="291.86" y2="185.63"/>
+      <line class="cls-4" x1="282.1" y1="185.63" x2="291.86" y2="170.18"/>
+      <line class="cls-4" x1="237.64" y1="361.55" x2="247.4" y2="373.75"/>
+      <line class="cls-4" x1="237.64" y1="373.75" x2="247.4" y2="358.3"/>
+      <line class="cls-4" x1="324.49" y1="460.07" x2="334.25" y2="472.26"/>
+      <line class="cls-4" x1="324.49" y1="472.26" x2="334.25" y2="456.81"/>
+      <circle class="cls-5" cx="385.34" cy="156.05" r="10.1"/>
+      <circle class="cls-5" cx="505.15" cy="223.83" r="10.1"/>
+      <circle class="cls-5" cx="393.06" cy="289.14" r="10.1"/>
+      <circle class="cls-5" cx="482.95" cy="355.65" r="10.1"/>
+      <circle class="cls-5" cx="401.82" cy="421.55" r="10.1"/>
+    </g>
+    <g id="_레이어_3" data-name="레이어_3">
+      <polygon class="cls-6" points="86.63 65.78 86.63 255.53 527.92 388.89 527.92 65.78 86.63 65.78"/>
+      <text class="cls-7" transform="translate(237.64 532.43)"><tspan x="0" y="0">Update the weight Vector</tspan></text>
+    </g>
+    <g id="_레이어_4" data-name="레이어_4">
+      <rect class="cls-2" x="385.2" y="404.93" width="33.24" height="33.24"/>
+      <g>
+        <line class="cls-3" x1="464.35" y1="369.85" x2="455.81" y2="395.06"/>
+        <polygon class="cls-1" points="453.71 391.72 454.39 391.41 455.91 394.78 459.16 393.03 459.52 393.69 455.55 395.83 453.71 391.72"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="446.38" y1="364.34" x2="437.84" y2="389.54"/>
+        <polygon class="cls-1" points="435.73 386.21 436.42 385.9 437.93 389.27 441.19 387.51 441.54 388.17 437.58 390.31 435.73 386.21"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="428.01" y1="358.94" x2="419.48" y2="384.14"/>
+        <polygon class="cls-1" points="417.37 380.81 418.06 380.5 419.57 383.87 422.83 382.11 423.18 382.77 419.22 384.92 417.37 380.81"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="408.98" y1="352.76" x2="400.44" y2="377.96"/>
+        <polygon class="cls-1" points="398.33 374.63 399.02 374.32 400.53 377.69 403.79 375.93 404.14 376.59 400.18 378.73 398.33 374.63"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="385.89" y1="345.96" x2="377.35" y2="371.16"/>
+        <polygon class="cls-1" points="375.24 367.82 375.93 367.51 377.44 370.89 380.7 369.13 381.05 369.79 377.09 371.93 375.24 367.82"/>
+      </g>
+    </g>
+  </g>
+</svg>
