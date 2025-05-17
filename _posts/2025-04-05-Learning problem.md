@@ -75,17 +75,16 @@ Let us now consider a different example. Suppose you are working at a financial 
    
 You have to decide whether to approve or rejecte these applications. To automate this task, we consider learning from historical application records. Let us now formalize the problem more mathematically.
 
-<div align="center">
 
-| Item           | Symbol               | Meaning                                |   
-|:--------------:|:-------------------------------:|:--------------------------------------:|   
-| Input          | **x**                           | Customer application                   |   
-| Output         | *y*                              | Good or bad customer?                  |   
-| Target function| *f : 𝓧 → 𝓨*                      | Ideal credit approval formula          |   
-| Data           | *(x₁, y₁), … , (xₙ, yₙ)*         | Historical records                     |   
-| Hypothesis     | *g : 𝓧 → 𝓨*                      | Formula to be used      |   
 
-</div>
+| 항목              | 기호/정의                                  | 의미 (영문 주석)                     |
+|-------------------|---------------------------------------------|--------------------------------------|
+| Input             | **x**                                       | (customer application)              |
+| Output            | *y*                                         | (good/bad customer?)                |
+| Target function   | *f : 𝓧 → 𝓨*                                 | (ideal credit approval formula)     |
+| Data              | *(x₁, y₁), (x₂, y₂), ⋯, (xₙ, yₙ)*             | (historical records)                |
+| Hypothesis        | *g : 𝓧 → 𝓨*                                 | (formula to be used)                |
+
 
 > **Reference**  
 > Yaser S. Abu-Mostafa, *Learning from data*, AMLBook, 2012    
