@@ -7,7 +7,7 @@ In this time, I will introduce the concept of the learning problem in the contex
 
 1. Example of machine learning   
 
-2. Components of a learning   
+2. Components of a Learning   
 
 3. A simple model   
 
