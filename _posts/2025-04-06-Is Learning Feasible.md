@@ -118,8 +118,7 @@ The way to get around this is to try to bound $\mathbb{P}[|E_{in}(g) - E_{out}(g
 
 $$
 \begin{aligned}
-|E_{in}(g) - E_{out}(g)| > \epsilon \Longrightarrow\ 
-&|E_{in}(h_1) - E_{out}(h_1)| > \epsilon \\[1em]
+|E_{in}(g) - E_{out}(g)| > \epsilon &\Longrightarrow\ |E_{in}(h_1) - E_{out}(h_1)| > \epsilon \\[1em]
 &\mathbf{or} \quad |E_{in}(h_2) - E_{out}(h_2)| > \epsilon \\[1em]
 &\quad \vdots \\[1em]
 &\mathbf{or} \quad |E_{in}(h_M) - E_{out}(h_M)| > \epsilon
