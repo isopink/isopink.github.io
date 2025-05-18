@@ -68,7 +68,10 @@ In real learning, we want to choose the best hypothesis from a set of hypotheses
 To analyze this more clearly, we introduce new terms: 
 
 $$
-E_{in}(h) = \text{(fraction of } \mathcal{D} \text{ where } f \text{ and } h \text{ disagree)} \\
-= \frac{1}{N} \sum_{n=1}^{N} \llbracket h(x_n) \ne f(x_n) \rrbracket
+\begin{aligned}
+E_{in}(h) 
+&= \text{(fraction of } \mathcal{D} \text{ where } f \text{ and } h \text{ disagree)} \\
+&= \frac{1}{N} \sum_{n=1}^{N} [h(x_n) \ne f(x_n)]
+\end{aligned}
 $$
 
