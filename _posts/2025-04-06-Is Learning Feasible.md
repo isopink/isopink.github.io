@@ -46,7 +46,7 @@ Here is a key idea: In reality, population mean generates the sample mean. Howev
 
 How does this bin model relate to learning? At first, the only unknown was a number $μ$, but in learning, we’re dealing with an unknown function $𝑓 : 𝑋 → 𝑌$. Still, the two cases are connected. Let’s choose a hypothesis $ℎ ∈𝐻$. 
 
-For each input $𝑥 ∈ 𝑋$ if $h(x)=f(x)$, mark it green; otherwise, mark it red. Since we don’t know $f$, we don’t know the actual colors. However, if we pick $x$ randomly based on a probability distribution $P$ then the probability that $h(x) \ne f(x)$ (a red marbles) is some value $μ$. This turns the input space $X$ into a probabilistic bin. 
+For each input $𝑥 ∈ 𝑋$, if $h(x)=f(x)$, mark it green; otherwise, mark it red. Since we don’t know $f$, we don’t know the actual colors. However, if we pick $x$ randomly based on a probability distribution $P$ then the probability that $h(x) \ne f(x)$ (a red marbles) is some value $μ$. This turns the input space $X$ into a probabilistic bin. 
 
 ![solution](/assets/images/2_2.svg)
 
@@ -66,3 +66,9 @@ In real learning, we want to choose the best hypothesis from a set of hypotheses
 ![solution](/assets/images/2_4.svg) 
   
 To analyze this more clearly, we introduce new terms: 
+
+$$
+E_{in}(h) = \text{(fraction of } \mathcal{D} \text{ where } f \text{ and } h \text{ disagree)} \\
+= \frac{1}{N} \sum_{n=1}^{N} \llbracket h(x_n) \ne f(x_n) \rrbracket
+$$
+
