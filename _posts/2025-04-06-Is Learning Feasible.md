@@ -3,7 +3,7 @@ layout: single
 title: "Lecture 2 : Is Learning Feasible?"
 ---
 
-In this session, we will talk about the question: **"Is learning Feasible?"**. I will proceed the question through the following four parts: 
+In this time, we will talk about the question: **"Is learning Feasible?"**. Let's answer this quention through the following four parts: 
 
 1. Probability to the Rescue
 
@@ -12,3 +12,8 @@ In this session, we will talk about the question: **"Is learning Feasible?"**. I
 3. Connection to Real Learning
 
 4. A Dilemma and a Solution
+
+---
+
+#### 1. Probability to the Rescue 
+
