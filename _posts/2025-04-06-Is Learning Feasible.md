@@ -67,6 +67,8 @@ In real learning, we want to choose the best hypothesis from a set of hypotheses
   
 To analyze this more clearly, we introduce new terms: 
 
+<br>
+
 $$
 \begin{aligned}
 E_{in}(h) 
@@ -74,4 +76,7 @@ E_{in}(h)
 &= \frac{1}{N} \sum_{n=1}^{N} [h(x_n) \ne f(x_n)]
 \end{aligned}
 $$
+
+<br>
+
 
