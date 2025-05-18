@@ -34,7 +34,7 @@ $$
 
 <br>
 
-(*Here is short proof*) The left-hand side represents the probability that $ν$ is significantly different from $μ$ — *the bad event.* The right-hand side gives an upper bound on this probability. If we reduce the error tolerance $ε$, the bound increases. If we increase the sample size $N$, the bound decreases. We can accept this intuitively. In other words, saying $μ ≈ ν$ is **Probably Approximately Correct**.
+(*Here is a short proof*) The left-hand side represents the probability that $ν$ is significantly different from $μ$ — *the bad event.* The right-hand side gives an upper bound on this probability. If we reduce the error tolerance $ε$, the bound increases. If we increase the sample size $N$, the bound decreases. We can accept this intuitively. In other words, saying $μ ≈ ν$ is **Probably Approximately Correct**.
 
 
 Here is a key idea: In reality, population mean generates the sample mean. However, since we don’t know the population mean, we interpret the sample mean as approximating the population mean, thanks to Hoeffding’s inequality.
@@ -49,8 +49,8 @@ How does this bin model relate to learning? At first, the only unknown was a num
 For each input $𝑥 ∈ 𝑋$ if $h(x)=f(x)$, mark it green; otherwise, mark it red. Since we don’t know $f$, we don’t know the actual colors. However, if we pick $x$ randomly based on a probability distribution $P$ then the probability that $h(x) \ne f(x)$ (a red marbles) is some value $μ$. This turns the input space $X$ into a probabilistic bin. 
 
 ![solution](/assets/images/2_2.svg)
-S
-Training data points are like marbless drawn from the bin.s
+
+Training data points are like marbless drawn from the bin
 Each point is independently drawn from $P$ and labeled red*(incorrect)* or green*(correct)* depending on whether $h(x_n)$ matches $f(x_n)$. **Thus, the learning problem becomes a probabilistic bin model, even if $P$ or $μ$ is unknown.** Now, we can update the learning diagram we introduced previously:
 
 ![solution](/assets/images/2_3.svg) 
