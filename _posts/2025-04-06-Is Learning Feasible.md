@@ -72,10 +72,12 @@ To analyze this more clearly, we introduce new terms:
 $$
 \begin{aligned}
 E_{in}(h) 
-&= \text{(fraction of } \mathcal{D} \text{ where } f \text{ and } h \text{ disagree)} \\
+&= \text{(fraction of } \mathcal{D} \text{ where } f \text{ and } h \text{ disagree)} \\[1em]
 &= \frac{1}{N} \sum_{n=1}^{N} [h(x_n) \ne f(x_n)]
 \end{aligned}
 $$
+
+<br>
 
 <br>
 
