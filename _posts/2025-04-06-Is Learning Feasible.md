@@ -107,12 +107,14 @@ $$
 
 It seems we have solved the problem. By using Hoeffding's inequality, we can estimate the $μ$ from $ν$ and by introducing multiple bins, we have extended the number of hypotheses in a finite way. Are we done? Unfortunately, not yet! **Hoeffing doesn't apply to multiple bins.** We need to know the reason, intuitively. 
 
-![solution](/assets/images/2_5.svg) 
+![solution](/assets/images/2_6.svg) 
 
 Let's flip a coin (if you have). The probability of getting $10$ heads in a row with one coin is about $0.1%$. But if you flip $1,000$ coins, the chance that at least one shows $10$ heads in a row is about $63%$. This shows that if you have many hypotheses, one of them may look good just by chance — even if it’s actually bad.
 
 
-The way to get around this is to try to bound $\mathbb{P}[|E_{in}(g) - E_{out}(g)| > \epsilon]$ in a way that does not depend on which $g$ the learning algorithm picks. There is a simple but crude way of doing that. Since $g$ has to be one of the $h_m$'s regardless of the algorithm and the sample, it is always true that
+The way to get around this is to try to bound 
+$\mathbb{P}\left[ |E_{in}(g) - E_{out}(g)| > \epsilon \right]$ 
+in a way that does not depend on which $g$ the learning algorithm picks. There is a simple but crude way of doing that. Since $g$ has to be one of the $h_m$’s regardless of the algorithm and the sample, it is always true that:
 
 <br>
 
