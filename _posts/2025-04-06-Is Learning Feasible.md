@@ -3,7 +3,7 @@ layout: single
 title: "Lecture 2 : Is Learning Feasible?"
 ---
 
-In this time, we will talk about the question: **"Is learning feasible?"**. Let's answer this quention through the following four parts: 
+In this time, we will talk about the feasibility of learning. The discussion will proceed in the following four parts: 
 
 1. Probability to the Rescue
 
@@ -19,28 +19,22 @@ In this time, we will talk about the question: **"Is learning feasible?"**. Let'
 
 ![solution](/assets/images/2_1.svg)
 
-Let’s begin by considering a bin filled with red and green balls.
-If we randomly draw one ball from the bin, let the probability that it’s red be μ.
-But we don’t know how many red balls are in the bin, so the exact value of μ is unknown.
+Let’s begin by considering a bin filled with red and green marbles. If we randomly draw one marble from the bin, let the probability that it is red be $μ$.
+However, we don’t know how many red marbless are in the bin, so the exact value of $μ$ is **unknown**. To estimate $μ$, we randomly draw $N$ marbles from the bin and define $ν$ as the fraction of red marbles among them.
 
-To estimate μ, we randomly draw N balls from the bin and define ν as the fraction of red balls among them.
 
-Can we then estimate μ using ν?
-As you may already know, when N becomes large, the sample frequency (ν) tends to approximate the true probability (μ).
-This intuition is mathematically justified by Hoeffding’s Inequality.
+Can we then estimate μ using $ν$? As you may already know, when $N$ becomes large, the sample frequency $ν$ tends to approximate the true probability $μ$.
+This intuition is mathematically justified by **Hoeffding’s Inequality**. 
 
-<Hoeffding’s Inequality>
+<br>
 
-The left-hand side represents the probability that ν is significantly different from μ — a bad event.
+$$
+\mathbb{P}(|\nu - \mu| > \epsilon) \leq 2e^{-2\epsilon^2 N} \quad \text{for any } \epsilon > 0.
+$$
 
-The right-hand side gives an upper bound on this probability.
-If we reduce the error tolerance ε, the bound increases.
-If we increase the sample size N, the bound decreases.
+<br>
 
-So the more we sample, the less likely the bad event becomes.
-This makes intuitive sense.
-
-In simple terms, saying “μ ≈ ν” is a form of PAC (Probably Approximately Correct).
+The left-hand side represents the probability that $ν$ is significantly different from $μ$ — *the bad event.* The right-hand side gives an upper bound on this probability. If we reduce the error tolerance $ε$, the bound increases. If we increase the sample size $N$, the bound decreases. We can accept this intuitively. In other words, saying $μ ≈ ν$ is **Probably Approximately Correct**.
 
 Hoeffding’s inequality holds for any ε and N.
 But here's a key idea:
