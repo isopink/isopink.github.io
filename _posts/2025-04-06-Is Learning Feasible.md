@@ -79,6 +79,49 @@ $$
 
 <br>
 
+This is the error rate wthin the sample, which corresponds to $ν$ in the bin model. It will be called the *in-sample error*. If the [statement] is true, returns $1$, otherwise, returns $0$. In the same way, we define the *out-of-sample error* below:
+
 <br>
 
+$$
+E_{out}(h) = \mathbb{P}[h(\mathbf{x}) \ne f(\mathbf{x})]
+$$
 
+<br>
+
+It corresponds to $μ$ in the bin model. The probability is based on the distribution *P* over *X* which is used to sample the data points *x*. We can now rewrite Hoeffding's Inequality using $E_{in}$ and $E_{out}$: 
+
+<br>
+
+$$
+\mathbb{P}\left[\,|E_{in}(h) - E_{out}(h)| > \epsilon\,\right] \leq 2e^{-2\epsilon^2 N} \quad \text{for any } \epsilon > 0
+$$
+
+<br>
+
+---
+
+#### 4. A dilemma and a solution. 
+
+![solution](/assets/images/2_5.svg) 
+
+It seems we have solved the problem. By using Hoeffding's inequality, we can estimate the $μ$ from $ν$ and by introducing multiple bins, we have extended the number of hypotheses in a finite way. Are we done? Unfortunately, not yet! **Hoeffing doesn't apply to multiple bins.** We need to know the reason, intuitively. 
+
+![solution](/assets/images/2_5.svg) 
+
+Let's flip a coin (if you have). The probability of getting $10$ heads in a row with one coin is about $0.1%$. But if you flip $1,000$ coins, the chance that at least one shows $10$ heads in a row is about $63%$. This shows that if you have many hypotheses, one of them may look good just by chance — even if it’s actually bad.
+
+
+The way to get around this is to try to bound $\mathbb{P}[|E_{in}(g) - E_{out}(g)| > \epsilon]$ in a way that does not depend on which $g$ the learning algorithm picks. There is a simple but crude way of doing that. Since $g$ has to be one of the $h_m$'s regardless of the algorithm and the sample, it is always true that
+
+<br>
+
+$$
+\begin{aligned}
+|E_{in}(g) - E_{out}(g)| > \epsilon \Longrightarrow\ 
+&|E_{in}(h_1) - E_{out}(h_1)| > \epsilon \\[1em]
+&\mathbf{or} \quad |E_{in}(h_2) - E_{out}(h_2)| > \epsilon \\[1em]
+&\quad \vdots \\[1em]
+&\mathbf{or} \quad |E_{in}(h_M) - E_{out}(h_M)| > \epsilon
+\end{aligned}
+$$
