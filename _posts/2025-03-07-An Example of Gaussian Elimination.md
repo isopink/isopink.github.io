@@ -71,7 +71,7 @@ Back substitution and forward elimination together are called **Gaussian elimina
 
 #### 2. Matrix Form of Elimination 
 
-One good way to write down the forward elimination steps is to include the right-hand side as an extra column. There is no need to copy $u$ and $v$ and $w$ and $=$ at every step, we left the minimum:
+One good way to write down the forward elimination steps is to include the right-hand side as an extra column. **There is no need to copy $u$ and $v$ and $w$ and $=$ at every step.** we left the minimum:
 
 <br>
 
@@ -82,7 +82,7 @@ $$
 -2 & 7 & 2 & 9
 \end{bmatrix}
 \\[1.5em]
-\Downarrow
+\downarrow
 \\[1.5em]
 \begin{bmatrix}
 2 & 1 & 1 & 5 \\
@@ -90,7 +90,7 @@ $$
 0 & 8 & 3 & 14
 \end{bmatrix}
 \\[1.5em]
-\Downarrow
+\downarrow
 \\[1.5em]
 \begin{bmatrix}
 2 & 1 & 1 & 5 \\
@@ -99,5 +99,14 @@ $$
 \end{bmatrix}
 $$
 
-
 <br>
+
+---
+
+#### 3. Breakdwon of Elimnation 
+
+**What circumstances could the process break down?**. With a full set of n pivots, there is only one solution. The system is non singular, and it is solved by forward elimination and back-substitution. But if a zero appears in a pivot position, elimination has to stop—either temporarily or permanently. The system might or might not be singular. Let's take both example. 
+
+##### 3.1. Nonsingular 
+
+##### 3.2. Singular 
