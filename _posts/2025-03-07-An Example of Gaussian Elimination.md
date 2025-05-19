@@ -24,7 +24,7 @@ The simplest way to understand the Gaussian Elimination is by example. Let's beg
 
 $$
 \begin{aligned}
-2u &+ v&+ w  &= 5 \\
+2u &+v &+ w  &= 5 \\
 4u &- 6v&+ 0w &= -2 \\
 -2u &+ 7v&+ 2w &= 9
 \end{aligned}
