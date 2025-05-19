@@ -51,7 +51,7 @@ For each input $𝑥 ∈ 𝑋$, if $h(x)=f(x)$, mark it green; otherwise, mark i
 ![solution](/assets/images/2_2.svg)
 
 Training data points are like marbless drawn from the bin
-Each point is independently drawn from $P$ and labeled red*(incorrect)* or green*(correct)* depending on whether $h(x_n)$ matches $f(x_n)$. **Thus, the learning problem becomes a probabilistic bin model, even if $P$ or $μ$ is unknown.** Now, we can update the learning diagram we introduced previously:
+Each point is independently drawn from $P$ and labeled red*(incorrect)* or green*(correct)* depending on whether $h(x_n)$ matches $f(x_n)$. **Thus, the learning problem becomes a probabilistic bin model, even if $P$ or $μ$ is unknown.** What $\mu$ tells us is the error rate $h$ makes in approximating $f$. If $\nu$ happens to be close to zero, we can predict that $h$ will approximate $f$ well over the entire input space. Now, we can update the learning diagram we introduced previously:
 
 ![solution](/assets/images/2_3.svg) 
 
@@ -109,12 +109,10 @@ It seems we have solved the problem. By using Hoeffding's inequality, we can est
 
 ![solution](/assets/images/2_6.svg) 
 
-Let's flip a coin (if you have). The probability of getting $10$ heads in a row with one coin is about $0.1%$. But if you flip $1,000$ coins, the chance that at least one shows $10$ heads in a row is about $63%$. This shows that if you have many hypotheses, one of them may look good just by chance — even if it’s actually bad.
+Let's flip a coin (if you have). The probability of getting $10$ heads in a row with one coin is about $0.1%$. But if you flip $1,000$ coins, the chance that at least one shows $10$ heads in a row is about $0.63$. This shows that if you have many hypotheses, one of them may look good just by chance — even if it’s actually bad. We need to fix the bound. 
 
-
-The way to get around this is to try to bound 
-$\mathbb{P}\left[ |E_{in}(g) - E_{out}(g)| > \epsilon \right]$ 
-in a way that does not depend on which $g$ the learning algorithm picks. There is a simple but crude way of doing that. Since $g$ has to be one of the $h_m$’s regardless of the algorithm and the sample, it is always true that:
+Let $g = \argmax_{h_i} \left( E_{in}(h_i) \right)&. The way to get around this is to try to bound 
+$\mathbb{P}\left[ |E_{in}(g) - E_{out}(g)| > \epsilon \right]$ in a way that does not depend on which $g$ the learning algorithm picks. There is a simple but crude way of doing that. Since $g$ has to be one of the $h_m$’s regardless of the algorithm and the sample, it is always true that:
 
 <br>
 
