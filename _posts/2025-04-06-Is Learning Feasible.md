@@ -34,10 +34,10 @@ $$
 
 <br>
 
-(*Here is a short proof*) The left-hand side represents the probability that $ν$ is significantly different from $μ$ — *the bad event.* The right-hand side gives an upper bound on this probability. If we reduce the error tolerance $ε$, the bound increases. If we increase the sample size $N$, the bound decreases. We can accept this intuitively. In other words, saying $μ ≈ ν$ is **Probably Approximately Correct**.
+(*Here is a short proof*) The left-hand side represents the probability that $ν$ is significantly different from $μ$ — *the bad event.* The right-hand side gives an upper bound on this probability. If we reduce the error tolerance $ε$, the bound increases. If we increase the sample size $N$, the bound decreases. We can accept this intuitively.
 
 
-Here is a key idea: In reality, population mean generates the sample mean. However, since we don’t know the population mean, we interpret the sample mean as approximating the population mean, thanks to Hoeffding’s inequality.
+Here is a key idea: In reality, population mean generates the sample mean. However, since we don’t know the population mean, we interpret the sample mean as approximating the population mean, thanks to Hoeffding’s inequality. In other words, saying $μ ≈ ν$ is **Probably Approximately Correct**.
 
 
 ---
