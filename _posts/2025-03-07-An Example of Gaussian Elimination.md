@@ -37,12 +37,13 @@ We want to find the unknown values of $u$, $v$, and $w$. We are using **Gaussian
 
 <br>
 
-<center>
-  
-(a) subtract $2$ times the first equation from the second   
-(b) subtract $−1$ times the first equation from the third.
+$$
+\text{(a) subtract } 2 \text{ times the first equation from the second}
+$$
 
-</center>
+$$
+\text{(b) subtract } -1 \text{ times the first equation from the third}
+$$
 
 <br>
 
