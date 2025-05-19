@@ -126,3 +126,55 @@ $$
 &\mathbf{or} \quad \, |E_{in}(h_M) - E_{out}(h_M)| > \epsilon
 \end{aligned}
 $$
+
+<br>
+
+$B_1 \Rightarrow B_2$ means that event $B_1$ implies event $B_2$. Although the events on the right-hand-side cover a lot more than the left-hand-side, the right-hand-side has the property we want; the hypotheses $h_m$ are fixed. We now apply two basic rules in probability: 
+
+<br>
+
+$$
+\text{if } B_1 \Rightarrow B_2, \text{ then } \mathbb{P}[B_1] \leq \mathbb{P}[B_2]
+$$
+
+<br>
+
+And, if $B_1, B_2, \cdots, B_M$ are any events, then:
+
+<br>
+
+$$
+\mathbb{P}[B_1 \text{ or } B_2 \text{ or } \cdots \text{ or } B_M] \leq \mathbb{P}[B_1] + \mathbb{P}[B_2] + \cdots + \mathbb{P}[B_M]
+$$
+
+<br>
+
+The second rule is known as the *union bound*. Putting the two rules together, we get: 
+
+<br>
+
+$$
+\mathbb{P}\left[ \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \right]
+\leq
+\sum_{m=1}^{M} \mathbb{P} \left[ \left| E_{\text{in}}(h_m) - E_{\text{out}}(h_m) \right| > \epsilon \right]
+$$
+
+<br>
+
+Then, apply the Hoeffding Inequality to the *M* terms one at a time, we meet the final form: 
+
+<br>
+
+$$
+\mathbb{P}\left[ \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \right] \leq 2M e^{-2\epsilon^2 N}.
+$$
+
+<br>
+
+It was a long journey. We are trying to simultaneously approximate all $E_{\text{out}}(h_m)$’s by the corresponding $E_{\text{in}}(h_m)$’s. This allows the learning algorithm to choose any hypothesis based on $E_{\text{in}}$ and expect that the corresponding $E_{\text{out}}$ will uniformly follow suit, regardless of which hypothesis is chosen.  
+
+---
+
+This inequality is only meaningful if $M$ is finite. Unfortunately, in general problems, the number of hypotheses is very large. **To make this inequality meaningful, we need to make $M$ tighter.** Stay curious — we will look into this soon.
+
+
