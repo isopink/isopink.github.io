@@ -17,3 +17,31 @@ In this time, I will introduce the Gaussian Elimination. The discussion will pro
 ---
 
 #### 1. Step - by - Step Example of Gaussian Elimination
+
+The simplest way to understand the Gaussian Elimination is by example. Let's begin in three demensions: 
+
+<br>
+
+$$
+\begin{align*}
+ 2u &+  v &+  w &= 5 \\
+ 4u &+ 0v &+ 0w &= -2 \\
+-2u &+ 7v &+ 2w &= 9
+\end{align*}
+$$
+
+<br>
+
+We want to find the unknown values of $u$, $v$, and $w$. We are using **Gaussian Elimination**. *It starts by subtracting muliples of the first equation from the other equations.* The goal is to eliminate $u$ from the last two equations. This requires : 
+
+<br>
+
+<center>
+  
+(a) subtract $2$ times the first equation from the second   
+(b) subtract $−1$ times the first equation from the third.
+
+</center>
+
+<br>
+
