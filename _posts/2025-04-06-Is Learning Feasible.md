@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Lecture 2 : Is Learning Feasible?"
---- 
+---
 
 In this time, we will talk about the feasibility of learning. The discussion will proceed in the following four parts: 
 
