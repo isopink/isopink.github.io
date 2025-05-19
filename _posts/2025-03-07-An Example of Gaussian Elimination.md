@@ -82,7 +82,7 @@ $$
 -2 & 7 & 2 & 9
 \end{bmatrix}
 \\[1.5em]
-\longrightarrow
+\Downarrow
 \\[1.5em]
 \begin{bmatrix}
 2 & 1 & 1 & 5 \\
@@ -90,7 +90,7 @@ $$
 0 & 8 & 3 & 14
 \end{bmatrix}
 \\[1.5em]
-\longrightarrow
+\Downarrow
 \\[1.5em]
 \begin{bmatrix}
 2 & 1 & 1 & 5 \\
