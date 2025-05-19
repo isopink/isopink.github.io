@@ -23,27 +23,18 @@ The simplest way to understand the Gaussian Elimination is by example. Let's beg
 <br>
 
 $$
-\begin{aligned}
-2u &+v &+ w  &= 5 \\
-4u &- 6v&+ 0w &= -2 \\
--2u &+ 7v&+ 2w &= 9
-\end{aligned}
+\begin{array}{rrrrrcl}
+2u &+& v  &+& w  &=& 5 \\
+4u &-& 6v &+& 0w &=& -2 \\
+-2u &+& 7v &+& 2w &=& 9
+\end{array}
 $$
+
 
 
 <br>
 
-We want to find the unknown values of $u$, $v$, and $w$. *It starts by subtracting muliples of the first equation from the other equations.* The goal is to eliminate $u$ from the last two equations. This requires : 
-
-<br>
-
-$$
-\text{(a) subtract } 2 \text{ times the first equation from the second}
-$$
-
-$$
-\text{(b) subtract } -1 \text{ times the first equation from the third}
-$$
+We want to find the unknown values of $u$, $v$, and $w$. *It starts by subtracting muliples of the first equation from the other equations.* The goal is to eliminate $u$ from the last two equations. To do so, subtract $2$ times the first equation from the second and subtract $-1$ times the first equation from the third.
 
 <br>
 
@@ -57,13 +48,7 @@ $$
 
 <br>
 
-The coefficient $2$ is the *first pivot*, and d$-8$ is the *second pivot*. We now ignore the first equation. To eliminate $v$, we add the second equation to the third : 
-
-<br>
-
-$$
-\text{(b) subtract } -1 \text{ times the second equation from the third}
-$$
+The coefficient $2$ is the *first pivot*, and d$-8$ is the *second pivot*. We now ignore the first equation. To eliminate $v$, we add the second equation to the third.
 
 <br>
 
@@ -86,5 +71,28 @@ Back substitution and forward elimination together are called **Gaussian elimina
 
 #### 2. Matrix Form of Elimination 
 
+One good way to write down the forward elimination steps is to include the right-hand side as an extra column. There is no need to copy $u$ and $v$ and $w$ and $=$ at every step, we left the minimum:
 
+<br>
 
+$$
+\begin{bmatrix}
+2 & 1 & 1 & 5 \\
+4 & -6 & 0 & -2 \\
+-2 & 7 & 2 & 9
+\end{bmatrix}
+\longrightarrow
+\begin{bmatrix}
+2 & 1 & 1 & 5 \\
+0 & -8 & -2 & -12 \\
+0 & 8 & 3 & 14
+\end{bmatrix}
+\longrightarrow
+\begin{bmatrix}
+2 & 1 & 1 & 5 \\
+0 & -8 & -2 & -12 \\
+0 & 0 & 1 & 2
+\end{bmatrix}
+$$
+
+<br>
