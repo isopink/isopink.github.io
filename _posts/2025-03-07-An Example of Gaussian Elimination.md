@@ -6,7 +6,7 @@ title: An Example of Gaussian Elimination
 
 In this time, I will introduce the Gaussian Elimination. The discussion will proceed in the following four parts :   
 
-1. Step - by - Step Example of Gaussian Elimination.    
+1. Short Example of Gaussian Elimination.    
 
 2. Matrix Form of Elimination.    
 
@@ -16,7 +16,7 @@ In this time, I will introduce the Gaussian Elimination. The discussion will pro
 
 ---
 
-#### 1. Step - by - Step Example of Gaussian Elimination
+#### 1. Short Example of Gaussian Elimination
 
 The simplest way to understand the Gaussian Elimination is by example. Let's begin in three demensions: 
 
@@ -105,8 +105,35 @@ $$
 
 #### 3. Breakdwon of Elimnation 
 
-**What circumstances could the process break down?**. With a full set of n pivots, there is only one solution. The system is non singular, and it is solved by forward elimination and back-substitution. But if a zero appears in a pivot position, elimination has to stop—either temporarily or permanently. The system might or might not be singular. Let's take both example. 
+**What circumstances could the process break down?**. With a full set of $n$ pivots, there is only one solution. The system is non singular, and it is solved by forward elimination and back-substitution. But if a zero appears in a pivot position, elimination has to stop—either temporarily or permanently. The system might or might not be singular. Let's take both example. 
 
 ##### 3.1. Nonsingular 
+
+<br>
+
+$$
+\begin{array}{rrrrrcl}
+\phantom{2}u &+& \phantom{2}v &+& \phantom{2}w &=&\_ \\
+2u &+& 2v &+& 5w &=&\_ \\
+4u &+& 6v &+& 8w &=&\_
+\end{array}
+$$
+
+<br>
+
+The right sides of the system are arbitrary numbers. Here is the result after one step of forward elimination:
+
+<br>
+
+$$
+\begin{array}{rrrrrcl}
+1u &+& 1v &+& 1w &=&\_ \\
+0u &+& 0v &+& 3w &=&\_ \\
+0u &+& 2v &+& 4w &=&\_
+\end{array}
+$$
+
+<br>
+
 
 ##### 3.2. Singular 
