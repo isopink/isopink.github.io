@@ -18,7 +18,7 @@ In this time, we will talk about how to reduce the number of hypothesis, $M$ whi
 #### 1. Where did the $M$ come from? 
 
 $$
-\mathbb{P}\left[ \lvert E_{\text{in}} - E_{\text{out}} \rvert > \epsilon \right] \leq 2\textcolor{red}{M} e^{-2\epsilon^2 N}
+\mathbb{P}\left[ \lvert E_{\text{in}} - E_{\text{out}} \rvert > \epsilon \right] \leq 2M e^{-2\epsilon^2 N}
 $$
 
 
