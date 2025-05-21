@@ -17,6 +17,9 @@ In this time, we will talk about how to reduce the number of hypothesis, M which
 
 #### 1. Where did the M come from? 
 
-<수식> union bound 식 . 
+$$
+\mathbb{P}\left[ \lvert E_{\text{in}} - E_{\text{out}} \rvert > \epsilon \right] \leq 2M e^{-2\epsilon^2 N}
+$$
+
 
 This is the inequality we discussed in lecture 2. At the end of the Lecture 2, i promised to make M tighter. This is the right time to do that. 
