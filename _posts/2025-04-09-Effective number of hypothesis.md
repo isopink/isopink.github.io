@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Effective number of hypothesis
+title: "Lecture 5 : Effective number of hypothesis"
 ---
 
 
