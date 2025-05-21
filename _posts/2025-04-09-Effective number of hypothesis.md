@@ -4,10 +4,10 @@ title: "Lecture 5 : Effective number of hypothesis"
 ---
 
 
-In this time, we will talk about how to reduce the number of hypothesis, M which we discussed in [Lecture 2](https://isopink.github.io/Is-Learning-Feasible/)  The discussion will proceed in the following three parts :
+In this time, we will talk about how to reduce the number of hypothesis, $M$ which we discussed in [Lecture 2](https://isopink.github.io/Is-Learning-Feasible/)  The discussion will proceed in the following three parts :
 
 
-1. Where did the M come from? 
+1. Where did the $M$ come from? 
 
 2. Ilustrative examples 
 
@@ -15,7 +15,7 @@ In this time, we will talk about how to reduce the number of hypothesis, M which
 
 ---
 
-#### 1. Where did the M come from? 
+#### 1. Where did the $M$ come from? 
 
 $$
 \mathbb{P}\left[ \lvert E_{\text{in}} - E_{\text{out}} \rvert > \epsilon \right] \leq 2\textcolor{red}{M} e^{-2\epsilon^2 N}
