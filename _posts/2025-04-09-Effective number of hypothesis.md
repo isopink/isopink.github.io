@@ -7,9 +7,9 @@ title: Effective number of hypothesis
 In this time, we will talk about how to reduce the number of hypothesis, M which we discussed in lecture 2. (링크)  The discussion will proceed in the following three parts :
 
 
-1.Where did the M come from? 
+1. Where did the M come from? 
 
-2. Iluustrative examples 
+2. Ilustrative examples 
 
 3. Break point 
 
