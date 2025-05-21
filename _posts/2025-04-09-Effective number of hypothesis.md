@@ -13,11 +13,6 @@ In this time, we will talk about how to reduce the number of hypothesis, M which
 
 3. Break point 
 
-
----
-
-#### 0. Traininig versus testing.  
-
 ---
 
 #### 1. Where did the M come from? 
