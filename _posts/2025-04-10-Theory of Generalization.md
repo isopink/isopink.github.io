@@ -14,7 +14,7 @@ In this time, we will discuss the proof about [<u>$m_{\mathcal{H}}(N)$</u>](http
 
 #### 1. Proof that $m_{\mathcal{H}}(N)$ is polynominal
 
-Let $B(N,K)$ is the maximum number of dichotomies of $N$ points such that no subset of size $k$ of the $N$ points can be shattered by these dichotomies. Since $B(N,K)$ is defined as a maximu, it will serve as an upper bound for any $m_h(n)$ that has a break point $k$: 
+Let $B(N,K)$ is the maximum number of dichotomies of $N$ points such that no subset of size $k$ of the $N$ points can be shattered by these dichotomies. Since $B(N,K)$ is defined as a maximu, it will serve as an upper bound for any $m_\mathcal{H}(N)$ that has a break point $k$: 
 
 <br>
 
@@ -53,9 +53,6 @@ S_2^- & \beta     & \vdots & \vdots & \ddots & \vdots & \vdots \\
 \hline
 \end{array}
 $$
-
-<br>
-
 
 <br>
 
