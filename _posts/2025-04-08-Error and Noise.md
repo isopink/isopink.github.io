@@ -42,3 +42,4 @@ $$
 
 We already discussed the *in - sample error* in [__previous time__](https://isopink.github.io/Is-Learning-Feasible/). You may ask how to calculate *the out-of-sample error*. We will discuss it later. For now on, we just keep going. **The important thing is that the error measure can vary depending on the context**.  Consider the problem of verifying fingerpint belongs to a particular person. There are two types of error that our hypothesis make here. 
 
+![solution](/assets/images/err_1.svg) 
