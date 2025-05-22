@@ -67,7 +67,8 @@ $$
 
 <br>
 
-We can think of the dichotomies
+We can think of the dichotomies $\mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}_N)$ as a set of hypotheses just like $\mathcal{H}$ is, except that the hypotheses are seen through the eyes of $N$ points only. We can now define the **Growth Function** $m_{\mathcal{H}}(N)$: 
+
 
 <br>
 
