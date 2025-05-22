@@ -122,7 +122,7 @@ $$ m_{\mathcal{H}(N)} = N + 1 $$
 
 ##### 2.2 Positive intervals
 
-$\mathcal{H}$ is set of $h: \mathbb{R} \rightarrow {-1, +1}$. It returns $+1$ within some interval and $-1$ otherwise. Each hypothesis is specified by the two end values of that interval. 
+$\mathcal{H}$ is set of $h: \mathbb{R} \rightarrow \pm 1$. It returns $+1$ within some interval and $-1$ otherwise. Each hypothesis is specified by the two end values of that interval. 
 
 ![solution](/assets/images/enh_8.svg) 
 
@@ -138,7 +138,7 @@ $$
 
 ##### 2.3 Convex Sets
 
-Convex sets are $\mathcal{H}$ consists of all hypotheses in two dimensions $h: \mathbb{R}^2 \rightarrow {-1, +1}$ that are positive inside some convex set and negative elsewhere.
+Convex sets are $\mathcal{H}$ consists of all hypotheses in two dimensions $h: \mathbb{R}^2 \rightarrow \pm 1$ that are positive inside some convex set and negative elsewhere.
 
 ![solution](/assets/images/enh_9.svg)
 
