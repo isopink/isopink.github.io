@@ -29,30 +29,33 @@ $$
 <br>
 
 $$
-\begin{array}{|c|c|c|c|c|c|}
+\begin{array}{|c|c|c c c c|c|}
 \hline
-\# \text{ of rows} & \mathbf{x}_1 & \mathbf{x}_2 & \cdots & \mathbf{x}_{N-1} & \mathbf{x}_N \\
+& \# \text{ of rows} & \mathbf{x}_1 & \mathbf{x}_2 & \cdots & \mathbf{x}_{N-1} & \mathbf{x}_N \\
 \hline
-\alpha & +1 & +1 & \cdots & +1 & +1 \\
-       & -1 & +1 & \cdots & +1 & -1 \\
-       & \vdots & \vdots & \ddots & \vdots & \vdots \\
-       & +1 & -1 & \cdots & -1 & -1 \\
-       & -1 & +1 & \cdots & -1 & +1 \\
+&                 & +1 & +1 & \cdots & +1 & +1 \\
+&                 & -1 & +1 & \cdots & +1 & -1 \\
+S_1 & \alpha      & \vdots & \vdots & \ddots & \vdots & \vdots \\
+&                 & +1 & -1 & \cdots & -1 & -1 \\
+&                 & -1 & +1 & \cdots & -1 & +1 \\
 \hline
-\beta & +1 & -1 & \cdots & +1 & +1 \\
-      & -1 & -1 & \cdots & +1 & +1 \\
-      & \vdots & \vdots & \ddots & \vdots & \vdots \\
-      & +1 & -1 & \cdots & -1 & +1 \\
-      & -1 & -1 & \cdots & -1 & +1 \\
+&                 & +1 & -1 & \cdots & +1 & +1 \\
+&                 & -1 & -1 & \cdots & +1 & +1 \\
+S_2^+ & \beta     & \vdots & \vdots & \ddots & \vdots & \vdots \\
+&                 & +1 & -1 & \cdots & -1 & +1 \\
+&                 & -1 & -1 & \cdots & -1 & +1 \\
 \hline
-\beta & +1 & -1 & \cdots & +1 & -1 \\
-      & -1 & -1 & \cdots & +1 & -1 \\
-      & \vdots & \vdots & \ddots & \vdots & \vdots \\
-      & +1 & -1 & \cdots & -1 & -1 \\
-      & -1 & -1 & \cdots & -1 & -1 \\
+&                 & +1 & -1 & \cdots & +1 & -1 \\
+&                 & -1 & -1 & \cdots & +1 & -1 \\
+S_2^- & \beta     & \vdots & \vdots & \ddots & \vdots & \vdots \\
+&                 & +1 & -1 & \cdots & -1 & -1 \\
+&                 & -1 & -1 & \cdots & -1 & -1 \\
 \hline
 \end{array}
 $$
+
+<br>
+
 
 <br>
 
