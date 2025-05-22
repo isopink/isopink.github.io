@@ -67,7 +67,7 @@ $$
 
 <br>
 
-We can think of the dichotomies 
+We can think of the dichotomies
 
 <br>
 
@@ -77,7 +77,7 @@ $$
 
 <br>
 
-For any $\mathcal{H}$, since 
+For any $\mathcal{H}$, since:
 
 <br>
 
@@ -85,7 +85,8 @@ $$
 \mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}_N) \subseteq \{-1, +1\}^N
 $$
 
-(the set of all possible dichotomies on any $N$ points),  
+<br>
+
 the value of $m_{\mathcal{H}}(N)$ is at most:
 
 <br>
@@ -96,7 +97,7 @@ $$
 
 <br>
 
-That is to say, 
+That is to say:
 
 <br>
 
