@@ -56,6 +56,7 @@ $$
 
 <br>
 
+Consider the dichotomies on $\mathbf{x}1, \cdots, \mathbf{x}{N-1}$. Some dichotomies on these $N - 1$ points appear only once (with either $+1$ or $-1$ in the $\mathbf{x}_N$ column, but not both). We collect these dichotomies in the set $S_1$. The remaining dichotomies on the first $N - 1$ points appear twice, once with $+1$ and once with $-1$ in the $\mathbf{x}_N$ column. We collect these dichotomies in the set $S_2$ which can be divided into two equal parts, $S_2^+$ and $S_2^-$ (with $+1$ and $-1$ in the $\mathbf{x}_N$ column, respectively). Let $S_1$ have $\alpha$ rows, and let $S_2^+$ and $S_2^-$ have $\beta$ rows each. Since the total number of rows in the table is $B(N, k)$ by construction, we have: 
 
 
 
