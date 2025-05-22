@@ -167,7 +167,7 @@ Likewise, for Positive Intervals, we find that $m_{\mathcal{H}}(2) = 4$, $m_{\ma
 
 However, in the case of Convex Sets, we have $m_{\mathcal{H}}(N) = 2^N$, which means no value of $k$ satisfies the break point condition. Thus, we cannot find a break point for this hypothesis set.
 
-Based on these observations, **if a break point exists, we can expect that the upper bound of the growth function will be significantly reduced**. In other words : 
+Based on these observations, **if a break point exists, we can expect that the upper bound of the growth function will be polynominal**. To simplify : 
 
 <br>
 
