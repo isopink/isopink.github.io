@@ -77,7 +77,18 @@ $$
 
 <br>
 
-For any $\mathcal{H}$, since $\mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}_N) \subseteq \{-1, +1\}^N$ (the set of all possible dichotomies on any $N$ points), the value of $m_{\mathcal{H}}(N)$ is at most $\left| \{-1, +1\}^N \right |$, hence: 
+For any $\mathcal{H}$, since 
+$\mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}_N) \subseteq \{-1, +1\}^N$, (the set of all possible dichotomies on any $N$ points), the value of $m_{\mathcal{H}}(N)$ is at most:
+
+<br>
+
+$$
+\left| \{-1, +1\}^N \right| = 2^N
+$$
+
+<br>
+
+That is to say, 
 
 <br>
 
