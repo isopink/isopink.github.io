@@ -182,11 +182,11 @@ If no data set of size $k$ can be shattered by $\mathcal{H}$, then $k$ is said t
 
 In the case of Positive Rays, we can see that the smallest value of $N$ satisfying $m_{\mathcal{H}}(N) = N + 1 < 2^N$ is $N = 2$. Therefore, the break point is $k = 2$. 
 
-Likewise, for Positive Intervals, we find that $m_{\mathcal{H}}(2) = 4$, $m_{\mathcal{H}}(3) = 7 < 2^3 = 8$, so it is easy to compute that the break point is $k = 3$. 
+Likewise, for Positive Intervals,we find that $m_{\mathcal{H}}(3) = 7 < 2^3 = 8$, so it is easy to compute that the break point is $k = 3$. 
 
 However, in the case of Convex Sets, we have $m_{\mathcal{H}}(N) = 2^N$, which means no value of $k$ satisfies the break point condition. Thus, we cannot find a break point for this hypothesis set.
 
-Based on these observations, **if a break point exists, we can expect that the upper bound of the growth function will be polynominal**. To simplify : 
+Based on these observations, **if a break point exists, we can expect that the upper bound of the growth function will be polynominal**. And this is true. To simplify : 
 
 <br>
 
@@ -199,3 +199,5 @@ Any break point ⟹ $m_{\mathcal{H}}(N)$ is <b>polynomial</b> in $N$
 </p>
 
 <br>
+
+In the next chapter, we will mathematically discuss whether $m_{\mathcal{H}}(N)$ is a polynomial and whether it can truly replace $M$.
