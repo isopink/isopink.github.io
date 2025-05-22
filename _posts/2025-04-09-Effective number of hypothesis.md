@@ -107,7 +107,7 @@ Let us now illustrate how to compute $m_{\mathcal{H}(N)}$ for some simple hypoth
 
 ##### 2.1. Positive rays
 
-$\mathcal{H}$ consists of all hypotheses $h: \mathbb{R} \rightarrow {-1, +1}$ of the form $h(x) = \text{sign}(x - a)$, i.e. They return $-1$ to the left of some value $a$ and $+1$ to the right of $a$.
+$\mathcal{H}$ consists of all hypotheses $h: \mathbb{R} \rightarrow \pm 1$ of the form $h(x) = \text{sign}(x - a)$, i.e. They return $-1$ to the left of some value $a$ and $+1$ to the right of $a$.
 
 ![solution](/assets/images/enh_7.svg) 
 
