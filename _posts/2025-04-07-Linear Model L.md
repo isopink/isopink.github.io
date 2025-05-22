@@ -172,7 +172,7 @@ $$
 
 <br>
 
-$\left( \mathbf{X}^\top \mathbf{X} \right)^{-1} \mathbf{X}^\top$ is called the *pseudo-inverse*, $mathbf{X}^\dagger$. 
+$\left( \mathbf{X}^\top \mathbf{X} \right)^{-1} \mathbf{X}^\top$ is called the *pseudo-inverse*, $X^\dagger$ 
 
 <br>
 
