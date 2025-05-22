@@ -169,6 +169,8 @@ However, in the case of Convex Sets, we have $m_{\mathcal{H}}(N) = 2^N$, which m
 
 Based on these observations, **if a break point exists, we can expect that the upper bound of the growth function will be significantly reduced**. In other words : 
 
+<br>
+
 <p align="center">
 No break point ⟹ $m_{\mathcal{H}}(N) = 2^N$
 </p>
@@ -177,3 +179,4 @@ No break point ⟹ $m_{\mathcal{H}}(N) = 2^N$
 Any break point ⟹ $m_{\mathcal{H}}(N)$ is <b>polynomial</b> in $N$
 </p>
 
+<br>
