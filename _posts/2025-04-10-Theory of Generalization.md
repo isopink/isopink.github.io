@@ -3,11 +3,11 @@ layout: single
 title: "Lectrue 6 : Theory of Generlization"
 ---
 
-In this time, we will discuss the proof about [<u>$m_{\mathcal{H}}(N)$</u>](https://isopink.github.io/Effective-number-of-hypothesis/) The discussion will proceed in the following two parts :
+In this time, we will discuss the mathematical proof of [<u>$m_{\mathcal{H}}(N)$</u>](https://isopink.github.io/Effective-number-of-hypothesis/) This is the most difficult part of this course. You need to pay attention! The discussion will proceed in the following two parts :
 
-1.Proof that mh(n) is polynominal
+1. Proof that $m_{\mathcal{H}}(N)$ is polynominal
 
-2. proof that mh(n) can replace m 
+2. proof that $m_{\mathcal{H}}(N)$ can replace $m$ 
 
 
 ---
@@ -58,5 +58,42 @@ $$
 
 Consider the dichotomies on $\mathbf{x}_1, \cdots, \mathbf{x}_{N-1}$. Some dichotomies on these $N - 1$ points appear only once (with either $+1$ or $-1$ in the $\mathbf{x}_N$ column, but not both). We collect these dichotomies in the set $S_1$. The remaining dichotomies on the first $N - 1$ points appear twice, once with $+1$ and once with $-1$ in the $\mathbf{x}_N$ column. We collect these dichotomies in the set $S_2$ which can be divided into two equal parts, $S_2^+$ and $S_2^-$ (with $+1$ and $-1$ in the $\mathbf{x}_N$ column, respectively). Let $S_1$ have $\alpha$ rows, and let $S_2^+$ and $S_2^-$ have $\beta$ rows each. Since the total number of rows in the table is $B(N, k)$ by construction, we have: 
 
+<br>
 
+$$
+B(N, k) = \alpha + 2\beta.
+$$
 
+<br>
+
+The total number of different dichotomies on the first $N - 1$ points is given by $\alpha + \beta$; since $S_2^+$ and $S_2^-$ are identical on these $N - 1$ points, their dichotomies are redundant. Since no subset of $k$ of these first $N - 1$ points can be shattered (since no $k$-subset of all $N$ points can be shattered), we deduce that :
+
+<br>
+
+$$
+\alpha + \beta \leq B(N - 1, k)
+$$
+
+<br>
+
+Further, no subset of size $k - 1$ of the first $N - 1$ points can be shattered by the dichotomies in $S_2^+$. If there existed such a subset, then taking the corresponding set of dichotomies in $S_2^-$ and adding $\mathbf{x}_N$ to the data points yields a subset of size $k$ that is shattered, which we know cannot exist in this table by definition of $B(N, k)$. Therefore,
+
+<br>
+
+$$
+\beta \leq B(N-1, K-1)
+$$
+
+<br>
+
+Substituting the two Inequalities, we get: 
+
+<br>
+
+$$
+B(N, K) \leq B(N-1, K) + B(N-1, K-1) 
+$$
+
+<br>
+
+We can use it recursively to compute a bound on $B(N, K)$, as shwon in the following table. 
