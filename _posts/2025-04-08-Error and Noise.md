@@ -42,9 +42,23 @@ $$
 
 We already discussed the *in - sample error* in [__previous time__](https://isopink.github.io/Is-Learning-Feasible/). You may ask how to calculate *the out-of-sample error*. We will discuss it later. For now on, we just keep going. **The important thing is that the error measure can vary depending on the context**.  Consider the problem of verifying fingerpint belongs to a particular person. There are two types of error that our hypothesis make here. 
 
-![solution](/assets/images/err_1.svg) 
+<br>
+
+$$
+\begin{array}{c|cc}
+h \backslash f & +1 & -1 \\
+\hline
++1 & \text{no error} & \text{false accept} \\
+-1 & \text{false reject} & \text{no error} \\
+\end{array}
+$$
+
+<br>
 
 If the correct person is rejected, ( $h = -1$ but $f = +1$), it is called *false reject*, and if an incorrect person is accepted ($h = +1$ but $f = -1$), it is called *false accept*. How should the error measure be defined in this problem? We need to specify the error values for a false accept and for a false reject. The right values depend on the situation. 
+
+
+
 
 
 ##### 1.1. Supermarket case
