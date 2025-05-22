@@ -90,7 +90,7 @@ Although the data is not linearly separable, the boundary found by the pocket al
 
 #### 3. Linear Regression
 
-So far, we’ve covered classification problems with discrete outputs. Now let’s deal with regression, where the output is a real-value. Let’s revisit the [__credit approval example__](https://isopink.github.io/Learning-problem/). This time, we want to determine a credit line. Here's the input table.
+So far, we’ve covered classification problems with discrete outputs. Now let’s deal with regression, where the output is a real-value. Let’s revisit the [<u>credit approval example</u>](https://isopink.github.io/Learning-problem/). This time, we want to determine a credit line. Here's the input table.
 
 <br>
 
