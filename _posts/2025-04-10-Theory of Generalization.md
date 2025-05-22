@@ -24,7 +24,7 @@ $$
 
 <br>
 
-**If we show $B(N,K) \leq \text{Polynominal}$, the game is over.** Let's get it started. I listed these dichotomies of $B(N,K)$ in the follownig table: 
+**If we show $B(N,K) \leq \text{Polynominal}$, the game is over.** Let us begin. I listed dichotomies of $B(N,K)$ in the follownig table: 
 
 <br>
 
