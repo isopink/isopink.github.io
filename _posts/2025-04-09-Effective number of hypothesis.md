@@ -67,7 +67,7 @@ $$
 
 <br>
 
-We can think of the dichotomies $\mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}_N)$ as a set of hypotheses just like $\mathcal{H}$ is, except that the hypotheses are seen through the eyes of $N$ points only. A larger $\mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}_N)$ means $\mathcal{H}$ is more ‘diverse’ – generating more dichotomies on $\mathbf{x}_1, \cdots, \mathbf{x}_N$. We can now define the **Growth Function** $m_{\mathcal{H}}(N)$:
+We can think of the dichotomies 
 
 <br>
 
@@ -77,7 +77,8 @@ $$
 
 <br>
 
-For any $\mathcal{H}$, since $\mathcal{H}(\mathbf{x}_1, \cdots, \mathbf{x}N) \subseteq {-1, +1}^N$ (the set of all possible dichotomies on any $N$ points), the value of $m{\mathcal{H}}(N)$ is at most $|{-1, +1}^N|$, hence: 
+For any 
+
 
 <br>
 
