@@ -54,7 +54,7 @@ $$
 
 #### 2. Linear Classification
 
-With this representation, we can expect significantly fewer computations. Let’s now classify the digits. Before classifying all digits, we start by separating them two at a time. This “multiclass to binary classification” approach is commonly used in many learning algorithms. We first classify $1$ and $5%. Digit $5$ has more black pixels than digit $1$, and while $1$ is symmetrical, $5$ is not — so it shouldn’t be too difficult to distinguish between the two. 
+With this representation, we can expect significantly fewer computations. Let’s now classify the digits. Before classifying all digits, we start by separating them two at a time. This “multiclass to binary classification” approach is commonly used in many learning algorithms. We first classify $1$ and $5$. Digit $5$ has more black pixels than digit $1$, and while $1$ is symmetrical, $5$ is not — so it shouldn’t be too difficult to distinguish between the two. 
 
 ![solution](/assets/images/lin_2.svg) 
 
