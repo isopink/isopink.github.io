@@ -45,7 +45,7 @@ $$
 
 #### 2. VC dimension of perceptrons 
 
-In general, the VC dimension of a $d$-dimensional perceptron is $d+1$. This is consistent with our [<u>previous perceptron exmaple</u>](https://isopink.github.io/Effective-number-of-hypothesis/), where the $2D$ perceptron has the break point $4$. To prove the VC dimension of $d$-dimiensional perceptron, We will show two statements, $d_{\text{VC}} \leq d + 1$ and $d_{\text{VC}} \geq d + 1$
+In general, the VC dimension of a $d$-dimensional perceptron is $d+1$. This is consistent with our previous perceptron [<u>exmaple</u>](https://isopink.github.io/Effective-number-of-hypothesis/), where the $2D$ perceptron has the break point $4$. To prove the VC dimension of $d$-dimiensional perceptron, We will show two statements, $d_{\text{VC}} \leq d + 1$ and $d_{\text{VC}} \geq d + 1$
 
 
 ##### 2.1. $d_{\text{VC}} \geq d + 1$
