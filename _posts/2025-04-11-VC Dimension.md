@@ -185,3 +185,46 @@ If we use the **VC dimension** to determine the degrees of freedom, the process 
 
 ##### 3.2. Amount of data required
 
+The second interpretation of VC dimension is, It provides a proper number of data to qualifiy the VC Inequality. Let's look at the following statement: 
+
+<br>
+
+$$
+\mathbb{P}\left[ \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \right] 
+\leq 
+\underbrace{4 m_{\mathcal{H}}(2N) e^{- \frac{1}{8} \epsilon^2 N}}_{\delta}
+$$
+
+<br>
+
+If we want certain $\epsilon$ and $\delta$, how does $N$ depend on $d_\text{VC}$? This is our question. Let's first simplify the right-hand side, which is currently in a rather complex form. If we keep only the $N$-dependent part of the exponential term and discard the rest of the complicated expression,  
+we can represent it as:
+
+$$
+N^d e^{-N} \quad \text{Where} \quad d = d_\text{VC}
+$$
+
+We want this value to be less than $1$. How deos $N$ chage with $d$?. Here is the plot: 
+
+![solution](/assets/images/vc_3.svg) 
+
+Instead of calculating exact value $N$, here is the **Rule of thumb**: 
+
+<br>
+
+$$
+N \geq 10 d_{\text{VC}}
+$$
+
+<br>
+
+Suppose that we have a learning model with $d_{\text{VC}} = 3$ and would like the generalization error to be at most $0.1$ with confidence $90{%}$  
+(so $\epsilon = 0.1$ and $\delta = 0.1$). How big a data set do we need? We could calculate this using rigorous mathematics, but by **Rule of thumb** instead, We can estimate that $N \approx 30{,}000$.  
+
+---
+
+#### 4. Generalization bounds 
+
+Finally, let's use the **VC dimension** to roughly estimate the **upper and lower bounds** of the variables used in the **VC Inequality**.
+
+
