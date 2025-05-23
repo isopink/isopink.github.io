@@ -2,7 +2,7 @@
 layout: single
 title: "Lecture 7 : VC dimension"
 ---
-
+ 
 In this time, we now introduce the **VC dimension**. At the end of the last session, we introduced *VC bound*. We will dive into that topic. The discussion will proceed in following four parts: 
 
 1. The definition of VC diemnsion
@@ -136,9 +136,24 @@ $$
 
 <br>
 
-If $\text{If } y_i = \text{sign}(\mathbf{w}^\top \mathbf{x}_i) = \text{sign}(a_i), \text{ then } a_i \, \mathbf{w}^\top \mathbf{x}_i > 0$. Therefore, $y_j = \text{sign}(\mathbf{w}^\top \mathbf{x}_j) = +1$
+If $y_i = \text{sign}(\mathbf{w}^\top \mathbf{x}_i) = \text{sign}(a_i), \text{ then } a_i \, \mathbf{w}^\top \mathbf{x}_i > 0$. Therefore, $y_j = \text{sign}(\mathbf{w}^\top \mathbf{x}_j) = +1$. 
 
 
+##### 2.3. Putting it together 
 
+We proved $d_{\text{VC}} \geq d + 1$ and $d_{\text{VC}} \leq d + 1$. That is to say: 
 
-If 
+<br>
+
+$$
+d_{\text{VC}} = d + 1
+$$
+
+<br>
+
+The perceptron case provides a nice intuition about the VC dimension, since $d + 1$ is also the number of parameters in the model. However, there are more interpretation of VC dimension. We now introduce that. 
+
+---
+
+#### 3. Interpreting the VC dimension. 
+
