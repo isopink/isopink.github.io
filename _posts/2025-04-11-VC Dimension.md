@@ -157,3 +157,8 @@ The perceptron case provides a nice intuition about the VC dimension, since $d +
 
 #### 3. Interpreting the VC dimension. 
 
+The VC dimension measures these effective parameters or **degrees of freedom** that enable the model to express a diverse set of hypotheses. In the case of perceptrons, the effective parameters correspond to explicit parameters in the model, namely $w_0, w_1, \cdots, w_d$. In other models, the effective parameters may be less obviuos or implicit. Let's see some examples. 
+
+
+
+
