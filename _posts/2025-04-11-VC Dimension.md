@@ -21,7 +21,7 @@ If you rememeber the difition of *break point*, which we learnd in [<u>Lecture 5
 
 If $d_{\text{VC}}$ is the VC dimension of $\mathcal{H}$, then **$k = d_{\text{VC}} + 1$** is a break point for $m_{\mathcal{H}}$, since $m_{\mathcal{H}}(N)$ cannot equal $2^N$ for any $N > d_{\text{VC}}$ by definition.
 
-Since $k = d_{text{VC}} +1$, our previous *Growth funtion* with polynominal bound : 
+Since $k = d_{\text{VC}} +1$, our previous *Growth funtion* with polynominal bound : 
 
 <br>
 
