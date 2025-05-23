@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Lecture 7 : Geometry of Linear Algebra"
+title: "Lecture 7 : VC dimension"
 ---
 
 In this time, we now introduce the **VC dimension**. At the end of the last session, we introduced *VC bound*. We will dive into that topic. The discussion will proceed in following four parts: 
