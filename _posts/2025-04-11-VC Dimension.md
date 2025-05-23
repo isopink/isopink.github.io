@@ -21,23 +21,16 @@ If you rememeber the difition of *break point*, which we learnd in [<u>Lecture 5
 
 If $d_{\text{VC}}$ is the VC dimension of $\mathcal{H}$, then **$k = d_{\text{VC}} + 1$** is a break point for $m_{\mathcal{H}}$, since $m_{\mathcal{H}}(N)$ cannot equal $2^N$ for any $N > d_{\text{VC}}$ by definition.
 
-Since $k = d_{\text{VC}} +1$, our previous *Growth funtion* with polynominal bound : 
+Since $k = d_{\text{VC}} +1$, our previous *Growth funtion* with polynominal bound can be rewritten as : 
 
 <br>
 
 $$
-m_{\mathcal{H}}(N) \leq \sum_{i=0}^{k-1} \binom{N}{i}
+m_{\mathcal{H}}(N) \leq \sum_{i=0}^{k-1} \binom{N}{i} = \sum_{i=0}^{d_\text{VC}} \binom{N}{i}
 $$
 
 <br>
 
-can be rewritten as: 
 
-<br>
 
-$$
-m_{\mathcal{H}}(N) \leq \sum_{i=0}^{d_\text{VC}} \binom{N}{i}
-$$
-
-<br>
 
