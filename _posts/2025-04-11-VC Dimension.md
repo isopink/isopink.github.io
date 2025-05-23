@@ -47,6 +47,7 @@ $$
 
 In general, the VC dimension of a $d$-dimensional perceptron is $d+1$. This is consistent with our previous perceptron [<u>exmaple</u>](https://isopink.github.io/Effective-number-of-hypothesis/), where the $2D$ perceptron has the break point $4$. To prove the VC dimension of $d$-dimiensional perceptron, We will show two statements, $d_{\text{VC}} \leq d + 1$ and $d_{\text{VC}} \geq d + 1$
 
+<br>
 
 ##### 2.1. $d_{\text{VC}} \geq d + 1$
 
@@ -110,7 +111,7 @@ $$
 
 We can shatter these $d+1$ points. This implies $d_{\text{VC}} \geq d + 1$. 
 
-
+<br>
 
 ##### 2.2. $d_{\text{VC}} \leq d + 1$
 
@@ -138,6 +139,7 @@ $$
 
 If $y_i = \text{sign}(\mathbf{w}^\top \mathbf{x}_i) = \text{sign}(a_i), \text{ then } a_i \, \mathbf{w}^\top \mathbf{x}_i > 0$. Therefore, $y_j = \text{sign}(\mathbf{w}^\top \mathbf{x}_j) = +1$. 
 
+<br>
 
 ##### 2.3. Putting it together 
 
@@ -155,10 +157,31 @@ The perceptron case provides a nice intuition about the VC dimension, since $d +
 
 ---
 
-#### 3. Interpreting the VC dimension. 
+#### 3. Interpreting the VC dimension
+
+We will explore two interpretations of the VC dimension. One is **degrees of freedom**, and the other is **Amount of data required**.
+
+<br>
+
+##### 3.1. Degree of freedom  
 
 The VC dimension measures these effective parameters or **degrees of freedom** that enable the model to express a diverse set of hypotheses. In the case of perceptrons, the effective parameters correspond to explicit parameters in the model, namely $w_0, w_1, \cdots, w_d$. In other models, the effective parameters may be less obviuos or implicit. Let's see some examples. 
 
+![solution](/assets/images/vc_1.svg) 
 
+In the *Positive Ray* example, whether the data is labeled $+1$ or $-1$ is determined by the position of parameter $a$. In other words, this example has **1 parameter**, **VC dimension of 1**, and **1 degree of freedom**.
 
+Similarly, in the *Positive Interval* example, two points are needed to define the interval. Thus, there are **2 parameters**, and both the **VC dimension** and **degrees of freedom** are also $2$.
+
+![solution](/assets/images/vc_2.svg) 
+
+Let's take a look at an example where **four 1-dimensional perceptrons** are stacked sequentially. Since each perceptron is $1$-dimensional, each one uses **two parameters**, $w_0$ and $w_1$. This means the total number of parameters is $2 + 2 + 2 + 2 = 8$.
+
+At first glance, it may seem that there are **8 degrees of freedom** because there are 8 parameters. However, if you look more closely, the output of the **first perceptron** can only be either $+1$ or $-1$. This means that the input to the **second perceptron** can also only be one of two values: $+1$ or $-1$. The same applies to the **third** and **fourth perceptrons**. Therefore, the actual number of degrees of freedom in this example is **2**.
+
+If we use the **VC dimension** to determine the degrees of freedom, the process becomes much simpler than counting parameters. Since each perceptron is $1$-dimensional, $d = 1$. The VC dimension of a perceptron is $d + 1$, so in this case, $d_{\text{VC}} = 2$. Since the **VC dimension equals the degrees of freedom**, we can immediately conclude that the number of degrees of freedom is **also 2**. 
+
+<br>
+
+##### 3.2. Amount of data required
 
