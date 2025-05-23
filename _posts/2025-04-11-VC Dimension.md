@@ -124,3 +124,21 @@ $$
 
 <br>
 
+Now, consider the following dichotomy. Let $x_i$'s with nonzero $a_i$ get $y_i = \text{sign}(a_i)$, and $x_j$ gets $y_j = -1$. Can any perceptron implement such dichotomy? The answer is "NO". Let me tell you why. Consider following statement. 
+
+<br>
+
+$$
+\mathbf{x}_j = \sum_{i \ne j} a_i \, \mathbf{x}_i 
+\quad \Rightarrow \quad 
+\mathbf{w}^\top \mathbf{x}_j = \sum_{i \ne j} a_i \, \mathbf{w}^\top \mathbf{x}_i
+$$
+
+<br>
+
+If $\text{If } y_i = \text{sign}(\mathbf{w}^\top \mathbf{x}_i) = \text{sign}(a_i), \text{ then } a_i \, \mathbf{w}^\top \mathbf{x}_i > 0$. Therefore, $y_j = \text{sign}(\mathbf{w}^\top \mathbf{x}_j) = +1$
+
+
+
+
+If 
