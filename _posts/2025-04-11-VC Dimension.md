@@ -50,7 +50,7 @@ In general, the VC dimension of a $d$-dimensional perceptron is $d+1$. This is c
 
 ##### 2.1. $d_{\text{VC}} \geq d + 1$
 
-To show that$d_{\text{VC}} \geq d + 1$, Let us find $d+1$ points in $d$-dimensional input space $\mathcal{X}$ can be shattered by perceptron. We prepare $d+1$ points in $d$-dimensional space. Since the $0th$ coordinate is for the threshold, forming a matrix $X$ using their transposes yields a square matrix. If the points are linearly independent, $X$ is invertible. It is described as: 
+To show that $d_{\text{VC}} \geq d + 1$, Let us find $d+1$ points in $d$-dimensional input space $\mathcal{X}$ can be shattered by perceptron. We prepare $d+1$ points in $d$-dimensional space. Since the $0th$ coordinate is for the threshold, forming a matrix $X$ using their transposes yields a square matrix. If the points are linearly independent, $X$ is invertible. It is described as: 
 
 <br>
 
@@ -114,7 +114,7 @@ We can shatter these $d+1$ points. This implies $d_{\text{VC}} \geq d + 1$.
 
 ##### 2.2. $d_{\text{VC}} \leq d + 1$
 
-To show that$d_{\text{VC}} \leq d + 1$, we need to show no set of $d+2$ points in $d$-dimensional input space $\mathcal{X}$ can be shattered by the perceptron. Let's consider creating $d+2$ arbitrary points in a $d$-dimensional space. What we can observe here is that, since the number of points exceeds the number of dimensions, it is impossible for all the points to be linearly independent. We must have nonzero $a_i$ where : 
+To show that $d_{\text{VC}} \leq d + 1$, we need to show no set of $d+2$ points in $d$-dimensional input space $\mathcal{X}$ can be shattered by the perceptron. Let's consider creating $d+2$ arbitrary points in a $d$-dimensional space. Since the number of points exceeds the number of dimensions, it is impossible for all the points to be linearly independent. We must have nonzero $a_i$ where : 
 
 <br>
 
