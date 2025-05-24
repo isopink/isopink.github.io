@@ -120,7 +120,7 @@ To show that $d_{\text{VC}} \leq d + 1$, we need to show no set of $d+2$ points 
 <br>
 
 $$
-\boldsymbol{x}_j = \sum_{i \ne j} a_i \, \boldsymbol{x}_i
+\mathbf{x}_j = \sum_{i \ne j} a_i \, \mathbf{x}_i
 $$
 
 <br>
