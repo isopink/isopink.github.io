@@ -175,11 +175,11 @@ Similarly, in the *Positive Interval* example, two points are needed to define t
 
 ![solution](/assets/images/vc_2.svg) 
 
-Let's take a look at an example where **four 1-dimensional perceptrons** are stacked sequentially. Since each perceptron is $1$-dimensional, each one uses **two parameters**, $w_0$ and $w_1$. This means the total number of parameters is $2 + 2 + 2 + 2 = 8$.
+Let’s look at an example where we stack **four 1-dimensional perceptrons** in a row. Each perceptron only takes one input and uses **two parameters**, $w_0$ and $w_1$. So in total, we have $8$ parameters.
 
-At first glance, it may seem that there are **8 degrees of freedom** because there are 8 parameters. However, if you look more closely, the output of the **first perceptron** can only be either $+1$ or $-1$. This means that the input to the **second perceptron** can also only be one of two values: $+1$ or $-1$. The same applies to the **third** and **fourth perceptrons**. Therefore, the actual number of degrees of freedom in this example is **2**.
+At first, it might seem like there are **8 degrees of freedom**, since we have 8 parameters. But if you look more carefully, the **first perceptron** can only make output **+1 or -1**. That means the input to the **second perceptron** is also just **+1 or -1**. The same thing happens for the **third** and **fourth perceptrons** — each only sees **two possible inputs**. Because of this, even though there are 8 parameters, the actual **degrees of freedom** is only **2**.
 
-If we use the **VC dimension** to determine the degrees of freedom, the process becomes much simpler than counting parameters. Since each perceptron is $1$-dimensional, $d = 1$. The VC dimension of a perceptron is $d + 1$, so in this case, $d_{\text{VC}} = 2$. Since the **VC dimension equals the degrees of freedom**, we can immediately conclude that the number of degrees of freedom is **also 2**. 
+We can also use the **VC dimension** to figure this out more easily. If each perceptron is $1$-dimensional, the **VC dimension is 2**, which matches our earlier result. That means the number of **degrees of freedom is also 2**.
 
 <br>
 
