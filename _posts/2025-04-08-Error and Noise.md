@@ -40,7 +40,7 @@ $$
 
 <br>
 
-We already discussed the *in - sample error* in [<u>previous time</u>](https://isopink.github.io/Is-Learning-Feasible/). You may ask how to calculate *the out-of-sample error*. We will discuss it later. For now on, we just keep going. **The important thing is that the error measure can vary depending on the context**.  Consider the problem of verifying fingerpint belongs to a particular person. There are two types of error that our hypothesis make here. 
+We already discussed the *in - sample error* in [previous time](https://isopink.github.io/Is-Learning-Feasible/). You may ask how to calculate *the out-of-sample error*. We will discuss it later. For now on, we just keep going. **The important thing is that the error measure can vary depending on the context**.  Consider the problem of verifying fingerpint belongs to a particular person. There are two types of error that our hypothesis make here. 
 
 <br>
 
@@ -100,7 +100,7 @@ $$
 
 #### 2. Noisy Targets  
 
-So far, we are trying to learn target 'function', indeed, **our target may not be 'function'**. Consider credit approval example [<u>before</u>](https://isopink.github.io/Learning-problem/), two customers may have identical applicants, but end up with diffrerent result. The output $y$ could no be uniquely determined by $x$. Actually, we can get through this issue by $y$ is afftected by $x$. Therefore, we use target 'distribution', not the target 'funtion'. Instead of $y=f(x)$, we can take the output $y$ to be a random variable, that is affected by, rather than determined by the input $x$. We can formalize this : 
+So far, we are trying to learn target 'function', indeed, **our target may not be 'function'**. Consider credit approval example [before](https://isopink.github.io/Learning-problem/), two customers may have identical applicants, but end up with diffrerent result. The output $y$ could no be uniquely determined by $x$. Actually, we can get through this issue by $y$ is afftected by $x$. Therefore, we use target 'distribution', not the target 'funtion'. Instead of $y=f(x)$, we can take the output $y$ to be a random variable, that is affected by, rather than determined by the input $x$. We can formalize this : 
 
 <br>
 
