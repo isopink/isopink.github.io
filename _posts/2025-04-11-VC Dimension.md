@@ -165,21 +165,21 @@ We will explore two interpretations of the VC dimension. One is **degrees of fre
 
 ##### 3.1. Degree of freedom  
 
-The VC dimension measures these effective parameters or **degrees of freedom** that enable the model to express a diverse set of hypotheses. In the case of perceptrons, the effective parameters correspond to explicit parameters in the model, namely $w_0, w_1, \cdots, w_d$. In other models, the effective parameters may be less obviuos or implicit. Let's see some examples. 
+The VC dimension measures effective parameters or degrees of freedom that enable the model to express a diverse set of hypotheses. In the case of perceptrons, the effective parameters correspond to explicit parameters in the model, namely $w_0, w_1, \cdots, w_d$. In other models, the effective parameters may be less obviuos or implicit. Let's see some examples. 
 
 ![solution](/assets/images/vc_1.svg) 
 
-In the *Positive Ray* example, whether the data is labeled $+1$ or $-1$ is determined by the position of parameter $a$. In other words, this example has **1 parameter**, **VC dimension of 1**, and **1 degree of freedom**.
+In the Positive Ray example, whether the data is labeled $+1$ or $-1$ is determined by the position of parameter $a$. In other words, this example has 1 parameter, VC dimension of 1, and 1 degree of freedom.
 
-Similarly, in the *Positive Interval* example, two points are needed to define the interval. Thus, there are **2 parameters**, and both the **VC dimension** and **degrees of freedom** are also $2$.
+Similarly, in the Positive Interval example, two points are needed to define the interval. Thus, there are 2 parameters, and both the VC dimension and degrees of freedom are also $2$.
 
 ![solution](/assets/images/vc_2.svg) 
 
-Let’s look at an example where we stack **four 1-dimensional perceptrons** in a row. Each perceptron only takes one input and uses **two parameters**, $w_0$ and $w_1$. So in total, we have $8$ parameters.
+Let’s look at an example where we stack four 1-dimensional perceptrons in a row. Each perceptron only takes one input and uses two parameters, $w_0$ and $w_1$. So in total, we have $8$ parameters.
 
-At first, it might seem like there are **8 degrees of freedom**, since we have 8 parameters. But if you look more carefully, the **first perceptron** can only make output **+1 or -1**. That means the input to the **second perceptron** is also just **+1 or -1**. The same thing happens for the **third** and **fourth perceptrons** — each only sees **two possible inputs**. Because of this, even though there are 8 parameters, the actual **degrees of freedom** is only **2**.
+At first, it might seem like there are 8 degrees of freedom, since we have 8 parameters. But if you look more carefully, every perceptrons can only make output $+1$ or $-1$. That means the input to the next perceptron is also just $+1$ or $-1$. Because of this, even though there are $8$ parameters, the actual degrees of freedom is only $2$.
 
-We can also use the **VC dimension** to figure this out more easily. If each perceptron is $1$-dimensional, the **VC dimension is 2**, which matches our earlier result. That means the number of **degrees of freedom is also 2**.
+We can also use the VC dimension to figure this out more easily. If each perceptron is $1$-dimensional, the VC dimension is 2, which matches our earlier result. That means the number of degrees of freedom is also 2.
 
 <br>
 
