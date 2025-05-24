@@ -90,18 +90,18 @@ h2 a {
 
   &:hover {
     color: mix(#fff, #000, 80%) !important;
-    text-decoration: none; !important;
+    text-decoration: none !important;
   }
 }
 
 // 본문 내용 안의 일반 링크는 파란색
 .page__content a {
   color: #0066cc;
-  text-decoration: none; !important;
+  text-decoration: none !important;
 
   &:hover {
     color: darken(#0066cc, 10%);
-    text-decoration: none; !important;
+    text-decoration: none !important;
   }
 
  
