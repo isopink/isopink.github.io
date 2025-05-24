@@ -89,7 +89,7 @@ h2 a {
   text-decoration: none;
 
   &:hover {
-    color: mix(#fff, $text-color, 80%) !important;
+    color: mix(#fff, #000, 80%) !important;
     text-decoration: none; !important;
   }
 }
@@ -112,7 +112,7 @@ h2 a {
   font-weight: normal;
 
   &:hover {
-    color: mix(#fff, $text-color, 80%) !important;
+    color: mix(#fff, #000, 80%) !important;
   }
 }
 
