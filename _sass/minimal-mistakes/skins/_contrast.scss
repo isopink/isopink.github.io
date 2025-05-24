@@ -90,7 +90,6 @@ h2 a {
 
   &:hover {
     color: darken(#000, 10%) !important;
-    text-decoration: underline;
   }
 }
 
@@ -105,5 +104,14 @@ h2 a {
 
   &:visited {
     color: #0066cc;
+  }
+}
+
+.pagination--pager {
+  color: #000 !important; // 검정색
+  font-weight: normal;
+
+  &:hover {
+    color: darken(#000, 10%) !important;
   }
 }
