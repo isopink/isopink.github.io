@@ -107,18 +107,17 @@ h2 a {
 
 
 .pagination--pager {
-  background-color: transparent !important;
+  background-color: #fff !important;
   color: $text-color !important;
-  transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: mix(#fff, #000, 90%) !important; // 연회색 배경
-    color: #000 !important; // 검정 글자 유지
+    background-color: #fff !important; // 연회색 배경
+    color: mix(#fff, $text-color, 80%) !important; // 검정 글자 유지
     text-decoration: none !important;
   }
 }
 
 .MathJax, mjx-container {
-  font-size: 0.9em !important;
+  font-size: 0.85em !important;
 }
 
