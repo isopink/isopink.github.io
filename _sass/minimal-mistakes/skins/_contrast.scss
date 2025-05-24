@@ -96,22 +96,23 @@ h2 a {
 
 // 본문 내용 안의 일반 링크는 파란색
 .page__content a {
-  color: #0066cc;
-  text-decoration: none !important;
+  color: #0066cc !important;
+  text-decoration: none;
 
   &:hover {
-    color: darken(#0066cc, 10%);
-    text-decoration: none !important;
-  }
-
- 
-}
-
-.pagination--pager {
-  color: $text-color; // 기본 검정
-
-  &:hover {
-    color: #222 !important; // 완전 검정 말고 부드러운 회색
+    color: darken(#0066cc, 10%) !important;
     text-decoration: none;
   }
 }
+
+
+.pagination--pager {
+  color: $text-color !important; // 기본 검정
+
+  &:hover {
+    color: #222 !important; // 부드러운 회색
+    background-color: transparent !important;
+    text-decoration: none !important;
+  }
+}
+
