@@ -3,7 +3,7 @@ layout: single
 title: "Lectrue 6 : Theory of Generlization"
 ---
 
-In this time, we will discuss the mathematical proof of [<u>$m_{\mathcal{H}}(N)$</u>](https://isopink.github.io/Effective-number-of-hypothesis/) This is the most difficult part of this course. You need to pay attention! The discussion will proceed in the following two parts :
+In this time, we will discuss the mathematical proof of [$m_{\mathcal{H}}(N)$](https://isopink.github.io/Effective-number-of-hypothesis/) This is the most difficult part of this course. You need to pay attention! The discussion will proceed in the following two parts :
 
 1. Proof that $m_{\mathcal{H}}(N)$ is polynominal
 
