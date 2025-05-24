@@ -9,8 +9,8 @@ $muted-text-color: $text-color !default;
 $primary-color: #b60000 !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
 $footer-background-color: #000 !default;
-$link-color: #000 !default;
-$link-color-hover: mix(#fff, $text-color, 80%) !default;
+$link-color: #0066cc !default; // 밝은 파랑
+$link-color-hover: darken($link-color, 10%) !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
