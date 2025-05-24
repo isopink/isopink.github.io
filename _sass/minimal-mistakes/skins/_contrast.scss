@@ -108,8 +108,14 @@ h2 a {
 }
 
 .pagination--pager {
-  color: #000 !important; // 검정색
-  font-weight: normal;
+  color: $text-color; // 기본 검정
+
+  &:hover {
+    color: #222 !important; // 완전 검정 말고 부드러운 회색
+    text-decoration: none;
+  }
+}
+
 
   &:hover {
     color: mix(#fff, #000, 80%) !important;
