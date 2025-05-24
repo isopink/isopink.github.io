@@ -270,7 +270,18 @@ $$
 
 <br>
 
+If we use the polynomial bound based on $d_{vc}$ instead of $m_{\mathcal{H}}(2N)$, we get another valid bound on the out-of-sample error : 
 
+<br>
 
+$$
+E_{\text{out}}(g) \leq E_{\text{in}}(g) + \sqrt{\frac{8}{N} \ln\left(\frac{4((2N)^{d_{vc}} + 1)}{\delta}\right)}
+$$
+
+<br>
+
+When we use a more complex learning model, one that has higher VC dimension $$d_{vc}$$, we are likely to fit the training data better resulting in a lower $E_\text{in}$, but we pay a higher penalty for model complexity. The upper bound of $E_\text{out}$ goes up. **A combination of the two attains a minimum at some intermediate $$d_{vc}^*$$.**  
+
+![solution](/assets/images/vc_4.svg) 
 
 
