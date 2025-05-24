@@ -107,12 +107,13 @@ h2 a {
 
 
 .pagination--pager {
-  color: $text-color !important; // 기본 검정
+  background-color: transparent !important;
+  color: $text-color !important;
+  transition: background-color 0.2s ease;
 
   &:hover {
-    color: #222 !important; // 부드러운 회색
-    background-color: transparent !important;
+    background-color: mix(#fff, #000, 90%) !important; // 연회색 배경
+    color: #000 !important; // 검정 글자 유지
     text-decoration: none !important;
   }
 }
-
