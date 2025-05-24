@@ -218,13 +218,59 @@ $$
 
 <br>
 
-Suppose that we have a learning model with $d_{\text{VC}} = 3$ and would like the generalization error to be at most $0.1$ with confidence $90{%}$  
+Suppose that we have a learning model with $d_{\text{VC}} = 3$ and would like the generalization error to be at most $0.1$ with confidence $0.9$  
 (so $\epsilon = 0.1$ and $\delta = 0.1$). How big a data set do we need? We could calculate this using rigorous mathematics, but by **Rule of thumb** instead, We can estimate that $N \approx 30{,}000$.  
 
 ---
 
 #### 4. Generalization bounds 
 
-Finally, let's use the **VC dimension** to roughly estimate the **upper and lower bounds** of the variables used in the **VC Inequality**.
+Let's use the **VC dimension** to roughly estimate the **upper and lower bounds** of the variables used in the **VC Inequality** : 
+
+<br>
+
+$$
+\mathbb{P}\left[ \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \right] 
+\leq 
+\underbrace{4 m_{\mathcal{H}}(2N) e^{- \frac{1}{8} \epsilon^2 N}}_{\delta}
+$$
+
+<br>
+
+Get $\epsilon$ in terms of $\delta$ : 
+
+<br>
+
+$$
+\delta = 4 m_{\mathcal{H}}(2N) \, e^{- \frac{1}{8} \epsilon^2 N} 
+\quad \Rightarrow \quad 
+\epsilon = \sqrt{ \frac{8}{N} \ln \left( \frac{4 m_{\mathcal{H}}(2N)}{\delta} \right) }
+$$
+
+<br>
+
+If we define the right-hand side of $\epsilon$ as a function $\Omega$, then this function $\Omega$ can be expressed as depending on the **number of data points** $N$, the **hypothesis set** $\mathcal{H}$, and the $\delta$ of the VC inequality. Now, we can simply put this : 
+
+<br>
+
+$$
+\text{With probability } \geq 1 - \delta,\quad 
+\left| E_{\text{out}} - E_{\text{in}} \right| \leq \Omega
+$$
+
+<br>
+
+Which means, There exist the **Good Event** at least the probability with $1-\delta$. Rearranging is now complete. In general, $E_{\text{out}}$ is bigger than $E_{\text{in}}$. Because $E_{\text{in}}$ is the term we minimize deliberately. With this inspection, **Generalization bound** is :
+
+<br>
+
+$$
+\text{With probability } \geq 1 - \delta,\quad E_{\text{out}} \leq E_{\text{in}} + \Omega
+$$
+
+<br>
+
+
+
 
 
