@@ -17,7 +17,7 @@ In this time, we now introduce the **VC dimension**. At the end of the last sess
 
 #### 1. The definition of VC dimension
 
-If you rememeber the defition of *break point*, which we learnd in [<u>Lecture 5</u>](https://isopink.github.io/Effective-number-of-hypothesis/), you can easily accept the difinition of VC dimension. 
+If you rememeber the defition of *break point*, which we learnd in [Lecture 5](https://isopink.github.io/Effective-number-of-hypothesis/), you can easily accept the difinition of VC dimension. 
 
 The Vapnik–Chervonenkis dimension of a hypothesis set $\mathcal{H}$, denoted by $d_{\text{VC}}(\mathcal{H})$ or simply $d_{\text{VC}}$, is the largest value of $N$ for which $ m_{\mathcal{H}}(N) = 2^N.$ 
 
@@ -45,7 +45,7 @@ $$
 
 #### 2. VC dimension of perceptrons 
 
-In general, the VC dimension of a $d$-dimensional perceptron is $d+1$. This is consistent with our previous perceptron [<u>exmaple</u>](https://isopink.github.io/Effective-number-of-hypothesis/), where the $2D$ perceptron has the break point $4$. To prove the VC dimension of $d$-dimiensional perceptron, We will show two statements, $d_{\text{VC}} \leq d + 1$ and $d_{\text{VC}} \geq d + 1$
+In general, the VC dimension of a $d$-dimensional perceptron is $d+1$. This is consistent with our previous perceptron [exmaple](https://isopink.github.io/Effective-number-of-hypothesis/), where the $2D$ perceptron has the break point $4$. To prove the VC dimension of $d$-dimiensional perceptron, We will show two statements, $d_{\text{VC}} \leq d + 1$ and $d_{\text{VC}} \geq d + 1$
 
 <br>
 
