@@ -80,3 +80,30 @@ code {
   background-color: #f4f4f4;
   color: #e83e8c;
 }
+
+// 글 제목 링크는 검정색으로 유지
+.archive__item-title a,
+h1 a,
+h2 a {
+  color: #000 !important;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(#000, 10%) !important;
+    text-decoration: underline;
+  }
+}
+
+// 본문 내용 안의 일반 링크는 파란색
+.page__content a {
+  color: #0066cc;
+  text-decoration: underline;
+
+  &:hover {
+    color: darken(#0066cc, 10%);
+  }
+
+  &:visited {
+    color: #0066cc;
+  }
+}
