@@ -111,7 +111,14 @@ It seems we have solved the problem. By using Hoeffding's inequality, we can est
 
 Let's flip a coin (if you have). The probability of getting $10$ heads in a row with one coin is about $0.1%$. But if you flip $1,000$ coins, the chance that at least one shows $10$ heads in a row is about $0.63$. This shows that if you have many hypotheses, one of them may look good just by chance — even if it’s actually bad. We need to fix the bound. 
 
-Let $g = \operatorname{arg\,max}_{h_i} E_{in}(h_i)$. The way to get around this is to try to bound $\mathbb{P}\left[ |E_{in}(g) - E_{out}(g)| > \epsilon \right]$ in a way that does not depend on which $g$ the learning algorithm picks. There is a simple but crude way of doing that. Since $g$ has to be one of the $h_m$’s regardless of the algorithm and the sample, it is always true that:
+Let $g = \arg\max_{h_i} E_{\text{in}}(h_i)$.  
+To work around this, we want to bound  
+$\mathbb{P}\left[\, |E_{\text{in}}(g) - E_{\text{out}}(g)| > \epsilon \,\right]$  
+in a way that does not depend on which $g$ the learning algorithm picks.
+
+A simple (but crude) approach is to note that  
+$g$ must be one of the $h_m$'s, no matter which algorithm or sample we use.  
+So it's always true that:
 
 <br>
 
