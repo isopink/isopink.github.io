@@ -140,4 +140,16 @@ $$
 
 <br>
 
+By applying induction, we get: 
+
+$$
+\begin{aligned}
+B(N_o + 1, k) &\leq \sum_{i=0}^{k-1} \binom{N_o}{i} + \sum_{i=0}^{k-2} \binom{N_o}{i} \\
+&= 1 + \sum_{i=1}^{k-1} \binom{N_o}{i} + \sum_{i=1}^{k-1} \binom{N_o}{i - 1} \\
+&= 1 + \sum_{i=1}^{k-1} \left[ \binom{N_o}{i} + \binom{N_o}{i - 1} \right] \\
+&= 1 + \sum_{i=1}^{k-1} \binom{N_o + 1}{i} = \sum_{i=0}^{k-1} \binom{N_o + 1}{i}
+\end{aligned}
+$$
+
+
 Applying the in
