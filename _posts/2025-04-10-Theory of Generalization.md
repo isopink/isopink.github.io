@@ -142,6 +142,8 @@ $$
 
 By applying induction, we get: 
 
+<br>
+
 $$
 \begin{aligned}
 B(N_o + 1, k) &\leq \sum_{i=0}^{k-1} \binom{N_o}{i} + \sum_{i=0}^{k-2} \binom{N_o}{i} \\
@@ -151,5 +153,56 @@ B(N_o + 1, k) &\leq \sum_{i=0}^{k-1} \binom{N_o}{i} + \sum_{i=0}^{k-2} \binom{N_
 \end{aligned}
 $$
 
+<br>
 
-Applying the in
+The proof is completed. the Saure's lemma is true for all $N$ and $k$. We finally arrive at the following inequality: 
+
+<br>
+
+$$
+m_{\mathcal{H}}(N) \leq B(N, K) \leq  \sum_{i=0}^{k-1} \binom{N}{i}
+$$
+
+<br>
+
+for all $N$. The right-hand side is polynominal in $N$ of degree $k-1$. We can now say that the growth function is a polynomial. Let's take some examples which we discussed in [Lecture 5](https://isopink.github.io/Effective-number-of-hypothesis/), and apply what we proved. 
+
+<br>
+
+##### 1.1. Positive rays 
+
+The break point is $k=2$, and the growth function was *N+1*. You can recognize the following statement is true. 
+
+<br>
+
+$$
+N+1 \leq \sum_{i=0}^{1} \binom{N}{i}
+$$
+
+<br>
+
+##### 1.2. Positive intervals
+
+The break point is $k=3$, and the growth function was *$\frac{1}{2}N^2 + \frac{1}{2}N + 1$*. You can recognize the following statement is true. 
+
+<br>
+
+$$
+\frac{1}{2}N^2 + \frac{1}{2}N + 1 \leq \sum_{i=0}^{2} \binom{N}{i}
+$$
+
+<br>
+
+##### 1.3. 2D perceptrons
+
+The break point is $k=4$, and we don't know the growth funtion. However, You can bound the growth funtion as following statement:
+
+<br>
+
+$$
+m_{\mathcal{H}}(N) \leq \frac{1}{6}N^3 + \frac{5}{6}N + 1
+$$
+
+<br>
+
+
