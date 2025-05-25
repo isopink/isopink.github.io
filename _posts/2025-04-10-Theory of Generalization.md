@@ -239,7 +239,10 @@ For a particular $h$, let us paint all these ‘bad’ points using one color. W
 
 ![solution](/assets/images/tog_2.svg)
 
-Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where $|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$. The union bound adds up all these areas without considering overlaps, leading to a loose bound when $\mathcal{H}$ is large.
+Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where  
+$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$.  
+The union bound adds up all these areas without considering overlaps,  
+leading to a loose bound when $\mathcal{H}$ is large.
 
 ![solution](/assets/images/tog_3.svg)
 
@@ -251,9 +254,27 @@ The bulk of the VC proof deals with how to account for the overlaps. Here is the
 
 ##### Extra!
 
-There is one more thing to consider. The reason $m_{\mathcal{H}}(2N)$ appears in the VC bound instead of $m_{\mathcal{H}}(N)$ is that the proof uses a sample of $2N$ points instead of $N$ points. Why do we need $2N$ points? The event “$\left|E_{\text{in}}(h) - E_{\text{out}}(h)\right| > \epsilon$” depends not only on $D$, but also on the entire $\mathcal{X}$ because $E_{\text{out}}(h)$ is based on $\mathcal{X}$. This breaks the main premise of grouping $h$’s based on their behavior on $D$, since aspects of each $h$ outside of $D$ affect the truth of “$\left|E_{\text{in}}(h) - E_{\text{out}}(h)\right| > \epsilon$.” 
+There is one more thing to consider. The reason $m_{\mathcal{H}}(2N)$ appears in the VC bound instead of $m_{\mathcal{H}}(N)$ is that the proof uses a sample of $2N$ points instead of $N$ points.
 
-To remedy that, we consider the artificial event “$\left|E_{\text{in}}(h) - E_{\text{in}}'(h)\right| > \epsilon$” instead, where $E_{\text{in}}$ and $E_{\text{in}}'$ are based on two samples $D$ and $D'$ each of size $N$. This is where the $2N$ comes from. It accounts for the total size of the two samples $D$ and $D'$. Now, the truth of the statement “$\left|E_{\text{in}}(h) - E_{\text{in}}'(h)\right| > \epsilon$” depends exclusively on the total sample of size $2N$, and the above redundancy argument will hold.
+Why do we need $2N$ points? The event  
+$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$  
+depends not only on $D$, but also on the entire $\mathcal{X}$, since $E_{\text{out}}(h)$ is based on $\mathcal{X}$.  
+This breaks the key idea of grouping $h$'s by their behavior on $D$, because information outside $D$ affects the result.
 
-Of course we have to justify why the two-sample condition “$\left|E_{\text{in}}(h) - E_{\text{in}}'(h)\right| > \epsilon$” can replace the original condition “$\left|E_{\text{in}}(h) - E_{\text{out}}(h)\right| > \epsilon$.” In doing so, we end up having to shrink the $\epsilon$’s by a factor of 4, and also end up with a factor of 2 in the estimate of the overall probability. This accounts for the $\frac{8}{N}$ instead of $\frac{1}{2N}$ in the VC bound and for having 4 instead of 2 as the multiplicative factor of the growth function. When you put all this together, you get the formula. 
+To fix this, we consider the artificial event  
+$|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$,  
+where $E_{\text{in}}$ and $E_{\text{in}}'$ are based on two samples $D$ and $D'$ of size $N$ each.  
+This gives us a total of $2N$ points.
 
+Now, this event depends only on the full $2N$ sample, making the union-bound-based argument valid again.
+
+Of course, we must justify replacing  
+$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$  
+with  
+$|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$.  
+Doing so requires us to shrink $\epsilon$ by a factor of 4 and adds a factor of 2 to the probability estimate.
+
+This explains why the VC bound uses  
+$\frac{8}{N}$ instead of $\frac{1}{2N}$,  
+and a factor of 4 instead of 2 in front of the growth function.  
+Putting all this together gives us the final form of the VC bound.
