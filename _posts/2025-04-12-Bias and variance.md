@@ -164,7 +164,17 @@ It's because model complexity should be defined based on the data, not on how co
 
 This time, we will look at how the in-sample error and out-of-sample error behave as the size of the data set increases. After learning with a particular data set $\mathcal{D}$ of size $N$, the final hypothesis $g^{(\mathcal{D})}$ has in-sample error $E_{\text{in}}(g^{(\mathcal{D})})$ and out-of-sample error $E_{\text{out}}(g^{(\mathcal{D})})$, both of which depend on $\mathcal{D}$. 
 
-As we saw in the Bias-Variance analysis, the expectation with respect to all data sets of size $N$ gives the expected errors: $\mathbb{E}_{\mathcal{D}}[E_{\text{in}}(g^{(\mathcal{D})})]$ and $\mathbb{E}_{\mathcal{D}}[E_{\text{out}}(g^{(\mathcal{D})})]$. These expected errors are functions of $N$, and are called the learning curves of the model. We illustrate the learning curves for a simple learning model and a complex one. 
+As we saw in the Bias-Variance analysis, the expectation with respect to all data sets of size $N$ gives the expected errors: 
+
+<br>
+
+$$
+\mathbb{E}_{\mathcal{D}} \left[ E_{\text{in}}(g^{(\mathcal{D})}) \right] \quad \text{and} \quad \mathbb{E}_{\mathcal{D}} \left[ E_{\text{out}}(g^{(\mathcal{D})}) \right]
+$$
+
+<br>
+
+These expected errors are functions of $N$, and are called the learning curves of the model. We illustrate the learning curves for a simple learning model and a complex one. 
 
 ![solution](/assets/images/bav_5.svg)
 
