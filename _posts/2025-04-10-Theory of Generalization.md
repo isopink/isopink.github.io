@@ -263,17 +263,13 @@ This breaks the key idea of grouping $h$'s by their behavior on $D$, because inf
 To fix this, we consider the artificial event 
 $|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$, 
 where $E_{\text{in}}$ and $E_{\text{in}}'$ are based on two samples $D$ and $D'$ of size $N$ each. 
-This gives us a total of $2N$ points.
-
-Now, this event depends only on the full $2N$ sample, making the union-bound-based argument valid again.
+This gives us a total of $2N$ points. Now, this event depends only on the full $2N$ sample, making the union-bound-based argument valid again.
 
 Of course, we must justify replacing 
 $|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$ 
 with 
 $|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$. 
-Doing so requires us to shrink $\epsilon$ by a factor of 4 and adds a factor of 2 to the probability estimate.
-
-This explains why the VC bound uses 
+Doing so requires us to shrink $\epsilon$ by a factor of 4 and adds a factor of 2 to the probability estimate. This explains why the VC bound uses 
 $\frac{8}{N}$ instead of $\frac{1}{2N}$, 
 and a factor of 4 instead of 2 in front of the growth function. 
 Putting all this together gives us the final form of the VC bound.
