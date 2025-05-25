@@ -19,9 +19,9 @@ So far, our main focus was reducing $E_{\text{out}}$, which means a good approxi
 
 <div align="center">
 
-**How well $\mathcal{H}$ can approximate $f$**
+**1. How well $\mathcal{H}$ can approximate $f$**
 
-**How well we can zoom in on a good $h \in \mathcal{H}$**
+**2. How well we can zoom in on a good $h \in \mathcal{H}$**
 
 </div>
 
