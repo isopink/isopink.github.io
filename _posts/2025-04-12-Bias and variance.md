@@ -15,14 +15,19 @@ In this time, we will discuss about bias and variace. At the end of the [Lecture
 
 So far, our main focus was reducing $E_{\text{out}}$, which means a good approximation of $f$ out of sample. To do so, We bounded $E_{\text{out}}$ by $E_{\text{in}}$ plus term $\Phi$. However, Bias-Variance analysis decomposes $E_{\text{out}}$ into two things: 
 
-<br>
-
 <div align="center">
 
-**1. How well $\mathcal{H}$ can approximate $f$**
+<br>  
+$$  
+1.\ \text{How well } \mathcal{H} \text{ can approximate } f  
+$$  
 
-**2. How well we can zoom in on a good $h \in \mathcal{H}$**
+<br>
+
+$$  
+2.\ \text{How well we can zoom in on a good } h \in \mathcal{H}  
+$$  
+<br>
 
 </div>
 
-<br>
