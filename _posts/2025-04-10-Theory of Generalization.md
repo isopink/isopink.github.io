@@ -226,4 +226,27 @@ $$
 
 This is the *VC Inequality* or *VC bound*. It is the most imporatnt mathematical result in the theory of learning. Since the formal proof is lengthy and technical. I will illustrate the main ideas in a sketch of the proof, and iclude the formal proof as an apprendix. 
 
+![solution](/assets/images/tog_1.svg)
+
+For a given hypothesis $h \in \mathcal{H}$, the event “$\left| E_{\text{in}}(h) - E_{\text{out}}(h) \right| > \epsilon$" consists of all points $\mathcal{D}$ for which the statement is true. For a particular $h$, let us paint all these ‘bad’ points using one color. What the basic Hoeffding Inequality tells us is that the colored area on the canvas will be small.
+
+![solution](/assets/images/tog_2.svg)
+
+Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where $|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$. The union bound adds up all these areas without considering overlaps, leading to a loose bound when $\mathcal{H}$ is large.
+
+![solution](/assets/images/tog_3.svg)
+
+The bulk of the VC Inequality proof deals with how to account for the overlaps. Here is the idea. If you were told that the hypotheses in $\mathcal{H}$ are such that each point on the canvas that is colored will be colored 100 times (because of 100 different $h$’s), then the total colored area is now 1/100 of what it would have been if the colored points had not overlapped at all. This is the essence of the VC bound as illustrated. 
+
+The bulk of the VC proof deals with how to account for the overlaps. Here is the idea. If you were told that the hypotheses in $\mathcal{H}$ are such that each point on the canvas that is colored will be colored 100 times (because of 100 different $h$’s), then the total colored area is now 1/100 of what it would have been if the colored points had not overlapped at all. This is the essence of the VC bound as illustrated. 
+
+<br>
+
+##### Extra!
+
+There is one more thing to consider. The reason $m_{\mathcal{H}}(2N)$ appears in the VC bound instead of $m_{\mathcal{H}}(N)$ is that the proof uses a sample of $2N$ points instead of $N$ points. Why do we need $2N$ points? The event “$\left|E_{\text{in}}(h) - E_{\text{out}}(h)\right| > \epsilon$” depends not only on $D$, but also on the entire $\mathcal{X}$ because $E_{\text{out}}(h)$ is based on $\mathcal{X}$. This breaks the main premise of grouping $h$’s based on their behavior on $D$, since aspects of each $h$ outside of $D$ affect the truth of “$\left|E_{\text{in}}(h) - E_{\text{out}}(h)\right| > \epsilon$.” 
+
+To remedy that, we consider the artificial event “$\left|E_{\text{in}}(h) - E_{\text{in}}'(h)\right| > \epsilon$” instead, where $E_{\text{in}}$ and $E_{\text{in}}'$ are based on two samples $D$ and $D'$ each of size $N$. This is where the $2N$ comes from. It accounts for the total size of the two samples $D$ and $D'$. Now, the truth of the statement “$\left|E_{\text{in}}(h) - E_{\text{in}}'(h)\right| > \epsilon$” depends exclusively on the total sample of size $2N$, and the above redundancy argument will hold.
+
+Of course we have to justify why the two-sample condition “$\left|E_{\text{in}}(h) - E_{\text{in}}'(h)\right| > \epsilon$” can replace the original condition “$\left|E_{\text{in}}(h) - E_{\text{out}}(h)\right| > \epsilon$.” In doing so, we end up having to shrink the $\epsilon$’s by a factor of 4, and also end up with a factor of 2 in the estimate of the overall probability. This accounts for the $\frac{8}{N}$ instead of $\frac{1}{2N}$ in the VC bound and for having 4 instead of 2 as the multiplicative factor of the growth function. When you put all this together, you get the formula. 
 
