@@ -56,7 +56,7 @@ $$
 
 <br>
 
-Consider the dichotomies on except the last column. Some dichotomies on these $N - 1$ points appear only once (with either $+1$ or $-1$ in the $\mathbf{x}_N$ column, but not both). We collect these dichotomies in the set $S_1$.
+Consider the dichotomies except the $\mathbf{x}_N$ column. Some dichotomies on these $N - 1$ points appear only once (with either $+1$ or $-1$ in the $\mathbf{x}_N$ column, but not both). We collect these dichotomies in the set $S_1$.
 
 The remaining dichotomies on the first $N - 1$ points appear twice, once with $+1$ and once with $-1$ in the $\mathbf{x}_N$ column. We collect these dichotomies in the set $S_2$ which can be divided into two equal parts, $S_2^+$ and $S_2^-$ (with $+1$ and $-1$ in the $\mathbf{x}_N$ column, respectively). 
 
@@ -100,4 +100,23 @@ $$
 
 <br>
 
-We can use it recursively to compute a bound on $B(N, K)$, as shwon in the following table. 
+We can use it recursively to compute a bound on $B(N, K)$, as shwon in the following table: 
+
+<br>
+
+$$
+\begin{array}{c c|cccccc}
+    &   &  &   &k   &   &   &   \\ 
+    &   & 1 & 2 &   & 3 & 4 & 5 \\
+\hline
+  & 1 & 1 & 2 &   & 2 & 2 & 2 \\
+  & 2 & 1 & 3 &   & 4 & 4 & 4 \\
+N &   &   &   &\searrow   & \downarrow &   &   \\ 
+  & 3 & 1 & 4 &   & 7 & 8 & 8 \\
+  & 4 & 1 & 5 &   &11 & \cdots & \cdots \\
+  & 5 & 1 & 6 &   &\cdots & \cdots &   \\
+  & 6 & 1 & 7 &   &\cdots &        &   \\
+\end{array}
+$$
+
+<br>
