@@ -28,6 +28,7 @@ $$
 $$
 2.\ \text{How well we can zoom in on a good } h \in \mathcal{H}  
 $$
+
 <br>
 
 </div>
@@ -104,6 +105,8 @@ $$
 <br>
 
 We thus arrive at the Bias-Variance decomposition of $E_{\text{out}}$: 
+
+<br>
 
 $$
 \mathbb{E}_{\mathcal{D}}\left[ E_{\text{out}}(g^{(\mathcal{D})}) \right] 
