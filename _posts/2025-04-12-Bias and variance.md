@@ -42,7 +42,7 @@ $$
 
 <br>
 
-If we denote a randomly given dataset as $\mathcal{D}$, then $g^{(\mathcal{D})}$ can be defined as the final hypothesis $g$ obtained from the dataset $D$. We have made explicit the dependence of the final hypothesis $g$ on the data $\mathcal{D}$. We can rid of the dependence on a particular data set by taking the expectation with respect to all data sets. Then the formula becomes: 
+If we denote a randomly given dataset as $\mathcal{D}$, then $g^{(\mathcal{D})}$ can be defined as the final hypothesis $g$ obtained from the dataset $D$. We have made explicit the dependence of the final hypothesis $g$ on the data $\mathcal{D}$. We can get rid of the dependence on a particular data set by taking the expectation with respect to all data sets. Then the formula becomes: 
 
 <br>
 
@@ -83,7 +83,7 @@ $$
 
 <br>
 
-The term $(\bar{g}(\mathbf{x}) - f(\mathbf{x}))^2$ measures how much the average function that we would learn using different data sets $\mathcal{D}$ deviates from the target function that generated these data sets. This term is appropriately called the bias:
+The term $(\bar{g}(\mathbf{x}) - f(\mathbf{x}))^2$ measures how much the average hypothesis that we would learn using different data sets $\mathcal{D}$ deviates from the target function that generated these data sets. This term is called the bias:
 
 <br>
 
@@ -92,5 +92,28 @@ $$
 $$
 
 <br>
+
+The other term measures how far a specific hypothesis in the hypothesis set is from the average hypothesis. In other words, this term can be interpreted as an indicator of how spread out the hypotheses are. This term is called the variance:
+
+<br>
+
+$$
+\text{var}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - \bar{g}(\mathbf{x}) \right)^2 \right],
+$$
+
+<br>
+
+We thus arrive at the Bias-Variance decomposition of $E_{\text{out}}$: 
+
+$$
+\mathbb{E}_{\mathcal{D}}\left[ E_{\text{out}}(g^{(\mathcal{D})}) \right] 
+= \mathbb{E}_{\mathbf{x}} \left[ \text{bias}(\mathbf{x}) + \text{var}(\mathbf{x}) \right]
+$$
+
+<br>
+
+The Approximation-Generalization tradeoff is captured in the Bias-Variance decomposition. To illustrate, let’s consider two extreme cases: a very small model (with one hypothesis) and a very large one with all hypotheses. 
+
+<
 
 
