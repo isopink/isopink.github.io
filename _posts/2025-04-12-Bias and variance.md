@@ -72,24 +72,25 @@ $$
 
 <br>
 
-Let $\bar{g}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x}) \right]$ first. We can now rewrite the expected $E_{\text{out}}$ in terms of $\bar{g}$:
+Let $\bar{g}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x}) \right]$. Using $\bar{g}$, with few techniques, our formula becomes: 
 
 <br>
 
 $$
-\mathbb{E}_{\mathcal{D}}\left[E_{\text{out}}(g^{(\mathcal{D})})\right]  
-= \mathbb{E}_{\mathbf{x}} \left[ \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x})^2 \right]  
-- 2\bar{g}(\mathbf{x})f(\mathbf{x}) + f(\mathbf{x})^2 \right],
+\mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - \bar{g}(\mathbf{x}) \right)^2 \right] 
++ \left( \bar{g}(\mathbf{x}) - f(\mathbf{x}) \right)^2
 $$
 
 <br>
 
+The term $(\bar{g}(\mathbf{x}) - f(\mathbf{x}))^2$ measures how much the average function that we would learn using different data sets $\mathcal{D}$ deviates from the target function that generated these data sets. This term is appropriately called the bias:
+
+<br>
+
 $$
-= \mathbb{E}_{\mathbf{x}} \left[
-\underbrace{\mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x})^2 \right] - \bar{g}(\mathbf{x})^2}_{\mathbb{E}_{\mathcal{D}}\left[(g^{(\mathcal{D})}(\mathbf{x}) - \bar{g}(\mathbf{x}))^2\right]}
-+ \underbrace{\bar{g}(\mathbf{x})^2 - 2\bar{g}(\mathbf{x})f(\mathbf{x}) + f(\mathbf{x})^2}_{(\bar{g}(\mathbf{x}) - f(\mathbf{x}))^2}
-\right]
+\text{bias}(\mathbf{x}) = \left( \bar{g}(\mathbf{x}) - f(\mathbf{x}) \right)^2,
 $$
 
 <br>
+
 
