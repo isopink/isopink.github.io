@@ -120,3 +120,25 @@ N &   &   &   &\searrow   & \downarrow &   &   \\
 $$
 
 <br>
+
+To continue the proof, we will introduce Sauer's lemma: 
+
+<br>
+
+$$
+B(N, k) \leq \sum_{i=0}^{k-1} \binom{N}{i}
+$$
+
+<br>
+
+*Proof*. The statement is true whenever $k = 1$ or $N = 1$, by inspection. The proof is by induction on $N$. Assume the statement is true for all $N \leq N_o$ and all $k$. We need to prove the statement for $N = N_o + 1$ and all $k$. Since the statement is already true when $k = 1$ (for all values of $N$) by the initial condition, we only need to worry about $k \geq 2$. We are going to apply induction hypotehsis to each term on the right-hand-side of following Inequality: 
+
+<br>
+
+$$
+B(N_o + 1, k) \leq B(N_o, k) + B(N_o, k - 1)
+$$
+
+<br>
+
+Applying the in
