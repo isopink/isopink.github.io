@@ -3,7 +3,7 @@ layout: single
 title: "Lecture 8 : Bias-Variance Tradeoff"
 ---
 
-In this post, we will discuss bias and variance. At the end of [Lecture 7](https://isopink.github.io/VC-Dimension/), we discussed the Approximation-Generalization Tradeoff from the perspective of the VC dimension. We now introduce a new way to analyze models. The discussion will proceed in the following two parts: 
+In this time, we will discuss bias and variance. At the end of [Lecture 7](https://isopink.github.io/VC-Dimension/), we discussed the Approximation-Generalization Tradeoff from the perspective of the VC dimension. We now introduce a new way to analyze models. The discussion will proceed in the following two parts: 
 
 1. Bias and Variance  
 2. Learning Curves  
