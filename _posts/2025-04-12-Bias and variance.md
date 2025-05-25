@@ -18,16 +18,55 @@ So far, our main focus was reducing $E_{\text{out}}$, which means a good approxi
 <div align="center">
 
 <br>  
-$$  
+
+$$
 1.\ \text{How well } \mathcal{H} \text{ can approximate } f  
-$$  
+$$
 
 <br>
 
-$$  
+$$
 2.\ \text{How well we can zoom in on a good } h \in \mathcal{H}  
-$$  
+$$
 <br>
 
 </div>
+
+Bias-Variance decomposition of $E_{\text{out}}$ can be applied to targets with real-values, and uses squared error. We start with representation of $E_{\text{out}}$:
+
+<br>  
+
+$$
+E_{\text{out}}(g^{(\mathcal{D})}) = \mathbb{E}_{\mathbf{x}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right]  
+$$
+
+<br>
+
+If we denote a randomly given dataset as $\mathcal{D}$, then $g^{(\mathcal{D})}$ can be defined as the final hypothesis $g$ obtained from the dataset $D$. We have made explicit the dependence of the final hypothesis $g$ on the data $\mathcal{D}$. We can rid of the dependence on a particular data set by taking the expectation with respect to all data sets. Then the formula becomes: 
+
+<br>  
+$$
+\mathbb{E}_{\mathcal{D}} \left[ E_{\text{out}}(g^{(\mathcal{D})}) \right] = \mathbb{E}_{\mathcal{D}} \left[ \mathbb{E}_{\mathbf{x}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right]  
+$$
+<br>
+
+By Fubini's theorem, We can rewritten the formula as: 
+
+<br>  
+
+$$
+\mathbb{E}_{\mathcal{D}} \left[ \mathbb{E}_{\mathbf{x}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right] = \mathbb{E}_{\mathbf{x}} \left[ \mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right]  
+$$
+
+<br>
+
+Now, let us focus on:
+
+<br>  
+$$  
+\mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right]  
+$$  
+<br>
+
+Let $\bar{g}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x}) \right]$  
 
