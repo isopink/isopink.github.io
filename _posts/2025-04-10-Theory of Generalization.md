@@ -3,7 +3,7 @@ layout: single
 title: "Lectrue 6 : Theory of Generlization"
 ---
 
-In this time, we will discuss the mathematical proof of [$m_{\mathcal{H}}(N)$](https://isopink.github.io/Effective-number-of-hypothesis/) This is the most difficult part of this course. You need to pay attention! The discussion will proceed in the following two parts :
+In this time, we will discuss the mathematical proof of [$m_{\mathcal{H}}(N)$](https://isopink.github.io/Effective-number-of-hypothesis/). This is the most difficult part of this course. You need to pay attention! The discussion will proceed in the following two parts :
 
 1. Proof that $m_{\mathcal{H}}(N)$ is polynominal
 
@@ -14,7 +14,7 @@ In this time, we will discuss the mathematical proof of [$m_{\mathcal{H}}(N)$](h
 
 #### 1. Proof that $m_{\mathcal{H}}(N)$ is polynominal
 
-Let $B(N,K)$ is the maximum number of dichotomies of $N$ points such that no subset of size $k$ of the $N$ points can be shattered by these dichotomies. Since $B(N,K)$ is defined as a maximu, it will serve as an upper bound for any $m_\mathcal{H}(N)$ that has a break point $k$: 
+Let $B(N,K)$ is the maximum number of dichotomies of $N$ points such that no subset of size $k$ of the $N$ points can be shattered by these dichotomies. Since $B(N,K)$ is defined as a maximum, it will serve as an upper bound for any $m_\mathcal{H}(N)$ that has a break point $k$: 
 
 <br>
 
@@ -24,7 +24,7 @@ $$
 
 <br>
 
-**If we show $B(N,K) \leq \text{Polynominal}$, the game is over.** Let us begin. I listed dichotomies of $B(N,K)$ in the follownig table: 
+If we show $B(N,K) \leq \text{Polynominal}$, the game is over. Let us begin. I listed dichotomies of $B(N,K)$ in the follownig table: 
 
 <br>
 
@@ -56,7 +56,7 @@ $$
 
 <br>
 
-Consider the dichotomies on $\mathbf{x}_1, \cdots, \mathbf{x}_{N-1}$. Some dichotomies on these $N - 1$ points appear only once (with either $+1$ or $-1$ in the $\mathbf{x}_N$ column, but not both). We collect these dichotomies in the set $S_1$.
+Consider the dichotomies on Some dichotomies on these $N - 1$ points appear only once (with either $+1$ or $-1$ in the $\mathbf{x}_N$ column, but not both). We collect these dichotomies in the set $S_1$.
 
 The remaining dichotomies on the first $N - 1$ points appear twice, once with $+1$ and once with $-1$ in the $\mathbf{x}_N$ column. We collect these dichotomies in the set $S_2$ which can be divided into two equal parts, $S_2^+$ and $S_2^-$ (with $+1$ and $-1$ in the $\mathbf{x}_N$ column, respectively). 
 
