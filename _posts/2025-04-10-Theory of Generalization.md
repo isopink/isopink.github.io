@@ -255,25 +255,25 @@ The bulk of the VC proof deals with how to account for the overlaps. Here is the
 
 There is one more thing to consider. The reason $m_{\mathcal{H}}(2N)$ appears in the VC bound instead of $m_{\mathcal{H}}(N)$ is that the proof uses a sample of $2N$ points instead of $N$ points.
 
-Why do we need $2N$ points? The event  
-$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$  
-depends not only on $D$, but also on the entire $\mathcal{X}$, since $E_{\text{out}}(h)$ is based on $\mathcal{X}$.  
+Why do we need $2N$ points? The event 
+$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$ 
+depends not only on $D$, but also on the entire $\mathcal{X}$, since $E_{\text{out}}(h)$ is based on $\mathcal{X}$. 
 This breaks the key idea of grouping $h$'s by their behavior on $D$, because information outside $D$ affects the result.
 
-To fix this, we consider the artificial event  
-$|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$,  
-where $E_{\text{in}}$ and $E_{\text{in}}'$ are based on two samples $D$ and $D'$ of size $N$ each.  
+To fix this, we consider the artificial event 
+$|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$, 
+where $E_{\text{in}}$ and $E_{\text{in}}'$ are based on two samples $D$ and $D'$ of size $N$ each. 
 This gives us a total of $2N$ points.
 
 Now, this event depends only on the full $2N$ sample, making the union-bound-based argument valid again.
 
-Of course, we must justify replacing  
-$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$  
-with  
-$|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$.  
+Of course, we must justify replacing 
+$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$ 
+with 
+$|E_{\text{in}}(h) - E_{\text{in}}'(h)| > \epsilon$. 
 Doing so requires us to shrink $\epsilon$ by a factor of 4 and adds a factor of 2 to the probability estimate.
 
-This explains why the VC bound uses  
-$\frac{8}{N}$ instead of $\frac{1}{2N}$,  
-and a factor of 4 instead of 2 in front of the growth function.  
+This explains why the VC bound uses 
+$\frac{8}{N}$ instead of $\frac{1}{2N}$, 
+and a factor of 4 instead of 2 in front of the growth function. 
 Putting all this together gives us the final form of the VC bound.
