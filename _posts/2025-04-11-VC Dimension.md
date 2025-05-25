@@ -284,4 +284,4 @@ When we use a more complex learning model, one that has higher VC dimension $$d_
 
 ![solution](/assets/images/vc_4.svg) 
 
-
+Altough the VC analysis was based on binary target functions, it can be extended to real-valued funtions. The proofs in those cases are quite technical and does not add any insights. Therefore, we will introduce an alternative approach that covers real-valued functions and add new insights into generalization. This approach is based on bias-variance analysis. We will discuss it right next session! 
