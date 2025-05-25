@@ -200,7 +200,7 @@ The break point is $k=4$, and we don't know the growth funtion. However, You can
 <br>
 
 $$
-m_{\mathcal{H}}(N) \leq \frac{1}{6}N^3 + \frac{5}{6}N + 1
+m_{\mathcal{H}}(N) \leq \sum_{i=0}^{3} \binom{N}{i} = \frac{1}{6}N^3 + \frac{5}{6}N + 1
 $$
 
 <br>
