@@ -205,4 +205,23 @@ $$
 
 <br>
 
+---
 
+#### 2. Proof that $m_{\mathcal{H}}(N)$ can replace $M$.
+
+<br>
+
+$$
+\mathbb{P}\left[\, \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \,\right] \leq 2M \, e^{-2\epsilon^2 N}
+$$
+
+<br>
+
+This was the Union bound form. But if the $M$ goes larger, the inequality goes useless. To get around this issue, We want to replace $M$. That was our goal. 
+Unfortunately, We cannot just put  $m_{\mathcal{H}}(N)$ to the position of $M$. Instead, we use:
+
+$$
+\mathbb{P}\left[\, \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \,\right] \leq 4 \, m_{\mathcal{H}}(2N) \, e^{-\frac{1}{8} \epsilon^2 N}
+$$
+
+This is the *VC Inequality* or *VC bound*. It is the most imporatnt mathematical result in the theory of learning. Since the formal proof is lengthy and technical. I will illustrate the main ideas in a sketch of the proof, and iclude the formal proof as an [appendix](
