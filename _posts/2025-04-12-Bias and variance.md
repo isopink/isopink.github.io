@@ -152,7 +152,7 @@ With $\mathcal{H}_1$, the learned hypothesis is more sensitive and varies signif
 
 ![solution](/assets/images/bav_4.svg)
 
-We can find that the sum of bias and variance is much larger in $\mathcal{H}_1$. That is to say, we should consider $\mathcal{H}_0$ as the better hypothesis. However, this is not intuitively satisfying. $h_1$ seems to approximate the sine function better. Why does this result go against our intuition? 
+We can find that the sum of bias and variance is much larger in $\mathcal{H}_1$. That is to say, we should consider $\mathcal{H}_0$ as the better hypothesis. However, this is not intuitively satisfying. $\mathcal{H}_1$ seems to approximate the sine function better. Why does this result go against our intuition? 
 
 It's because model complexity should be defined based on the data, not on how complex the target function is. In the previous example, the data consisted of only two points. With just two points, the set of possible functions is very limited, so the simpler model $\mathcal{H}_0$ performed better. However, if we are given more points for the same target function, the more complex model $\mathcal{H}_1$ would perform better.
 
