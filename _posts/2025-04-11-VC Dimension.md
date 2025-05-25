@@ -280,7 +280,7 @@ $$
 
 <br>
 
-When we use a more complex learning model, one that has higher VC dimension $$d_{VC}$$, we are likely to fit the training data better resulting in a lower $E_\text{in}$, but we pay a higher penalty for model complexity. The upper bound of $E_\text{out}$ goes up. **A combination of the two attains a minimum at some intermediate $$d_{VC}^*$$.**  
+When we use a more complex learning model, one that has higher VC dimension $$d_{VC}$$, we are likely to fit the training data better resulting in a lower $E_\text{in}$, but we pay a higher penalty for model complexity. The upper bound of $E_\text{out}$ goes up. A combination of the two attains a minimum at some intermediate $$d_{VC}^*$$. There is tradeoff between Approximation and Generlization.   
 
 ![solution](/assets/images/vc_4.svg) 
 
