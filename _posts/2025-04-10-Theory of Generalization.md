@@ -239,9 +239,8 @@ For a particular $h$, let us paint all these ‘bad’ points using one color. W
 
 ![solution](/assets/images/tog_2.svg)
 
-Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where  
-$|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$.  
-The union bound adds up all these areas without considering overlaps,  
+Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where $|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$. 
+The union bound adds up all these areas without considering overlaps, 
 leading to a loose bound when $\mathcal{H}$ is large.
 
 ![solution](/assets/images/tog_3.svg)
