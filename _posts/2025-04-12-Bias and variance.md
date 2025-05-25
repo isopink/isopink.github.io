@@ -120,7 +120,9 @@ The approximation-generalization tradeoff is captured in the bias-variance decom
 
 The figure on the left represents an extreme case where there is only a single final hypothesis $g^{(D)}$ within the entire hypothesis set $\mathcal{H}$, and that hypothesis itself becomes the average $\bar{g}$. In this case, the distance between the point $\bar{g}$ and the target function $f$ becomes the bias. Since there is only one point, the variance is zero.
 
-The figure on the right shows a case where the hypothesis set $\mathcal{H}$ is very large. It contains many hypotheses, and the target function $f$ also exists within $\mathcal{H}$. In this case, the distance between the average hypothesis $\bar{g}$ and $f$ is very small and approaches zero, so the bias can be considered zero. On the other hand, the distances between $\bar{g}$ and the other hypotheses are relatively large compared to the left figure—especially for those on the opposite side of $\bar{g}$—which means the variance will be very high.
+![solution](/assets/images/bav_1.5svg) 
+
+The figure on the right shows a large hypothesis set $\mathcal{H}$ that includes the target function $f$. The average hypothesis $\bar{g}$ is close to $f$, so the bias is nearly zero. However, the hypotheses are widely spread around $\bar{g}$, leading to high variance.
 
 In conclusion, there is a tradeoff between bias and variance. As the hypothesis set $\mathcal{H}$ becomes larger, bias decreases and variance increases. Let us see one more example with a sinusoid.  
 
@@ -160,12 +162,14 @@ It's because model complexity should be defined based on the data, not on how co
 
 #### 2. Learning Curves 
 
-This time, we will look at how the in-sample error and out-of-sample error behave as the size of the data set increases. After learning with a particular data set $\mathcal{D}$ of size $N$, the final hypothesis $g^{(\mathcal{D})}$ has in-sample error $E_{\text{in}}(g^{(\mathcal{D})})$ and out-of-sample error $E_{\text{out}}(g^{(\mathcal{D})})$, both of which depend on $\mathcal{D}$. As we saw in the bias-variance analysis, the expectation with respect to all data sets of size $N$ gives the expected errors: $\mathbb{E}_{\mathcal{D}}[E_{\text{in}}(g^{(\mathcal{D})})]$ and $\mathbb{E}_{\mathcal{D}}[E_{\text{out}}(g^{(\mathcal{D})})]$. These expected errors are functions of $N$, and are called the learning curves of the model. We illustrate the learning curves for a simple learning model and a complex one. 
+This time, we will look at how the in-sample error and out-of-sample error behave as the size of the data set increases. After learning with a particular data set $\mathcal{D}$ of size $N$, the final hypothesis $g^{(\mathcal{D})}$ has in-sample error $E_{\text{in}}(g^{(\mathcal{D})})$ and out-of-sample error $E_{\text{out}}(g^{(\mathcal{D})})$, both of which depend on $\mathcal{D}$. 
+
+As we saw in the Bias-Variance analysis, the expectation with respect to all data sets of size $N$ gives the expected errors: $\mathbb{E}_{\mathcal{D}}[E_{\text{in}}(g^{(\mathcal{D})})]$ and $\mathbb{E}_{\mathcal{D}}[E_{\text{out}}(g^{(\mathcal{D})})]$. These expected errors are functions of $N$, and are called the learning curves of the model. We illustrate the learning curves for a simple learning model and a complex one. 
 
 ![solution](/assets/images/bav_5.svg)
 
-For the simple model, the learning curves converge more quickly, but to worse ultimate performance than for the complex model. In both models, the out-of-sample learning curve decreases with $N$, while the in-sample learning curve increases with $N$. However, you might wonder why the in-sample error of the complex model is so low when $N$ is small. This is because a complex model can perfectly fit small data sets, like how the linear model fits two points exactly in the previous sine example. Let us look at these curves in two different approaches: VC analysis and bias-variance analysis.  
+For the simple model, the learning curves converge faster but to worse final performance. In both models, out-of-sample error decreases with $N$, while in-sample error increases. The complex model shows very low in-sample error for small $N$ because it can perfectly fit small data sets, as in the previous sine example. Let's now compare these curves using VC and bias-variance analysis.
 
 ![solution](/assets/images/bav_6.svg) 
 
-In the VC analysis, $E_{\text{out}}$ was expressed as the sum of $E_{\text{in}}$ and a generalization error that was bounded by $\Omega$. In the bias-variance analysis, $E_{\text{out}}$ was expressed as the sum of a bias and a variance. When the number of data points increases, generalization error and the variance term shrink, as expected. The bias-variance analysis figure is somewhat idealized, since it assumes that, for every $N$, the average learned hypothesis $\bar{g}$ has the same performance as the best approximation to $f$ in the learning model. 
+In VC analysis, $E_{\text{out}}$ is bounded by $E_{\text{in}}$ plus a complexity penalty $\Omega$. In bias-variance analysis, it’s split into bias and variance. As $N$ increases, both $\Omega$ and variance decrease. The bias-variance view is idealized, assuming $\bar{g}$ performs as well as the best possible hypothesis.
