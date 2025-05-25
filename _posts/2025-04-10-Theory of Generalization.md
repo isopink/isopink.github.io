@@ -232,11 +232,11 @@ This is the *VC Inequality* or *VC bound*. It is the most imporatnt mathematical
 
 ![solution](/assets/images/tog_1.svg)
 
-For a given hypothesis $h \in \mathcal{H}$, the event “$\left| E_{\text{in}}(h) - E_{\text{out}}(h) \right| \geq \epsilon$" consists of all points $\mathcal{D}$ for which the statement is true. For a particular $h$, let us paint all these ‘bad’ points using one color. What the basic Hoeffding Inequality tells us is that the colored area on the canvas will be small.
+For a given hypothesis $h \in \mathcal{H}$, the event “$\left| E_{\text{in}}(h) - E_{\text{out}}(h) \right| > \epsilon$" consists of all points $\mathcal{D}$ for which the statement is true. For a particular $h$, let us paint all these ‘bad’ points using one color. What the basic Hoeffding Inequality tells us is that the colored area on the canvas will be small.
 
 ![solution](/assets/images/tog_2.svg)
 
-Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where $|E_{\text{in}}(h) - E_{\text{out}}(h)| \geq \epsilon$. The union bound adds up all these areas without considering overlaps, leading to a loose bound when $\mathcal{H}$ is large.
+Each hypothesis $h \in \mathcal{H}$ may cause a different set of points where $|E_{\text{in}}(h) - E_{\text{out}}(h)| > \epsilon$. The union bound adds up all these areas without considering overlaps, leading to a loose bound when $\mathcal{H}$ is large.
 
 ![solution](/assets/images/tog_3.svg)
 
