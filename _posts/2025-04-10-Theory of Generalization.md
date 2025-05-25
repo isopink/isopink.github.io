@@ -224,4 +224,4 @@ $$
 \mathbb{P}\left[\, \left| E_{\text{in}}(g) - E_{\text{out}}(g) \right| > \epsilon \,\right] \leq 4 \, m_{\mathcal{H}}(2N) \, e^{-\frac{1}{8} \epsilon^2 N}
 $$
 
-This is the *VC Inequality* or *VC bound*. It is the most imporatnt mathematical result in the theory of learning. Since the formal proof is lengthy and technical. I will illustrate the main ideas in a sketch of the proof, and iclude the formal proof as an [appendix](
+This is the *VC Inequality* or *VC bound*. It is the most imporatnt mathematical result in the theory of learning. Since the formal proof is lengthy and technical. I will illustrate the main ideas in a sketch of the proof, and iclude the formal proof as an [appendix](docs/_docs/VC BOUND.pdf)
