@@ -114,6 +114,48 @@ $$
 
 The Approximation-Generalization tradeoff is captured in the Bias-Variance decomposition. To illustrate, let’s consider two extreme cases: a very small model (with one hypothesis) and a very large one with all hypotheses. 
 
-<
+![solution](/assets/images/bav_1.svg) 
 
+The figure on the left represents an extreme case where there is only a single final hypothesis $g^{(D)}$ within the entire hypothesis set $\mathcal{H}$, and that hypothesis itself becomes the average $\bar{g}$. In this case, the distance between the point $\bar{g}$ and the target function $f$ becomes the bias. Since there is only one point, the variance is zero.
+
+The figure on the right shows a case where the hypothesis set $\mathcal{H}$ is very large. It contains many hypotheses, and the target function $f$ also exists within $\mathcal{H}$. In this case, the distance between the average hypothesis $\bar{g}$ and $f$ is very small and approaches zero, so the bias can be considered zero. On the other hand, the distances between $\bar{g}$ and the other hypotheses are relatively large compared to the left figure—especially for those on the opposite side of $\bar{g}$—which means the variance will be very high.
+
+In conclusion, there is a tradeoff between Bias and Variance. As the hypothesis set $\mathcal{H} becomes larger, bias decreases and variance increases. Let us see one more examples with sinusoid.  
+
+![solution](/assets/images/bav_2.svg)
+
+Consider a target function $f(x) = \sin(\pi x)$ and a data set of size $N=2$. We sample $x$ uniformly in $[-1, 1]$ to generate a data set $ (x_1, y_1), (x_2, y_2); $ and fit the data using one of two models: 
+
+<br>
+
+$$
+\mathcal{H}_0:\quad h(x) = b  
+$$
+
+<br>
+
+$$  
+\mathcal{H}_1:\quad h(x) = ax + b  
+$$
+
+<br>
+
+Which one is better hypothesis? We have to establish the criteria first. In general, we prefer lower $E_{\text{out}}$. And we have learned Bias-Variance decomposition. We shall apply this method here. 
+
+For $\mathcal{H}_0$, we choose the constant hypothesis that best fits the data (the horizontal line at the midpoint, $b = \frac{y_1 + y_2}{2}$). For $\mathcal{H}_1$, we choose the line that passes through the two data points $(x_1, y_1)$ and $(x_2, y_2)$. Repeating this process with many data sets, we can estimate the bias and the variance. The figures which follow show the resulting fits on the same (random) data sets for both models.
+
+![solution](/assets/images/bav_3.svg)
+
+With $\mathcal{H}_1$, the learned hypothesis is wilder and varies extensively depending on the data set. The bias-var analysis is summarized in the next figures.
+
+![solution](/assets/images/bav_4.svg)
+
+$\mathcal{H}_0$ has a much smaller expected $E_{\text{out}}$ than $\mathcal{H}_1$. That is to say, we should say $\mathcal{H}_0$ is better hypothesis. However, this is not intuitively satisfying. $h_1$ seems to approximate the sine function better. Why does this result go against our intuition? 
+
+It's because model complexity should be defined based on the data, not on how complex the target function is. In the previous example, the data consisted of only two points. With just two points, the set of possible functions is very limited, so the simpler model $\mathcal{H}_0$ performed better. However, if we are given more points for the same target function, the more complex model $\mathcal{H}_1$ would perform better.
+
+
+---
+
+#### 2. Learning Curves 
 
