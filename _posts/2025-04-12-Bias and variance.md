@@ -44,29 +44,52 @@ $$
 
 If we denote a randomly given dataset as $\mathcal{D}$, then $g^{(\mathcal{D})}$ can be defined as the final hypothesis $g$ obtained from the dataset $D$. We have made explicit the dependence of the final hypothesis $g$ on the data $\mathcal{D}$. We can rid of the dependence on a particular data set by taking the expectation with respect to all data sets. Then the formula becomes: 
 
-<br>  
+<br>
+
 $$
 \mathbb{E}_{\mathcal{D}} \left[ E_{\text{out}}(g^{(\mathcal{D})}) \right] = \mathbb{E}_{\mathcal{D}} \left[ \mathbb{E}_{\mathbf{x}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right]  
 $$
+
 <br>
 
-By Fubini's theorem, We can rewritten the formula as: 
+By Fubini's theorem, We can state the formula as: 
 
-<br>  
+<br>
 
 $$
-\mathbb{E}_{\mathcal{D}} \left[ \mathbb{E}_{\mathbf{x}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right] = \mathbb{E}_{\mathbf{x}} \left[ \mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right]  
+\mathbb{E}_{\mathbf{x}} \left[ \mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right] \right]  
 $$
 
 <br>
 
 Now, let us focus on:
 
-<br>  
-$$  
-\mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right]  
-$$  
 <br>
 
-Let $\bar{g}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x}) \right]$  
+$$  
+\mathbb{E}_{\mathcal{D}} \left[ \left( g^{(\mathcal{D})}(\mathbf{x}) - f(\mathbf{x}) \right)^2 \right]  
+$$
+
+<br>
+
+Let $\bar{g}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x}) \right]$ first. We can now rewrite the expected $E_{\text{out}}$ in terms of $\bar{g}$:
+
+<br>
+
+$$
+\mathbb{E}_{\mathcal{D}}\left[E_{\text{out}}(g^{(\mathcal{D})})\right]  
+= \mathbb{E}_{\mathbf{x}} \left[ \mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x})^2 \right]  
+- 2\bar{g}(\mathbf{x})f(\mathbf{x}) + f(\mathbf{x})^2 \right],
+$$
+
+<br>
+
+$$
+= \mathbb{E}_{\mathbf{x}} \left[
+\underbrace{\mathbb{E}_{\mathcal{D}} \left[ g^{(\mathcal{D})}(\mathbf{x})^2 \right] - \bar{g}(\mathbf{x})^2}_{\mathbb{E}_{\mathcal{D}}\left[(g^{(\mathcal{D})}(\mathbf{x}) - \bar{g}(\mathbf{x}))^2\right]}
++ \underbrace{\bar{g}(\mathbf{x})^2 - 2\bar{g}(\mathbf{x})f(\mathbf{x}) + f(\mathbf{x})^2}_{(\bar{g}(\mathbf{x}) - f(\mathbf{x}))^2}
+\right]
+$$
+
+<br>
 
