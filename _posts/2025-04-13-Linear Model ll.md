@@ -1,4 +1,4 @@
 ---
 layout: single
-title: "Lecture 9 : Linear Model II"
+title: "Lecture 9 : The Linear Model II"
 ---
