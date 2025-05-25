@@ -162,3 +162,12 @@ It's because model complexity should be defined based on the data, not on how co
 
 #### 2. Learning Curves 
 
+This time, we will look at how the in-sample error and out-of-sample error behave as the size of the data set increases. After learning with a particular data set $\mathcal{D}$ of size $N$, the final hypothesis $g^{(\mathcal{D})}$ has in-sample error $E_{\text{in}}(g^{(\mathcal{D})})$ and out-of-sample error $E_{\text{out}}(g^{(\mathcal{D})})$, both of which depend on $\mathcal{D}$. As we saw in the bias-variance analysis, the expectation with respect to all data sets of size $N$ gives the expected errors: $\mathbb{E}{\mathcal{D}}[E{\text{in}}(g^{(\mathcal{D})})]$ and $\mathbb{E}{\mathcal{D}}[E{\text{out}}(g^{(\mathcal{D})})]$. These expected errors are functions of $N$, and are called the learning curves of the model. We illustrate the learning curves for a simple learning model and a complex one. 
+
+![solution](/assets/images/bav_5.svg)
+
+For the simple model, the learning curves converge more quickly, but to worse ultimate performance than for the complex model. In both models, out-of-sample learning curve is decreasing in $N$, while the in-sample learning curve is increasing in $N$. However, you might wonder in-sample-error learning curve of complex model in small $N$. This is because a complex model can perfectly fit small data sets, like how the linear model fit two points exactly in the previous sine example. Let us look at these curves in two different approaches, VC analysis and Bias-Variance analysis.  
+
+![solution](/assets/images/bav_6.svg) 
+
+In the VC analysis, $E_{\text{out}}$ was expressed as the sum of $E_{\text{in}}$ and a generalization error that was bounded by $\Omega$. In the Bias-Variance analysis, $E_{\text{out}}$ was expressed as the sum of a bias and a variance. When the number of data points increases, generalization error and the variance term shrink, as expected. The Bias-Variance analysis figure is somewhat idealized, since it assumes that, for every $N$, the average learned hypothesis $\bar{g}$ has the same performances as the best approximation to $f$ in the learning model. 
