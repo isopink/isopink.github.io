@@ -120,7 +120,7 @@ $$
 
 <br>
 
-To continue the proof, we will introduce Sauer's lemma: 
+To continue the proof, let me introduce Sauer's lemma: 
 
 <br>
 
