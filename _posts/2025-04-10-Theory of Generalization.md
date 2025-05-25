@@ -29,8 +29,7 @@ If we show $B(N,K) \leq \text{Polynominal}$, the game is over. Let us begin. I l
 <br>
 
 $$
-\begin{array}{|c|c|c c c c|c|}
-\hline
+\begin{array}{c|c|c c c c|c}
 & \# \text{ of rows} & \mathbf{x}_1 & \mathbf{x}_2 & \cdots & \mathbf{x}_{N-1} & \mathbf{x}_N \\
 \hline
 &                 & +1 & +1 & \cdots & +1 & +1 \\
@@ -50,9 +49,9 @@ S_2^+ & \beta     & \vdots & \vdots & \ddots & \vdots & \vdots \\
 S_2^- & \beta     & \vdots & \vdots & \ddots & \vdots & \vdots \\
 &                 & +1 & -1 & \cdots & -1 & -1 \\
 &                 & -1 & -1 & \cdots & -1 & -1 \\
-\hline
 \end{array}
 $$
+
 
 <br>
 
