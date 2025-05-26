@@ -171,6 +171,8 @@ The VC dimension measures effective parameters or degrees of freedom that enable
 
 In the Positive Ray example, whether the data is labeled $+1$ or $-1$ is determined by the position of parameter $a$. In other words, this example has 1 parameter, VC dimension of 1, and 1 degree of freedom.
 
+![solution](/assets/images/vc_1.5.svg) 
+
 Similarly, in the Positive Interval example, two points are needed to define the interval. Thus, there are 2 parameters, and both the VC dimension and degrees of freedom are also $2$.
 
 ![solution](/assets/images/vc_2.svg) 
