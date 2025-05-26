@@ -146,7 +146,7 @@ $$
 
 Which one is the better hypothesis? We have to establish the criteria first. In general, we prefer lower $E_{\text{out}}$. And we have learned bias-variance decomposition. We shall apply this method here. 
 
-For $\mathcal{H}_0$, we choose the constant hypothesis that best fits the data (the horizontal line at the midpoint, $b = \frac{y_1 + y_2}{2}$). For $\mathcal{H}_1$, we choose the line that passes through the two data points $(x_1, y_1)$ and $(x_2, y_2)$. Repeating this process with many data sets, we can estimate the bias and the variance. The figures which follow show the resulting fits on the same (random) data sets for both models.
+For $\mathcal{H}_0$, we choose the constant hypothesis that best fits the data (the horizontal line at the midpoint, $b = \frac{y_1 + y_2}{2}$). For $\mathcal{H}_1$, we choose the line that passes through the two data points $(x_1, y_1)$ and $(x_2, y_2)$. Repeating this process with many data sets, we can estimate the bias and the variance. Following figure shows the resulting fits on the same (random) data sets for both models.
 
 ![solution](/assets/images/bav_3.svg)
 
