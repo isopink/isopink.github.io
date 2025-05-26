@@ -114,7 +114,7 @@ Let's look at a few simple examples to understand how to compute the *Growth Fun
 
 ![solution](/assets/images/enh_5.svg) 
 
-what is $m_{\mathcal{H}}(3)$ figure on the left shows a dichotomy on $3$ points that the perceptron cannot generate, while figure on the right shows another $3$ points that the perceptron can shatter, generating all $2^3 = 8$ dichotomies. Because the definition of $m_{\mathcal{H}}(N)$ is based on the maximum number of dichotomies, $m_{\mathcal{H}}(3) = 8$ in spite of the case in Figure on the left. 
+What is $m_{\mathcal{H}}(3)$? figure on the left shows a dichotomy on $3$ points that the perceptron cannot generate, while figure on the right shows another $3$ points that the perceptron can shatter, generating all $2^3 = 8$ dichotomies. Because the definition of $m_{\mathcal{H}}(N)$ is based on the maximum number of dichotomies, $m_{\mathcal{H}}(3) = 8$ in spite of the case in Figure on the left. 
 
 ![solution](/assets/images/enh_6.svg) 
 
