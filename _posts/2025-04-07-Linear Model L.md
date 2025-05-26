@@ -243,10 +243,6 @@ $$
 
 <br>
 
-And here is summary of **What transforms to waht?** :
-
-![solution](/assets/images/lin_8.svg)
-
 The goal is to find the weights — so this is the key. However, since we don’t compute the weights directly in the $X$ space, there is no weight vector in the $X$ space. The weights are computed in the $Z$ space, so only $\tilde{w}$ exists. That said, we are given $x$ as input, and we must perform classification or regression using $g(x)$. Therefore, the hypothesis $g(x)$ is defined as:
 
 <br>
