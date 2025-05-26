@@ -191,7 +191,7 @@ So far, we’ve talked about linear models. But linear in what? This is the impo
 
 ![solution](/assets/images/lin_7.svg) 
 
-Clearly, a linear classifier won’t work on this dataset. However, if we transform $x_1$, $x_2$ into $x_1^2$, $x_2^2$, we may be able to separate the data. A circle corresponds to the equation: 
+Clearly, a linear classifier won’t work on the left dataset. However, if we transform $x_1$, $x_2$ into $x_1^2$, $x_2^2$, we may be able to separate the data. A circle corresponds to the equation: 
 
 <br>
 
