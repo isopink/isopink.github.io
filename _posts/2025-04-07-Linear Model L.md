@@ -179,7 +179,7 @@ $\left( \mathbf{X}^\top \mathbf{X} \right)^{-1} \mathbf{X}^\top$ is called the *
 **Remark**: If $X^T X$ is not invertible, we can still define a *pseudo-inverse*, but the solution won’t be unique. Fortunately, in practice, $X$ typically has independent columns. To handle non-invertibility, we would need to discuss *SVD* — but that’s too much for now. You can check one of my other posts for that.
 
 
-Here’s an extra insight: Linear regression gives real-valued outputs. But classification outputs $+1$ or $-1$ — those are real numbers too, so maybe there’s a connection. Of course, regression and classification have different objectives, so we can’t directly reuse the model. However, we can use the regression-trained weights to speed up convergence during classification. Instead of initializing $w$ randomly (or with a zero vector), starting with the regression result can save a lot of time. 
+Here’s an extra insight: Linear regression gives real-valued outputs. But classification outputs $+1$ or $-1$ — those are real numbers too, so maybe there’s a connection. Of course, regression and classification have different objectives, so we can’t directly reuse the model. However, we can use the regression-trained weights to speed up convergence during classification. Instead of initializing $w$ randomly (or with a zero vector), starting with the regression result can save a lot of time. The following shows the weight vector obtained using linear regression in the previous digit classification problem.
 
 ![solution](/assets/images/lin_6.svg)
 
