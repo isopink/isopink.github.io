@@ -120,7 +120,7 @@ The approximation-generalization tradeoff is captured in the bias-variance decom
 
 The figure represents an extreme case where there is only a single final hypothesis $g^{(D)}$ within the entire hypothesis set $\mathcal{H}$, and that hypothesis itself becomes the average $\bar{g}$. In this case, the distance between the point $\bar{g}$ and the target function $f$ becomes the bias. Since there is only one point, the variance is zero.
 
-![solution](/assets/images/bav_1.5svg) 
+![solution](/assets/images/bav_1.5.svg) 
 
 The figure shows a large hypothesis set $\mathcal{H}$ that includes the target function $f$. The average hypothesis $\bar{g}$ is close to $f$, so the bias is nearly zero. However, the hypotheses are widely spread around $\bar{g}$, leading to high variance.
 
