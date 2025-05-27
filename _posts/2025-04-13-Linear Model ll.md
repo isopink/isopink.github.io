@@ -19,4 +19,6 @@ In this time, We will discuss the rest of [Linear Model](https://isopink.github.
 
 We studied nonlinear transformations in Lecture 3, but we didn’t cover everything. Therefore, we would like to add a few more points about nonlinear transformations. 
 
-<
+![solution](/assets/images/lm_1.svg) 
+
+
