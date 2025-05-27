@@ -55,7 +55,7 @@ $$
 
 You can easily regonize that applying Hoeffding’s Inequality to all hypotheses using the union bound might seem unreasonable. What can we replace $M$ with? It is the **Growth function**. Before introducing the growth function, we need to understand **Dichotomy**.  
 
-![solution](/assets/images/enh_4.svg)
+![solution](/assets/images/enh_4.svg) 
 
 **Let me introduce the key idea of dichotomy first**. As you already know, we cannot measure the out-of-sample error precisely and directly. Instead, we can only measure the in-sample error. For that reason, we will focus only on the behavior of the in-sample error. 
 
