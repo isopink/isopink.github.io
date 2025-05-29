@@ -161,6 +161,9 @@ $$
 
 <br> 
 
+The implied pointwise error measure is $e(h(\mathbf{x}_n), y_n) = \ln(1 + e^{-y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n})$.
+
+
 ---
 
 #### 4. Gradient Descent 
