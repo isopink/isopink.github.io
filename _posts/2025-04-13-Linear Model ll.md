@@ -21,7 +21,7 @@ We studied nonlinear transformations in [Lecture 3](https://isopink.github.io/Li
 
 ![solution](/assets/images/lm_1.svg) 
 
-When we encounter 'non' seperable data set, transforming input vectors $x$'s to $z$ in $z$-space, called feature transform is a classical way to deal with it. However, there is a price we have to pay. Transforming data to make it linearly separable usually increases the dimensionality, which raises the VC dimension and makes generalization harder. Sometimes, feature transform may not be a good idea. Let me introduce two examples.
+When data isn’t linearly separable, we often apply a feature transform to map $x$ to $z$-space. But this increases dimensionality, raising the VC dimension and making generalization harder. So, it’s not always a good idea. Let’s look at two examples.
 
 ![solution](/assets/images/lm_2.svg) 
 
@@ -49,12 +49,24 @@ $$ \Phi_2(\mathbf{x}) = (1, x_1, x_2, x_1^2, x_1 x_2, x_2^2) $$
 
 <br>
 
-After seeing that the learned result resembled a circle, why don't we intentionally reduce the dimensionality of the transformed data? The term $x_1$, $x_2$ and $x_1 x_2$ seems useless! We could decrease the VC dimension! Unfortunately, We must not. This is called 'Data Snooping'. Data snooping is using test data or future information during model training or evaluation, which can cause overestimated performance and poor generalization.
+After seeing the result looks like a circle, it’s tempting to remove terms like $x_1$, $x_2$, and $x_1 x_2$ to reduce the VC dimension. But we must not — that’s data snooping. It uses future information and leads to overfitting and poor generalization.
 
 Feature transform is powerful tool. However, with inspection of case $1$ and $2$, It is not always useful tool. The generalization woudl impossible. We have to choose $\Phi$ carefully. 
 
 ---
 
 #### 2. Logistic Regression
+
+The core of the linear model is the 'signal' $ s = \mathbf{w}^\mathrm{T} \mathbf{x} $. We have seen two models based on this signal, and we are now going to introduce a third. In Logistic Regression, the signal is converted into a probability through the formula $theta$:
+
+<br> 
+
+$$ 
+\theta(s) = \frac{e^s}{1 + e^s} 
+$$ 
+
+<br> 
+
+It is a type of sigmoid function. As $s$ increase, $theta(s)$ approaches $1$, and as $s$ decreases, $theta(s) approaches $0$. Let us consider a concrete example. To predict heart attacks, a linear classifier gives only yes or no. But since risk isn't deterministic, logistic regression is better. It outputs the probability $\theta(s)$, where $s$ is a linear risk score — higher $s$ means higher risk.
 
 
