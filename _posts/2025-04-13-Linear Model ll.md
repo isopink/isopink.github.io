@@ -168,4 +168,7 @@ The implied pointwise error measure is $e(h(\mathbf{x}_n), y_n) = \ln(1 + e^{-y_
 
 #### 4. Gradient Descent 
 
+Unlike the $E_{\text{in}}(\mathbf{w})$ of linear regression, $E_{\text{in}}(\mathbf{w})$ of Logistic regression is not a closed - form. We cannot calculate the proper weight vector analytically. Instead, we have iterative solution. We now introduce the new algorithm, Gradient Descent. 
+
+![solution](/assets/images/lm_5.svg)
 
