@@ -21,7 +21,7 @@ We studied nonlinear transformations in [Lecture 3](https://isopink.github.io/Li
 
 ![solution](/assets/images/lm_1.svg) 
 
-When data isn’t linearly separable, we often apply a feature transform to map $x$ to $z$-space. But this increases dimensionality, raising the VC dimension and making generalization harder. So, it’s not always a good idea. Let’s look at two examples.
+When data isn’t linearly separable, we often apply a feature transform to map $x$ to $\mathcal{Z}$-space. But this increases dimensionality, raising the VC dimension and making generalization harder. So, it’s not always a good idea. Let’s look at two examples.
 
 ![solution](/assets/images/lm_2.svg) 
 
@@ -57,7 +57,7 @@ Feature transform is powerful tool. However, with inspection of case $1$ and $2$
 
 #### 2. Logistic Regression
 
-The core of the linear model is the 'signal' $ s = \mathbf{w}^\mathrm{T} \mathbf{x} $. We have seen two models based on this signal, and we are now going to introduce a third. In Logistic Regression, the signal is converted into a probability through the formula $theta$:
+The core of the linear model is the 'signal' $ s = \mathbf{w}^\mathrm{T} \mathbf{x} $. We have seen two models based on this signal, and we are now going to introduce a third. In Logistic Regression, the signal is converted into a probability through the formula $\theta(s)$:
 
 <br> 
 
@@ -66,6 +66,7 @@ $$
 $$ 
 
 <br> 
+
 
 It is a type of sigmoid function. As $s$ increase, $theta(s)$ approaches $1$, and as $s$ decreases, $theta(s) approaches $0$. Let us consider a concrete example. To predict heart attacks, a linear classifier gives only yes or no. But since risk isn't deterministic, logistic regression is better. It outputs the probability $\theta(s)$, where $s$ is a linear risk score — higher $s$ means higher risk.
 
