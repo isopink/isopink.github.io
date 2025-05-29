@@ -68,7 +68,7 @@ $$
 <br> 
 
 
-It is a type of sigmoid function. As $s$ increase, $theta(s)$ approaches $1$, and as $s$ decreases, $theta(s) approaches $0$. Let us consider a concrete example. To predict heart attacks, a linear classifier gives only yes or no. But since risk isn't deterministic, logistic regression is better. It outputs the probability $\theta(s)$, where $s$ is a linear risk score — higher $s$ means higher risk.
+It is a type of sigmoid function. As $s$ increase, $theta(s)$ approaches $1$, and as $s$ decreases, $\theta(s)$ approaches $0$. Let us consider a concrete example. To predict heart attacks, a linear classifier gives only yes or no. But since risk isn't deterministic, logistic regression is better. It outputs the probability $\theta(s)$, where $s$ is a linear risk score — higher $s$ means higher risk.
 
 Let us first look at the target we want to learn. It is a probability, say of a patient being at risk for heart attack, that depends on the input $\mathbf{x} (the characteristics of the patient). Formally, we are trying to learn the target funtion: 
 
@@ -102,6 +102,8 @@ Our goal is to find $g(\mathbf{x}) = \theta(\mathbf{w}^\mathrm{T} \mathbf{x}) \a
 
 The standard error measure $e(h(\mathbf{x}), y)$ used in logistic regression is based on the notion of likelihood; how 'likely' is it that we would get this output $y$ from the input $\mathbf{x}$ if the target distribution $P(y \mid \mathbf{x})$ was captured by our hypothesis $h(\mathbf{x})$: 
 
+<br>
+
 $$
 P(y \mid \mathbf{x}) =
 \begin{cases}
@@ -110,25 +112,39 @@ h(\mathbf{x}) & \text{for } y = +1; \\
 \end{cases}
 $$
 
+<br>
+
 We substitute for $h(\mathbf{x})$ by its value $\theta(\mathbf{w}^\mathrm{T} \mathbf{x})$. And use the fact that $\theta(-s) = 1 - \theta(s)$ to get: 
+
+<br>
 
 $$
 P(y \mid \mathbf{x}) = \theta(y\, \mathbf{w}^\mathrm{T} \mathbf{x})
 $$
 
+<br>
+
 Since the data points are independently generated, the probability of getting all the $y_n$'s in the data set from the corresponding $x_n$'s would be the product: 
+
+<br>
 
 $$
 \prod_{n=1}^{N} P(y_n \mid \mathbf{x}_n) = \prod_{n=1}^{N} \theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n)
 $$
 
+<br>
+
 We want to maximize this probability. Instead, We can minimize: 
 
+<br>
+
 $$
-- \frac{1}{N} \ln \left( \prod_{n=1}^{N} \theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n) \right)\\
+- \frac{1}{N} \ln \left( \prod_{n=1}^{N} \theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n) \right)\\ 
 
 = \frac{1}{N} \sum_{n=1}^{N} \ln \left( \frac{1}{\theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n)} \right)
 $$
+
+<br>
 
 
 
