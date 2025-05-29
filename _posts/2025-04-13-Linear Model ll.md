@@ -11,7 +11,7 @@ In this time, We will discuss the rest of [Linear Model](https://isopink.github.
 
 3. Error measure of Logistic Regression
 
-4. Learning algorithm of Logistic Regression
+4. Gradient Descent
 
 ---
 
@@ -139,12 +139,30 @@ We want to maximize this probability. Instead, We can minimize:
 <br>
 
 $$
-- \frac{1}{N} \ln \left( \prod_{n=1}^{N} \theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n) \right)\\ 
+- \frac{1}{N} \ln \left( \prod_{n=1}^{N} \theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n) \right)
+$$
 
+<br>
+
+$$
 = \frac{1}{N} \sum_{n=1}^{N} \ln \left( \frac{1}{\theta(y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n)} \right)
 $$
 
 <br>
 
+The fact that we are minimizing this qunatity allows us to treat it as an 'error measure'. Substituting $\theta$, We get the final form: 
+
+<br>
+
+$$
+E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} 
+\underbrace{\ln \left( 1 + e^{-y_n\, \mathbf{w}^\mathrm{T} \mathbf{x}_n} \right)}_{e(h(\mathbf{x}_n), y_n)}
+$$
+
+<br> 
+
+---
+
+#### 4. Gradient Descent 
 
 
