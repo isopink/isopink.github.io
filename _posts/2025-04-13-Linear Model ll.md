@@ -49,4 +49,12 @@ $$ \Phi_2(\mathbf{x}) = (1, x_1, x_2, x_1^2, x_1 x_2, x_2^2) $$
 
 <br>
 
-After seeing that the learned result resembled a circle, why don't we intentionally reduce the dimensionality of the transformed data? The term $x_1$, $x_2$ and $x_1 x_2$ seems useless! 
+After seeing that the learned result resembled a circle, why don't we intentionally reduce the dimensionality of the transformed data? The term $x_1$, $x_2$ and $x_1 x_2$ seems useless! We could decrease the VC dimension! Unfortunately, We must not. This is called 'Data Snooping'. Data snooping is using test data or future information during model training or evaluation, which can cause overestimated performance and poor generalization.
+
+Feature transform is powerful tool. However, with inspection of case $1$ and $2$, It is not always useful tool. The generalization woudl impossible. We have to choose $\Phi$ carefully. 
+
+---
+
+#### 2. Logistic Regression
+
+
