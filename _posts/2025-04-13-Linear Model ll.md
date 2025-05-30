@@ -223,18 +223,17 @@ $$
 This allows large steps when far from the minimum and smaller, stable steps near it. It also cancels out the normalization in the update direction, simplifying the gradient descent update, and leads to the *fixed learning rate gradient descent algorithm*. 
 
 <div style="border:1px solid #ccc; padding:10px; border-radius:6px">
-
-**Fixed learning rate gradient descent:**
-
-1. Initialize the weights at time step \( t = 0 \) to \( \mathbf{w}(0) \).  
-2. For \( t = 0, 1, 2, \dots \) do  
-3.  Compute the gradient \( \mathbf{g}_t = \nabla E_{\text{in}}(\mathbf{w}(t)) \).  
-4.  Set the direction to move, \( \mathbf{v}_t = -\mathbf{g}_t \).  
-5.  Update the weights: \( \mathbf{w}(t+1) = \mathbf{w}(t) + \eta \mathbf{v}_t \).  
-6.  Iterate to the next step until it is time to stop.  
+ 
+1. Initialize the weights at time step \( t = 0 \) to \( \mathbf{w}(0) \). <br>
+2. For \( t = 0, 1, 2, \dots \) do <br>
+3.  Compute the gradient \( \mathbf{g}_t = \nabla E_{\text{in}}(\mathbf{w}(t)) \). <br>
+4.  Set the direction to move, \( \mathbf{v}_t = -\mathbf{g}_t \). <br>
+5.  Update the weights: \( \mathbf{w}(t+1) = \mathbf{w}(t) + \eta \mathbf{v}_t \). <br>
+6.  Iterate to the next step until it is time to stop. <br>
 7. Return the final weights.
 
 </div>
+
 
 
 
