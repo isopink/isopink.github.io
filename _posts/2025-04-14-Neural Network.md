@@ -92,31 +92,7 @@ The $\tanh$ function is nearly linear near $0$ and saturates at ±1 for large in
 
 ![solution](/assets/images/nn_8.svg)
 
-Layers are labeled by $\ell = 0, 1, \dots, L$.  
-
-<br>
-<div align="center">
-
-$\ell = 0$: input layer (not always counted)  
-<br>  
-$\ell = L$: output layer  
-<br>  
-$0 < \ell < L$: hidden layers
-
-</div>
-<br>
-
-Each layer $\ell$ has $d^{(\ell)} + 1$ nodes:  
-
-<br>
-<div align="center">
-
-$d^{(\ell)}$ regular nodes  
-<br>  
-$1$ bias node (index $0$), always outputs $1$
-
-</div>
-<br>
+Layers are labeled by $\ell = 0, 1, \dots, L$. Each layer $\ell$ contains $d^{(\ell)}$ regular nodes and one bias node (index $0$), which always outputs $1$.
 
 We use superscript $^{(\ell)}$ to indicate layer index. The bias node is similar to the convention $x_0 = 1$ in linear models.A neural network is defined by its layer sizes $\mathbf{d} = [d^{(0)}, d^{(1)}, \dots, d^{(L)}]$, where $d^{(\ell)}$ is the number of (non-bias) nodes in layer $\ell$. A specific model $h$ is chosen by setting the weights between layers. 
 
@@ -126,20 +102,10 @@ Each node receives an input $s$ and produces an output $x$. Connections between 
 
 ![solution](/assets/images/nn_10.svg)
 
-To work with the network layer by layer, we use vector and matrix notation.  
+To work with the network layer by layer, we use vector and matrix notation. The input signals to nodes $1, \dots, d^{(\ell)}$ in layer $\ell$ are collected in the vector $\mathbf{s}^{(\ell)}$. The outputs from nodes $0, \dots, d^{(\ell)}$, including the bias node, are collected in $\mathbf{x}^{(\ell)}$.
 
+Each layer $\ell$ has a weight matrix $\mathbf{W}^{(\ell)}$ of size $(d^{(\ell-1)} + 1) \times d^{(\ell)}$. The entry $w_{ij}^{(\ell)}$ represents the weight from node $i$ in layer $\ell - 1$ to node $j$ in layer $\ell$. Here is a summary.
 <br>
-<div align="center">
-
-The input signals to nodes $1, \dots, d^{(\ell)}$ in layer $\ell$ are collected in $\mathbf{s}^{(\ell)}$.  
-<br>  
-The outputs from nodes $0, \dots, d^{(\ell)}$ (including bias) are collected in $\mathbf{x}^{(\ell)}$,  
-so $\mathbf{x}^{(\ell)} \in \{1\} \times \mathbb{R}^{d^{(\ell)}}$.
-
-</div>
-<br>
-
-Each layer $\ell$ has a weight matrix $\mathbf{W}^{(\ell)}$ of size $(d^{(\ell-1)} + 1) \times d^{(\ell)}$. The entry $w_{ij}^{(\ell)}$ represents the weight from node $i$ in layer $\ell - 1$ to node $j$ in layer $\ell$. Here is a summary 
 
 | Item         | Symbol              | Description                                  |
 |--------------|---------------------|----------------------------------------------|
@@ -147,3 +113,5 @@ Each layer $\ell$ has a weight matrix $\mathbf{W}^{(\ell)}$ of size $(d^{(\ell-1
 | outputs      | $\mathbf{x}^{(\ell)}$     | $(d^{(\ell)} + 1)$-dimensional output vector (includes bias) |
 | weights in   | $\mathbf{W}^{(\ell)}$     | $(d^{(\ell-1)} + 1) \times d^{(\ell)}$ dimensional matrix |
 | weights out  | $\mathbf{W}^{(\ell+1)}$   | $(d^{(\ell)} + 1) \times d^{(\ell+1)}$ dimensional matrix |
+
+<br>
