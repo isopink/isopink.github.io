@@ -178,9 +178,7 @@ Gradient descent is a method to minimize functions like $E_{in}(w)$, which can b
 
 Here is a particular advantage for logistic regression. With cross-entropy error in logistic regression, $E_{in}(w)$ is a convex function. This guarantees a single global minimum, so gradient descent always finds it, regardless of the starting point. There are no local minima to get stuck in. Let's now determine how to roll down the $E_{\text{in}}$ surface. 
 
-Suppose we take a small step of size $\eta$ in the direction of a unit vector $\hat{v}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $\eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
-
-<br>
+Suppose we take a small step of size $\eta$ in the direction of a unit vector $\hat{mathbf{v}}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $\eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
 
 <br>
 
@@ -195,7 +193,7 @@ $$
 
 <br>
 
-since $vec{v}$ is a unit vector, equality holds if and only if: 
+since $hat{\mathbf{v}}$ is a unit vector, equality holds if and only if: 
 
 <br>
 
@@ -238,7 +236,8 @@ This allows large steps when far from the minimum and smaller, stable steps near
 
 <br>
 
-In the algorithm, \( \mathbf{v}_t \) is a direction that is no longer restricted to unit length. The parameter \( \eta \) (the *learning rate*) has to be specified. A typically good choice for \( \eta \) is around \( 0.1 \) (a purely practical observation). Gradient descent is a general algorithm for minimizing twice-differntiable functions. We can apply it to the logistic regresiion in-sampler error to return weights that approximately minimize: 
+In the algorithm, $ \mathbf{v}_t $ is a direction that is no longer restricted to unit length. The parameter $ \eta $ (the *learning rate*) has to be specified.  
+A typically good choice for $ \eta $ is around $ 0.1 $ (a purely practical observation). Gradient descent is a general algorithm for minimizing twice-differentiable functions. We can apply it to the logistic regression in-sample error to return weights that approximately minimize:
 
 <br>
 
