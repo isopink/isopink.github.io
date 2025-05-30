@@ -14,6 +14,10 @@ This time, we will take our first look at neural networks. The discussion will p
 
 A neural network is made up of many perceptrons, just like a biological neural network is composed of many neurons. We begin with the basic properties of neural networks, and how to train them on data. 
 
+<br>
+
+##### 1.1. Multilayer perceptron
+
 ![solution](/assets/images/nn_1.svg) 
 
 The perceptron is simple and useful, but it cannot solve problems that need more than one line to separate classes. For example, if the $+$ and $–$ are split diagonally, a single line is not enough. So, we came up with a new idea: use two lines, like $h_1$ and $h_2$, and combine them to solve the problem.
@@ -87,6 +91,10 @@ When using $\theta(s) = \text{sign}(s)$, learning the weights is difficult becau
 ![solution](/assets/images/nn_7.svg)
 
 The $\tanh$ function is nearly linear near $0$ and saturates at ±1 for large inputs. This makes it a good substitute and is related to the sigmoid function used in logistic regression. Networks using such smooth activation functions are called *sigmoidal neural networks*. In neural networks, the number of weights increases compared to a perceptron, so we need a more precise notation. 
+
+<br>
+
+##### 1.2. Notation 
 
 ![solution](/assets/images/nn_8.svg)
 
