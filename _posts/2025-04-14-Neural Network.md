@@ -61,4 +61,19 @@ A node sends its output through an arrow, which multiplies it by a weight. The n
 
 ![solution](/assets/images/nn_3.svg) 
 
-Since the two inputs 
+Since the two inputs $\overline{h_1}h_2$ and $h_1\overline{h_2}$ are ANDs, We can illustrate is as below. 
+
+![solution](/assets/images/nn_4.svg) 
+
+Finally, since $h_1 = \text{sign}(\mathbf{w}_1^\top \mathbf{x})$ and $h_2 = \text{sign}(\mathbf{w}_2^\top \mathbf{x})$, we can expand our previous illustration as: 
+
+![solution](/assets/images/nn_5.svg) 
+
+This problem can be solved in three steps, each called a *layer* in neural networks. Since the data flows forward only, it forms a *feedforward* structure.  
+Since More layers of nodes are used between the input and output to implement $f$, as compared to the single perceptron, we call it a multilayer - layer perceptron (MLP).
+
+![solution](/assets/images/nn_6.svg)
+
+Neural networks can solve problems that a single perceptron cannot. For example, a circle can’t be represented by one line, but we can approximate it using multiple perceptrons to form polygon shapes. The more perceptrons we use, the closer we get to the target shape. However, adding more perceptrons increases the number of weights and the model’s complexity, which makes generalization harder and optimization more difficult.
+
+
