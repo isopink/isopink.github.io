@@ -172,3 +172,38 @@ Unlike the $E_{\text{in}}(\mathbf{w})$ of linear regression, $E_{\text{in}}(\mat
 
 ![solution](/assets/images/lm_5.svg)
 
+Gradient descent is a method to minimize functions like $E_{in}(w)$, which can be viewed as an error surface. Like a ball rolling downhill, the algorithm follows the slope to reduce the error. However, it may end up in a local minimum depending on the starting point.
+
+![solution](/assets/images/lm_6.svg) 
+
+Here is a particular advantage for logistic regression. With cross-entropy error in logistic regression, $E_{in}(w)$ is a convex function. This guarantees a single global minimum, so gradient descent always finds it, regardless of the starting point. There are no local minima to get stuck in. Let's now determine how to roll down the $E_{\text{in}}$ surface. 
+
+Suppose we take a small step of size $\eta$ in the direction of a unit vector $\vec{v}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $/eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
+
+<br>
+
+<br>
+
+$$
+\begin{aligned}
+\Delta E_{\text{in}} 
+&= E_{\text{in}}(\mathbf{w}(0) + \eta \hat{\mathbf{v}}) - E_{\text{in}}(\mathbf{w}(0)) \\
+&= \eta \nabla E_{\text{in}}(\mathbf{w}(0))^\top \hat{\mathbf{v}} + O(\eta^2) \\
+&\ge -\eta \|\nabla E_{\text{in}}(\mathbf{w}(0))\|, 
+\end{aligned}
+$$
+
+<br>
+
+since $vec{v}$ is a unit vector, equality holds if and only if: 
+
+<br>
+
+$$
+\hat{\mathbf{v}} = - \frac{\nabla E_{\text{in}}(\mathbf{w}(0))}{\|\nabla E_{\text{in}}(\mathbf{w}(0))\|}.
+$$
+
+<br>
+
+This direction, specified by $vec{v}$, leads to the largest decrease in $E_{\text{in}}$.
+
