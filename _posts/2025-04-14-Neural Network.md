@@ -69,11 +69,37 @@ Finally, since $h_1 = \text{sign}(\mathbf{w}_1^\top \mathbf{x})$ and $h_2 = \tex
 
 ![solution](/assets/images/nn_5.svg) 
 
-This problem can be solved in three steps, each called a *layer* in neural networks. Since the data flows forward only, it forms a *feedforward* structure.  
-Since More layers of nodes are used between the input and output to implement $f$, as compared to the single perceptron, we call it a multilayer - layer perceptron (MLP).
+This problem can be solved in three steps, each called a *layer* in neural networks. Since the data flows forward only, it forms a *feed-forward* structure. Also, more layers of nodes are used between the input and output to implement $f$, as compared to the single perceptron, we call it a multilayer - layer perceptron (MLP).
 
 ![solution](/assets/images/nn_6.svg)
 
 Neural networks can solve problems that a single perceptron cannot. For example, a circle can’t be represented by one line, but we can approximate it using multiple perceptrons to form polygon shapes. The more perceptrons we use, the closer we get to the target shape. However, adding more perceptrons increases the number of weights and the model’s complexity, which makes generalization harder and optimization more difficult.
 
+![solution](/assets/images/nn_6.svg)
+
+Once you fix the size of the MLP, you learn the weights on every link by fitting the data. Let’s consider the single perceptron:
+
+$$
+h(\mathbf{x}) = \theta(\mathbf{w}^\top \mathbf{x}).
+$$
+
+When using $\theta(s) = \text{sign}(s)$, learning the weights is difficult because the sign function is not smooth. This makes optimization hard, especially in MLPs. To address this, we use a smooth approximation like $\tanh(x)$ instead of $\text{sign}(x)$.
+
+![solution](/assets/images/nn_7.svg)
+
+The $\tanh$ function is nearly linear near $0$ and saturates at ±1 for large inputs. This makes it a good substitute and is related to the sigmoid function used in logistic regression. Networks using such smooth activation functions are called *sigmoidal neural networks*. 
+
+
+
+| 항목             | 기호                         | 설명 |
+|------------------|-------------------------------|------|
+| Layer index       | $\ell = 0, 1, \dots, L$        | $\ell = 0$: 입력층, $\ell = L$: 출력층, 중간은 은닉층 |
+| 노드 개수         | $d^{(\ell)}$                   | layer $\ell$의 노드 수 (bias 제외) |
+| 입력 신호 벡터    | $\mathbf{s}^{(\ell)}$          | layer $\ell$에 들어오는 신호 ($d^{(\ell)}$ 차원) |
+| 출력 벡터         | $\mathbf{x}^{(\ell)}$          | layer $\ell$의 출력 벡터 <br>($d^{(\ell)} + 1$차원; bias 포함) |
+| weight (스칼라)   | $w_{ij}^{(\ell)}$              | layer $\ell - 1$의 노드 $i$ → layer $\ell$의 노드 $j$ 로 가는 weight |
+| weight (행렬)     | $\mathbf{W}^{(\ell)}$          | layer $\ell - 1$ → layer $\ell$ 의 가중치 행렬 <br>크기: $(d^{(\ell-1)} + 1) \times d^{(\ell)}$ |
+| 전체 가중치 집합  | $\mathbf{w}$                   | $\{\mathbf{W}^{(1)}, \mathbf{W}^{(2)}, \dots, \mathbf{W}^{(L)}\}$ |
+| 활성화 함수       | $\theta(s)$                    | 예: $\tanh(s)$, $\text{sign}(s)$ 등 |
+| 출력 함수         | $h(\mathbf{x}; \mathbf{w})$    | 전체 네트워크의 출력 함수 |
 
