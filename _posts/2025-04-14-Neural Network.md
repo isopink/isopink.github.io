@@ -20,6 +20,7 @@ Neural network is made up of many perceptrons, just like a biological neural net
 The perceptron is simple and useful, but it cannot solve problems that need more than one line to separate classes. For example, if the $+$ and $–$ are split diagonally, single line is not enough. So, we came up with a new idea: use two lines, like $h_1$ and $h_2$, and combine them to solve the problem.
 
 The target $f$ equals $+1$ when exactly one of $h_1, h_2$ equals $+1$. This is the Boolean XOR function:
+
 <br>
 
 $$f = \text{XOR}(h_1, h_2)$$, 
