@@ -34,7 +34,7 @@ $$
 \mathbf{w(t+1)} = \mathbf{w(t)} - \eta \nabla e_n(\mathbf{w})
 $$
 
-Since the data is picked uniformly at random from $\{1, \ldots, N\}^{\!\!\top}$, the expected weight change is: 
+Since the data is picked uniformly at random from $\{1, \ldots, N\}$, the expected weight change is: 
 
 <br>
 
@@ -44,6 +44,9 @@ $$
 
 <br>
 
-SGD behaves like batch gradient descent on average, though it's noisier due to randomness. Over time, these fluctuations cancel out. There are some benefits of SGD. 
+SGD behaves like batch gradient descent on average, though it's noisier due to randomness. Over time, these fluctuations cancel out. There are some advantages of SGD. One major advantage of SGD is its faster computation. Unlike batch gradient descent, which uses all data points to compute the gradient, SGD uses only one data point per update, making each step much quicker.  
 
-First, 
+![solution](/assets/images/nn_1.svg) 
+
+Another benefit is its randomness, which helps escape local minima. Real-world loss surfaces are often bumpy, and SGD's noisy updates give it a chance to jump out of bad spots and find better solutions. 
+
