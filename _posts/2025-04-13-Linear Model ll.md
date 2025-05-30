@@ -222,6 +222,8 @@ $$
 
 This allows large steps when far from the minimum and smaller, stable steps near it. It also cancels out the normalization in the update direction, simplifying the gradient descent update, and leads to the *fixed learning rate gradient descent algorithm*. 
 
+<br>
+
 <div style="border:1px solid #ccc; padding:10px; border-radius:6px">
  
 1. Initialize the weights at time step \( t = 0 \) to \( \mathbf{w}(0) \). <br>
@@ -234,9 +236,36 @@ This allows large steps when far from the minimum and smaller, stable steps near
 
 </div>
 
+<br>
 
+In the algorithm, \( \mathbf{v}_t \) is a direction that is no longer restricted to unit length. The parameter \( \eta \) (the *learning rate*) has to be specified. A typically good choice for \( \eta \) is around \( 0.1 \) (a purely practical observation). Gradient descent is a general algorithm for minimizing twice-differntiable functions. We can apply it to the logistic regresiion in-sampler error to return weights that approximately minimize: 
 
+<br>
 
+$$
+E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} \ln \left(1 + e^{-y_n \mathbf{w}^\top \mathbf{x}_n} \right).
+$$
+
+<br>
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:6px">
+
+1. Initialize the weights at time step \( t = 0 \) to \( \mathbf{w}(0) \). <br>
+2. For \( t = 0, 1, 2, \dots \) do <br>
+3.  Compute the gradient  
+<br>  
+$$
+\mathbf{g}_t = -\frac{1}{N} \sum_{n=1}^{N} \frac{y_n \mathbf{x}_n}{1 + e^{y_n \mathbf{w}(t)^\top \mathbf{x}_n}}.
+$$  
+<br>
+4.  Set the direction to move, \( \mathbf{v}_t = -\mathbf{g}_t \). <br>
+5.  Update the weights: \( \mathbf{w}(t+1) = \mathbf{w}(t) + \eta \mathbf{v}_t \). <br>
+6.  Iterate to the next step until it is time to stop. <br>
+7. Return the final weights \( \mathbf{w} \).
+
+</div>
+
+<br>
 
 
 
