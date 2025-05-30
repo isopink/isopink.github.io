@@ -26,7 +26,7 @@ $$f = \text{XOR}(h_1, h_2)$$
 
 <br>
 
-where $+1$ represents “TRUE” and $-1$ represents “FALSE”. We can rewrite $f$ using the simpler OR and AND operations: $\text{OR}(h_1, h_2) = +1$ if at least one of $h_1, h_2$ equals $+1$, and $\text{AND}(h_1, h_2) = +1$ if both $h_1, h_2$ equal $+1$. Using standard Boolean notation: 
+We can rewrite $f$ using the simpler OR and AND operations. Using standard Boolean notation: 
 
 <br>
 
@@ -102,7 +102,8 @@ Each node receives an input $s$ and produces an output $x$. Connections between 
 
 To work with the network layer by layer, we use vector and matrix notation. The input signals to nodes $1, \dots, d^{(\ell)}$ in layer $\ell$ are collected in the vector $\mathbf{s}^{(\ell)}$. The outputs from nodes $0, \dots, d^{(\ell)}$, including the bias node, are collected in $\mathbf{x}^{(\ell)}$.
 
-Each layer $\ell$ has a weight matrix $\mathbf{W}^{(\ell)}$ of size $(d^{(\ell-1)} + 1) \times d^{(\ell)}$. The $(i, j)$-entry of $\mathbf{W}^{(\ell)}$ is $w_{ij}^{(\ell)}$, going from node $i$ in the previous layer to node $j$ in layer $\ell$. Here is a summary.
+Each layer $\ell$ has a weight matrix $\mathbf{W}^{(\ell)}$ of size $(d^{(\ell-1)} + 1) \times d^{(\ell)}$. The $(i, j)$-entry of $\mathbf{W}^{(\ell)}$ is $w_{ij}^{(\ell)}$.
+
 <br>
 
 | Item         | Symbol              | Description                                  |
