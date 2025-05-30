@@ -13,3 +13,5 @@ In this time, We will take our first look at neural network. The discussion will
 
 #### 1. Neural Network model
 
+Neural network is made up of many perceptrons, just like a biological neural network is composed of many neurons. We begin with the basic properties of neural networks, and how to train them on data. 
+
