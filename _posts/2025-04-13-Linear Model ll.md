@@ -178,7 +178,7 @@ Gradient descent is a method to minimize functions like $E_{in}(w)$, which can b
 
 Here is a particular advantage for logistic regression. With cross-entropy error in logistic regression, $E_{in}(w)$ is a convex function. This guarantees a single global minimum, so gradient descent always finds it, regardless of the starting point. There are no local minima to get stuck in. Let's now determine how to roll down the $E_{\text{in}}$ surface. 
 
-Suppose we take a small step of size $\eta$ in the direction of a unit vector $\vec{v}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $/eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
+Suppose we take a small step of size $\eta$ in the direction of a unit vector $\vec{v}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $\eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
 
 <br>
 
@@ -205,5 +205,39 @@ $$
 
 <br>
 
-This direction, specified by $\vec{v}$, leads to the largest decrease in $E_{\text{in}}$. 
+This direction, specified by $\vec{v}$, leads to the largest decrease in $E_{\text{in}}$. Here is one more last thing to consider, the $\eta$. Consider the following figure:
+
+![solution](/assets/images/lm_7.svg) 
+
+
+A fixed step size can be inefficient: too small slows convergence, too large causes instability near the minimum. To address this, scale the step size by the gradient norm:
+
+<br>
+
+$$
+\eta_t = \eta \|\nabla E_{\text{in}}\|
+$$
+
+<br>
+
+This allows large steps when far from the minimum and smaller, stable steps near it. It also cancels out the normalization in the update direction, simplifying the gradient descent update, and leads to the *fixed learning rate gradient descent algorithm*. 
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:6px">
+
+**Fixed learning rate gradient descent:**
+
+1. Initialize the weights at time step \( t = 0 \) to \( \mathbf{w}(0) \).  
+2. For \( t = 0, 1, 2, \dots \) do  
+3.  Compute the gradient \( \mathbf{g}_t = \nabla E_{\text{in}}(\mathbf{w}(t)) \).  
+4.  Set the direction to move, \( \mathbf{v}_t = -\mathbf{g}_t \).  
+5.  Update the weights: \( \mathbf{w}(t+1) = \mathbf{w}(t) + \eta \mathbf{v}_t \).  
+6.  Iterate to the next step until it is time to stop.  
+7. Return the final weights.
+
+</div>
+
+
+
+
+
 
