@@ -30,7 +30,7 @@ $$f = \text{XOR}(h_1, h_2)$$
 
 <br>
 
-We can rewrite $f$ using the simpler OR and AND operations. Using standard Boolean notation: 
+where $+1$ denotes TRUE, $-1$ denotes FLASE. We can rewrite $f$ using the simpler OR and AND operations. Using standard Boolean notation: 
 
 <br>
 
