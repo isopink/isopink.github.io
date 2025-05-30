@@ -14,3 +14,5 @@ In this time, we will revisit and elaborate on some aspects of gradient descent 
 ---
 
 #### 1. Stochastic gradient descent
+
+Last time we talked about gradeient descent. It is a good method to find optimal weights $\mathcal{w}$. However, We are forced to use whole $N$ data points every iterative steps, updating the gradient. This approach of processing all the data at once for a single update is called batch. So far, we have discussed the Batch Gradient Descent (BGD). 
