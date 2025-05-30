@@ -187,9 +187,9 @@ Suppose we take a small step of size $\eta$ in the direction of a unit vector $\
 $$
 \begin{aligned}
 \Delta E_{\text{in}} 
-&= E_{\text{in}}(\mathbf{w}(0) + \eta \hat{\mathbf{v}}) - E_{\text{in}}(\mathbf{w}(0)) \\
-&= \eta \nabla E_{\text{in}}(\mathbf{w}(0))^\top \hat{\mathbf{v}} + O(\eta^2) \\
-&\ge -\eta \|\nabla E_{\text{in}}(\mathbf{w}(0))\|, 
+&= E_{\text{in}}(\mathbf{w}(0) + \eta \hat{\mathbf{v}}) - E_{\text{in}}(\mathbf{w}(0)) \\ \\
+&= \eta \nabla E_{\text{in}}(\mathbf{w}(0))^\top \hat{\mathbf{v}} + O(\eta^2) \\ \\
+&\ge -\eta \|\nabla E_{\text{in}}(\mathbf{w}(0))\| 
 \end{aligned}
 $$
 
@@ -205,5 +205,5 @@ $$
 
 <br>
 
-This direction, specified by $vec{v}$, leads to the largest decrease in $E_{\text{in}}$.
+This direction, specified by $\vec{v}$, leads to the largest decrease in $E_{\text{in}}$. 
 
