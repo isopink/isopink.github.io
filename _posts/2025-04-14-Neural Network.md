@@ -23,7 +23,7 @@ The target $f$ equals $+1$ when exactly one of $h_1, h_2$ equals $+1$. This is t
 
 <br>
 
-$$f = \text{XOR}(h_1, h_2)$$, 
+$$f = \text{XOR}(h_1, h_2)$$
 
 <br>
 
