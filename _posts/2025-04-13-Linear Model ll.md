@@ -178,7 +178,7 @@ Gradient descent is a method to minimize functions like $E_{in}(w)$, which can b
 
 Here is a particular advantage for logistic regression. With cross-entropy error in logistic regression, $E_{in}(w)$ is a convex function. This guarantees a single global minimum, so gradient descent always finds it, regardless of the starting point. There are no local minima to get stuck in. Let's now determine how to roll down the $E_{\text{in}}$ surface. 
 
-Suppose we take a small step of size $\eta$ in the direction of a unit vector $\vec{v}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $\eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
+Suppose we take a small step of size $\eta$ in the direction of a unit vector $\hat{v}$. The new weights are $\mathbf{w}(0) + \eta \hat{\vec{v}}$. Since $\eta$ is small, using the Taylor expansion to first order, we compute the $\Delta E_{in}$ as: 
 
 <br>
 
