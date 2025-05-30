@@ -87,4 +87,26 @@ When using $\theta(s) = \text{sign}(s)$, learning the weights is difficult becau
 
 ![solution](/assets/images/nn_7.svg)
 
-The $\tanh$ function is nearly linear near $0$ and saturates at ±1 for large inputs. This makes it a good substitute and is related to the sigmoid function used in logistic regression. Networks using such smooth activation functions are called *sigmoidal neural networks*. 
+The $\tanh$ function is nearly linear near $0$ and saturates at ±1 for large inputs. This makes it a good substitute and is related to the sigmoid function used in logistic regression. Networks using such smooth activation functions are called *sigmoidal neural networks*. In neural networks, the number of weights increases compared to a perceptron, so we need a more precise notation. 
+
+
+![solution](/assets/images/nn_8.svg)
+
+Layers are labeled by $\ell = 0, 1, \dots, L$.  
+- $\ell = 0$: input layer (not always counted)  
+- $\ell = L$: output layer  
+- $0 < \ell < L$: hidden layers  
+
+Each layer $\ell$ has $d^{(\ell)} + 1$ nodes:  
+- $d^{(\ell)}$ regular nodes  
+- $1$ bias node (index $0$), always outputs $1$  
+
+We use superscript $^{(\ell)}$ to indicate layer index. The bias node is similar to the convention $x_0 = 1$ in linear models.A neural network is defined by its layer sizes $\mathbf{d} = [d^{(0)}, d^{(1)}, \dots, d^{(L)}]$, where $d^{(\ell)}$ is the number of (non-bias) nodes in layer $\ell$. A specific model $h$ is chosen by setting the weights between layers. 
+
+![solution](/assets/images/nn_9.svg)
+
+Each node receives an input $s$ and produces an output $x$. Connections between layers are defined by weights $w_{ij}^{(\ell)}$, which go from node $i$ in layer $\ell-1$ to node $j$ in layer $\ell$. Every layer includes a bias node (index $0$) that always outputs $1$. The input layer only passes input values and does not receive any weights.
+
+![solution](/assets/images/nn_10.svg)
+
+
