@@ -122,3 +122,12 @@ Each layer $\ell$ has a weight matrix $\mathbf{W}^{(\ell)}$ of size $(d^{(\ell-1
 | weights out  | $\mathbf{W}^{(\ell+1)}$   | $(d^{(\ell)} + 1) \times d^{(\ell+1)}$ dimensional matrix |
 
 <br>
+
+After fixing the weights $ \mathbf{W}^{(\ell)} $ for $ \ell = 1, \dots, L $, we have specified a particular neural network hypothesis $ h \in \mathcal{H}_{\text{nn}} $. We collect all these weight matrices into a single weight parameter: 
+
+<br>
+
+$$ \mathbf{w} = \{ \mathbf{W}^{(1)}, \mathbf{W}^{(2)}, \dots, \mathbf{W}^{(L)} \} $$
+
+<br>
+
