@@ -164,12 +164,30 @@ $$
 \mathbf{x} = \mathbf{x}^{(0)} 
 \xrightarrow{\mathbf{W}^{(1)}} \mathbf{s}^{(1)} 
 \xrightarrow{\theta} \mathbf{x}^{(1)} 
-\xrightarrow{\mathbf{W}^{(2)}} \mathbf{s}^{(2)} 
-\xrightarrow{\theta} \mathbf{x}^{(2)} 
 \cdots 
-\xrightarrow{\mathbf{s}^{(L)}} 
 \xrightarrow{\theta} \mathbf{x}^{(L)} 
 = h(\mathbf{x}).
 $$
 
 <br>
+
+Here are the summary figure: 
+
+![solution](/assets/images/nn_11.svg)
+
+If we want to compute $ E_{\text{in}} $, all we need is $ h(\mathbf{x}_n) $ and $ y_n $. For the sum of squares: 
+
+<br>
+
+$$
+E_{\text{in}}(\mathbf{w}) 
+= \frac{1}{N} \sum_{n=1}^{N} \left( x_n^{(L)} - y_n \right)^2.
+$$
+
+<br>
+
+We now discuss how to minimize $E_{\text{in}}$ to obtain the learned weights. 
+
+---
+
+#### 2. Backpropagation Algorithm
