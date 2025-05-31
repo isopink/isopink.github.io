@@ -131,3 +131,45 @@ $$ \mathbf{w} = \{ \mathbf{W}^{(1)}, \mathbf{W}^{(2)}, \dots, \mathbf{W}^{(L)} \
 
 <br>
 
+##### 1.3. Forward Propagation 
+
+Observe that the inputs and outputs of a layer are related by the transformation function: 
+
+<br>
+
+$$
+\mathbf{x}^{(\ell)} = \begin{bmatrix}
+1 \\
+\theta(s^{(\ell)})
+\end{bmatrix}
+$$
+
+<br>
+
+where $ \theta(\mathbf{s}^{(\ell)}) $ is a vector whose components are $ \theta(s_j^{(\ell)}) $. To get the input vector into layer $ \ell $, we compute the weighted sum of the outputs from the previous layer. This process is compactly represented by the matrix equation: 
+
+<br>
+
+$$
+\mathbf{s}^{(\ell)} = \left( \mathbf{W}^{(\ell)} \right)^\top \mathbf{x}^{(\ell-1)}
+$$
+
+<br>
+
+Initialize input layer to $\mathbf{x}^{(0)} = \mathbf{x}$, and consider following chain: 
+
+<br>
+
+$$
+\mathbf{x} = \mathbf{x}^{(0)} 
+\xrightarrow{\mathbf{W}^{(1)}} \mathbf{s}^{(1)} 
+\xrightarrow{\theta} \mathbf{x}^{(1)} 
+\xrightarrow{\mathbf{W}^{(2)}} \mathbf{s}^{(2)} 
+\xrightarrow{\theta} \mathbf{x}^{(2)} 
+\cdots 
+\xrightarrow{\mathbf{s}^{(L)}} 
+\xrightarrow{\theta} \mathbf{x}^{(L)} 
+= h(\mathbf{x}).
+$$
+
+<br>
