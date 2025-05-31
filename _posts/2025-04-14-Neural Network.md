@@ -191,3 +191,4 @@ We now discuss how to minimize $E_{\text{in}}$ to obtain the learned weights.
 ---
 
 #### 2. Backpropagation Algorithm
+
