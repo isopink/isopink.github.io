@@ -337,3 +337,26 @@ $$
 
 This is the end. And here is the summary of Backpropagation algorithm. 
 
+<br>
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:6px">
+
+1. Initialize all weights \( w^{(\ell)}_{ij} \) <span style="color:green"><b>at random</b></span>. <br>
+2. For \( t = 0, 1, 2, \dots \) do <br>
+3.  Pick \( n \in \{1, 2, \cdots, N\} \). <br>
+4.  <span style="color:blue"><i>Forward:</i></span> Compute all \( x^{(\ell)}_j \). <br>
+5.  <span style="color:red"><i>Backward:</i></span> Compute all \( \delta^{(\ell)}_j \). <br>
+6.  Update the weights:  
+<br>
+
+$$
+w^{(\ell)}_{ij} \leftarrow w^{(\ell)}_{ij} - \eta \, x^{(\ell-1)}_i \, \delta^{(\ell)}_j
+$$
+
+<br>
+7.  Iterate to the next step until it is time to stop. <br>
+8. Return the final weights \( w^{(\ell)}_{ij} \).
+
+</div>
+
+<br>
