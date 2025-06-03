@@ -339,7 +339,7 @@ This is the end. And here is the summary of Backpropagation algorithm.
 <br>
 
 $$
-w^{(\ell)}_{ij} \leftarrow w^{(\ell)}_{ij} - \eta \, \delta e_n(\mathbf{w})
+w^{(\ell)}_{ij} \leftarrow w^{(\ell)}_{ij} - \eta \, \nabla \mathbf{e}_n(\mathbf{w})
 $$
 
 <br>
