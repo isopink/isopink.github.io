@@ -245,21 +245,48 @@ Here is the key idea. We can compute $\delta^{(l-1)}_j$ with $\delta^{(l)}_j$. L
 <br>
 
 $$
-\delta^{(L)}_1 = \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(L)}_1}
-$$
-
-$$
 \mathbf{e}(\mathbf{w}) = \left( x^{(L)}_1 - y_n \right)^2
 $$
+
+<br>
+
+Since $x^{(L)}_1$ is the output of the activation function $\theta$ and input $s^{(L)}_1$, 
+
+<br>
 
 $$
 x^{(L)}_1 = \theta(s^{(L)}_1)
 $$
 
+<br>
+
+Furthermore, We use **tanh** as a activation function $\theta$. So, 
+
+<br>
+
 $$
-\theta'(s) = 1 - \theta^2(s) \quad \text{for the tanh}
+\theta'(s) = 1 - \theta^2(s)
 $$
 
 <br>
 
+With these inspections, We compute $\delta^{(l-1)_i)$ as below: 
 
+<br>
+
+$$
+\begin{aligned}
+\delta^{(l-1)}_i 
+&= \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(l-1)}_i} \\ \\
+&= \sum_{j=1}^{d^{(l)}} 
+\frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(l)}_j}
+\times \frac{\partial \, s^{(l)}_j}{\partial \, x^{(l-1)}_i}
+\times \frac{\partial \, x^{(l-1)}_i}{\partial \, s^{(l-1)}_i} \\ \\
+&= \sum_{j=1}^{d^{(l)}} 
+\delta^{(l)}_j \times w^{(l)}_{ij} \times \theta'(s^{(l-1)}_i) \\ \\
+&= \left(1 - \left(x^{(l-1)}_i\right)^2\right)
+\sum_{j=1}^{d^{(l)}} w^{(l)}_{ij} \, \delta^{(l)}_j
+\end{aligned}
+$$
+
+<br>
