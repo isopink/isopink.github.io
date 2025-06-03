@@ -200,7 +200,7 @@ To learn all parameters **w**, we use one data point $(\mathbf{x}_n, y_n)$ at a 
 
 $$
 \nabla \mathbf{e}(\mathbf{w}) 
-:= \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, w^{(l)}_{ij}} 
+= \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, w^{(l)}_{ij}} 
 \quad \text{for all } i, j, l
 $$
 
