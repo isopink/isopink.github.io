@@ -313,7 +313,7 @@ $$
 
 <br>
 
-By forward-propagation, we can compute all $\mathbf{x}^{(l)}_j$. By backward-propagation, we can compute all $\delta^{(\ell)}_j$. In conclusion, we can compute: 
+By forward-propagation, we can compute all $\mathbf{x}^{(\ell)}_j$. By backward-propagation, we can compute all $\delta^{(\ell)}_j$. In conclusion, we can compute: 
 
 <br>
 
@@ -323,4 +323,17 @@ $$
 $$
 
 <br>
+
+We can describe this formula with a simple matrix notation as: 
+
+<br>
+
+$$
+\frac{\partial \, \mathbf{e}}{\partial \, \mathbf{W}^{(\ell)}} 
+= \mathbf{x}^{(\ell - 1)} \left( \delta^{(\ell)} \right)^\top
+$$
+
+<br>
+
+This is the end. And here is the summary. 
 
