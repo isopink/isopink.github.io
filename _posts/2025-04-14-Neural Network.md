@@ -196,4 +196,52 @@ We studied an algorithm for getting to a local minimum of a smooth $E_{\text{in}
 
 To learn all parameters **w**, we use one data point $(\mathbf{x}_n, y_n)$ at a time. The error at this point is defined as $\mathbf{e}(\mathbf{w})$. To implement stochastic gradient descent, we need to compute the gradient of $\mathbf{e}(\mathbf{w})$, and since we must update all parameter values, this must be done for all layers $l$, and for every $j$ and $i$. To summarzie, we need to find: 
 
+<br>
+
+$$
+\nabla \mathbf{e}(\mathbf{w}) 
+:= \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, w^{(l)}_{ij}} 
+\quad \text{for all } i, j, l
+$$
+
+<br>
+
+Before we begin, we introduce the senstivity vector $\delta^{(l)}_j$: 
+
+<br>
+
+$$
+\delta^{(l)}_j = \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(l)}_j}
+$$
+
+<br>
+
+To begin, let us take a closer look at the partial derivative. The situiation is illustrated in the following figure. 
+
+![solution](/assets/images/nn_12.svg)
+
+The error $e$ is influenced through a chain from $W^{(\ell)}$ to $x^{(L)}$ as below: 
+
+<br>
+
+$$
+\mathbf{W}^{(\ell)} \rightarrow \mathbf{s}^{(\ell)} \rightarrow \mathbf{x}^{(\ell)} \rightarrow \mathbf{s}^{(\ell+1)} \rightarrow \cdots \rightarrow \mathbf{x}^{(L)} = \mathbf{h}
+$$
+
+<br>
+
+We now apply the chain rule for a single weight $w^{(\ell)}_{ij}$, which only affects $s^{(\ell)}_j$. By the chain rule, 
+
+<br>
+
+$$
+\frac{\partial \, \mathbf{e}}{\partial \, w^{(\ell)}_{ij}} 
+= \frac{\partial \, s^{(\ell)}_j}{\partial \, w^{(\ell)}_{ij}} \cdot 
+\frac{\partial \, \mathbf{e}}{\partial \, s^{(\ell)}_j} 
+= x^{(\ell - 1)}_i \cdot \delta^{(\ell)}_j
+$$
+
+<br>
+
+where the last equality follows because $s^{(\ell)}j = \sum{\alpha=0}^{d^{(\ell-1)}} w^{(\ell)}{j\alpha} x^{(\ell-1)}\alpha$ and by definition of $\delta^{(\ell)}_j$. 
 
