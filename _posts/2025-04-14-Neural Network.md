@@ -324,17 +324,6 @@ $$
 
 <br>
 
-We can describe this formula with a simple matrix notation as: 
-
-<br>
-
-$$
-\frac{\partial \, \mathbf{e}}{\partial \, \mathbf{W}^{(\ell)}} 
-= \mathbf{x}^{(\ell - 1)} \left( \delta^{(\ell)} \right)^\top
-$$
-
-<br>
-
 This is the end. And here is the summary of Backpropagation algorithm. 
 
 <br>
@@ -350,7 +339,7 @@ This is the end. And here is the summary of Backpropagation algorithm.
 <br>
 
 $$
-w^{(\ell)}_{ij} \leftarrow w^{(\ell)}_{ij} - \eta \, x^{(\ell-1)}_i \, \delta^{(\ell)}_j
+w^{(\ell)}_{ij} \leftarrow w^{(\ell)}_{ij} - \eta \, \delta e_n(\mathbf{w})
 $$
 
 <br>
