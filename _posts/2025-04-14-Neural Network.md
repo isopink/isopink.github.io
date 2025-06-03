@@ -192,3 +192,53 @@ We now discuss how to minimize $E_{\text{in}}$ to obtain the learned weights.
 
 #### 2. Backpropagation Algorithm
 
+We studied an algorithm for getting to a local minimum of a smooth $E_{\text{in}}$ [before](https://isopink.github.io/Linear-Model-ll/), Gradient Descent. Especially, we are going to use Stochastic Gradient Descent (SGD) here, because of the benefits of computation. 
+
+To learn all parameters **w**, we use one data point $(\mathbf{x}_n, y_n)$ at a time. The error at this point is defined as $\mathbf{e}(\mathbf{w})$. To implement stochastic gradient descent, we need to compute the gradient of $\mathbf{e}(\mathbf{w})$, and since we must update all parameter values, this must be done for all layers $l$, and for every $j$ and $i$. To summarzie, we need to find: 
+
+<br>
+
+$$
+\nabla \mathbf{e}(\mathbf{w}) : \quad \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, w^{(l)}_{ij}} \quad \text{for all } i, j, l
+$$
+
+<br>
+
+We can evaluate $\nabla \mathbf{e}(\mathbf{w})$ one by one, but that's an computational disaster. We now introduce an elegant computation technique, known as Backpropagation. It is based on several applications of the chain rule to write partial derivatives. Consider following figure. 
+
+![solution](/assets/images/nn_12.svg) 
+
+Here is a trick for efficient computation for $\nabla \mathbf{e}(\mathbf{w})$:
+
+<br>
+
+$$
+\frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, w^{(l)}_{ij}} 
+= \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(l)}_j} 
+\times \frac{\partial \, s^{(l)}_j}{\partial \, w^{(l)}_{ij}}
+$$
+
+<br>
+
+We have 
+
+<br>
+
+$$
+\frac{\partial \, s^{(l)}_j}{\partial \, w^{(l)}_{ij}} = x^{(l-1)}_i
+$$
+
+<br>
+
+We only need the rest of the equation, called, sensitivity vector: 
+
+<br>
+
+$$
+\delta^{(l)}_j= \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(l)}_j}
+$$
+
+<br>
+
+
+
