@@ -335,5 +335,5 @@ $$
 
 <br>
 
-This is the end. And here is the summary. 
+This is the end. And here is the summary of Backpropagation algorithm. 
 
