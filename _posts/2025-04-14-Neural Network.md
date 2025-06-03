@@ -220,7 +220,7 @@ To begin, let us take a closer look at the partial derivative. The situiation is
 
 ![solution](/assets/images/nn_12.svg)
 
-The error $e$ is influenced through a chain from $W^{(\ell)}$ to $mathbf{x}^{(L)}$ as below: 
+The error $\mathbf{e}$ is influenced through a chain from $W^{(\ell)}$ to $mathbf{x}^{(L)}$ as below: 
 
 <br>
 
@@ -243,5 +243,71 @@ $$
 
 <br>
 
+The last equality follows by definition of $\delta^{(\ell)}_j$ and the weighted sum of $s^{(\ell)}_j$,
 
+<br>
+
+$$
+\mathbf{s}^{(\ell)}_j = \sum_{\alpha = 0}^{d^{(\ell - 1)}} w^{(\ell)}_{\alpha j} \, \mathbf{x}^{(\ell - 1)}_\alpha
+$$
+
+<br>
+
+Since $\mathbf{e}$ depends on $s^{(\ell)}$ only through $\mathbf{x}^{(\ell)}$, by the chain rule, we have: 
+
+<br>
+
+$$
+\delta^{(\ell)}_j 
+= \frac{\partial \, \mathbf{e}}{\partial \, s^{(\ell)}_j} 
+= \frac{\partial \, \mathbf{e}}{\partial \, \mathbf{x}^{(\ell)}_j} 
+\cdot \frac{\partial \, \mathbf{x}^{(\ell)}_j}{\partial \, s^{(\ell)}_j}
+$$
+
+<br>
+
+And it can be rewritten as: 
+
+<br>
+
+$$
+\theta'\left(s^{(\ell)}_j\right) \cdot \frac{\partial \, \mathbf{e}}{\partial \, \mathbf{x}^{(\ell)}_j}
+$$
+
+<br>
+
+To get the partial derivative $\partial \mathbf{e} / \partial \mathbf{x}^{(\ell)}$, we need to understand how $\mathbf{e}$ changes due to changes in $\mathbf{x}^{(\ell)}$. A change in $\mathbf{x}^{(\ell)}$ only affects $\mathbf{s}^{(\ell+1)}$ and hence $\mathbf{e}$. Because a particular component of $\mathbf{x}^{(\ell)}$ can affect every component of $\mathbf{s}^{(\ell+1)}$, we need to sum these dependencies using the chain rule:
+
+<br>
+
+$$
+\frac{\partial \, \mathbf{e}}{\partial \, \mathbf{x}^{(\ell)}_j} 
+= \sum_{k=1}^{d^{(\ell+1)}} 
+\frac{\partial \, s^{(\ell+1)}_k}{\partial \, \mathbf{x}^{(\ell)}_j} 
+\cdot \frac{\partial \, \mathbf{e}}{\partial \, s^{(\ell+1)}_k}
+$$
+
+<br>
+
+And it can be rewritten as: 
+
+<br>
+
+$$
+\sum_{k=1}^{d^{(\ell+1)}} w^{(\ell+1)}_{jk} \, \delta^{(\ell+1)}_k
+$$
+
+<br>
+
+Putting all this together, we get the final form: 
+
+<br>
+
+$$
+\delta^{(\ell)}_j 
+= \theta'\left(s^{(\ell)}_j\right) 
+\sum_{k=1}^{d^{(\ell+1)}} w^{(\ell+1)}_{jk} \, \delta^{(\ell+1)}_k
+$$
+
+<br>
 
