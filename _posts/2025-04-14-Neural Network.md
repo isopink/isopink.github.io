@@ -192,6 +192,10 @@ We now discuss how to minimize $E_{\text{in}}$ to obtain the learned weights.
 
 #### 2. Backpropagation Algorithm
 
+<br>
+
+##### 2.1. Mathematical Insight
+
 We studied an algorithm for getting to a local minimum of a smooth $E_{\text{in}}$ [before](https://isopink.github.io/Linear-Model-ll/), Gradient Descent. Especially, we are going to use Stochastic Gradient Descent (SGD) here, because of the benefits of computation. 
 
 To learn all parameters **w**, we use one data point $(\mathbf{x}_n, y_n)$ at a time. The error at this point is defined as $\mathbf{e}(\mathbf{w})$. To implement stochastic gradient descent, we need to compute the gradient of $\mathbf{e}(\mathbf{w})$, and since we must update all parameter values, this must be done for all layers $l$, and for every $j$ and $i$. To summarzie, we need to find: 
@@ -349,3 +353,16 @@ $$
 </div>
 
 <br>
+
+##### 2.2. Initialization 
+
+If weights are too large, neuron outputs can saturate and gradients vanish, stopping learning. Zero initialization also fails since all neurons behave the same. Using small random weights keeps neurons responsive and allows gradients to flow. A common method is Gaussian initialization with small variance.
+
+<br>
+
+##### 2.3. Termination 
+
+Small gradients don't always mean learning is done — it could be a flat region. A better rule is to stop when the error is low, changes are small, and a max number of iterations is reached. 
+
+So far, we hgave discussed the backpropagation algorithm as well as initialization and termination. Then, how should we adjust the number of hidden layers or nodes to train properly? This question will be addressed in the right next session, the overfitting. 
+
