@@ -220,7 +220,7 @@ $$
 
 <br>
 
-We have 
+We have, 
 
 <br>
 
@@ -240,5 +240,26 @@ $$
 
 <br>
 
+Here is the key idea. We can compute $\delta^{(l-1)}_j$ with $\delta^{(l)}_j$. Let the final layer $l = L$ and $j = 1$. And we use the squared error as our error measure. Then, 
+
+<br>
+
+$$
+\delta^{(L)}_1 = \frac{\partial \, \mathbf{e}(\mathbf{w})}{\partial \, s^{(L)}_1}
+$$
+
+$$
+\mathbf{e}(\mathbf{w}) = \left( x^{(L)}_1 - y_n \right)^2
+$$
+
+$$
+x^{(L)}_1 = \theta(s^{(L)}_1)
+$$
+
+$$
+\theta'(s) = 1 - \theta^2(s) \quad \text{for the tanh}
+$$
+
+<br>
 
 
