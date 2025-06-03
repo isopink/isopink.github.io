@@ -220,7 +220,7 @@ To begin, let us take a closer look at the partial derivative. The situiation is
 
 ![solution](/assets/images/nn_12.svg)
 
-The error $\mathbf{e}$ is influenced through a chain from $W^{(\ell)}$ to $mathbf{x}^{(L)}$ as below: 
+The error $\mathbf{e}$ is influenced through a chain from $W^{(\ell)}$ to $\mathbf{x}^{(L)}$ as below: 
 
 <br>
 
