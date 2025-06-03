@@ -220,7 +220,7 @@ To begin, let us take a closer look at the partial derivative. The situiation is
 
 ![solution](/assets/images/nn_12.svg)
 
-The error $e$ is influenced through a chain from $W^{(\ell)}$ to $x^{(L)}$ as below: 
+The error $e$ is influenced through a chain from $W^{(\ell)}$ to $mathbf{x}^{(L)}$ as below: 
 
 <br>
 
@@ -243,5 +243,5 @@ $$
 
 <br>
 
-where the last equality follows because $s^{(\ell)}j = \sum{\alpha=0}^{d^{(\ell-1)}} w^{(\ell)}{j\alpha} x^{(\ell-1)}\alpha$ and by definition of $\delta^{(\ell)}_j$. 
+
 
