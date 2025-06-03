@@ -276,7 +276,7 @@ $$
 
 <br>
 
-To get the partial derivative $\partial \mathbf{e} / \partial \mathbf{x}^{(\ell)}$, we need to understand how $\mathbf{e}$ changes due to changes in $\mathbf{x}^{(\ell)}$. A change in $\mathbf{x}^{(\ell)}$ only affects $\mathbf{s}^{(\ell+1)}$ and hence $\mathbf{e}$. Because a particular component of $\mathbf{x}^{(\ell)}$ can affect every component of $\mathbf{s}^{(\ell+1)}$, we need to sum these dependencies using the chain rule:
+To get the partial derivative $\partial \mathbf{e} / \partial \mathbf{x}^{(\ell)}$, we need to understand how $\mathbf{e}$ changes due to changes in $\mathbf{x}^{(\ell)}$. Also, change in $\mathbf{x}^{(\ell)}$ only affects $\mathbf{s}^{(\ell+1)}$ and hence $\mathbf{e}$. Because a particular component of $\mathbf{x}^{(\ell)}$ can affect every component of $\mathbf{s}^{(\ell+1)}$, we need to sum these dependencies using the chain rule:
 
 <br>
 
@@ -311,3 +311,4 @@ $$
 
 <br>
 
+The first term shows how $s^{(\ell)}$ affects $x^{(\ell)}$. The sum shows how $x^{(\ell)}$ affects $s^{(\ell+1)}$, and then $s^{(\ell+1)}$ affects $h$, giving us the sensitivities from the next layer. This forms the backward recursion. 
