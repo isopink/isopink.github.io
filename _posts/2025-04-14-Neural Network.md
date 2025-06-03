@@ -307,8 +307,20 @@ $$
 \delta^{(\ell)}_j 
 = \theta'\left(s^{(\ell)}_j\right) 
 \sum_{k=1}^{d^{(\ell+1)}} w^{(\ell+1)}_{jk} \, \delta^{(\ell+1)}_k
+
+
 $$
 
 <br>
 
-The first term shows how $s^{(\ell)}$ affects $x^{(\ell)}$. The sum shows how $x^{(\ell)}$ affects $s^{(\ell+1)}$, and then $s^{(\ell+1)}$ affects $h$, giving us the sensitivities from the next layer. This forms the backward recursion. 
+By forward-propagation, we can compute all $\mathbf{x}^{(l)}_j$. By backward-propagation, we can compute all $\delta^{(\ell)}_j$. In conclusion, we can compute: 
+
+<br>
+
+$$
+\nabla \mathbf{e}(\mathbf{w}) = \frac{\partial \, \mathbf{e}}{\partial \, w^{(\ell)}_{ij}} 
+= x^{(\ell - 1)}_i \cdot \delta^{(\ell)}_j
+$$
+
+<br>
+
