@@ -122,9 +122,4 @@ We first examine the left plot showing the effect of noise level. Higher noise r
 
 This experiment shows that both noise level and target complexity increase overfitting. Since the noise level $\sigma^2$ follows a probability distribution, it is referred to as stochastic noise. In contrast, target complexity is not probabilistic, and is thus called deterministic noise. Here is the summary: 
 
-<br> 
 
-$$ \begin{array}{|c|c|} \hline \text{number of data points} \uparrow & \text{Overfitting} \downarrow \\ \text{stochastic noise} \uparrow & \text{Overfitting} \uparrow \\ \text{deterministic noise} \uparrow & \text{Overfitting} \uparrow \\ \hline \end{array} 
-$$ 
-
-<br>
