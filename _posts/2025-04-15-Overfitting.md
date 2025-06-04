@@ -124,11 +124,15 @@ This experiment shows that both noise level and target complexity increase overf
 
 <br>
 
+<div align="center">
+
 |        Factor         | Change | Effect on Overfitting |
 |:---------------------:|:------:|:---------------------:|
 | Number of data points |   ↑    |          ↓           |
 |        Noise          |   ↑    |          ↑           |
 |  Target complexity    |   ↑    |          ↑           |
+
+</div>
 
 <br>
 
