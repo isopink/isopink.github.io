@@ -124,11 +124,11 @@ This experiment shows that both noise level and target complexity increase overf
 
 <br>
 
-<div style="border:1px solid #ccc; padding:15px; border-radius:6px; line-height:1.8; font-family:serif;">
+<div style="border:1px solid #ccc; padding:15px; border-radius:6px; line-height:1.8; font-family:serif; color:black;">
 
-<b>Number of data points ↑</b> &nbsp;&nbsp;&nbsp;&nbsp; → &nbsp;&nbsp;&nbsp;&nbsp; <b>Overfitting ↓</b> <br>
-<span style="color:gray">Noise ↑</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:gray">→ Overfitting ↑</span> <br>
-<span style="color:gray">Target complexity ↑</span> &nbsp;&nbsp; <span style="color:gray">→ Overfitting ↑</span>
+<b>Number of data points ↑</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Overfitting ↓</b> <br>
+Noise ↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Overfitting ↑ <br>
+Target complexity ↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Overfitting ↑
 
 </div>
 
