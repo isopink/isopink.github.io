@@ -39,15 +39,11 @@ Here are the table of $E_{\text{in}}$ and $E_{\text{out}}$.
 
 <br>
 
-<div align="center">
-
 |                      | **10th Order Noisy Target** |           | **50th Order Noiseless Target** |           |
 |:----------------------:|:-----------------------------:|:-----------:|:----------------------------------:|:-----------:|
 |                      | 2nd Order                  | 10th Order | 2nd Order                       | 10th Order |
 | $E_{\text{in}}$      | 0.050                      | 0.034      | 0.029                           | $10^{-5}$  |
 | $E_{\text{out}}$     | 0.127                      | **9.00**   | 0.120                           | **7680**   |
-
-</div>
 
 <br>
 
@@ -128,15 +124,11 @@ This experiment shows that both noise level and target complexity increase overf
 
 <br>
 
-<div align="center">
-
 |        Factor         | Change | Effect on Overfitting |
 |:---------------------:|:------:|:---------------------:|
 | Number of data points |   ↑    |          ↓           |
 |        Noise          |   ↑    |          ↑           |
 |  Target complexity    |   ↑    |          ↑           |
-
-</div>
 
 <br>
 
