@@ -364,5 +364,4 @@ If weights are too large, neuron outputs can saturate and gradients vanish, stop
 
 Small gradients don't always mean learning is done — it could be a flat region. A better rule is to stop when the error is low, changes are small, and a max number of iterations is reached. 
 
-So far, we hgave discussed the backpropagation algorithm as well as initialization and termination. Then, how should we adjust the number of hidden layers or nodes to train properly? This question will be addressed in the right next session, the overfitting. 
-
+So far, we hgave discussed the backpropagation algorithm as well as initialization and termination. Then, how should we adjust the number of hidden layers or nodes to train properly? This question will be addressed during next three sessions, The Overfitting. 
