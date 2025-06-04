@@ -3,15 +3,13 @@ layout: single
 title: "Lecture 11 : Overfitting"
 ---
 
-In this time, we will discuss the concept of overfitting and the way to deal with it. The discussion will proceed in the following four parts: 
+In this time, we will discuss the concept of overfitting. The discussion will proceed in the following four parts: 
 
 1. What is overfitting?
 
 2. Reason of overfitting
 
 3. Deterministic noise
-
-4. Dealing with overfitting
 
 ---
 
@@ -135,5 +133,34 @@ This experiment shows that both noise level and target complexity increase overf
 ---
 
 #### 3. Deterministic noise
+
+Why does a higher target complexity lead to more overfitting when comparing the same two models? The intuition is that for a given learning model, there is a best approximation to the target function. The part of the target function ‘outside’ this best fit acts like noise in the data. We can call this *deterministic noise* to differentiate it from the random *stochastic noise*. 
+
+While stochastic and deterministic noise both affect overfitting, they differ in two key ways. First, if we regenerate the same data, stochastic noise changes, but deterministic noise does not. Second, deterministic noise depends on the model, as different models fit different parts of the target function.
+
+![solution](/assets/images/of_9.svg)
+
+Above figure shows the deterministic noise for a 2nd order model fitting a more complex target. The shading illustrates deterministic noise for this learning problem. Now that we have analyzed it through the figure, let us take a closer look using equations. We recall the [Bias-Variance Decomposition](https://isopink.github.io/Bias-and-variance/).
+
+<br>
+
+$$
+\mathbb{E}_{\mathcal{D}} \left[ E_{\text{out}}(g^{(\mathcal{D})}) \right] = \text{bias} + \text{var}.
+$$
+
+<br>
+
+In the earlier analysis, we did not assume any noise in $f$. Let us now examine how the expression changes when noise is introduced to $f$. The noise is assumed to follow a Gaussian distribution with zero mean. Since the derivation is straightforward, we will omit it here. The equation above will be updated as: 
+
+<br>
+
+$$
+\mathbb{E}_{\mathcal{D}} \left[ E_{\text{out}}(g^{(\mathcal{D})}) \right] = \sigma^2 + \text{bias} + \text{var}.
+$$
+
+<br>
+
+The first two terms show the direct effects of stochastic and deterministic noise. The variance term $ \sigma^2 $ comes from stochastic noise, and the bias reflects the model's inability to approximate $ f $. The variance term is also indirectly influenced by both types of noise, capturing how easily the model is misled. This is the end of this session. We will discuss how to deal with overfitting next session. 
+
 
 
