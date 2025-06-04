@@ -51,13 +51,13 @@ Surprisingly, the 2nd order model performed significantly better than the 10th o
 
 <br>
 
-##### 1.1. 10th Order Noisy Target
+##### 2.1. 10th Order Noisy Target
 
 ![solution](/assets/images/of_4.svg)
 
-Using a 10th-order model on 10th order target function doesn’t seem excessive. In fact, using a 2nd-degree model might seem too simple. So why did this happen? This is because of the quality and qunatity of the data. 
+Using a 10th-order model on 10th order target function doesn’t seem excessive. In fact, using a 2nd-degree model might seem too simple. So why did this happen? This is because of the quality of the data. The model learned not only the pure data, but also the noisy data. 
 
-As we discussed in [Lecture 7](https://isopink.github.io/VC-Dimension/), proper learning requires about ten times the VC dimension in data. Thr 2nd order model needs around 30 points, while a 10th order model needs about 110. Although the data was insufficient for both, it was closer to what's needed for the quadratic model, which explains its better performance. Actually, we have seen this case [before](https://isopink.github.io/Bias-and-variance/). 
+Furthermore, qunatity of data is also matter. As we discussed in [Lecture 7](https://isopink.github.io/VC-Dimension/), proper learning requires about ten times the VC dimension in data. Thr 2nd order model needs around 30 points, while a 10th order model needs about 110. Although the data was insufficient for both, it was closer to what's needed for the 2nd model, which explains its better performance. Actually, we have seen this case [before](https://isopink.github.io/Bias-and-variance/). 
 
 ![solution](/assets/images/of_5.svg)
 
@@ -65,5 +65,53 @@ With enough data, the 10th order model ​would outperform the 2nd order model. 
 
 <br>
 
-##### 1.2. 50th Order Noiseless target 
+##### 2.2. 50th Order Noiseless target 
+
+We have discussed that noisy data could occur overfitting. Then, if the the data is noiseless, can we find the exact target function? Maybe not. Here is our second example about 50th order target:
+
+![solution](/assets/images/of_6.svg)
+
+Despite the noiseless of data, 10th order model heavily overfits the data. The 2nd order model wins. This is because the complexity of the target function. 
+
+<br>
+
+##### 2.3. The overfit measure 
+
+With the inspection of (2.1) and (2.2) we can realize what matters is how the model complexity matches the quantity and quality of the data we have, not how it matches the target function. One can think the overfitting can be influenced by the noise level, the amount of data, and the complexity of the target function. We will explore this idea through the following experiment. 
+
+Let $x \in \mathbb{R}$ be the input and $y$ the output. Without noise:
+
+<br>
+
+$$
+y = f(x)
+$$
+
+<br>
+
+With additive noise $\epsilon(x) \sim \mathcal{N}(0, \sigma^2)$, the observed output becomes:
+
+<br>
+
+$$
+y = f(x) + \epsilon(x)
+$$
+
+<br>
+
+Assume $f(x)$ is a polynomial of degree $Q_f$, and let $N$ be the number of data points. 
+
+![solution](/assets/images/of_7.svg)
+
+The figure above illustrate the case where $Q_f =10$, $N=15$, and the noise variance $\sigma^2$. We compare the final hypothesis $g_{10} \in \mathcal{H}_{10}$ (larger model) to the final hypothesis $g_2 \in \mathcal{H}_2$ (smaller model). Clearly, $E_{\text{in}}(g_{10}) \leq E_{\text{in}}(g_2)$ since $g_{10}$ has more degrees of freedom to fit the data. What is surprising is how often $g_{10}$ overfits the data, resulting in $E_{\text{out}}(g_{10}) > E_{\text{out}}(g_2)$.  
+
+Let us define the overfit measure as: 
+
+$$
+E_{\text{out}}(g_{10}) - E_{\text{out}}(g_2)
+$$
+
+The more positive this measure is, the more severe overfitting would be.
+
+
 
