@@ -124,14 +124,16 @@ This experiment shows that both noise level and target complexity increase overf
 
 <br>
 
-<div style="border:1px solid #ccc; padding:15px; border-radius:6px; line-height:1.8; font-family:serif; color:black;">
-
-<b>Number of data points ↑</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Overfitting ↓</b> <br>
-Noise ↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Overfitting ↑ <br>
-Target complexity ↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Overfitting ↑
-
-</div>
+|        Factor         | Change | Effect on Overfitting |
+|:---------------------:|:------:|:---------------------:|
+| Number of data points |   ↑    |          ↓           |
+|        Noise          |   ↑    |          ↑           |
+|  Target complexity    |   ↑    |          ↑           |
 
 <br>
+
+---
+
+#### 3. Deterministic noise
 
 
