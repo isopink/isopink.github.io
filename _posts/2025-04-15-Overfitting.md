@@ -103,7 +103,10 @@ Assume $f(x)$ is a polynomial of degree $Q_f$, and let $N$ be the number of data
 
 ![solution](/assets/images/of_7.svg)
 
-The figure above illustrate the case where $Q_f =10$, $N=15$, and the noise variance $\sigma^2$. We compare the final hypothesis $g_{10} \in \mathcal{H}_{10}$ (larger model) to the final hypothesis $g_2 \in \mathcal{H}_2$ (smaller model). Clearly, $E_{\text{in}}(g_{10}) \leq E_{\text{in}}(g_2)$ since $g_{10}$ has more degrees of freedom to fit the data. What is surprising is how often $g_{10}$ overfits the data, resulting in $E_{\text{out}}(g_{10}) > E_{\text{out}}(g_2)$.  
+The figure above illustrates the case where $Q_f = 10$, $N = 15$, and the noise variance is $\sigma^2$.  
+We compare the final hypothesis $g_{10} \in \mathcal{H}_{10}$. (larger model) to the final hypothesis $g_2 \in \mathcal{H}_2$ (smaller model).
+
+Clearly, $E_{\text{in}}(g_{10}) \leq E_{\text{in}}(g_2)$ since $g_{10}$ has more degrees of freedom to fit the data. What is surprising is how often $g_{10}$ overfits the data, resulting in $E_{\text{out}}(g_{10}) > E_{\text{out}}(g_2)$.
 
 Let us define the overfit measure as: 
 
@@ -111,7 +114,17 @@ $$
 E_{\text{out}}(g_{10}) - E_{\text{out}}(g_2)
 $$
 
-The more positive this measure is, the more severe overfitting would be.
+The more positive this measure is, the more severe overfitting would be. Let us look at the color mapping that represents the level of overfitting below: 
 
+![solution](/assets/images/of_8.svg)
 
+We first examine the left plot showing the effect of noise level. Higher noise requires more data to avoid overfitting. The right plot shows the effect of target function complexity on overfitting. As $Q_f$ increases, overfitting generally becomes more severe. Interestingly, when $Q_f$ is below a certain threshold, increased complexity does not lead to overfitting — an explanation will follow soon. 
 
+This experiment shows that both noise level and target complexity increase overfitting. Since the noise level $\sigma^2$ follows a probability distribution, it is referred to as stochastic noise. In contrast, target complexity is not probabilistic, and is thus called deterministic noise. Here is the summary: 
+
+<br> 
+
+$$ \begin{array}{|c|c|} \hline \text{number of data points} \uparrow & \text{Overfitting} \downarrow \\ \text{stochastic noise} \uparrow & \text{Overfitting} \uparrow \\ \text{deterministic noise} \uparrow & \text{Overfitting} \uparrow \\ \hline \end{array} 
+$$ 
+
+<br>
