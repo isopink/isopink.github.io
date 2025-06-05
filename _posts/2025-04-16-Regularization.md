@@ -312,9 +312,11 @@ $$
 Let us begin with examining the definition of regularizer. In our definition of $E_{\text{aug}}(n)$, we only highlighted the dependence on *w*. However, in general, the augmented error for a hypothesis $h \in \mathcal{H}$ is: 
 
 <br>
+
 $$
 E_{\text{aug}}(h, \lambda, \Omega) = E_{\text{in}}(h) + \frac{\lambda}{N} \Omega(h)
 $$
+
 <br>
 
 For weight decay, $\Omega(h) = \mathbf{w}^\top \mathbf{w}$. In fact, weight decay is a type of regularization and $\Omega(h)$ serves as the regularizer. As the number of data points increases, less regularization is needed, so we factor out $\frac{1}{N}$ to make $\lambda$ less sensitive to $N$ and easier to interpret.
