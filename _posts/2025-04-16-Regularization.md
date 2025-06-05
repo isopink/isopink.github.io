@@ -214,8 +214,45 @@ $$
 
 <br>
 
-When $\lambda = 0$, we recover the usual $E_{\text{in}}$. For $\lambda > 0$, the penalty term $\mathbf{w}^\top \mathbf{w}$ introduces a tradeoff between fitting the data and keeping the weights small—known as *weight decay*. This effectively limits the hypothesis set, leading to better generalization.
+When $\lambda = 0$, we recover the usual $E_{\text{in}}$. For $\lambda > 0$, the penalty term $\mathbf{w}^\top \mathbf{w}$ introduces a tradeoff between fitting the data and keeping the weights small—known as *weight decay*. This effectively limits the hypothesis set, leading to better generalization. Now, we will introduce how to minimize it. By modifying $\lambda$, $E_{\text{aug}}$ can be described as below: 
 
+<br>
+
+$$
+E_{\text{aug}}(\mathbf{w}) = E_{\text{in}}(\mathbf{w}) + \frac{\lambda}{N} \mathbf{w}^\top \mathbf{w}
+$$
+
+<br>
+
+We have calculated $E_{\text{in}}$ at (3.2). So our equation becomes: 
+
+<br>
+
+$$
+\frac{1}{N} \left( (\mathbf{Z}\mathbf{w} - \mathbf{y})^\top (\mathbf{Z}\mathbf{w} - \mathbf{y}) + \lambda\, \mathbf{w}^\top \mathbf{w} \right)
+$$
+
+<br>
+
+Then, defferntiate with respect to $mathbf{w}$:
+
+<br>
+$$
+
+\nabla E_{\text{aug}}(\mathbf{w}) = \mathbf{0} \quad \Longrightarrow \quad \mathbf{Z}^\top (\mathbf{Z}\mathbf{w} - \mathbf{y}) + \lambda \mathbf{w} = \mathbf{0}
+$$
+
+<br>
+
+Now we can compute the $\mathbf{w}_{\text{reg}}$ as below: 
+
+<br>
+$$
+
+\mathbf{w}_{\text{reg}} = \left( \mathbf{Z}^\top \mathbf{Z} + \lambda \mathbf{I} \right)^{-1} \mathbf{Z}^\top \mathbf{y}
+$$
+
+<br>
 
 
 
