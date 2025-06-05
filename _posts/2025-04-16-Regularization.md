@@ -298,9 +298,6 @@ $$
 
 <br>
 
-
-<br>
-
 ---
 
 #### 5. Choosing a regularzier 
@@ -329,9 +326,13 @@ As $\lambda$ increases, the learning algorithm changes but the hypothesis set—
 
 Consider the regularizer $\Omega(h)$ is: 
 
+<br>
+
 $$
 \sum_{q=0}^{Q} \gamma_q w_q^2
 $$
+
+<br>
 
 Or we can represent it usnig matrix notation: 
 
