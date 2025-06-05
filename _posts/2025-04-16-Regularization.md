@@ -234,11 +234,11 @@ $$
 
 <br>
 
-Then, defferntiate with respect to $mathbf{w}$:
+Then, defferntiate with respect to $\mathbf{w}$:
 
 <br>
-$$
 
+$$
 \nabla E_{\text{aug}}(\mathbf{w}) = \mathbf{0} \quad \Longrightarrow \quad \mathbf{Z}^\top (\mathbf{Z}\mathbf{w} - \mathbf{y}) + \lambda \mathbf{w} = \mathbf{0}
 $$
 
@@ -247,8 +247,8 @@ $$
 Now we can compute the $\mathbf{w}_{\text{reg}}$ as below: 
 
 <br>
-$$
 
+$$
 \mathbf{w}_{\text{reg}} = \left( \mathbf{Z}^\top \mathbf{Z} + \lambda \mathbf{I} \right)^{-1} \mathbf{Z}^\top \mathbf{y}
 $$
 
