@@ -3,7 +3,7 @@ layout: single
 title: "Lecture 12 : Regularization"
 ---
 
-In this time, we will introduce regularization, a kind of way to deal with [overfitting](https://isopink.github.io/Overfitting/). The discussion will proceed in following four parts: 
+In this time, we will introduce regularization, a kind of way to deal with [overfitting](https://isopink.github.io/Overfitting/). The discussion will proceed in following five parts: 
 
 1. Simple example of regularization. 
 
