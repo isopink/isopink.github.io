@@ -104,7 +104,7 @@ where $L_0(x) = 1$. As usual, we will sometimes refer to the hypothesis $h$ by i
 <br>
 
 $$
-E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} (\mathbf{w}^\top \mathbf{z}_n - y_n)^2. \tag{4.2}
+E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} (\mathbf{w}^\top \mathbf{z}_n - y_n)^2
 $$
 
 <br>
