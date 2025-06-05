@@ -290,3 +290,11 @@ $$
 
 Each time $t$ increases, $\mathbf{w}(t)$ becomes slightly smaller. This gradual shrinkage is the reason the method is called Weight Decay.
 
+<br>
+
+---
+
+#### 5. Choosing a regularzier 
+
+
+
