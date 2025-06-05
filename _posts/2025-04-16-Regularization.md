@@ -161,7 +161,7 @@ With this inspection, optimization of $E_{\text{in}}$ problem becomes:
 <br>
 
 $$
-\min_{\mathbf{w}} E_{\text{in}}(\mathbf{w}) \quad \text{subject to} \quad \mathbf{w}^\top \mathbf{w} \leq C.
+\min_{\mathbf{w}} E_{\text{in}}(\mathbf{w}) \quad \text{subject to} \quad \mathbf{w}^\top \mathbf{w} \leq C
 $$
 
 <br>
