@@ -214,7 +214,7 @@ $$
 
 <br>
 
-When $\lambda = 0$, we recover the usual $E_{\text{in}}$. For $\lambda > 0$, the penalty term $\mathbf{w}^\top \mathbf{w}$ introduces a tradeoff between fitting the data and keeping the weights small—known as *weight decay*. This effectively limits the hypothesis set, leading to better generalization. Now, we will introduce how to find constrained solution. By modifying $\lambda$, $E_{\text{aug}}$ can be described as below: 
+When $\lambda = 0$, we recover the usual $E_{\text{in}}$. For $\lambda > 0$, the penalty term $\mathbf{w}^\top \mathbf{w}$ introduces a tradeoff between fitting the data and keeping the weights small. This effectively limits the hypothesis set, leading to better generalization. Now, we will introduce how to find constrained solution. By modifying $\lambda$, $E_{\text{aug}}$ can be described as below: 
 
 <br>
 
@@ -254,6 +254,14 @@ $$
 
 <br>
 
+We can now apply $\mathbf{w}_{\text{reg}}$ to the overfitting example. Let us recall the previous example we discussed at [lecture 11](https://isopink.github.io/Overfitting/). The results for different $\lambda$'s are shown below: 
 
+![solution](/assets/images/rr_6.svg) 
+
+As you can see, even very little regularization goes a long way, but too much regularization results in an overly flat curve at the expense of in-sample fit.  
+
+---
+
+#### 4. Weight decay
 
 
