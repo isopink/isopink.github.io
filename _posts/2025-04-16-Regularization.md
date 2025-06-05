@@ -269,7 +269,7 @@ The method described in (3.2) is called Weight Decay. To understand why it is ca
 <br>
 
 $$
-\mathbf{w}(t + 1) = \mathbf{w}(t) - \eta \nabla e_n(\mathbf{w})
+\mathbf{w}(t + 1) = \mathbf{w}(t) - \eta \nabla E_n(\mathbf{w})
 $$
 
 <br>
