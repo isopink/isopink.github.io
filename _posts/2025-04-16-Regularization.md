@@ -224,7 +224,7 @@ $$
 
 <br>
 
-We have calculated $E_{\text{in}}$ at (3.2). So our equation becomes: 
+We have calculated $E_{\text{in}}$ at (3.2). So, our equation becomes: 
 
 <br>
 
