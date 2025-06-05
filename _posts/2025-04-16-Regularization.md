@@ -281,10 +281,12 @@ However, if we use constrained error function, the equation becomes as below :
 $$
 \begin{aligned}
 \mathbf{w}(t + 1) 
-&= \mathbf{w}(t) - \eta \nabla E_{\text{in}}(\mathbf{w}(t)) - 2\eta \mathbf{w}(t) \\
+&= \mathbf{w}(t) - \eta \nabla E_{\text{in}}(\mathbf{w}(t)) - 2\eta \mathbf{w}(t) \\ \\
 &= \mathbf{w}(t) \left(1 - 2\eta \lambda \right) - \eta \nabla E_{\text{in}}(\mathbf{w}(t))
 \end{aligned}
 $$
 
 <br>
+
+Each time $t$ increases, $\mathbf{w}(t)$ becomes slightly smaller. This gradual shrinkage is the reason the method is called Weight Decay.
 
