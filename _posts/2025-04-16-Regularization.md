@@ -94,7 +94,7 @@ Our hypothesis set $\mathcal{H}_Q$ is a linear combination of these polynomials:
 <br>
 
 $$
-\mathcal{H}_Q = \left\{ h \;\middle|\; h(x) = \mathbf{w}^\top \mathbf{z} = \sum_{q=0}^{Q} w_q L_q(x) \right\}, \quad \mathbf{w} \in \mathbb{R}^{Q+1},
+\mathcal{H}_Q = \left\{ h \;\middle|\; h(x) = \mathbf{w}^\top \mathbf{z} = \sum_{q=0}^{Q} w_q L_q(x) \right\}
 $$
 
 <br>
@@ -264,4 +264,27 @@ As you can see, even very little regularization goes a long way, but too much re
 
 #### 4. Weight decay
 
+The method described in (3.2) is called Weight Decay. To understand why it is called that, let us consider the case of using gradient descent. We have seen how gradient descent works in [Lecture 9](https://isopink.github.io/Linear-Model-ll/). It can be described as below, using unconstrained error function: 
+
+<br>
+
+$$
+\mathbf{w}(t + 1) = \mathbf{w}(t) - \eta \nabla e_n(\mathbf{w})
+$$
+
+<br>
+
+However, if we use constrained error function, the equation becomes as below : 
+
+<br>
+
+$$
+\begin{aligned}
+\mathbf{w}(t + 1) 
+&= \mathbf{w}(t) - \eta \nabla E_{\text{in}}(\mathbf{w}(t)) - 2\eta \mathbf{w}(t) \\
+&= \mathbf{w}(t) \left(1 - 2\eta \lambda \right) - \eta \nabla E_{\text{in}}(\mathbf{w}(t))
+\end{aligned}
+$$
+
+<br>
 
