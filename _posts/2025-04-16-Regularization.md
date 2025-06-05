@@ -353,7 +353,7 @@ $$
 
 <br>
 
-As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. 
+As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. Furthermore, applying soft approach is a way of avoiding combinatorial computation, which is very difficult to handle. 
 
 <br>
 
