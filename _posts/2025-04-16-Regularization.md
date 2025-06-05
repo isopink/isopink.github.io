@@ -69,7 +69,7 @@ As you can see, when the order of the Legendre polynomial increases, the curve g
 
 <br>
 
-##### 3.2. The polynominal model without regularizaiton. 
+##### 3.2. polynominal model without regularizaiton. 
 
 The case of polynomial regression with the squared-error measure illustrates the main ideas of regularization effectively and provides a solid mathematical foundation. Although we focus on this case for clarity, the concepts we discuss extend naturally to non-linear and multi-dimensional settings with more general error measures.
 
@@ -119,7 +119,7 @@ $$
 
 <br>
 
-The optimal weights can be computed using the pseudo-inverse
+By using the pseudo-inverse, the optimal weights that mininize the $E_{\text{in}}$ can be computed as: 
 
 <br>
 
@@ -129,17 +129,16 @@ $$
 
 <br>
 
-This solution is computed without regularization. What if we constrain the weights?
+This solution is computed without any constraint. What if we constrain the weights? 
 
 <br>
 
-##### 3.2. The polynominal model with regularizaiton
+##### 3.2. polynominal model with regularizaiton
 
-We have already seen an example of constraining the weights. the set of 2nd order polynominals $\mathcal{H}_2$ can be thought of as a constrained version of 
+We have already seen an example of constraining the weights in [Lecture 11](https://isopink.github.io/Overfitting/).
+The set of 2nd-order polynomials can be thought of as a constrained version of the set of 10th-order polynomials in the sense that some of the 10th-order polynominal's weights are required to be zero. We denote the set of 2nd-order and 10th-order polynominals as $\mathcal{H}_2$ and $\mathcal{H}_10$.
 
-set of 10th order polynominals $\mathcal{H}_{10}$ in the sense that some of the $\mathcal{H}_{10}$ weights are required to be zero. 
-
-That is, $\mathcal{H}_2$ is a subset of $\mathcal{H}_{10}$ defined by: 
+That is, $\mathcal{H}_2$ is a subset of $\mathcal{H}_10$ defined by: 
 
 <br>
 
@@ -149,14 +148,26 @@ $$
 
 <br>
 
-Requiring some weights to be 0 is a *hard* constraint. We have seen that such a hard constraint on the order can help, for example $\mathcal{H}_2$ is better than $\mathcal{H}_{10}$ when there is a lot of noise and $N$ is small.  
-Instead of requiring some weights to be zero, we can force the weights to be small but not necessarily zero through a softer constraint such as
+Requiring some weights to be 0 is a *hard* constraint. Instead of requiring some weights to be zero, we can force the weights to be small but not necessarily zero through a softer constraint such as
 
 <br>
+
 $$
-\sum_{q=0}^{Q} w_q^2 \leq C.
+\sum_{q=0}^{Q} w_q^2 \leq C
 $$
+
 <br>
 
+With this inspection, optimization of $E_{\text{in}}$ problem becomes: 
+
+<br>
+
+$$
+\min_{\mathbf{w}} E_{\text{in}}(\mathbf{w}) \quad \text{subject to} \quad \mathbf{w}^\top \mathbf{w} \leq C.
+$$
+
+<br>
+
+We define $\mathbf{w}_{\text{reg}}$ to compare this solution with the unconstrained solution. 
 
 
