@@ -214,7 +214,7 @@ $$
 
 <br>
 
-When $\lambda = 0$, we recover the usual $E_{\text{in}}$. For $\lambda > 0$, the penalty term $\mathbf{w}^\top \mathbf{w}$ introduces a tradeoff between fitting the data and keeping the weights small. This effectively limits the hypothesis set, leading to better generalization. Now, we will introduce how to find constrained solution. By modifying $\lambda$, $E_{\text{aug}}$ can be described as below: 
+When $\lambda = 0$, we recover the usual $E_{\text{in}}$. For $\lambda > 0$, the penalty term $\mathbf{w}^\top \mathbf{w}$ introduces a tradeoff between fitting the data and keeping the weights small. Now, we will introduce how to find constrained solution. By modifying $\lambda$, $E_{\text{aug}}$ can be described as below: 
 
 <br>
 
@@ -288,7 +288,16 @@ $$
 
 <br>
 
-Each time $t$ increases, $\mathbf{w}(t)$ becomes slightly smaller. This gradual shrinkage is the reason the method is called Weight Decay.
+Each time $t$ increases, $\mathbf{w}(t)$ becomes slightly smaller. This gradual shrinkage is the reason the method is called Weight Decay. We can also think of weight decay in [Neural Network](https://isopink.github.io/Neural-Network/) as below: 
+
+<br>
+
+$$
+\mathbf{w}^\top \mathbf{w} = \sum_{l=1}^{L} \sum_{i=0}^{d^{(l-1)}} \sum_{j=1}^{d^{(l)}} \left(w_{ij}^{(l)}\right)^2
+$$
+
+<br>
+
 
 <br>
 
@@ -296,5 +305,62 @@ Each time $t$ increases, $\mathbf{w}(t)$ becomes slightly smaller. This gradual 
 
 #### 5. Choosing a regularzier 
 
+<br>
 
+##### 5.1. General form of augmented error
 
+Let us begin with examining the definition of regularizer. In our definition of $E_{\text{aug}}(n)$, we only highlighted the dependence on *w*. However, in general, the augmented error for a hypothesis $h \in \mathcal{H}$ is: 
+
+<br>
+$$
+E_{\text{aug}}(h, \lambda, \Omega) = E_{\text{in}}(h) + \frac{\lambda}{N} \Omega(h)
+$$
+<br>
+
+For weight decay, $\Omega(h) = \mathbf{w}^\top \mathbf{w}$. In fact, weight decay is a type of regularization and $\Omega(h)$ serves as the regularizer. As the number of data points increases, less regularization is needed, so we factor out $\frac{1}{N}$ to make $\lambda$ less sensitive to $N$ and easier to interpret.
+
+As $\lambda$ increases, the learning algorithm changes but the hypothesis set—and thus $d_{\text{VC}}$—remains the same. This creates a mismatch, since more regularization effectively reduces model complexity. To address this, we can use an *effective VC dimension* based on the number of free parameters. For linear models, this decreases as $\lambda$ increases, making it a better indicator of generalization than the standard VC dimension.
+
+<br>
+
+##### 5.2. Variations of regularizer 
+
+Consider the regularizer $\Omega(h)$ is: 
+
+$$
+\sum_{q=0}^{Q} \gamma_q w_q^2
+$$
+
+Or we can represent it usnig matrix notation: 
+
+<br>
+
+$$
+\mathbf{w}^\top \Gamma^\top \Gamma \mathbf{w}
+$$
+
+<br>
+
+This is called **Tikhonov regularizer**. Let us take two examples. When $\gamma_q = 2^q$, the model prefers to match lower-order terms. For example, if the target function is a high-degree polynomial, the model tends to align with lower-degree terms. On the other hand, if $\gamma_q = 2^{-q}$, the model puts more emphasis on higher-degree terms. This could lead to better performance when the target function is expected to be more complex.
+
+We introduce ome more regularizers for neural network, Weight elimination. As the name suggests, this method sets some of the weights exactly to zero. Reducing the number of weights effectively lowers the VC dimension. However, instead of forcing weights to be exactly zero, a softer approach will be proposed:
+
+<br>
+
+$$
+\Omega(\mathbf{w}) = \sum_{i,j,l} \frac{\left(w_{ij}^{(l)}\right)^2}{\beta^2 + \left(w_{ij}^{(l)}\right)^2}
+$$
+
+<br>
+
+In this case, when $w$ is small, the expression approaches $\frac{1}{\beta^2}$, and when $w$ is large, it approaches 1. As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. By using soft elimination, we can avoid combinatorial computation. 
+
+<br>
+
+##### 5.3. Optimal $\lambda$ 
+
+![solution](/assets/images/rr_7.svg) 
+
+As the noise level increases—whether from randomness or target complexity—the optimal $\lambda$ should also increase to achieve better generalization. What if we choose the wrong regularizer? However, even in this case, properly tuning $\lambda$ (e.g., setting $\lambda = 0$) can yield the same result as having no regularization at all. 
+
+Regularization is essential for handling both stochastic and deterministic noise in data. By favoring simpler functions or smaller weights, it helps prevent overfitting and improves generalization. The strength of regularization, often controlled by $\lambda$, can be tuned automatically using validation techniques. We will discuss validation in the next session. 
