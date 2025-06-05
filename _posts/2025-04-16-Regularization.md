@@ -7,9 +7,9 @@ In this time, we will introduce regularization, a kind of way to deal with [over
 
 1. Simple example of regularization. 
 
-2. Regularization : Heuristical explanation
+2. Regularization : informal
 
-3. Regularization : Mathematical explanation
+3. Regularization : formal
 
 4. Weight decay
 
@@ -27,7 +27,7 @@ Though we only used a very small 'amount' of regularizaiton, the fit improves dr
 
 ---
 
-#### 2. Regularization : Heuristical explanation
+#### 2. Regularization : informal 
 
 Regularization can be viewed through the [VC bound](https://isopink.github.io/VC-Dimension/), which penalizes model complexity:
 
@@ -49,9 +49,11 @@ We constrain the weight to fitting the target $f(x) = \sin(\pi x)$ using $N = 2$
  
 As expected, the regularized model performs better than the unregularized one. While $\bar{g}(x)$ seem unchanged, the model distribution has narrowed. This slightly increases bias but significantly reduces variance by eliminating out-of-range fits. That is to say, $E_{\text{out}}$ is reduced. 
 
+This example shows why regularization is necessary. The linear model is too complex for the small dataset—it can perfectly fit any two points, leading to overfitting. Regularization helps by accounting for both the quantity and quality of data. Instead of switching to a simpler model like constant functions, we can use the complex model with constraints. This approach gives better flexibility and leads to the best $E_{\text{out}}$.  
+
 ---
 
-#### 3. Regularization : Mathematical explanation
+#### 3. Regularization : formal 
 
 
 
