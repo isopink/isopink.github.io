@@ -209,7 +209,7 @@ The constant $C$ disappears in the expression and is replaced by $\lambda$. Fort
 <br>
 
 $$
-E_{\text{aug}}(\mathbf{w}) = E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w},
+E_{\text{aug}}(\mathbf{w}) = E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w}
 $$
 
 <br>
