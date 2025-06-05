@@ -353,7 +353,7 @@ $$
 
 <br>
 
-In this case, when $w$ is small, the expression approaches $\frac{1}{\beta^2}$, and when $w$ is large, it approaches 1. As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. By using soft elimination, we can avoid combinatorial computation. 
+As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. By using soft elimination, we can avoid combinatorial computation. 
 
 <br>
 
