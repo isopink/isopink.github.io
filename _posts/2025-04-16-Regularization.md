@@ -69,12 +69,14 @@ As you can see, when the order of the Legendre polynomial increases, the curve g
 
 <br>
 
-##### 3.2. The polynominal model 
+##### 3.2. The polynominal model without regularizaiton. 
 
-Polynomial models are a special case of linear models in a space $\mathcal{Z}$, under a nonlinear transformation $\Phi : \mathcal{X} \rightarrow \mathcal{Z}$.  
-Here, for the $Q$th order polynomial model, $\Phi$ transforms $x$ into a vector $\mathbf{z}$ of Legendre polynomials,
+The case of polynomial regression with the squared-error measure illustrates the main ideas of regularization effectively and provides a solid mathematical foundation. Although we focus on this case for clarity, the concepts we discuss extend naturally to non-linear and multi-dimensional settings with more general error measures.
+
+Polynomial models, in fact, are a special case of linear models in a transformed space $\mathcal{Z}$, defined by a nonlinear mapping $\Phi : \mathcal{X} \rightarrow \mathcal{Z}$. In the case of a $Q$th-order polynomial model, $\Phi$ transforms the input $x$ into a vector $\mathbf{z}$ of Legendre polynomials: 
 
 <br>
+
 $$
 \mathbf{z} =
 \begin{bmatrix}
@@ -84,33 +86,77 @@ L_1(x) \\
 L_Q(x)
 \end{bmatrix}.
 $$
+
 <br>
 
 Our hypothesis set $\mathcal{H}_Q$ is a linear combination of these polynomials:
 
 <br>
+
 $$
 \mathcal{H}_Q = \left\{ h \;\middle|\; h(x) = \mathbf{w}^\top \mathbf{z} = \sum_{q=0}^{Q} w_q L_q(x) \right\}, \quad \mathbf{w} \in \mathbb{R}^{Q+1},
 $$
-<br>
-
-where $L_0(x) = 1$. As usual, we will sometimes refer to the hypothesis $h$ by its weight vector $\mathbf{w}$.  
-Since each $h$ is linear in $\mathbf{w}$, we can use the machinery of linear regression from [Lecture 3](https://isopink.github.io/Linear-Model-L/) to minimize the squared error:
 
 <br>
+
+where $L_0(x) = 1$. As usual, we will sometimes refer to the hypothesis $h$ by its weight vector $\mathbf{w}$. Since each $h$ is linear in $\mathbf{w}$, we can use the machinery of linear regression from [Lecture 3](https://isopink.github.io/Linear-Model-L/) to minimize the squared error:
+
+<br>
+
 $$
 E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} (\mathbf{w}^\top \mathbf{z}_n - y_n)^2. \tag{4.2}
 $$
+
 <br>
 
 We can write it down with matrix notation as: 
 
+<br>
 
+$$
+E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \left\| \mathbf{Zw} - \mathbf{y} \right\|^2
+$$
 
-The case of polynomial regression with squared-error measure illustrates the main ideas of regularization well, and facilitates a solid mathematical derivation.  
-Nonetheless, our discussion will generalize in practice to non-linear, multi-dimensional settings with more general error measures.  
-The baseline algorithm (without regularization) is to minimize $E_{\text{in}}$ over the hypotheses in $\mathcal{H}_Q$ to produce the final hypothesis  
-$g(x) = \mathbf{w}_{\text{in}}^\top \mathbf{z}$, where $\mathbf{w}_{\text{in}} = \arg\min_{\mathbf{w}} E_{\text{in}}(\mathbf{w})$.
+<br>
+
+The optimal weights can be computed using the pseudo-inverse
+
+<br>
+
+$$
+\mathbf{w}_{\text{lin}} = (\mathbf{Z}^\top \mathbf{Z})^{-1} \mathbf{Z}^\top \mathbf{y}
+$$
+
+<br>
+
+This solution is computed without regularization. What if we constrain the weights?
+
+<br>
+
+##### 3.2. The polynominal model with regularizaiton
+
+We have already seen an example of constraining the weights. the set of 2nd order polynominals $\mathcal{H}_2$ can be thought of as a constrained version of 
+
+set of 10th order polynominals $\mathcal{H}_{10}$ in the sense that some of the $\mathcal{H}_{10}$ weights are required to be zero. 
+
+That is, $\mathcal{H}_2$ is a subset of $\mathcal{H}_{10}$ defined by: 
+
+<br>
+
+$$
+\mathcal{H}_2 = \{ \mathbf{w} \mid \mathbf{w} \in \mathcal{H}_{10};\ w_q = 0\ \text{for}\ q \geq 3 \}
+$$
+
+<br>
+
+Requiring some weights to be 0 is a *hard* constraint. We have seen that such a hard constraint on the order can help, for example $\mathcal{H}_2$ is better than $\mathcal{H}_{10}$ when there is a lot of noise and $N$ is small.  
+Instead of requiring some weights to be zero, we can force the weights to be small but not necessarily zero through a softer constraint such as
+
+<br>
+$$
+\sum_{q=0}^{Q} w_q^2 \leq C.
+$$
+<br>
 
 
 
