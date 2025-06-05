@@ -136,9 +136,7 @@ This solution is computed without any constraint. What if we constrain the weigh
 ##### 3.2. polynominal model with regularizaiton
 
 We have already seen an example of constraining the weights in [Lecture 11](https://isopink.github.io/Overfitting/).
-The set of 2nd-order polynomials can be thought of as a constrained version of the set of 10th-order polynomials in the sense that some of the 10th-order polynominal's weights are required to be zero. We denote the set of 2nd-order and 10th-order polynominals as $\mathcal{H}_2$ and $\mathcal{H}_{10}$.
-
-$\mathcal{H}_2$ is a subset of $\mathcal{H}_{10}$ defined by: 
+The set of 2nd-order polynomials can be thought of as a constrained version of the set of 10th-order polynomials in the sense that some of the 10th-order polynominal's weights are required to be zero. In conclusion, we can establish the relationship between two hypothesis sets as below:
 
 <br>
 
@@ -168,6 +166,44 @@ $$
 
 <br>
 
-We define $\mathbf{w}_{\text{reg}}$ to compare this solution with the unconstrained solution. 
+We define $\mathbf{w}_{\text{reg}}$ to diffrentiate this solution with the unconstrained solution. Now let us examine how to solve the constrained situation. I could have explained it through mathematical way, I will include figures and intuitive explanations to aid the readers' understanding.
+
+![solution](/assets/images/rr_5.svg) 
+
+The unconstrained $E_{\text{in}}$ forms a blue ellipse centered at $\mathbf{w}_{\text{lin}}$, while the constraint is shown as a red circle. The optimal solution lies where the two regions overlap.
+
+To minimize $E_{\text{in}}$, consider a point $\mathbf{w}$ in the overlap region. The gradient of $E_{\text{in}}$ points outward from the blue ellipse, and the normal vector of the red circle does the same. Thus, to reduce $E_{\text{in}}$, $\mathbf{w}$ should move along the red boundary toward $\mathbf{w}_{\text{lin}}$.
+
+If $\mathbf{w}_{\text{reg}}$ is to be optimal while remaining on the boundary, then for some positive parameter $\lambda$,
+
+<br>
+
+$$
+\nabla E_{\text{in}}(\mathbf{w}_{\text{reg}}) = -2 \lambda \mathbf{w}_{\text{reg}}
+$$
+
+<br>
+
+Equivalently, $\mathbf{w}_{\text{reg}}$ satisfies: 
+
+<br>
+
+$$
+\nabla \left( E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w} \right) \Big|_{\mathbf{w} = \mathbf{w}_{\text{reg}}} = \mathbf{0},
+$$
+
+<br>
+
+So, for some $\lambda > 0$, $\mathbf{w}_{\text{reg}}$ locally minimizes:
+
+<br>
+
+$$
+E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w}.
+$$
+
+<br>
+
+The constant $C$ disappears in the expression and is replaced by $\lambda$. Fortunately, as $C$ increases, $\lambda$ decreases, and vice versa. So, adjusting $\lambda$ has the same effect as controlling $C$.
 
 
