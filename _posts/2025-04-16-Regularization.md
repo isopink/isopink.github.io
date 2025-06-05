@@ -84,7 +84,7 @@ $$
 L_1(x) \\
 \vdots \\
 L_Q(x)
-\end{bmatrix}.
+\end{bmatrix}
 $$
 
 <br>
