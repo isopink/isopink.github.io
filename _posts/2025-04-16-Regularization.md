@@ -204,6 +204,17 @@ $$
 
 <br>
 
-The constant $C$ disappears in the expression and is replaced by $\lambda$. Fortunately, as $C$ increases, $\lambda$ decreases, and vice versa. So, adjusting $\lambda$ has the same effect as controlling $C$.
+The constant $C$ disappears in the expression and is replaced by $\lambda$. Fortunately, as $C$ increases, $\lambda$ decreases, and vice versa. So, adjusting $\lambda$ has the same effect as controlling $C$. We call this form as Augmented error, $E_{\text{aug}}(\mathbf{w})$: 
+
+<br>
+
+$$
+E_{\text{aug}}(\mathbf{w}) = E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w},
+$$
+
+<br>
+
+When $\lambda = 0$, we have the usual unconstrained $E_{\text{in}}$. For $\lambda > 0$, minimizing the augmented error corresponds to minimizing a penalized $E_{\text{in}}$. The value of $\lambda$ controls the amount of regularization. The penalty term $\mathbf{w}^\top \mathbf{w}$ enforces a tradeoff between minimizing the $E_{\text{in}}$ and keeping the weights small, a concept known as *weight decay*.
+
 
 
