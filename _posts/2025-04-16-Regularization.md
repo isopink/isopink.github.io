@@ -136,9 +136,9 @@ This solution is computed without any constraint. What if we constrain the weigh
 ##### 3.2. polynominal model with regularizaiton
 
 We have already seen an example of constraining the weights in [Lecture 11](https://isopink.github.io/Overfitting/).
-The set of 2nd-order polynomials can be thought of as a constrained version of the set of 10th-order polynomials in the sense that some of the 10th-order polynominal's weights are required to be zero. We denote the set of 2nd-order and 10th-order polynominals as $\mathcal{H}_2$ and $\mathcal{H}_10$.
+The set of 2nd-order polynomials can be thought of as a constrained version of the set of 10th-order polynomials in the sense that some of the 10th-order polynominal's weights are required to be zero. We denote the set of 2nd-order and 10th-order polynominals as $\mathcal{H}_2$ and $\mathcal{H}_{10}$.
 
-That is, $\mathcal{H}_2$ is a subset of $\mathcal{H}_10$ defined by: 
+$\mathcal{H}_2$ is a subset of $\mathcal{H}_{10}$ defined by: 
 
 <br>
 
