@@ -55,7 +55,62 @@ This example shows why regularization is necessary. The linear model is too comp
 
 #### 3. Regularization : formal 
 
+In this section, we derive a regularization method that applies to a wide variety of learning problems. To simplify the math, we will use the concrete setting of regression using Legendre polynomials, the polynomials of increasing complexity. Let us first formally introduce you to the Legendre polynomials.
 
+<br>
+
+##### 3.1. Legendre polynominal
+
+Legendre polynomials are a standard set of polynomials with nice analytic properties that result in simpler derivations. The zeroth-order Legendre polynomial is the constant $L_0(x) = 1$, and the first few Legendre polynomials are illustrated below.
+
+![solution](/assets/images/rr_4.svg) 
+
+As you can see, when the order of the Legendre polynomial increases, the curve gets more complex. Legendre polynomials are orthogonal to each other within $x \in [-1, 1]$, and any regular polynomial can be written as a linear combination of Legendre polynomials, just like it can be written as a linear combination of powers of $x$. 
+
+<br>
+
+##### 3.2. The polynominal model 
+
+Polynomial models are a special case of linear models in a space $\mathcal{Z}$, under a nonlinear transformation $\Phi : \mathcal{X} \rightarrow \mathcal{Z}$.  
+Here, for the $Q$th order polynomial model, $\Phi$ transforms $x$ into a vector $\mathbf{z}$ of Legendre polynomials,
+
+<br>
+$$
+\mathbf{z} =
+\begin{bmatrix}
+1 \\
+L_1(x) \\
+\vdots \\
+L_Q(x)
+\end{bmatrix}.
+$$
+<br>
+
+Our hypothesis set $\mathcal{H}_Q$ is a linear combination of these polynomials:
+
+<br>
+$$
+\mathcal{H}_Q = \left\{ h \;\middle|\; h(x) = \mathbf{w}^\top \mathbf{z} = \sum_{q=0}^{Q} w_q L_q(x) \right\}, \quad \mathbf{w} \in \mathbb{R}^{Q+1},
+$$
+<br>
+
+where $L_0(x) = 1$. As usual, we will sometimes refer to the hypothesis $h$ by its weight vector $\mathbf{w}$.  
+Since each $h$ is linear in $\mathbf{w}$, we can use the machinery of linear regression from [Lecture 3](https://isopink.github.io/Linear-Model-L/) to minimize the squared error:
+
+<br>
+$$
+E_{\text{in}}(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} (\mathbf{w}^\top \mathbf{z}_n - y_n)^2. \tag{4.2}
+$$
+<br>
+
+We can write it down with matrix notation as: 
+
+
+
+The case of polynomial regression with squared-error measure illustrates the main ideas of regularization well, and facilitates a solid mathematical derivation.  
+Nonetheless, our discussion will generalize in practice to non-linear, multi-dimensional settings with more general error measures.  
+The baseline algorithm (without regularization) is to minimize $E_{\text{in}}$ over the hypotheses in $\mathcal{H}_Q$ to produce the final hypothesis  
+$g(x) = \mathbf{w}_{\text{in}}^\top \mathbf{z}$, where $\mathbf{w}_{\text{in}} = \arg\min_{\mathbf{w}} E_{\text{in}}(\mathbf{w})$.
 
 
 
