@@ -353,7 +353,7 @@ $$
 
 <br>
 
-As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. By using soft elimination, we can avoid combinatorial computation. 
+As a result, less important weights are pushed closer to zero, while more important weights remain relatively unchanged. 
 
 <br>
 
