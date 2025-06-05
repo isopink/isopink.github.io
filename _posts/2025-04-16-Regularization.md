@@ -189,7 +189,7 @@ Equivalently, $\mathbf{w}_{\text{reg}}$ satisfies:
 <br>
 
 $$
-\nabla \left( E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w} \right) \Big|_{\mathbf{w} = \mathbf{w}_{\text{reg}}} = \mathbf{0},
+\nabla \left( E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w} \right) \Big|_{\mathbf{w} = \mathbf{w}_{\text{reg}}} = \mathbf{0}
 $$
 
 <br>
@@ -199,7 +199,7 @@ So, for some $\lambda > 0$, $\mathbf{w}_{\text{reg}}$ locally minimizes:
 <br>
 
 $$
-E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w}.
+E_{\text{in}}(\mathbf{w}) + \lambda \mathbf{w}^\top \mathbf{w}
 $$
 
 <br>
