@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/646c4182-2640-4d2d-887b-88b62aaa34a7)---
+---
 layout: single
 title: "Lecture 12 : Regularization"
 ---
