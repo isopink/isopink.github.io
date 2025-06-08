@@ -104,13 +104,8 @@ This is the value of the Kernel. It looks like an inner product, except for $2$'
 <br>
 
 $$
-\left( 1,\ x_1^2,\ x_2^2,\ \sqrt{2}x_1,\ \sqrt{2}x_2,\ \sqrt{2}x_1x_2 \right)
+\Phi(x_1, x_2) = \left( 1,\ x_1^2,\ x_2^2,\ \sqrt{2}x_1,\ \sqrt{2}x_2,\ \sqrt{2}x_1x_2 \right)
 $$
 
 <br>
 
-$$
-\left( 1,\ x_1'^2,\ x_2'^2,\ \sqrt{2}x_1',\ \sqrt{2}x_2',\ \sqrt{2}x_1'x_2' \right)
-$$
-
-<br>
