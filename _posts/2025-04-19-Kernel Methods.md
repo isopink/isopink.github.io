@@ -17,17 +17,22 @@ We have discussed the nonlinear transformation with applying [SVM](https://isopi
 
 Let us recall what we have done in $\mathcal{Z}$ space. We have: 
 
+<br>
+
 $$
 \mathcal{L}(\alpha) = \sum_{n=1}^{N} \alpha_n - \frac{1}{2} \sum_{n=1}^{N} \sum_{m=1}^{N} y_n y_m \alpha_n \alpha_m \, \mathbf{z}_n^\top \mathbf{z}_m
 $$
 
-And the constraints: 
+<br>
 
-$$ \alpha_n \geq 0 \quad \text{for} \quad n = 1, \cdots, N $$  
+And the constraints: 
 
 <br>
 
-$$ \sum_{n=1}^{N} \alpha_n y_n = 0 $$
+$$ 
+\alpha_n \geq 0 \quad \text{for} \quad n = 1, \cdots, N \\ \\ \sum_{n=1}^{N} \alpha_n y_n = 0
+$$  
+
 
 
 
