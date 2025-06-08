@@ -33,6 +33,8 @@ $$
 \alpha_n \geq 0 \quad \text{for} \quad n = 1, \cdots, N \\ \\ \sum_{n=1}^{N} \alpha_n y_n = 0
 $$  
 
+<br>
+
 
 
 
