@@ -15,5 +15,20 @@ In this time, we are going to discuss the Kernel methods to deal with the nonlin
 
 We have discussed the nonlinear transformation with applying [SVM](https://isopink.github.io/SVM/). However, when data is transformed into a high-dimensional space ($\mathcal{Z} space), linear separation becomes easier, but the computational complexity may increases dramatically. Kernel methods will deal with it.  
 
-Let us recall what do we have done in $\mathcal{Z}$ space. 
+Let us recall what we have done in $\mathcal{Z}$ space. We have: 
+
+$$
+\mathcal{L}(\alpha) = \sum_{n=1}^{N} \alpha_n - \frac{1}{2} \sum_{n=1}^{N} \sum_{m=1}^{N} y_n y_m \alpha_n \alpha_m \, \mathbf{z}_n^\top \mathbf{z}_m
+$$
+
+And the constraints: 
+
+$$ \alpha_n \geq 0 \quad \text{for} \quad n = 1, \cdots, N $$  
+
+<br>
+
+$$ \sum_{n=1}^{N} \alpha_n y_n = 0 $$
+
+
+
 
