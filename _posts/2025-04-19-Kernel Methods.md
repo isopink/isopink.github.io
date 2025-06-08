@@ -99,7 +99,7 @@ $$
 
 <br>
 
-This is the value of the Kernel. It looks like an inner product, except for $2$'s. However, this still is an inner product. We can consider the $\mathbf{x}$ and $\mathbf{x}'$ goes through the following transformation: 
+This is the value of the Kernel. It looks like an inner product, except for $2$'s. However, this still is an inner product. We can consider the $\mathbf{x}$ and $\mathbf{x}'$ goes through the following transformation $\Phi$: 
 
 <br>
 
