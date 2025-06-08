@@ -47,13 +47,70 @@ $$
 
 Where, 
 
+<br>
+
 $$
 \mathbf{w} = \sum_{\mathbf{z}_n \text{ is SV}} \alpha_n y_n \mathbf{z}_n \quad \text{and} \quad y_m(\mathbf{w}^\top \mathbf{z}_m + b) = 1
 $$
 
+<br>
+
 To compute $\mathbf{w}^\top \mathbf{z} + b$, we need inner product of $\mathbf{z}$ again. 
 
-Both cases, we only deal with $\mathbf{z}$ as the inner product. Then, if we are able to compute the inner product in the $\mathcal{Z}$ space without visiting the $\mathbf{Z}$ space, we can carry this machinery. Let us look at this idea as being a generalized inner product. 
+Both Lagrangian and hypotehsis, we only deal with $\mathbf{z}$ as the inner product. Then, if we are able to compute the inner product in the $\mathcal{Z}$ space without visiting the $\mathbf{Z}$ space, we can carry this machinery. Let us look at this idea as being a generalized inner product. 
 
+Suppose we are given two points, $\mathbf{x}$ and $mathbf{x}' \in \mathcal{X}$. We transform them and take an inner product in the $\mathcal{Z}$ space, $mathbf{z}^\top mathbf{z}'$. However, we want to treat it as if it was a generalized inner product in the $\mathcal{X}$ space. In other words: 
 
- 
+<br>
+
+$$
+\text{Let } \mathbf{z}^\top \mathbf{z}' = K(\mathbf{x}, \mathbf{x}')
+$$
+
+<br>
+
+We don't know which funtion, but we know it is a function, Since $\mathbf{z}$ is a funtion of $\mathbf{x}$, being transformed version. We are ging to call this, Kernel. Can we compute this without transforming $\mathbf{x}$ and $\mathbf{x}'$? Let us consider following example: 
+
+<br>
+
+$$
+K(\mathbf{x}, \mathbf{x}') = \left(1 + \mathbf{x}^\top \mathbf{x}'\right)^2
+$$
+
+<br>
+
+Suppose we are given two-dimensional vector $\mathbf{x}$. So we have two coordinates, $x_1$ and $x_2$. Then the above Kernel can be written as below: 
+
+<br>
+
+$$
+\left(1 + x_1 x_1' + x_2 x_2'\right)^2
+$$
+
+<br>
+
+Finally, we get this: 
+
+<br>
+
+$$
+1 + x_1^2 {x_1'}^2 + x_2^2 {x_2'}^2 + 2 x_1 x_1' + 2 x_2 x_2' + 2 x_1 x_1' x_2 x_2'
+$$
+
+<br>
+
+This is the value of the Kernel. It looks like an inner product, except for $2$'s. However, this still is an inner product. We can consider the $\mathbf{x}$ and $\mathbf{x}'$ goes through the following transformation: 
+
+<br>
+
+$$
+\left( 1,\ x_1^2,\ x_2^2,\ \sqrt{2}x_1,\ \sqrt{2}x_2,\ \sqrt{2}x_1x_2 \right)
+$$
+
+<br>
+
+$$
+\left( 1,\ x_1'^2,\ x_2'^2,\ \sqrt{2}x_1',\ \sqrt{2}x_2',\ \sqrt{2}x_1'x_2' \right)
+$$
+
+<br>
