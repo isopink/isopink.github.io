@@ -123,7 +123,7 @@ $$
 The Kernel will be: 
 
 $$
-K(\mathbf{x}, \mathbf{x}') = (ax^\top x' + b)^Q
+K(\mathbf{x}, \mathbf{x}') = (a \mathbf{x}^\top \mathbf{x}' + b)^Q
 $$
 
 And it can be expanded as below: 
@@ -136,4 +136,4 @@ $$
 
 <br>
 
-It is a tremendous number of terms, which are all orders up to $Q$, of different combinations of the $x$'s. It is better to compute $ x^\top x'$ and raise it to the power $Q$. This is our trick. 
+It is a tremendous number of terms, which are all orders up to $Q$, of different combinations of the $x$'s. It is better to compute $ \mathbf{x}^\top \mathbf{x}'$ and raise it to the power $Q$. This is the key idea of our trick. 
