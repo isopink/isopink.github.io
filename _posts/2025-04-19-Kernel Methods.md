@@ -297,7 +297,7 @@ We are completely ready here.
 
 Now, the only problem we have is that we don't know the kernel is valid. There are three approaches to verify. First one is construction, such as the Polynominal Kernel. The second relies on the mathematical properties of kernels, such as Mercer's conditon, Which will be explained soon. The final one is just not to worry about it. Who cares? :> 
 
-Let us examine the Mercer's condition. $K(\mathbf{x}, \mathbf{x}')$ is valid if and only if: 
+Let us introduce the Mercer's condition. Kernel is valid if and only if: 
 
 <br>
 
@@ -318,5 +318,99 @@ $$
 $$
 
 <br>
+
+where $\mathbf{K}$ is $N$ by $N$ matrix as shown below: 
+
+$$
+\begin{bmatrix}
+K(\mathbf{x}_1, \mathbf{x}_1) & K(\mathbf{x}_1, \mathbf{x}_2) & \cdots & K(\mathbf{x}_1, \mathbf{x}_N) \\
+K(\mathbf{x}_2, \mathbf{x}_1) & K(\mathbf{x}_2, \mathbf{x}_2) & \cdots & K(\mathbf{x}_2, \mathbf{x}_N) \\
+\vdots & \vdots & \ddots & \vdots \\
+K(\mathbf{x}_N, \mathbf{x}_1) & K(\mathbf{x}_N, \mathbf{x}_2) & \cdots & K(\mathbf{x}_N, \mathbf{x}_N)
+\end{bmatrix}
+$$
+
+--- 
+
+#### 2. Soft-margin SVM
+
+There are two types of non-separable data. First one is seriously non-separable data as illusted in the following figure: 
+
+![solution](/assets/images/km_4.svg) 
+
+We have done this type of problems by using Kernel method. The other one is slightly non-separable data: 
+
+![solution](/assets/images/km_5.svg) 
+
+There are a few outliers, but mapping to a high-dimensional nonlinear space solely to handle them does not seem reasonable. Furthermore, SVM may not be suitable in this case, as it results in an excessive number of support vectors. We now introduce Soft-margin SVM to deal with it. Consider we are given following situation. 
+
+![solution](/assets/images/km_6.svg) 
+
+The current issue lies with data points that violate the margin region between support vectors. So the condition so the constraint $y_n(\mathbf{w}^\top \mathbf{x}_n + b) \geq 1$ does not hold. To handle this issue, we introduce slack variables $xi_n >0$. Then, constraints becomes: 
+
+<br>
+
+$$
+y_n(\mathbf{w}^\top \mathbf{x}_n + b) \geq 1 - \xi_n
+$$
+
+<br>
+
+And the total violation can be expressed as: 
+
+<br>
+
+$$
+\sum_{n=1}^{N} \xi_n
+$$
+
+<br>
+
+Since the constraits are changed, our optimization method should be updated as: 
+
+<br>
+
+$$
+\text{Minimize} \quad \frac{1}{2} \, \mathbf{w}^\top \mathbf{w} + C \sum_{n=1}^{N} \xi_n
+$$
+
+<br>
+
+subject to: 
+
+<br>
+
+$$
+y_n(\mathbf{w}^\top \mathbf{x}_n + b) \geq 1 - \xi_n \quad \text{for } n = 1, \dots, N
+$$
+
+<br>
+
+$$
+\xi_n \geq 0 \quad \text{for } n = 1, \dots, N
+$$
+
+<br>
+
+$$
+\mathbf{w} \in \mathbb{R}^d,\quad b \in \mathbb{R},\quad \boldsymbol{\xi} \in \mathbb{R}^N
+$$
+
+<br>
+
+We are trying to maximize the margin and mimize the error simultaneously. The constant $C$ denotes the relative importance between two terms. Now, let us update our Lagrangian: 
+
+$$
+\begin{aligned}
+\mathcal{L}(\mathbf{w}, b, \boldsymbol{\xi}, \boldsymbol{\alpha}, \boldsymbol{\beta}) 
+&= \frac{1}{2} \, \mathbf{w}^\top \mathbf{w} 
++ C \sum_{n=1}^{N} \xi_n \\
+&\quad - \sum_{n=1}^{N} \alpha_n \left( y_n(\mathbf{w}^\top \mathbf{x}_n + b) - 1 - \xi_n \right) \\
+&\quad - \sum_{n=1}^{N} \beta_n \, \xi_n
+\end{aligned}
+$$
+
+
+
 
 
