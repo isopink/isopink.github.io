@@ -243,7 +243,7 @@ This is the only difference so far. Once we pass it to the QP solver, we will ob
 <br>
 
 $$
-\text{Express } \quad g(\mathbf{x}) = \text{sign}(\mathbf{w}^\top \mathbf{z} + b) \quad \text{ in terms of } \quad K(\cdot, \cdot)
+g(\mathbf{x}) = \text{sign}(\mathbf{w}^\top \mathbf{z} + b) \quad \text{ in terms of } \quad K(\cdot, \cdot)
 $$
 
 <br>
