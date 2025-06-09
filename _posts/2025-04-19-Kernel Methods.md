@@ -59,7 +59,7 @@ To compute $\mathbf{w}^\top \mathbf{z} + b$, we need inner product of $\mathbf{z
 
 Both Lagrangian and hypotehsis, we only deal with $\mathbf{z}$ as the inner product. Then, if we are able to compute the inner product in the $\mathcal{Z}$ space without visiting the $\mathbf{Z}$ space, we can carry this machinery. Let us look at this idea as being a generalized inner product. 
 
-Suppose we are given two points, $\mathbf{x}$ and $mathbf{x}' \in \mathcal{X}$. We transform them and take an inner product in the $\mathcal{Z}$ space, $mathbf{z}^\top mathbf{z}'$. However, we want to treat it as if it was a generalized inner product in the $\mathcal{X}$ space. In other words: 
+Suppose we are given two points, $\mathbf{x}$ and $\mathbf{x}' \in \mathcal{X}$. We transform them and take an inner product in the $\mathcal{Z}$ space, $\mathbf{z}^\top \mathbf{z}'$. However, we want to treat it as if it was a generalized inner product in the $\mathcal{X}$ space. In other words: 
 
 <br>
 
