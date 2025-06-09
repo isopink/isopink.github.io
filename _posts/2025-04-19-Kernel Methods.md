@@ -268,7 +268,7 @@ $$
 
 <br>
 
-Moreover, for any support vector ($\alpha > 0), we can substitute $b$ by 
+Moreover, for any support vector ($\alpha > 0$), we can substitute $b$ by 
 
 <br>
 
