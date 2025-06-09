@@ -144,3 +144,10 @@ It is a tremendous number of terms, which are all orders up to $Q$, of different
 
 So far, we were able to examine what the $\mathcal{Z}$ is. Now, let us try to get a kernel that maps us to $\mathcal{Z}$ without imagining what $\mathcal{Z}$ is. Consider following case: 
 
+<br>
+
+$$
+K(\mathbf{x}, \mathbf{x}') = \exp\left( -\gamma \|\mathbf{x} - \mathbf{x}'\|^2 \right)
+$$
+
+<br>
