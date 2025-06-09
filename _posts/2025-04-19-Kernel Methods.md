@@ -109,7 +109,7 @@ $$
 
 <br>
 
-Now, let us introduce the general case. Consider we are given: 
+Now, let us introduce the general case, Polynominal Kernel. Consider we are given: 
 
 <br>
 
@@ -120,13 +120,13 @@ $$
 
 <br> 
 
-The equivalent kernel will be: 
+The Kernel will be: 
 
 $$
-K(\mathbf{x}, \mathbf{x}') = (1 + \mathbf{x}^\top \mathbf{x}')^Q
+K(\mathbf{x}, \mathbf{x}') = (ax^\top x' + b)^Q
 $$
 
-And it can be written as below: 
+And it can be expanded as below: 
 
 <br>
 
@@ -136,3 +136,4 @@ $$
 
 <br>
 
+It is a tremendous number of terms, which are all orders up to $Q$, of different combinations of the $x$'s. It is better to compute $ x^\top x'$ and raise it to the power $Q$. This is our trick. 
