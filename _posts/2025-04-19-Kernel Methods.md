@@ -181,10 +181,8 @@ The interesting thing is that the space is infinite-dimensional. We might worry 
 <br>
 
 $$
-
-\sqrt{\frac{2^k}{k!}} \exp\left(-\frac{x^2}{2}\right) x^k  \\
-<br>
- \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{(x')^2}{2}\right) (x')^k 
+\sqrt{\frac{2^k}{k!}} \exp\left(-\frac{x^2}{2}\right) x^k  \\ \\
+\sqrt{\frac{2^k}{k!}} \exp\left(-\frac{(x')^2}{2}\right) (x')^k 
 $$
 
 <br>
