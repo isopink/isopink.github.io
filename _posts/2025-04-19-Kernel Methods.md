@@ -176,15 +176,15 @@ $$
 
 <br>
 
-The interesting thing is that the space is infinite-dimensional. We might worry about generalization performance, however, we don't have to. We just count number of support vectors. So, let us keep going. Above formula can be rewritten as below: 
+The interesting thing is that the space is infinite-dimensional. We might worry about generalization performance, however, we don't have to. We just count number of support vectors. So, let us keep going. Above formula can be decomposed into two separate terms: 
 
 <br>
 
 $$
-\sum_{k=0}^{\infty} 
-\left( \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{x^2}{2}\right) x^k \right)
-\times
-\left( \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{(x')^2}{2}\right) (x')^k \right)
+
+\sqrt{\frac{2^k}{k!}} \exp\left(-\frac{x^2}{2}\right) x^k  \\
+<br>
+ \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{(x')^2}{2}\right) (x')^k 
 $$
 
 <br>
