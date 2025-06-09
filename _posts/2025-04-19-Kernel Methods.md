@@ -219,31 +219,26 @@ This was the matrix notation of our Lagrangian. And the $N$ by $N$ matrix $Q$ wa
 
 $$
 \begin{bmatrix}
-y_1 y_1 \, \mathbf{x}_1^\top \mathbf{x}_1 & y_1 y_2 \, \mathbf{x}_1^\top \mathbf{x}_2 & \cdots & y_1 y_N \, \mathbf{x}_1^\top \mathbf{x}_N \\
-y_2 y_1 \, \mathbf{x}_2^\top \mathbf{x}_1 & y_2 y_2 \, \mathbf{x}_2^\top \mathbf{x}_2 & \cdots & y_2 y_N \, \mathbf{x}_2^\top \mathbf{x}_N \\
+y_1 y_1 \, \mathbf{z}_1^\top \mathbf{z}_1 & y_1 y_2 \, \mathbf{z}_1^\top \mathbf{z}_2 & \cdots & y_1 y_N \, \mathbf{z}_1^\top \mathbf{z}_N \\
+y_2 y_1 \, \mathbf{z}_2^\top \mathbf{z}_1 & y_2 y_2 \, \mathbf{z}_2^\top \mathbf{z}_2 & \cdots & y_2 y_N \, \mathbf{z}_2^\top \mathbf{z}_N \\
 \vdots & \vdots & \ddots & \vdots \\
-y_N y_1 \, \mathbf{x}_N^\top \mathbf{x}_1 & y_N y_2 \, \mathbf{x}_N^\top \mathbf{x}_2 & \cdots & y_N y_N \, \mathbf{x}_N^\top \mathbf{x}_N
+y_N y_1 \, \mathbf{z}_N^\top \mathbf{z}_1 & y_N y_2 \, \mathbf{z}_N^\top \mathbf{z}_2 & \cdots & y_N y_N \, \mathbf{z}_N^\top \mathbf{z}_N
 \end{bmatrix}
 $$
 
 <br>
 
-Applying kernel method, matrix above becomes: 
+Applying kernel method, inner product of $\mathbf{z}$ can be expressed as:
 
 <br>
 
 $$
-\begin{bmatrix}
-y_1 y_1 K(\mathbf{x}_1, \mathbf{x}_1) & y_1 y_2 K(\mathbf{x}_1, \mathbf{x}_2) & \cdots & y_1 y_N K(\mathbf{x}_1, \mathbf{x}_N) \\
-y_2 y_1 K(\mathbf{x}_2, \mathbf{x}_1) & y_2 y_2 K(\mathbf{x}_2, \mathbf{x}_2) & \cdots & y_2 y_N K(\mathbf{x}_2, \mathbf{x}_N) \\
-\vdots & \vdots & \ddots & \vdots \\
-y_N y_1 K(\mathbf{x}_N, \mathbf{x}_1) & y_N y_2 K(\mathbf{x}_N, \mathbf{x}_2) & \cdots & y_N y_N K(\mathbf{x}_N, \mathbf{x}_N)
-\end{bmatrix}
+\mathbf{z}^\top \mathbf{z}' = K(\mathbf{x}, \mathbf{x}')
 $$
 
 <br>
 
-The only difference is shown above. Once we pass it to the QP solver, we will obtain the $\alpha$'s. Now, let us look at the final hypothesis: 
+This is the only difference so far. Once we pass it to the QP solver, we will obtain the $\alpha$. Now, let us look at the final hypothesis: 
 
 <br>
 
@@ -253,5 +248,37 @@ $$
 
 <br>
 
+We are going to translate it in terms of the kernel by substituting: 
 
+<br>
+
+$$
+\mathbf{w} = \sum_{\mathbf{z}_n \text{ is SV}} \alpha_n y_n \mathbf{z}_n
+$$
+
+<br>
+
+Then, $g(\mathbf{x})$ can be expressed as: 
+
+<br>
+
+$$
+g(\mathbf{x}) = \text{sign} \left( \sum_{\alpha_n > 0} \alpha_n y_n K(\mathbf{x}_n, \mathbf{x}) + b \right)
+$$
+
+<br>
+
+Moreover, for any support vector ($\alpha > 0), we can substitute $b$ by 
+
+<br>
+
+$$
+b = y_m - \sum_{\alpha_n > 0} \alpha_n y_n K(\mathbf{x}_n, \mathbf{x}_m)
+$$
+
+<br>
+
+We are completely ready here. 
+
+Now, the only problem we have is that we don't know the kernel is valid. There are three approaches. First one is construction, such as the Polynominal Kernel. The second relies on the mathematical properties of kernels, such as Mercer's conditon, Which will be explained soon. The final one is just not to worry about it. Who cares? :> Let us examine the Mercer's condition. 
 
