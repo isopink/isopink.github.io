@@ -494,7 +494,11 @@ We are done. Now, let us discuss the two types of support vectors.
 
 <br>
 
+Unlike before, not all support vectors lie on the margin. According to the modified condition, if $\xi_n = 0$, the support vector lies exactly on the margin boundary as before. However, when $\xi_n > 0$, the support vector may lie elsewhere, possibly far from the margin. To finish up, let me introduce two simple but important technical observations. 
 
+First, if the data is not linearly separable, the hard margin method doesn’t work well, and the connection between the primal and dual forms might breaks down. Second, if there is an extra weight term like $w_0$, known as threshold, it can be combined into the bias $b$, and $w_0$ becomes zero. So, we don't have to worry. 
+
+These points show why we sometimes need to go beyond the basic hard margin approach.
 
 
 
