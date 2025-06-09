@@ -122,9 +122,13 @@ $$
 
 The Kernel will be: 
 
+<br>
+
 $$
 K(\mathbf{x}, \mathbf{x}') = (a \mathbf{x}^\top \mathbf{x}' + b)^Q
 $$
+
+<br>
 
 And it can be expanded as below: 
 
