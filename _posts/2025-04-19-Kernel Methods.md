@@ -140,4 +140,59 @@ $$
 
 <br>
 
-It is a tremendous number of terms, which are all orders up to $Q$, of different combinations of the $x$'s. It is better to compute $ \mathbf{x}^\top \mathbf{x}'$ and raise it to the power $Q$. This is the key idea of our trick. 
+It is a tremendous number of terms, which are all orders up to $Q$, of different combinations of the $x$'s. It is better to compute $ \mathbf{x}^\top \mathbf{x}'$ and raise it to the power $Q$. It turns out that if we compute inner product in some space $\mathcal{Z}$, everything is okay. We will get support vectors and generalization bound will be guranteed. This is the key idea of our trick. 
+
+So far, we were able to examine what the $\mathcal{Z}$ is. Now, let us try to get a kernel that maps us to $\mathcal{Z}$ without imagining what $\mathcal{Z}$ is. Consider following case: 
+
+<br>
+
+$$
+K(\mathbf{x}, \mathbf{x}') = \exp\left( -\gamma \|\mathbf{x} - \mathbf{x}'\|^2 \right)
+$$
+
+<br>
+
+It is definitely a funtion of $\mathcal{x}$ and $\mathcal{x}'$. However, it is not clear that we can compute inner product either in $\mathcal{X}$ space or $\mathcal{Z}$ space. 
+
+Our question is, does this actually correspond to some $\mathcal{Z}$ space and inner product in $\mathcal{Z}$ space? Can we get the same number by visiting some space? The answer is yes. To simplify the math, let $\mathcal{X} = \mathbb{R}^1$ and $\gamma = 1$. Then kernel becomes: 
+
+
+<br>
+
+$$
+K(x, x') = \exp\left( - (x - x')^2 \right)
+$$
+
+<br>
+
+Now, let us express this using taylor series as below: 
+
+<br>
+
+$$
+\exp(-x^2)\exp(-{x'}^2) \sum_{k=0}^{\infty} \frac{2^k (x)^k ({x'})^k}{k!}
+\quad \text{(which equals } \exp(2xx') \text{)}
+$$
+
+<br>
+
+The interesting thing is that the space is infinite-dimensional. We might worry about generalization performance, however, we don't have to. We just count number of support vectors. 
+So, let us keep going. Above formula can be rewritten as below: 
+
+<br>
+
+$$
+\sum_{k=0}^{\infty} \left[ \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{x^2}{2}\right) x^k \right]
+\times
+\left[ \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{{x'}^2}{2}\right) {x'}^k \right]
+$$
+
+<br>
+
+We can interpret this as the inner product of transformed vector $\mathbf{x}$ and $\mathbf{x}'$. This is very interesting kernel, called Radial Basis Funtion, which we will discuss next session. It corresponds to an infinite-dimensional space, but we can carry it out by computing a fairly simple exponential between $x$'s. So, let us look at it in action. 
+
+Consider we are given slightly non-separable data in the $\mathcal{X}$ space as shown below: 
+
+
+
+
