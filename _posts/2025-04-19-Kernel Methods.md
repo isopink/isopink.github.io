@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4754998b-6bfc-4d8b-a1b0-3d126f4591a6)---
+---
 layout: single
 title: "Lecture 15 : Kernel Methods" 
 ---
