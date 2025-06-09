@@ -152,6 +152,28 @@ $$
 
 <br>
 
+
+
 It is definitely a funtion of $\mathcal{x}$ and $\mathcal{x}'$. However, it is not clear that we can compute inner product either in $\mathcal{X}$ space or $\mathcal{Z}$ space. 
 
 Our question is, does this actually correspond to some $\mathcal{Z}$ space and inner product in $\mathcal{Z}$ space? Can we get the same number by visiting some space? The answer is yes. To simplify the math, let $\mathcal{X} = \mathbb{R}^1$ and $\gamma = 1$. Then kernel becomes: 
+
+<br>
+
+$$
+K(x, x') = \exp\left( - (x - x')^2 \right)
+$$
+
+<br>
+
+Now, let us express this using taylor series as below: 
+
+<br>
+
+$$
+\exp(-x^2)\exp(-{x'}^2) \sum_{k=0}^{\infty} \frac{2^k (x)^k ({x'})^k}{k!}
+\quad \text{(which equals } \exp(2xx') \text{)}
+$$
+
+<br>
+
