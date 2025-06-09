@@ -172,7 +172,6 @@ Now, let us express this using taylor series as below:
 
 $$
 \exp(-x^2)\exp(-{x'}^2) \sum_{k=0}^{\infty} \frac{2^k (x)^k ({x'})^k}{k!}
-\quad \text{(which equals } \exp(2xx') \text{)}
 $$
 
 <br>
