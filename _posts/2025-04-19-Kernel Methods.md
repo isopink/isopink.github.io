@@ -15,6 +15,10 @@ In this time, we are going to discuss the Kernel methods to deal with the nonlin
 
 We have discussed the nonlinear transformation with applying [SVM](https://isopink.github.io/SVM/). However, when data is transformed into a high-dimensional space ($\mathcal{Z}$ space), linear separation becomes easier, but the computational complexity may increases dramatically. Kernel methods will deal with it.  
 
+<br>
+
+##### 1.1. What is Kernel? 
+
 Let us first recall what we have done in $\mathcal{Z}$ space. We have: 
 
 <br>
@@ -152,8 +156,6 @@ $$
 
 <br>
 
-
-
 It is definitely a funtion of $\mathcal{x}$ and $\mathcal{x}'$. However, it is not clear that we can compute inner product either in $\mathcal{X}$ space or $\mathcal{Z}$ space. 
 
 Our question is, does this actually correspond to some $\mathcal{Z}$ space and inner product in $\mathcal{Z}$ space? Can we get the same number by visiting some space? The answer is yes. To simplify the math, let $\mathcal{X} = \mathbb{R}^1$ and $\gamma = 1$. Then kernel becomes: 
@@ -206,7 +208,13 @@ We highlighted pre-image of nine support vectors. So to speak, our [upper bound 
 
 ![solution](/assets/images/km_3.svg) 
 
-We can see why support vectors are called support vectors. They are sort of holding the line. We are now fully convinced of the effectiveness of kernel methods. Now, let us examine how to formulate the problem. We already know it, since we have discussed [last time](https://isopink.github.io/SVM/), but just let us take it step by step. Let us recall the previous one: 
+We can see why support vectors are called support vectors. They are sort of holding the line. We are now fully convinced of the effectiveness of kernel methods. 
+
+<br>
+
+##### 1.2. Formulate the problem 
+
+Now, let us examine how to formulate the problem. We already know it, since we have discussed [last time](https://isopink.github.io/SVM/), but just let us take it step by step. Let us recall the previous one: 
 
 <br> 
 
@@ -282,6 +290,10 @@ $$
 <br>
 
 We are completely ready here. 
+
+<br>
+
+##### 1.3. Is kernel valid? 
 
 Now, the only problem we have is that we don't know the kernel is valid. There are three approaches. First one is construction, such as the Polynominal Kernel. The second relies on the mathematical properties of kernels, such as Mercer's conditon, Which will be explained soon. The final one is just not to worry about it. Who cares? :> Let us examine the Mercer's condition. 
 
