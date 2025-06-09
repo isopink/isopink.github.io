@@ -416,7 +416,7 @@ $$
 
 <br>
 
-We are going to minimize Lagrangian with respect to $\mathbf{w}$, $b$, and $\boldsymbol{\xi}$ and maximize with respect to each $\text{each } \alpha_n \geq 0 \quad \text{and} \quad \beta_n \geq 0$. Then we get the following equations: 
+We are going to minimize Lagrangian with respect to $\mathbf{w}$, $b$, and $\boldsymbol{\xi}$ and maximize with respect to each $\text{each } \alpha_n \geq 0$ and  $\beta_n \geq 0$. Then we get the following equations: 
 
 <br>
 
@@ -438,6 +438,51 @@ $$
 
 <br>
 
+By substituting, with respect to $\boldsymbol{\alpha}$, we are going to maximize: 
+
+<br>
+
+$$
+\sum_{n=1}^{N} \alpha_n 
+- \frac{1}{2} \sum_{n=1}^{N} \sum_{m=1}^{N} 
+y_n y_m \, \alpha_n \alpha_m \, \mathbf{x}_n^\top \mathbf{x}_m
+$$
+
+<br>
+
+Subject to: 
+
+<br>
+
+$$
+0 \leq \alpha_n \leq C \quad \text{for } n = 1, \dots, N
+\quad \text{and} \quad
+\sum_{n=1}^{N} \alpha_n y_n = 0
+$$
+
+<br>
+
+Then, QP solver will give us $\mathcal{w}$: 
+
+<br>
+
+$$
+\mathbf{w} = \sum_{n=1}^{N} \alpha_n y_n \mathbf{x}_n
+$$
+
+<br>
+
+which minimizes: 
+
+<br>
+
+$$
+\text{minimizes} \quad \frac{1}{2} \, \mathbf{w}^\top \mathbf{w} + C \sum_{n=1}^{N} \xi_n
+$$
+
+<br>
+
+Now we are done. 
 
 
 
