@@ -114,7 +114,7 @@ Now, let us introduce the general case. Consider we are given:
 <br>
 
 $$
-\mathcal{X} = \mathbb{R}^d \\ \\
+\mathcal{X} = \mathbb{R}^d \\ \\ \\ 
 \Phi: \mathcal{X} \rightarrow \mathcal{Z} \ \text{is polynomial of order } Q
 $$
 
