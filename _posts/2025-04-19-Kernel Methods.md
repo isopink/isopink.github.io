@@ -189,3 +189,10 @@ $$
 
 <br>
 
+We can interpret this as the inner product of transformed vector $\mathbf{x}$ and $\mathbf{x}'$. This is very interesting kernel, called Radial Basis Funtion, which we will discuss next session. It corresponds to an infinite-dimensional space, but we can carry it out by computing a fairly simple exponential between $x$'s. So, let us look at it in action. 
+
+Consider we are given slightly non-separable $100$ data in the $\mathcal{X}$ space as shown below: 
+
+![solution](/assets/images/km_1.svg) 
+
+There is no straight line to separate them. And we lighten the target funtion. We will leave it in order to compare it with the final hypothesis that we get. Now, we are going to transform $\mathcal{X}$ into an infinite-dimensional space. However, all we need is the inner product for QP solver, and QP solver will give us support vectors. So, we will apply kernel method. Let us look at the following figure. 
