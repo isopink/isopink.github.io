@@ -109,3 +109,30 @@ $$
 
 <br>
 
+Now, let us introduce the general case. Consider we are given: 
+
+<br>
+
+$$
+\mathcal{X} = \mathbb{R}^d \\ \\
+\Phi: \mathcal{X} \rightarrow \mathcal{Z} \ \text{is polynomial of order } Q
+$$
+
+<br> 
+
+The equivalent kernel will be: 
+
+$$
+K(\mathbf{x}, \mathbf{x}') = (1 + \mathbf{x}^\top \mathbf{x}')^Q
+$$
+
+And it can be written as below: 
+
+<br>
+
+$$
+(1 + x_1 x_1' + x_2 x_2' + \cdots + x_d x_d')^Q
+$$
+
+<br>
+
