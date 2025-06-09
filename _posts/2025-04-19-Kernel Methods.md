@@ -416,7 +416,7 @@ $$
 
 <br>
 
-We are going to minimize Lagrangian with respect to $/mathbf{w}$, $b$, and $boldsymbol{\xi}$ and maximize with respect to each $\text{each } \alpha_n \geq 0 \quad \text{and} \quad \beta_n \geq 0$. Then we get the following equations: 
+We are going to minimize Lagrangian with respect to $\mathbf{w}$, $b$, and $\boldsymbol{\xi}$ and maximize with respect to each $\text{each } \alpha_n \geq 0 \quad \text{and} \quad \beta_n \geq 0$. Then we get the following equations: 
 
 <br>
 
