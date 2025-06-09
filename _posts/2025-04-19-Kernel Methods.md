@@ -330,6 +330,8 @@ K(\mathbf{x}_N, \mathbf{x}_1) & K(\mathbf{x}_N, \mathbf{x}_2) & \cdots & K(\math
 \end{bmatrix}
 $$
 
+<br>
+
 --- 
 
 #### 2. Soft-margin SVM
@@ -400,15 +402,41 @@ $$
 
 We are trying to maximize the margin and mimize the error simultaneously. The constant $C$ denotes the relative importance between two terms. Now, let us update our Lagrangian: 
 
+<br>
+
 $$
 \begin{aligned}
 \mathcal{L}(\mathbf{w}, b, \boldsymbol{\xi}, \boldsymbol{\alpha}, \boldsymbol{\beta}) 
-&= \frac{1}{2} \, \mathbf{w}^\top \mathbf{w} 
+= \; & \frac{1}{2} \, \mathbf{w}^\top \mathbf{w} 
 + C \sum_{n=1}^{N} \xi_n \\
-&\quad - \sum_{n=1}^{N} \alpha_n \left( y_n(\mathbf{w}^\top \mathbf{x}_n + b) - 1 - \xi_n \right) \\
-&\quad - \sum_{n=1}^{N} \beta_n \, \xi_n
+- \; & \sum_{n=1}^{N} \alpha_n \left( y_n(\mathbf{w}^\top \mathbf{x}_n + b) - 1 - \xi_n \right) \\
+- \; & \sum_{n=1}^{N} \beta_n \, \xi_n
 \end{aligned}
 $$
+
+<br>
+
+We are going to minimize Lagrangian with respect to $/mathbf{w}$, $b$, and $boldsymbol{\xi}$ and maximize with respect to each $\text{each } \alpha_n \geq 0 \quad \text{and} \quad \beta_n \geq 0$. Then we get the following equations: 
+
+<br>
+
+$$
+\nabla_{\mathbf{w}} \mathcal{L} = \mathbf{w} - \sum_{n=1}^{N} \alpha_n y_n \mathbf{x}_n = 0
+$$
+
+<br>
+
+$$
+\frac{\partial \mathcal{L}}{\partial b} = - \sum_{n=1}^{N} \alpha_n y_n = 0
+$$
+
+<br>
+
+$$
+\frac{\partial \mathcal{L}}{\partial \xi_n} = C - \alpha_n - \beta_n = 0
+$$
+
+<br>
 
 
 
