@@ -64,7 +64,7 @@ Suppose we are given two points, $\mathbf{x}$ and $mathbf{x}' \in \mathcal{X}$. 
 <br>
 
 $$
-\text{Let } \mathbf{z}^\top \mathbf{z}' = K(\mathbf{x}, \mathbf{x}')
+\text{Let } \quad \mathbf{z}^\top \mathbf{z}' = K(\mathbf{x}, \mathbf{x}')
 $$
 
 <br>
