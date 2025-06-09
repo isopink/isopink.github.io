@@ -307,6 +307,10 @@ $$
 
 <br>
 
+$$ \text{and} $$
+
+<br>
+
 $$ \text{Kernel matrix is positive semi-definite} $$
 
 <br>
