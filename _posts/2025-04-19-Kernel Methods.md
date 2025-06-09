@@ -295,5 +295,20 @@ We are completely ready here.
 
 ##### 1.3. Is kernel valid? 
 
-Now, the only problem we have is that we don't know the kernel is valid. There are three approaches. First one is construction, such as the Polynominal Kernel. The second relies on the mathematical properties of kernels, such as Mercer's conditon, Which will be explained soon. The final one is just not to worry about it. Who cares? :> Let us examine the Mercer's condition. 
+Now, the only problem we have is that we don't know the kernel is valid. There are three approaches to verify. First one is construction, such as the Polynominal Kernel. The second relies on the mathematical properties of kernels, such as Mercer's conditon, Which will be explained soon. The final one is just not to worry about it. Who cares? :> 
+
+Let us examine the Mercer's condition. $K(\mathbf{x}, \mathbf{x}')$ is valid if and only if: 
+
+<br>
+
+$$
+K(\mathbf{x}, \mathbf{x}') = K(\mathbf{x}', \mathbf{x})
+$$
+
+<br>
+
+$$ \text{Kernel matrix is positive semi-definite} $$
+
+<br>
+
 
