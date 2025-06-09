@@ -196,3 +196,34 @@ Consider we are given slightly non-separable $100$ data in the $\mathcal{X}$ spa
 ![solution](/assets/images/km_1.svg) 
 
 There is no straight line to separate them. And we lighten the target funtion. We will leave it in order to compare it with the final hypothesis that we get. Now, we are going to transform $\mathcal{X}$ into an infinite-dimensional space. However, all we need is the inner product for QP solver, and QP solver will give us support vectors. So, we will apply kernel method. Let us look at the following figure. 
+
+![solution](/assets/images/km_2.svg) 
+
+We highlighted pre-image of nine support vectors. So to speak, our [upper bound of $E_{\text{out}}$](https://isopink.github.io/SVM/) is at most $0.1$. Now, let us look at the final hypothesis. 
+
+![solution](/assets/images/km_3.svg) 
+
+We can see why support vectors are called support vectors. They are sort of holding the line. We are now fully convinced of the effectiveness of kernel methods. Now, let us examine how to formulate the problem. We already know it, since we have discussed [last time](https://isopink.github.io/SVM/), but just let us take it step by step. Let us recall the previous one: 
+
+<br> 
+
+$$
+\frac{1}{2} \boldsymbol{\alpha}^\top \mathbf{Q} \boldsymbol{\alpha} - \mathbf{1}^\top \boldsymbol{\alpha}
+$$
+
+<br>
+
+This was the matrix notation of our Lagrangian. And the $N$ by $N$ matrix $Q$ was: 
+
+<br>
+
+$$
+\begin{bmatrix}
+y_1 y_1 \, \mathbf{x}_1^\top \mathbf{x}_1 & y_1 y_2 \, \mathbf{x}_1^\top \mathbf{x}_2 & \cdots & y_1 y_N \, \mathbf{x}_1^\top \mathbf{x}_N \\
+y_2 y_1 \, \mathbf{x}_2^\top \mathbf{x}_1 & y_2 y_2 \, \mathbf{x}_2^\top \mathbf{x}_2 & \cdots & y_2 y_N \, \mathbf{x}_2^\top \mathbf{x}_N \\
+\vdots & \vdots & \ddots & \vdots \\
+y_N y_1 \, \mathbf{x}_N^\top \mathbf{x}_1 & y_N y_2 \, \mathbf{x}_N^\top \mathbf{x}_2 & \cdots & y_N y_N \, \mathbf{x}_N^\top \mathbf{x}_N
+\end{bmatrix}
+$$
+
+<br>
