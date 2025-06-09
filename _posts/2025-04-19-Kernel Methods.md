@@ -462,7 +462,7 @@ $$
 
 <br>
 
-Then, QP solver will give us $\mathcal{w}$: 
+Then, QP solver will give us $\mathbf{w}$: 
 
 <br>
 
@@ -482,7 +482,17 @@ $$
 
 <br>
 
-Now we are done. 
+We are done. Now, let us discuss the two types of support vectors. 
+
+<br>
+
+| Type                    | $ \alpha_n $ Range        | Decision Boundary Condition                | Slack Variable        |
+|-------------------------|-----------------------------|---------------------------------------------|------------------------|
+| Margin support vector   | $ 0 < \alpha_n < C $      | $ y_n(\mathbf{w}^\top \mathbf{x}_n + b) = 1 $ | $ \xi_n = 0 $        |
+| Non-margin support vector | $ \alpha_n = C $        | $ y_n(\mathbf{w}^\top \mathbf{x}_n + b) < 1 $ | $ \xi_n > 0 $        |
+
+<br>
+
 
 
 
