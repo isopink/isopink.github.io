@@ -184,7 +184,7 @@ $$
 \sum_{k=0}^{\infty} 
 \left( \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{x^2}{2}\right) x^k \right)
 \times
-\left( \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{{x'}^2}{2}\right) {x'}^k \right)
+\left( \sqrt{\frac{2^k}{k!}} \exp\left(-\frac{(x')^2}{2}\right) (x')^k \right)
 $$
 
 <br>
