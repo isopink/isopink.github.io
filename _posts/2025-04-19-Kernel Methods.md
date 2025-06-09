@@ -205,7 +205,7 @@ We highlighted pre-image of nine support vectors. So to speak, our [upper bound 
 
 We can see why support vectors are called support vectors. They are sort of holding the line. We are now fully convinced of the effectiveness of kernel methods. Now, let us examine how to formulate the problem. We already know it, since we have discussed [last time](https://isopink.github.io/SVM/), but just let us take it step by step. Let us recall the previous one: 
 
-<br>
+<br> 
 
 $$
 \frac{1}{2} \boldsymbol{\alpha}^\top \mathbf{Q} \boldsymbol{\alpha} - \mathbf{1}^\top \boldsymbol{\alpha}
