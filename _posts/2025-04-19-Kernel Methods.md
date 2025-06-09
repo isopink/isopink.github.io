@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/4754998b-6bfc-4d8b-a1b0-3d126f4591a6)---
 layout: single
 title: "Lecture 15 : Kernel Methods" 
 ---
@@ -227,3 +227,31 @@ y_N y_1 \, \mathbf{x}_N^\top \mathbf{x}_1 & y_N y_2 \, \mathbf{x}_N^\top \mathbf
 $$
 
 <br>
+
+Applying kernel method, matrix above becomes: 
+
+<br>
+
+$$
+\begin{bmatrix}
+y_1 y_1 K(\mathbf{x}_1, \mathbf{x}_1) & y_1 y_2 K(\mathbf{x}_1, \mathbf{x}_2) & \cdots & y_1 y_N K(\mathbf{x}_1, \mathbf{x}_N) \\
+y_2 y_1 K(\mathbf{x}_2, \mathbf{x}_1) & y_2 y_2 K(\mathbf{x}_2, \mathbf{x}_2) & \cdots & y_2 y_N K(\mathbf{x}_2, \mathbf{x}_N) \\
+\vdots & \vdots & \ddots & \vdots \\
+y_N y_1 K(\mathbf{x}_N, \mathbf{x}_1) & y_N y_2 K(\mathbf{x}_N, \mathbf{x}_2) & \cdots & y_N y_N K(\mathbf{x}_N, \mathbf{x}_N)
+\end{bmatrix}
+$$
+
+<br>
+
+The only difference is shown above. Once we pass it to the QP solver, we will obtain the $\alpha$'s. Now, let us look at the final hypothesis: 
+
+<br>
+
+$$
+\text{Express } \quad g(\mathbf{x}) = \text{sign}(\mathbf{w}^\top \mathbf{z} + b) \quad \text{ in terms of } \quad K(\cdot, \cdot)
+$$
+
+<br>
+
+
+
