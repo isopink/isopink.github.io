@@ -302,16 +302,8 @@ Let us examine the Mercer's condition. $K(\mathbf{x}, \mathbf{x}')$ is valid if 
 <br>
 
 $$
-K(\mathbf{x}, \mathbf{x}') = K(\mathbf{x}', \mathbf{x})
+K(\mathbf{x}, \mathbf{x}') = K(\mathbf{x}', \mathbf{x}) \quad \text{and} \quad \forall N,\, \forall \{\mathbf{x}_1, \dots, \mathbf{x}_N\},\, \mathbf{K} \succeq 0
 $$
-
-<br>
-
-$$ \text{and} $$
-
-<br>
-
-$$ \text{Kernel matrix is positive semi-definite} $$
 
 <br>
 
