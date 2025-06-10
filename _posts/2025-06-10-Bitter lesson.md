@@ -1,15 +1,13 @@
 ---
 title: "The Bitter Lesson: On the Superiority of Scalable Computation in AI"
 layout: single
-categories: [Artificial Intelligence, Deep Learning, Philosophy of AI]
 ---
 
 ## Introduction
 
 Over seven decades of artificial intelligence research have revealed a consistent pattern:  
-> **General-purpose methods that scale with computation ultimately outperform methods that rely on human insight.**
-
-This observation, often referred to as **"The Bitter Lesson"** (by Rich Sutton), emphasizes that human-crafted knowledge may offer short-term advantages, but **search** and **learning**, when combined with increasing computational power, are what drive long-term progress.
+> **General-purpose methods that scale with computation ultimately outperform methods that rely on human insight.**  
+This idea is succinctly captured by Rich Sutton in what he calls **“The Bitter Lesson”** [1].
 
 ---
 
@@ -17,53 +15,68 @@ This observation, often referred to as **"The Bitter Lesson"** (by Rich Sutton),
 
 ### Chess
 
-In 1997, IBM’s *Deep Blue* defeated Garry Kasparov using a brute-force search strategy. This result disappointed many AI researchers who had invested in systems that embedded human chess expertise. The system did not "understand" chess in a human-like way, but it **won**—and that mattered more.
+In 1997, IBM’s *Deep Blue* defeated world champion Garry Kasparov through deep brute-force search.  
+This success disillusioned many researchers who had focused on embedding human expertise into chess programs.  
+Sutton notes:
+
+> “These researchers wanted methods based on human input to win and were disappointed when they did not” [1].
 
 ### Go
 
-Progress in computer Go followed a similar trajectory, delayed by two decades. Early attempts to encode domain-specific knowledge were outperformed by *AlphaGo*, which relied on deep neural networks and **self-play**. Success came not from mimicking human intuition, but from massive search and learning at scale.
+Progress in Go mirrored that in chess but was delayed by 20 years. Initial approaches focused on domain-specific heuristics. However, **AlphaGo**, using deep neural networks and **reinforcement learning via self-play**, outperformed all prior methods [2].
 
 ### Speech Recognition
 
-In the 1970s, speech recognition systems that modeled human phonetics and linguistics competed with statistical approaches such as Hidden Markov Models (HMMs). The latter prevailed. Eventually, deep learning models, trained on large corpora with minimal human-engineered features, dramatically improved performance.
+In the 1970s, DARPA-sponsored competitions showed that statistical models, such as Hidden Markov Models (HMMs), outperformed systems rooted in linguistic and phonetic knowledge. Decades later, **deep learning models** further advanced the field by training on massive datasets with minimal domain-specific structure [3].
 
 ### Computer Vision
 
-Earlier approaches to vision focused on handcrafted features (e.g., SIFT, edge detectors). Today, convolutional neural networks (CNNs) trained end-to-end using gradient descent dominate the field, with **no explicit encoding of human visual heuristics**.
+Earlier models used handcrafted features like SIFT or edge detection. Today, **convolutional neural networks (CNNs)** dominate, learning directly from pixel-level data using large-scale computation. The transition marks a shift from “understanding vision” to “optimizing performance.”
 
 ---
 
 ## Core Argument
 
-AI researchers have often attempted to build their understanding of the world into their models. While this can be personally satisfying and helpful in early stages, such methods tend to:
+AI researchers frequently attempt to embed structured knowledge into their systems. However, such efforts:
 
-1. Plateau in performance,
-2. Resist scaling with increasing computation,
-3. Inhibit broader applicability.
+- Plateau in the long term,
+- Do not benefit proportionally from increasing computational power,
+- Are often fragile and task-specific.
 
-By contrast, **general methods such as search and learning**:
-- Are simple yet powerful,
-- Benefit directly from hardware improvements (e.g., Moore’s Law),
-- Can be applied across diverse tasks without task-specific engineering.
+On the other hand, methods like **search** and **learning**:
+
+- **Scale reliably** with more compute,
+- **Generalize** across tasks and domains,
+- Are **robust** to noisy or unstructured data.
+
+> “The only thing that matters in the long run is the leveraging of computation.”  
+> — Rich Sutton [1]
 
 ---
 
 ## Implications
 
-The **bitter lesson** is that *what works best in AI is often not what feels most intelligent or elegant*. It is not the incorporation of our cognitive understanding, but rather the deployment of simple, scalable algorithms—run at scale—that leads to breakthroughs.
+The bitter lesson challenges us to rethink our role in AI design. Rather than encoding intelligence, we should:
 
-Thus, the future of AI may depend less on encoding what we know, and more on building systems that can **discover**, **learn**, and **adapt** without us.
+- Build **meta-methods** that can discover structure on their own,
+- Focus on **scalable algorithms** like gradient descent, deep learning, and reinforcement learning,
+- Recognize the limits of human intuition in favor of empirical performance.
 
 ---
 
 ## Conclusion
 
-The most important takeaway from the bitter lesson is this:
+> “We want AI agents that can discover like we can, not which contain what we have discovered.”  
+> — Rich Sutton [1]
 
-> **We should build AI systems that leverage computation to learn for themselves, rather than try to teach them what we know.**
+The history of AI repeatedly shows that the most effective systems are those that learn, search, and scale—with minimal human intervention.
 
-In doing so, we embrace a model of intelligence that is empirical, scalable, and capable of exceeding the bounds of human intuition.
+As Sutton concludes, **"building in our discoveries only makes it harder to see how the discovering process can be done."**
 
 ---
 
-*References available upon request.*
+## References
+
+[1] Sutton, R. S. (2019). *The Bitter Lesson*. Retrieved from: https://www.incompleteideas.net/IncIdeas/BitterLesson.html  
+[2] Silver, D., et al. (2016). *Mastering the game of Go with deep neural networks and tree search*. Nature, 529(7587), 484–489.  
+[3] Hinton, G., et al. (2012). *Deep neural networks for acoustic modeling in speech recognition*. IEEE Signal Processing Magazine, 29(6), 82–97.
