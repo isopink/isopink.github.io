@@ -1,6 +1,6 @@
 ---
 title: "The Bitter Lesson: On the Superiority of Scalable Computation in AI"
-date: 2025-06-11
+layout: single
 categories: [Artificial Intelligence, Deep Learning, Philosophy of AI]
 ---
 
