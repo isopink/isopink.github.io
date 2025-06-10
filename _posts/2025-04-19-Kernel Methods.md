@@ -321,6 +321,8 @@ $$
 
 where $\mathbf{K}$ is $N$ by $N$ matrix as shown below: 
 
+<br>
+
 $$
 \begin{bmatrix}
 K(\mathbf{x}_1, \mathbf{x}_1) & K(\mathbf{x}_1, \mathbf{x}_2) & \cdots & K(\mathbf{x}_1, \mathbf{x}_N) \\
