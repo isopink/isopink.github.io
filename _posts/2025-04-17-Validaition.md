@@ -26,6 +26,6 @@ $$
 Our goal in [regularization](https://isopink.github.io/Regularization/) was to estimate the overfit penalty. In contrast, validation aims to estimate $E_{\text{out}}(h)$ directly using a validation set. A validation set is similar to a test set in that it’s held out from training and used to estimate out-of-sample error. 
 
 
- 
+ ![solution](/assets/images/nn_1.svg) 
 
 
