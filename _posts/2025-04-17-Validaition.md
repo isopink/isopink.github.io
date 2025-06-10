@@ -25,11 +25,13 @@ $$
 
 This tells us that $E_{\text{in}}$ is not exactly $E_{\text{out}}$. The more complex the model, the bigger the overfit penalty. So, what does regularizaiton do? 
 
-<br> 
+<br>
+
 $$
-E_{\text{out}}(h) = E_{\text{in}}(h) + \overbrace{\text{overfit penalty}}^{\textcolor{red}{\text{regularization estimates this quantity}}}
+E_{\text{out}}(h) = E_{\text{in}}(h) + \underbrace{\text{overfit penalty}}_{\text{regularization estimates this quantity}}
 $$
-<br> 
+
+<br>
 
 
 
