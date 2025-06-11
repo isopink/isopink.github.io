@@ -13,17 +13,17 @@ In this post, I introduce the brief history of Deep Learning. The discussion wil
 
 #### 1. Three Waves of Deep Learning
 
-Deep learning might seem new, but it actually started in the 1940s. Over time, it had different names—like *cybernetics*, *connectionism*, and now *deep learning*. By looking at this history, we can understand how it became such a powerful tool in AI.
+Deep learning might seem new, but it actually started in the 1940s. Over time, it had different names—like cybernetics, connectionism, and now deep learning. By looking at this history, we can understand how it became such a powerful tool in AI.
 
 ##### 1.1. Cybernetics (1940s–1960s)
 
-In the beginning, researchers were inspired by how the brain works. They made simple models like the **McCulloch-Pitts neuron** and the **perceptron**. These early models could solve simple tasks and introduced ideas like learning by changing weights. This laid the foundation for later training methods. Figure 1.1 shows how the names for these ideas changed over time.
+In the beginning, researchers were inspired by how the brain works. They made simple models like the McCulloch-Pitts neuron and the perceptron. These early models could solve simple tasks and introduced ideas like learning by changing weights. This laid the foundation for later training methods. Figure 1.1 shows how the names for these ideas changed over time.
 
 ![solution](/assets/images/ht_1.1.svg)
 
 ##### 1.2. Connectionism (1980s–1990s)
 
-In the 1980s, a new wave called *connectionism* became popular. It focused on using many simple units together and training them with a method called **backpropagation**. These models were more powerful, but they still had limits and eventually lost popularity. Figure 1.2 shows how artificial networks became more connected, closer to real brains.
+In the 1980s, a new wave called *connectionism* became popular. It focused on using many simple units together and training them with a method called backpropagation. These models were more powerful, but they still had limits and eventually lost popularity. Figure 1.2 shows how artificial networks became more connected, closer to real brains.
 
 ![solution](/assets/images/ht_1.2.svg)
 
@@ -58,4 +58,4 @@ Deep learning can now recognize complex images, understand language, and help wi
 ---
 
 **Reference**  
-Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press. Chapter 1.2
+Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press. 
