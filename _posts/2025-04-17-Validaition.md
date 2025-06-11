@@ -65,7 +65,7 @@ $$
 
 <br>
 
-This is an unbiased estimate of $E_{\text{out}}$ as its expected value over the distribution on $mathbf{x}$ is simply $E_{\text{out}}$. And, the variance is: 
+This is an unbiased estimate of $E_{\text{out}}$ as its expected value over the distribution on $\mathbf{x}$ is simply $E_{\text{out}}$. And, the variance is: 
 
 <br>
 
@@ -76,6 +76,37 @@ $$
 <br>
 
 We denote the variance as $\sigma^2$. However, since we are using only one point, the estimate will be poor. Therefore, we cannot rely on it to estimate $E_{\text{out}}$. To get around this issue, let us move on to a full set. 
+
+Consider we are given validation set, size of $K$: 
+
+<br>
+
+$$
+(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \cdots, (\mathbf{x}_K, y_K)
+$$
+
+<br>
+
+And the error on that set, we are going to call it $E_{\text{val}}$ as in validaition error: 
+
+<br>
+
+$$
+E_{\mathrm{val}}(h) = \frac{1}{K} \sum_{k=1}^{K} e(h(\mathbf{x}_k), y_k)
+$$
+
+<br>
+
+What is expected value of $E_{\text{val}}$? We just take the expected value of above equation as below: 
+
+<br>
+
+$$
+\mathbb{E} \left[ E_{\mathrm{val}}(h) \right] = \frac{1}{K} \sum_{k=1}^{K} \mathbb{E} \left[ e(h(\mathbf{x}_k), y_k) \right] = E_{\mathrm{out}}(h)
+$$
+
+<br>
+
 
  ![solution](/assets/images/nn_1.svg) 
 
