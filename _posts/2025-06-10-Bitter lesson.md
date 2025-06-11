@@ -55,4 +55,4 @@ Rich Sutton supports his argument by presenting four concrete examples.
 
 **Reference**
 
-Sutton, R. (2019). *The Bitter Lesson*.
+Sutton, R. (2019). [*The Bitter Lesson*](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf).
