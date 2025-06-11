@@ -1,82 +1,52 @@
 ---
-title: "The Bitter Lesson: On the Superiority of Scalable Computation in AI"
+title: The Bitter Lesson
 layout: single
 ---
 
-## Introduction
+In this post, Let me introudce the brief perspective on learning. I aimed to convey Rich Sutton’s original message with minimal modification or reinterpretation. The discussion will proceed in following three parts: 
 
-Over seven decades of artificial intelligence research have revealed a consistent pattern:  
-> **General-purpose methods that scale with computation ultimately outperform methods that rely on human insight.**  
-This idea is succinctly captured by Rich Sutton in what he calls **“The Bitter Lesson”** [1].
+1. The core lesson of 70 years of AI
 
----
+2. Case study
 
-## Historical Context
+3. Philosophical Reflection
 
-### Chess
+--- 
 
-In 1997, IBM’s *Deep Blue* defeated world champion Garry Kasparov through deep brute-force search.  
-This success disillusioned many researchers who had focused on embedding human expertise into chess programs.  
-Sutton notes:
+#### 1. The core lesson of 70 years of AI
 
-> “These researchers wanted methods based on human input to win and were disappointed when they did not” [1].
+  The biggest lesson that can be read from 70 years of AI research is that general methods that leverage computation are ultimately the most effective, and by a large margin. The ultimate reason for this is Moore’s law, or rather its generalization of continued exponentially falling cost per unit of computation. Most AI research has been conducted as if the computation available to the agent were constant (in which case leveraging human knowledge would be one of the only ways to improve performance) but, over a slightly longer time than a typical research project, massively more computation inevitably becomes available. Seeking an improvement that makes a difference in the shorter term, researchers seek to leverage their human knowledge of the domain, but the only thing that matters in the long run is the leveraging of computation. 
 
-### Go
-
-Progress in Go mirrored that in chess but was delayed by 20 years. Initial approaches focused on domain-specific heuristics. However, **AlphaGo**, using deep neural networks and **reinforcement learning via self-play**, outperformed all prior methods [2].
-
-### Speech Recognition
-
-In the 1970s, DARPA-sponsored competitions showed that statistical models, such as Hidden Markov Models (HMMs), outperformed systems rooted in linguistic and phonetic knowledge. Decades later, **deep learning models** further advanced the field by training on massive datasets with minimal domain-specific structure [3].
-
-### Computer Vision
-
-Earlier models used handcrafted features like SIFT or edge detection. Today, **convolutional neural networks (CNNs)** dominate, learning directly from pixel-level data using large-scale computation. The transition marks a shift from “understanding vision” to “optimizing performance.”
+  These two need not run counter to each other, but in practice they tend to. Time spent on one is time not spent on the other. There are psychological commitments to investment in one approach or the other. And the human-knowledge approach tends to complicate methods in ways that make them less suited to taking advantage of general methods leveraging computation. There were many examples of AI researchers’ belated learning of this bitter lesson, and it is instructive to review some of the most prominent.
 
 ---
 
-## Core Argument
+#### 2. Case study 
 
-AI researchers frequently attempt to embed structured knowledge into their systems. However, such efforts:
+Rich Sutton supports his argument by presenting four concrete examples.
 
-- Plateau in the long term,
-- Do not benefit proportionally from increasing computational power,
-- Are often fragile and task-specific.
+##### 2.1. Chess
 
-On the other hand, methods like **search** and **learning**:
+  In computer chess, the methods that defeated the world champion, Kasparov, in 1997, were based on massive, deep search. At the time, this was looked upon with dismay by the majority of computer-chess researchers who had pursued methods that leveraged human understanding of the special structure of chess. When a simpler, search-based approach with special hardware and software proved vastly more effective, these human-knowledge-based chess researchers were not good losers. They said that “brute force” search may have won this time, but it was not a general strategy, and anyway it was not how people played chess. These researchers wanted methods based on human input to win and were disappointed when they did not.
 
-- **Scale reliably** with more compute,
-- **Generalize** across tasks and domains,
-- Are **robust** to noisy or unstructured data.
+##### 2.2. Go 
 
-> “The only thing that matters in the long run is the leveraging of computation.”  
-> — Rich Sutton [1]
+  A similar pattern of research progress was seen in computer Go, only delayed by a further 20 years. Enormous initial efforts went into avoiding search by taking advantage of human knowledge, or of the special features of the game, but all those efforts proved irrelevant, or worse, once search was applied effectively at scale. Also important was the use of learning by self play to learn a value function (as it was in many other games and even in chess, although learning did not play a big role in the 1997 program that first beat a world champion). Learning by self play, and learning in general, is like search in that it enables massive computation to be brought to bear. Search and learning are the two most important classes of techniques for utilizing massive amounts of computation in AI research. In computer Go, as in computer chess, researchers’ initial effort was directed towards utilizing human understanding (so that less search was needed) and only much later was much greater success had by embracing search and learning.
 
----
+##### 2.3. Speech recognition
 
-## Implications
+  In speech recognition, there was an early competition, sponsored by DARPA, in the 1970s. Entrants included a host of special methods that took advantage of human knowledge---knowledge of words, of phonemes, of the human vocal tract, etc. On the other side were newer methods that were more statistical in nature and did much more computation, based on hidden Markov models (HMMs). Again, the statistical methods won out over the human-knowledge-based methods. This led to a major change in all of natural language processing, gradually over decades, where statistics and computation came to dominate the field. The recent rise of deep learning in speech recognition is the most recent piece in this consistent direction. Deep learning methods rely even less on human knowledge, and use even more computation, especially with learning on huge training sets, to produce dramatically better speech recognition systems. As in the games, researchers always tried to make systems that worked the way the researchers thought their own minds worked---they tried to put their knowledge in their systems---but it proved ultimately counterproductive, and a colossal waste of researcher’s time, when, through Moore’s law, massive computation became available and a means was found to put it to good use.
 
-The bitter lesson challenges us to rethink our role in AI design. Rather than encoding intelligence, we should:
+##### 2.4. Computer vision 
 
-- Build **meta-methods** that can discover structure on their own,
-- Focus on **scalable algorithms** like gradient descent, deep learning, and reinforcement learning,
-- Recognize the limits of human intuition in favor of empirical performance.
+  In computer vision, there has been a similar pattern. Early methods conceived of vision as searching for edges, or generalized cylinders, or in terms of SIFT features. But today all this is discarded. Modern deep-learning neural networks use only the notions of convolution and certain kinds of invariances, and perform much better.
 
 ---
 
-## Conclusion
+#### 3. Philosophical Reflection
 
-> “We want AI agents that can discover like we can, not which contain what we have discovered.”  
-> — Rich Sutton [1]
+  This is a big lesson. As a field, we still have not thoroughly learned it, as we are continuing to make the same kind of mistakes. To see this, and to effectively resist it, we have to understand the appeal of these mistakes. We have to learn the bitter lesson that building in how we think we think does not work in the long run. The bitter lesson is based on the historical observations that 1) AI researchers have often tried to build knowledge into their agents, 2) this always helps in the short term, and is personally satisfying to the researcher, but 3) in the long run it plateaus and even inhibits further progress, and 4) breakthrough progress eventually arrives by an opposing approach based on scaling computation by search and learning. The eventual success is tinged with bitterness, and often incompletely digested, because it is success over a favored, human-centric approach.
 
-The history of AI repeatedly shows that the most effective systems are those that learn, search, and scale—with minimal human intervention.
+  One thing that should be learned from the bitter lesson is the great power of general purpose methods, of methods that continue to scale with increased computation even as the available computation becomes very great. The two methods that seem to scale arbitrarily in this way are search and learning.
 
-As Sutton concludes, **"building in our discoveries only makes it harder to see how the discovering process can be done."**
-
----
-
-## References
-
-[1] Sutton, R. S. (2019). *The Bitter Lesson*. Retrieved from: https://www.incompleteideas.net/IncIdeas/BitterLesson.html  
-[2] Silver, D., et al. (2016). *Mastering the game of Go with deep neural networks and tree search*. Nature, 529(7587), 484–489.  
-[3] Hinton, G., et al. (2012). *Deep neural networks for acoustic modeling in speech recognition*. IEEE Signal Processing Magazine, 29(6), 82–97.
+  The second general point to be learned from the bitter lesson is that the actual contents of minds are tremendously, irredeemably complex; we should stop trying to find simple ways to think about the contents of minds, such as simple ways to think about space, objects, multiple agents, or symmetries. All these are part of the arbitrary, intrinsically-complex, outside world. They are not what should be built in, as their complexity is endless; instead we should build in only the meta-methods that can find and capture this arbitrary complexity. Essential to these methods is that they can find good approximations, but the search for them should be by our methods, not by us. We want AI agents that can discover like we can, not which contain what we have discovered. Building in our discoveries only makes it harder to see how the discovering process can be done.
