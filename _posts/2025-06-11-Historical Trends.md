@@ -3,61 +3,51 @@ title: Historical Trends in Deep Learning
 layout: single
 ---
 
-In this post, I introduce the brief history of Deep Learning. 
+In this post, I introduce the brief history of Deep Learning.
 
 ---
 
-#### 1. Three Waves of Deep Learning
+## 1. Three Waves of Deep Learning
 
-Deep learning might feel like a recent breakthrough, but its roots trace back to the 1940s. Over time, it has gone through different names—cybernetics, connectionism, and now, deep learning. Understanding its evolution helps us see how and why deep learning became one of the most powerful tools in modern AI.
+Deep learning might seem new, but it actually started in the 1940s. Over time, it had different names—like *cybernetics*, *connectionism*, and now *deep learning*. By looking at this history, we can understand how it became such a powerful tool in AI.
 
-<br>
+### 1.1. Cybernetics (1940s–1960s)
+In the beginning, researchers were inspired by how the brain works. They made simple models like the **McCulloch-Pitts neuron** and the **perceptron**. These early models could solve simple tasks and introduced ideas like learning by changing weights. This laid the foundation for later training methods. Figure 1.1 shows how the names for these ideas changed over time.
 
-##### 1.1. Cybernetics (1940s–1960s)
+![solution](/assets/images/ht_1.1.svg)
 
-The first wave of neural networks, known as cybernetics, was inspired by the brain. Early models like the **McCulloch-Pitts neuron** and **perceptron** were linear and could solve simple classification problems. These models introduced the concept of learning by adjusting weights, laying the groundwork for modern training algorithms like stochastic gradient descent. The historical progression of neural network terminology from "cybernetics" to "connectionism" is illustrated in Figure 1.1, highlighting the field's changing identity over time.
+### 1.2. Connectionism (1980s–1990s)
+In the 1980s, a new wave called *connectionism* became popular. It focused on using many simple units together and training them with a method called **backpropagation**. These models were more powerful, but they still had limits and eventually lost popularity. Figure 1.2 shows how artificial networks became more connected, closer to real brains.
 
+![solution](/assets/images/ht_1.2.svg)
 
-
-### Connectionism (1980s–1990s)
-The second wave emerged as *connectionism*, focusing on distributed representations and using **backpropagation** to train multi-layer networks. Although promising, this wave faded as expectations outpaced results and competing methods (like kernel machines) gained popularity.  
-Figure 1.10 shows how the number of connections per neuron in artificial networks has grown over time, approaching the biological level found in mammals.
-
-### Deep Learning (2006–Present)
-The current wave began in 2006 with **greedy layer-wise pretraining** and grew rapidly as computational power and data availability increased. Deep models began outperforming traditional methods in image, speech, and language tasks, reigniting interest in neural networks under the banner of *deep learning*.
+### 1.3. Deep Learning (2006–Now)
+The third wave started in 2006. Thanks to better computers and more data, deep learning models became easier to train. These models started doing better than old methods at tasks like image and speech recognition.
 
 ---
 
-## 2. Key Factors Driving Deep Learning's Success
+## 2. Why Deep Learning Became Successful
 
-### 📈 More Data
-As society digitized, data became more available. From small datasets like **MNIST** to massive ones like **ImageNet** and **Sports-1M**, the size of training sets exploded—enabling deep models to learn complex patterns.  
-This trend is captured in Figure 1.8, which shows the exponential growth in dataset sizes from the early 1900s to the modern era of big data.
+### 2.1. More Data
+As the world became more digital, we got much more data. From small datasets like **MNIST** to big ones like **ImageNet**, deep learning models could now learn better patterns. Figure 1.8 shows how much bigger datasets have gotten over time.
 
-### 💻 More Compute
-Hardware advances (especially GPUs), faster networks, and better software infrastructure allowed training of much larger networks. Today’s deep nets rival the complexity of biological systems, with millions—even billions—of parameters.  
-Figure 1.11 visualizes the growth in neural network size, comparing it to biological organisms across history.
+### 2.2. More Compute
+Better hardware like GPUs and faster networks helped train larger models. Some deep networks now have millions or even billions of weights. Figure 1.11 shows how these models have grown and how they compare to real animals.
 
-### 🎯 Higher Accuracy and Broader Applications
-Deep learning has gone from recognizing small objects in cropped images to handling high-res, multi-class recognition in full scenes. It now powers speech recognition, translation, image segmentation, autonomous driving, and even drug discovery.  
-Figure 1.12 shows how deep learning models have dramatically improved image classification accuracy in the ImageNet competition over the years.
+### 2.3. Better Results and More Use Cases
+Deep learning can now recognize complex images, understand language, and help with things like translation and drug discovery. Figure 1.12 shows how image recognition has improved a lot thanks to deep learning.
 
 ---
 
-## 3. Brain-Inspired, But Not Brain-Copies
-While early models were closely tied to neuroscience, modern deep learning draws from many fields—linear algebra, probability, optimization—not just biology. Inspiration from the brain remains valuable, but engineers prioritize what works over biological realism.
+## 3. Inspired by the Brain, But Not a Copy
+Deep learning was inspired by the brain, but today it also uses ideas from math, statistics, and engineering. It doesn’t try to copy the brain exactly—it just uses what works best.
 
 ---
 
-## 4. Future Directions
-Deep learning continues to evolve. Current research explores:
-- Learning with less labeled data (semi-supervised learning)
-- Larger, more general models (like GPT and multimodal models)
-- More efficient architectures and training methods
-
-As data and compute continue to scale, deep learning’s reach across industries and sciences will likely grow even further.
+## 4. What’s Next?
+Deep learning is still growing. Researchers are trying to help models learn with less labeled data. They’re also building larger models that can do many things, and finding ways to make training faster and cheaper. As we get more data and better tools, deep learning will keep spreading to more areas.
 
 ---
 
 **Reference**  
-Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
+Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press. Chapter 1.2
