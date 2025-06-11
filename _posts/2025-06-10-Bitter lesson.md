@@ -55,4 +55,4 @@ Rich Sutton supports his argument by presenting four concrete examples.
 
 **Reference**
 
-Sutton, R. (2019). [*The Bitter Lesson*](https://github.com/isopink/isopink.github.io/tree/master/_posts/pdf).
+Sutton, R. (2019). [*The Bitter Lesson*](https://github.com/isopink/isopink.github.io/blob/master/_posts/pdf/bitter%20lesson.pdf).
