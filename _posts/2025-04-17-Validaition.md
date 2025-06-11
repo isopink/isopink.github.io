@@ -75,7 +75,7 @@ $$
 
 <br>
 
-We denote the variance as $\sigma^2$. However, since we are using only one point, the estimate will be poor. Therefore, we cannot rely on it to estimate $E_{\text{out}}$. To get around this issue, let us move on to a full set. 
+We denote the variance as $\sigma^2$. However, since we are using only one point, the estimate will be poor because of high-variace. Therefore, we cannot rely on it to estimate $E_{\text{out}}$. To get around this issue, let us move on to a full set. 
 
 Consider we are given validation set, size of $K$: 
 
@@ -107,7 +107,43 @@ $$
 
 <br>
 
+So indeed, again, the validation error is an unbiased estimate of the out-of-sample error, provided that all you did with the validation set is just measure the out-of-sample error. Now, let us look at the variace, because that was our problem with the single-point estimate.
 
- ![solution](/assets/images/nn_1.svg) 
+<br>
 
+$$
+\mathrm{Var} \left[ E_{\mathrm{val}}(h) \right] = \frac{1}{K^2} \sum_{k=1}^{K} \mathrm{Var} \left[ e(h(\mathbf{x}_k), y_k) \right] = \frac{\sigma^2}{K}
+$$
 
+<br>
+
+With this inspection, we can define our estimated out-of-sample error as below: 
+
+<br>
+
+$$
+E_{\mathrm{val}}(h) = E_{\mathrm{out}}(h) \pm \mathcal{O} \left( \frac{1}{\sqrt{K}} \right)
+$$
+
+<br>
+
+The equation illustrates that the accuracy of our validation error $E_{\text{val}}(h)$ in estimating the true out-of-sample error $E_{\text{out}}(h)$ improves as the size of validation set $K$ grows. 
+
+The interesting point is that $K$ is not free. Increasing $K$ is a good thing—but why don’t we just use more validation points? Because in practice, $K$ isn’t given to us in addition to the training set. So every time we take a point for validation, we are taking it away from training.
+Let us examine this more precisely. 
+
+Consider we are given data set $\mathcal{D}$ as: 
+
+<br>
+
+$$
+\mathcal{D} = (\mathbf{x}_1, y_1),(\mathbf{x}_2, y_2), \cdots, (\mathbf{x}_N, y_N)
+$$
+
+<br>
+
+We are going to take any random $K$ points as validation set. Then, we have $N-K$ points as training set. Now, let us recall the learning curve. 
+
+ ![solution](/assets/images/val_1.svg) 
+
+As $K$ increases, $N - K$ decreases, which can lead to a higher $E_{\text{out}}$. 
