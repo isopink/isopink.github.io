@@ -49,7 +49,7 @@ Better hardware like GPUs and faster networks helped train larger models. Some d
 
 ![solution](/assets/images/ht_4.svg)
 
-##### 2.3. Better Results and More Use Cases
+##### 2.3. Better Results
 
 Deep learning can now recognize complex images, understand language, and help with things like translation and drug discovery. Following figure shows how image recognition has improved a lot thanks to deep learning.
 
