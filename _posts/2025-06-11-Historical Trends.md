@@ -1,4 +1,4 @@
----
+--- 
 title: Historical Trends in Deep Learning
 layout: single
 ---
