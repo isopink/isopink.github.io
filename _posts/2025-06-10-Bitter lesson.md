@@ -53,6 +53,6 @@ Rich Sutton supports his argument by presenting four concrete examples.
 
 --- 
 
-> **Reference**  
-> Sutton, R. (2019). The Bitter Lesson.
-> [Original PDF](/_posts/pdf/bitter lesson.pdf)
+**Reference**
+
+Sutton, R. (2019). *The Bitter Lesson*.
