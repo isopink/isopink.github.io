@@ -3,15 +3,21 @@ title: Historical Trends in Deep Learning
 layout: single
 ---
 
-In this post, I introduce the brief history of Deep Learning. Deep learning might feel like a recent breakthrough, but its roots trace back to the 1940s. Over time, it has gone through different names—*cybernetics*, *connectionism*, and now, *deep learning*. Understanding its evolution helps us see how and why deep learning became one of the most powerful tools in modern AI.
+In this post, I introduce the brief history of Deep Learning. 
 
 ---
 
-## 1. Three Waves of Deep Learning
+#### 1. Three Waves of Deep Learning
 
-### Cybernetics (1940s–1960s)
-The first wave of neural networks, known as cybernetics, was inspired by the brain. Early models like the **McCulloch-Pitts neuron** and **perceptron** were linear and could solve simple classification problems. These models introduced the concept of learning by adjusting weights, laying the groundwork for modern training algorithms like stochastic gradient descent.  
-The historical progression of neural network terminology—from "cybernetics" to "connectionism"—is illustrated in Figure 1.7, highlighting the field's changing identity over time.
+Deep learning might feel like a recent breakthrough, but its roots trace back to the 1940s. Over time, it has gone through different names—cybernetics, connectionism, and now, deep learning. Understanding its evolution helps us see how and why deep learning became one of the most powerful tools in modern AI.
+
+<br>
+
+##### 1.1. Cybernetics (1940s–1960s)
+
+The first wave of neural networks, known as cybernetics, was inspired by the brain. Early models like the **McCulloch-Pitts neuron** and **perceptron** were linear and could solve simple classification problems. These models introduced the concept of learning by adjusting weights, laying the groundwork for modern training algorithms like stochastic gradient descent. The historical progression of neural network terminology from "cybernetics" to "connectionism" is illustrated in Figure 1.1, highlighting the field's changing identity over time.
+
+
 
 ### Connectionism (1980s–1990s)
 The second wave emerged as *connectionism*, focusing on distributed representations and using **backpropagation** to train multi-layer networks. Although promising, this wave faded as expectations outpaced results and competing methods (like kernel machines) gained popularity.  
@@ -54,4 +60,4 @@ As data and compute continue to scale, deep learning’s reach across industries
 ---
 
 **Reference**  
-Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press. Chapter 1.2
+Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
