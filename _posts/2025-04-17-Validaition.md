@@ -265,28 +265,17 @@ $$
 
 The more models $M$ we choose from, the higher the chance of overfitting, but the effect grows only logarithmically. If $M$ is infinite (like continuous $\lambda$ tuning), we use VC dimension to measure complexity instead of counting models. 
 
-To better understand how model selection affects performance estimation, we now look at how different data splits are impacted. We have three error estimates: 
-
-<br>
-
-$$
-E_{\text{in}},\quad E_{\text{test}},\quad E_{\text{val}}
-$$
-
-<br>
-
-When we use data to choose models, we make it less reliable for checking real performance. The training set is the most affected because we use it to fit the model, so $E_{\text{in}}$ doesn't tell us much about $E_{\text{out}}$. The test set is clean because we don’t use it to make any decisions, so it gives an honest estimate. The validation set is in the middle. It’s used a little for choosing, so it’s only slightly affected. Let us summarize it as below:
 
 <br>
 
 <div align="center">
 
-<b>Training set</b>: totally contaminated  
-<b>Validation set</b>: slightly contaminated  
-<b>Test set</b>: totally 'clean'
+<b>Training set</b>: totally contaminated  \\
+<b>Validation set</b>: slightly contaminated  \\ 
+<b>Test set</b>: totally 'clean' \\
 
 </div>
 
 <br>
 
-To keep it useful, we shouldn’t use the same validation set too many times. It’s better to switch between different ones or use cross-validation.
+
