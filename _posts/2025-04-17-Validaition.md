@@ -247,8 +247,9 @@ Now let us formalize it. How much is the bias? When we select the best model usi
 <br>
 
 $$
-\mathcal{H}_{\text{val}} = \left\{ \bar{g}_1, \bar{g}_2, \ldots, \bar{g}_M \right\}
+\mathcal{H}_{\text{val}} = \left\{ g_1^-,\ g_2^-,\ \ldots,\ g_M^- \right\}
 $$
+
 
 <br>
 
