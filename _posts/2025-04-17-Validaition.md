@@ -207,7 +207,7 @@ Basically, we are going to use the validation set more than once. This is how we
  <br>
  
  $$
- \matcal{H}_1, \ldots, \mathcal{H}_M
+ \mathcal{H}_1, \ldots, \mathcal{H}_M
  $$
  
  <br>
