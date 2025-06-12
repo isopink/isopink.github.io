@@ -220,5 +220,5 @@ Among these, we select the model with the lowest validation error, say $E_{m^*}$
 
 Selecting the best hypothesis $H_{m^*}$ is no different in concept. However, this time we retrain it not on $\mathcal{D}_{\text{train}}$, but on the full dataset $\mathcal{D}$.
 
-The final hypothesis $g_{m^*}$ is then obtained from $H_{m^*}$ using all available data. This whole process is illustrated in our diagram.
+The final hypothesis $g_{m^*}$ is then obtained from $\mathcal{H}_{m^*}$ using all available data. This whole process is illustrated in our diagram.
 
