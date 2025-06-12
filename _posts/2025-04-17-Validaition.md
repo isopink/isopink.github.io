@@ -192,7 +192,7 @@ $$
 
 <br>
 
-In fact, there's a $75%$ chance that the smaller value is below $0.5$. This means the selected hypothesis looks better than it actually is— which is why we call this effect Optimistic Bias 
+In fact, there's a $75\%$ chance that the smaller value is below $0.5$. This means the selected hypothesis looks better than it actually is— which is why we call this effect Optimistic Bias 
 
 ---
 
