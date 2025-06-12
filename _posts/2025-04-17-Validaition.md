@@ -265,6 +265,21 @@ $$
 
 The more models $M$ we choose from, the higher the chance of overfitting, but the effect grows only logarithmically. If $M$ is infinite (like continuous $\lambda$ tuning), we use VC dimension to measure complexity instead of counting models. 
 
+Now, let us summarize the data contamination we have discussed so far. As we saw earlier, the out-of-sample error is affected by optimistic bias, which introduces contamination. Beyond that, let’s consider the three data sets we used to estimate different types of error: 
+
+<br>
+
+$$
+\boldsymbol{E}_{\text{in}},\quad \boldsymbol{E}_{\text{test}},\quad \boldsymbol{E}_{\text{val}}
+$$
+
+<br>
+
+First, the training set, used to compute the in-sample error, is completely contaminated because it was directly involved in the learning process.
+
+Second, the test set, used to estimate the test error, is totally clean, since it was not involved in training or any decision-making.
+
+Lastly, the validation set, used to estimate the validation error, is slightly contaminated, as it was used both to approximate the out-of-sample error and to help decide where to stop training. To summarize, 
 
 <br>
 
@@ -278,4 +293,21 @@ The more models $M$ we choose from, the higher the chance of overfitting, but th
 
 <br>
 
+We should have not only one validation set. We could have a number of them, such that when one of them gets contaminated, we move on to the other one which has not been used for decisions, and therefore the estimates will be reliable. Now we go to cross-validation.
+
+---
+
+#### 3. Cross Validation 
+
+Let us start with the dilemma about $K$. We have the following chain of reasoning: 
+
+<br>
+
+$$
+E_{\text{out}}(g) \approx E_{\text{out}}(g^{-}) \approx E_{\text{val}}(g^{-})
+$$
+
+<br>
+
+To satisfy the first and second term, $K$ should be small. In contrast, to satisfy the second and thrid term, $K$ should be large. This is our dilemma. Can we have $K$ both small and large? To solve this dilemma, we introduce Leave One Out method. 
 
