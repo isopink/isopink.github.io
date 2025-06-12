@@ -258,7 +258,7 @@ From the validation set’s perspective, it's simply choosing the one with the l
 <br>
 
 $$
-E_{\text{out}}(\bar{g}_{m^*}) \leq E_{\text{val}}(\bar{g}_{m^*}) + O\left( \sqrt{ \frac{\ln M}{K} } \right)
+E_{\text{out}}(g_{m^*}^-) \leq E_{\text{val}}(g_{m^*}^-) + O\left( \sqrt{ \frac{\ln M}{K} } \right)
 $$
 
 <br>
