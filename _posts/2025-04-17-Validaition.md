@@ -202,16 +202,21 @@ Basically, we are going to use the validation set more than once. This is how we
 
  ![solution](/assets/images/val_3.svg)
 
- Let us discuss how the diagram reflects the logic. Suppose we have $M$ different models $H_1, \ldots, H_M$. 
+ Let us discuss how the diagram reflects the logic. Suppose we have $M$ different models: 
  
- If we train each model using the dataset $\mathcal{D}_{\text{train}}$ (excluding the validation set), we obtain final hypotheses $g^-_m$ for each model.
+ <br>
  
-Now, suppose we evaluate each $g^-_m$ on the validation set $\mathcal{D}_{\text{val}}$, and measure their validation errors as $E_1, \ldots, E_M$.
+ $$
+ \matcal{H}_1, \ldots, \mathcal{H}_M
+ $$
+ 
+ <br>
+ 
+If we train each model using the dataset $\mathcal{D}_{\text{train}}$ (excluding the validation set), we obtain final hypotheses $g^-_m$ for each model. Now, suppose we evaluate each $g^-_m$ on the validation set.
 
-Among these, we select the model with the lowest validation error, say $E_{m^*}$,  
-as the best-performing model. As previously discussed, this selection process may include Optimistic Bias.
+$\mathcal{D}_{\text{val}}$ will measure their validation errors as $E_1, \ldots, E_M$.
 
-Selecting the best hypothesis $H_{m^*}$ is no different in concept.  
-However, this time we retrain it not on $\mathcal{D}_{\text{train}}$, but on the full dataset $\mathcal{D}$.  
+Among these, we select the model with the lowest validation error, say $E_{m^*}$, as the best-performing model. As previously discussed, this selection process may include Optimistic Bias.
+Selecting the best hypothesis $H_{m^*}$ is no different in concept. However, this time we retrain it not on $\mathcal{D}_{\text{train}}$, but on the full dataset $\mathcal{D}$.  
 
 The final hypothesis $g_{m^*}$ is then obtained from $H_{m^*}$ using all available data. These whole process is illustrated in our diagram. 
