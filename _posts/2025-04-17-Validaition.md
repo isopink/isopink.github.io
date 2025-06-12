@@ -232,7 +232,7 @@ The final hypothesis $g_m^*$ is then obtained from:
 
 <br>
 
-$$ \mathcal{H}_{m^*}$ $$
+$$ \mathcal{H}_{m^*}$$
 
 <br>
 
