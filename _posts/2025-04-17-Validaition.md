@@ -200,7 +200,7 @@ In fact, there's a $75\%$ chance that the smaller value is below $0.5$. This mea
 
 Basically, we are going to use the validation set more than once. This is how we are going to make the choice. So let us first look at the full process diagram shown below: 
 
- ![solution](/assets/images/val_3.svg)
+ ![solution](/assets/images/val_4.svg)
 
  Let us discuss how the diagram reflects the logic. Suppose we have $M$ different models: 
  
@@ -228,7 +228,7 @@ Among these, we select the model with the lowest validation error, say $E_{m^*}$
 
 Selecting the best hypothesis $H_{m^*}$ is no different in concept. However, this time we retrain it not on $\mathcal{D}_{\text{train}}$, but on the full dataset $\mathcal{D}$.
 
-The final hypothesis $g_{m^*}$ is then obtained from: 
+Using all available data, final hypothesis $g_{m^*}$ is then obtained from: 
 
 <br>
 
@@ -236,5 +236,31 @@ $$ \mathcal{H}_{m^*}$$
 
 <br>
 
-using all available data. This whole process is illustrated in our above diagram. 
+This whole process is illustrated in our above diagram. Now, let us discuss more about bias. Consider following learning curve figure: 
+
+![solution](/assets/images/val_5.svg)
+
+We have two questions about the figure. First, why does $E_{\text{out}}$ increase as $K$ increases? This is because the size of the training set decreases as $K$ increases. Second, why does $E_{\text{out}}$ converge as $K$ increases? This is because our estimate of $E_{\text{val}}$ becomes more accurate with larger $K$, and also because the true out-of-sample error naturally increases due to smaller training sets.
+
+Now let us formalize it. How much is the bias? When we select the best model using a validation set, we're effectively training on a special hypothesis set — the set of $M$ final models: 
+
+<br>
+
+$$
+\mathcal{H}_{\text{val}} = \left\{ \bar{g}_1, \bar{g}_2, \ldots, \bar{g}_M \right\}
+$$
+
+<br>
+
+From the validation set’s perspective, it's simply choosing the one with the lowest error, like training on a small hypothesis space. We can formalize it with the [VC dimension](https://isopink.github.io/VC-Dimension/) as below: 
+
+<br>
+
+$$
+E_{\text{out}}(\bar{g}_{m^*}) \leq E_{\text{val}}(\bar{g}_{m^*}) + O\left( \sqrt{ \frac{\ln M}{K} } \right)
+$$
+
+<br>
+
+The more models $M$ we choose from, the higher the chance of overfitting, but the effect grows only logarithmically. If $M$ is infinite (like continuous $\lambda$ tuning), we use VC dimension to measure complexity instead of counting models.
 
