@@ -214,7 +214,15 @@ Basically, we are going to use the validation set more than once. This is how we
  
 If we train each model using the dataset $\mathcal{D}_{\text{train}}$ (excluding the validation set), we obtain final hypotheses $g^-_m$ for each model. Now, suppose we evaluate each $g^-_m$ on the validation set.
 
-$\mathcal{D}_{\text{val}}$ will measure their validation errors as $E_1, \ldots, E_M$.
+$\mathcal{D}_{\text{val}}$ will measure their validation errors as:
+
+<br>
+
+$$
+E_1, \ldots, E_M
+$$
+
+<br>
 
 Among these, we select the model with the lowest validation error, say $E_{m^*}$, as the best-performing model. As previously discussed, this selection process may include Optimistic Bias.
 
