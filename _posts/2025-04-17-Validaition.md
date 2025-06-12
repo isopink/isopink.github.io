@@ -161,7 +161,7 @@ It seems nothing different from a test set. Then, why do we call it a validation
 
 If we simply observe performance on a dataset, it acts as a test set, yielding an unbiased estimate. However, the moment we make a decision based on those observations—like stopping training at the lowest error point—that dataset becomes a validation set. This "choice" introduces a bias, making the estimate optimistically skewed. Thus, using a set for active decisions changes its nature from a neutral test set to a biased validation set.
 
-To understand Optimistic Bias, consider a simple example. Suppose we have two hypotheses, $h_1$ and $h_2$ with: 
+To understand Optimistic Bias more precisely, let us consider a simple example. Suppose we have two hypotheses, $h_1$ and $h_2$ with: 
 
 <br>
 
@@ -198,3 +198,20 @@ In fact, there's a $75\%$ chance that the smaller value is below $0.5$. This mea
 
 #### 2. Model selection 
 
+Basically, we are going to use the validation set more than once. This is how we are going to make the choice. So let us first look at the full process diagram shown below: 
+
+ ![solution](/assets/images/val_3.svg)
+
+ Let us discuss how the diagram reflects the logic. Suppose we have $M$ different models $H_1, \ldots, H_M$. 
+ 
+ If we train each model using the dataset $\mathcal{D}_{\text{train}}$ (excluding the validation set), we obtain final hypotheses $g^-_m$ for each model.
+ 
+Now, suppose we evaluate each $g^-_m$ on the validation set $\mathcal{D}_{\text{val}}$, and measure their validation errors as $E_1, \ldots, E_M$.
+
+Among these, we select the model with the lowest validation error, say $E_{m^*}$,  
+as the best-performing model. As previously discussed, this selection process may include Optimistic Bias.
+
+Selecting the best hypothesis $H_{m^*}$ is no different in concept.  
+However, this time we retrain it not on $\mathcal{D}_{\text{train}}$, but on the full dataset $\mathcal{D}$.  
+
+The final hypothesis $g_{m^*}$ is then obtained from $H_{m^*}$ using all available data. These whole process is illustrated in our diagram. 
