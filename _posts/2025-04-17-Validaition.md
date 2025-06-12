@@ -270,9 +270,9 @@ The more models $M$ we choose from, the higher the chance of overfitting, but th
 
 <div align="center">
 
-<b>Training set</b>: totally contaminated  \\
-<b>Validation set</b>: slightly contaminated  \\ 
-<b>Test set</b>: totally 'clean' \\
+<b>Training set</b>: totally contaminated <br>
+<b>Validation set</b>: slightly contaminated <br> 
+<b>Test set</b>: totally 'clean' 
 
 </div>
 
