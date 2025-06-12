@@ -216,7 +216,14 @@ If we train each model using the dataset $\mathcal{D}_{\text{train}}$ (excluding
 
 $\mathcal{D}_{\text{val}}$ will measure their validation errors as $E_1, \ldots, E_M$.
 
-Among these, we select the model with the lowest validation error, say $E_{m^*}$, as the best-performing model. As previously discussed, this selection process may include Optimistic Bias.
-Selecting the best hypothesis $H_{m^*}$ is no different in concept. However, this time we retrain it not on $\mathcal{D}_{\text{train}}$, but on the full dataset $\mathcal{D}$.  
+Among these, we select the model with the lowest validation error, say $E_{m^*}$,  
+as the best-performing model. As previously discussed, this selection process  
+may include Optimistic Bias.
 
-The final hypothesis $g_{m^*}$ is then obtained from $H_{m^*}$ using all available data. These whole process is illustrated in our diagram. 
+Selecting the best hypothesis $H_{m^*}$ is no different in concept.  
+However, this time we retrain it not on $\mathcal{D}_{\text{train}}$,  
+but on the full dataset $\mathcal{D}$.
+
+The final hypothesis $g_{m^*}$ is then obtained from $H_{m^*}$ using all available data.  
+This whole process is illustrated in our diagram.
+
