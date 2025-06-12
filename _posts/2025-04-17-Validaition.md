@@ -153,13 +153,43 @@ The trick is to use $g^-$ evaluated on $\mathcal{D}_{\text{val}}$ as a reliable 
 
 If $K$ is small, then the validation error for $g^-$ is similar to that for $g$, so it doesn't cause much of a problem. However, if $K$ is large, the gap between $g^-$ and $g$ becomes significant, making the validation error itself less meaningful.
 
-In conclusion, as long as the size of the validation set is chosen properly, there is no issue in using the same data for both validation and training. As a rule of thumb, we suggests using about 20% of the total dataset as the validation set. 
+In conclusion, as long as the size of the validation set is chosen properly, there is no issue in using the same data for both validation and training. As a rule of thumb, we suggests using about 20% of the total dataset as the validation set.
 
-It seems nothing different from test set. Then, why we call it validation set? It is because we use it to make choices. Consider Early stopping in neural network:
+It seems nothing different from a test set. Then, why do we call it a validation set? It is because we use it to make choices. Consider Early Stopping in neural networks:
 
  ![solution](/assets/images/val_3.svg) 
 
-If we simply observe performance on a dataset, it acts as a test set, yielding an unbiased estimate. However, the moment we make a decision based on those observations—like stopping training at the lowest error point—that dataset becomes a validation set. This choice introduces a bias, making the estimate optimistically skewed. Thus, using a set for active decisions changes its nature from a neutral test set to a biased validation set.
+If we simply observe performance on a dataset, it acts as a test set, yielding an unbiased estimate. However, the moment we make a decision based on those observations—like stopping training at the lowest error point—that dataset becomes a validation set. This "choice" introduces a bias, making the estimate optimistically skewed. Thus, using a set for active decisions changes its nature from a neutral test set to a biased validation set.
 
-Let us discuss more about meaning of optimistic.
+To understand Optimistic Bias, consider a simple example. Suppose we have two hypotheses, $h_1$ and $h_2$ with: 
 
+<br>
+
+$$
+E_{\mathrm{out}}(h_1) = E_{\mathrm{out}}(h_2) = 0.5
+$$
+
+<br>
+
+We estimate their errors as $e_1$ and $e_2$, and assume both are uniformly distributed between $0$ and $1$. Now, we pick the hypothesis with the smaller estimated error as below: 
+
+<br>
+
+$$
+\text{Pick } h \in \{ h_1, h_2 \} \quad \text{with} \quad e = \min(e_1, e_2)
+$$
+
+<br>
+
+
+Although both $e_1$ and $e_2$ are unbiased, the minimum of the two tends to be less than $0.5$ on average. We can describe this as below: 
+
+<br>
+
+$$
+\mathbb{E}(e) < 0.5
+$$
+
+<br>
+
+In fact, there's a $75%$ chance that the smaller value is below $0.5$. This means the selected hypothesis looks better than it actually is— which is why we call this effect Optimistic Bias 
