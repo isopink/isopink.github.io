@@ -311,3 +311,50 @@ $$
 
 To satisfy the first and second term, $K$ should be small. In contrast, to satisfy the second and thrid term, $K$ should be large. This is our dilemma. Can we have $K$ both small and large? To solve this dilemma, we introduce Leave One Out method. 
 
+Consider we are given $N-1$ points for training and $1$ point for validation. We call this training set $\mathcal{D}_n$. And let us call the final hypothesis set learned from $\mathcal{D}_n$ as $g_n^-$. Since we excluded only $1$ point, it will be close to $g$. 
+
+Now, let us estimate the $E_{\text{val}}(g_n^-)$. Sice we choose only 1 point for validation set: 
+
+<br>
+
+$$
+\mathbf{e}_n = E_{\text{val}}(g_n^{-}) = e\left(g_n^{-}(\mathbf{x}_n),\ y_n\right)
+$$
+
+<br>
+
+However, $K$ is too small. So we are going to repeat this exercise for every $n$, and compute the average of them. It can be described as below: 
+
+<br>
+
+$$
+E_{\text{cv}} = \frac{1}{N} \sum_{n=1}^{N} \mathbf{e}_n
+$$
+
+<br>
+
+We call it Cross Validation Error. Now we solved the dilemma of $K$. To aid understanding, we describe cross-validation as below: 
+
+![solution](/assets/images/val_6.svg) 
+
+If we apply the leave-one-out method, we can obtain the following cross-validation error: 
+
+<br>
+
+$$
+E_{\text{cv}} = \frac{1}{3} \left( \textcolor{red}{\mathbf{e}_1} + \textcolor{red}{\mathbf{e}_2} + \textcolor{red}{\mathbf{e}_3} \right)
+$$
+
+<br>
+
+Now, let us apply Cross Validation for model selection. We compare linear model, illustrated above figure, and constant model. Which one is better model? 
+
+![solution](/assets/images/val_7.svg) 
+
+Although the exact value of the cross-validation error is not given, it is easy to see that the constant model has a lower cross-validation error just by visual comparison. So, constant model will be choosen. 
+
+However, using leave-one-out in practice can be difficult. When the dataset is large, computing the cross-validation error becomes too time-consuming. For this reason, instead of leaving out just one data point, we typically group several data points together.
+
+![solution](/assets/images/val_8.svg) 
+
+One commonly used method is 10-fold cross-validation. This approach divides the entire dataset into $10$ parts, performs validation $10$ times, and takes the average of the results. Although the gap between the out-of-sample errors of $g$ and $g^{-}$ may be larger compared to leave-one-out, this method is generally preferred due to its computational efficiency.
