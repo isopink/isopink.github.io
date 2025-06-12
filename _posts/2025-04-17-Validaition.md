@@ -75,9 +75,7 @@ $$
 
 <br>
 
-We denote the variance as $\sigma^2$. However, since we are using only one point, the estimate will be poor because of high-variace. Therefore, we cannot rely on it to estimate $E_{\text{out}}$. To get around this issue, let us move on to a full set. 
-
-Consider we are given validation set, size of $K$: 
+We denote the variance as $\sigma^2$. However, since we are using only one point, the estimate will be poor because of high-variace. Therefore, we cannot rely on it to estimate $E_{\text{out}}$. To get around this issue, let us move on to a full set. Consider we are given validation set, size of $K$: 
 
 <br>
 
@@ -130,9 +128,7 @@ $$
 The equation illustrates that the accuracy of our validation error $E_{\text{val}}(h)$ in estimating the true out-of-sample error $E_{\text{out}}(h)$ improves as the size of validation set $K$ grows. 
 
 The interesting point is that $K$ is not free. Increasing $K$ is a good thing—but why don’t we just use more validation points? Because in practice, $K$ isn’t given to us in addition to the training set. So every time we take a point for validation, we are taking it away from training.
-Let us examine this more precisely. 
-
-Consider we are given data set $\mathcal{D}$ as: 
+Let us examine this more precisely. Consider we are given data set $\mathcal{D}$ as: 
 
 <br>
 
@@ -146,4 +142,20 @@ We are going to take any random $K$ points as validation set. Then, we have $N-K
 
  ![solution](/assets/images/val_1.svg) 
 
-As $K$ increases, $N - K$ decreases, which can lead to a higher $E_{\text{out}}$. 
+As $K$ increases, $N - K$ decreases, which can lead to a higher $E_{\text{out}}$. This is a price to be paid for $K$. It turns out that we are going to have a trick that will make us not pay that price. But still, the question of what happens when K is big is a question mark in our mind. Then, why don't we resotre the data set afterwe have the estimate? The situation is illustrated below: 
+
+ ![solution](/assets/images/val_2.svg) 
+
+If we used the full training set to train, we would get a final hypothesis, which we call $g$.  
+But in the validation setting, we only train on $\mathcal{D}_{\text{train}}$. The resulting hypothesis is $g^-$, since it is trained on a smaller dataset. 
+
+The trick is to use $g^-$ evaluated on $\mathcal{D}_{\text{val}}$ as a reliable proxy for $g$'s unknown performance. This allows us to then maximize $g$'s potential by training it on all data and ultimately report $g$ as our final hypothesis.
+
+If $K$ is small, then the validation error for $g^-$ is similar to that for $g$, so it doesn't cause much of a problem. However, if $K$ is large, the gap between $g^-$ and $g$ becomes significant, making the validation error itself less meaningful.
+
+In conclusion, as long as the size of the validation set is chosen properly, there is no issue in using the same data for both validation and training. As a rule of thumb, we suggests using about 20% of the total dataset as the validation set.
+
+
+
+
+
