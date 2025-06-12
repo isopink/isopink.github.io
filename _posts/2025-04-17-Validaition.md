@@ -153,9 +153,13 @@ The trick is to use $g^-$ evaluated on $\mathcal{D}_{\text{val}}$ as a reliable 
 
 If $K$ is small, then the validation error for $g^-$ is similar to that for $g$, so it doesn't cause much of a problem. However, if $K$ is large, the gap between $g^-$ and $g$ becomes significant, making the validation error itself less meaningful.
 
-In conclusion, as long as the size of the validation set is chosen properly, there is no issue in using the same data for both validation and training. As a rule of thumb, we suggests using about 20% of the total dataset as the validation set.
+In conclusion, as long as the size of the validation set is chosen properly, there is no issue in using the same data for both validation and training. As a rule of thumb, we suggests using about 20% of the total dataset as the validation set. 
 
+It seems nothing different from test set. Then, why we call it validation set? It is because we use it to make choices. Consider Early stopping in neural network:
 
+ ![solution](/assets/images/val_3.svg) 
 
+If we simply observe performance on a dataset, it acts as a test set, yielding an unbiased estimate. However, the moment we make a decision based on those observations—like stopping training at the lowest error point—that dataset becomes a validation set. This choice introduces a bias, making the estimate optimistically skewed. Thus, using a set for active decisions changes its nature from a neutral test set to a biased validation set.
 
+Let us discuss more about meaning of optimistic.
 
