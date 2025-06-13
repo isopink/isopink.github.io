@@ -342,7 +342,7 @@ If we apply the leave-one-out method, we can obtain the following cross-validati
 <br>
 
 $$
-E_{\text{cv}} = \frac{1}{3} \left( \textcolor{red}{\mathbf{e}_1} + \textcolor{red}{\mathbf{e}_2} + \textcolor{red}{\mathbf{e}_3} \right)
+E_{\text{cv}} = \frac{1}{3} \left(\mathbf{e}_1 + \mathbf{e}_2+ \mathbf{e}_3 \right)
 $$
 
 <br>
