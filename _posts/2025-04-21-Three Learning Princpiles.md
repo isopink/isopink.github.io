@@ -87,3 +87,15 @@ However, a good fit is only meaningful if it is falsifiable. A model that always
 ![image1](./image1.png)
 
 Scientist A uses only two points, which always form a line, while Scientist B uses three. Only B's experiment is falsifiable since the third point had deviated, the model would have been clearly wrong. The key point is that a fit that cannot fail tells us nothing. Falsifiability gives meaning to a model's success. When combined with simplicity, it leads to models that are not just statistically sound, but also scientifically meaningful. 
+
+---
+
+#### 2. Sampling Bias 
+
+Let us begin with the puzzle about Presidential election. In 1948, Harry Truman and Thomas Dewey faced off in one of the most famously mispredicted presidential elections in U.S. history. A major newspaper at the time conducted a phone poll to gauge public opinion and found that Dewey was leading by a large margin. Confident in the poll results, the newspaper prematurely printed the headline, “DEWEY DEFEATS TRUMAN.” However, the actual election result turned out quite differently. Truman won. What went wrong? 
+
+![image1](./image1.png)
+
+The problem wasn’t the size of the poll, but how the data was collected. In 1948, phones were not yet widespread and were mostly owned by wealthier individuals. As a result, the sample used in the poll was not representative of the overall voting population. This is a classic case of sampling bias. The process used to gather data introduced a systematic error, leading to a faulty prediction.
+
+From a machine learning perspective, this example highlights an essential lesson: having more data is not enough if the data isn’t representative. Even the best models can produce misleading results when trained on biased or poorly collected datasets. Ultimately, the quality and representativeness of data matter more than quantity when it comes to making reliable predictions.
