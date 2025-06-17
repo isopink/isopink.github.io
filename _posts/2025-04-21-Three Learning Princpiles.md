@@ -54,4 +54,36 @@ This illustrates a key idea. Even if a model performs perfectly on training data
 
 ##### 1.2. Why is simpler better? 
 
+A simpler model is considered better not because it is more elegant or aesthetically pleasing, but because it tends to perform better on unseen data. In other words, it has better out-of-sample performance. 
 
+This advantage comes from the fact that simpler models have fewer hypotheses in their hypothesis set, which we denote as:
+
+<br>
+
+$$
+m_{\mathcal{H}}(N) \text{for a dataset of size} \, N
+$$
+
+<br> 
+
+This is the growth function, typically used for binary classification, discussed in [Lecture 5](https://isopink.github.io/Effective-number-of-hypothesis/). Since they can represent fewer possible mappings from input to output, simpler models are less likely to fit a training dataset purely by chance. The probability of such a coincidental fit is approximately:
+
+<br>
+
+$$
+m_{\mathcal{H}}(N)
+$$
+
+<br>
+
+where $2^N$ is the total number of possible binary labelings of the dataset. A lower value of $m_{\mathcal{H}}(N)$ implies a lower risk of overfitting. In contrast, a more complex model typically has a much larger hypothesis set and can match many different labelings of the data. This flexibility increases the chance of finding a hypothesis that fits the training data well — even if that fit captures noise rather than real structure. In such cases, the model may appear to perform well during training but fail to generalize to new examples. 
+
+This leads us to previous puzzle in (1.1). One of those letters will inevitably be correct. To that one recipient, the scammer looks like a genius. But the prediction was not meaningful. It was just one out of many guesses. A model with a hypothesis set as large as $2^N$ is doing the same thing. It’s making all possible guesses, and one of them will fit the data, but we can't trust it. In contrast, a simple model with only one possible hypothesis $m_{\mathcal{H}}(N) = 1$ can’t cheat like that. If it fits the data, we have reason to believe it discovered something real.
+
+In conclusion, when a simple model achieves a good fit, it is statistically more meaningful. It suggests that the model is capturing a genuine pattern in the data, rather than memorizing it. This is why simplicity is favored in learning theory, not for its elegance, but because it leads to more reliable and generalizable predictions.
+
+However, a good fit is only meaningful if it is falsifiable. A model that always fits the data, either because it's too flexible or the dataset is too limited, offers no real evidence. Let us look at clear exmaple, where two scientists test whether conductivity is linear in temperature. 
+
+![image1](./image1.png)
+
+Scientist A uses only two points, which always form a line, while Scientist B uses three. Only B's experiment is falsifiable since the third point had deviated, the model would have been clearly wrong. The key point is that a fit that cannot fail tells us nothing. Falsifiability gives meaning to a model's success. When combined with simplicity, it leads to models that are not just statistically sound, but also scientifically meaningful. 
