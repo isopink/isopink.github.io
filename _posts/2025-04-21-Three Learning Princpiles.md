@@ -3,7 +3,7 @@ layout: single
 title: "Lecture 17 : Three Learning Principles"
 ---
 
-In this time, we introduce Three Learning Principles. These are related to the model selection and data handling. The discussion will proceed in the following three parts: 
+This is the end of our journey with Learning from data. This time, we introduce Three Learning Principles. These are related to the model selection and data handling. The discussion will proceed in the following three parts: 
 
 1. Occam's Razor
 
