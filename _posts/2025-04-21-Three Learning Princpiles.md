@@ -37,7 +37,7 @@ However, there are exceptions. Some models may look complex in form but actually
 
 Despite its complex-looking decision boundary, it’s defined by a relatively small number of support vectors—so it belongs to a small class of hypotheses. Let us discuss one more funny puzzle about exceptions. 
 
-Imagine receiving a letter each week predicting the outcome of a football game—win or lose. We follow the predictions, and week after week, they are always correct. After five weeks of perfect predictions, the sender asks us to pay $50 to keep receiving them. Should we trust them?
+Imagine receiving a letter each week predicting the outcome of a football game—win or lose. We follow the predictions, and week after week, they are always correct. After five weeks of perfect predictions, the sender asks us to pay 50 dollars to keep receiving them. Should we trust them?
 
 <이미지2>
 
