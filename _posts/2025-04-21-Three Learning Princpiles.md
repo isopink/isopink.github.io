@@ -48,4 +48,10 @@ This puzzle presents that exact scenario. On the figure above, we see sequences 
 
 Among these people, some just happen to get all the predictions right. For example, the person with arrow received five correct predictions in a row. It looks impressive, but the trick is that there are many different people receiving different prediction letters. With enough people, it’s statistically likely that someone will get five correct predictions just by chance.
 
-This illustrates a key idea. Even if a model performs perfectly on training data, that doesn’t mean it’s genuinely good—it could just be overfitting. The oracle’s perfect record is not necessarily meaningful if we don’t know how many people were sent different letters. Random success is not the same as true predictive power.
+This illustrates a key idea. Even if a model performs perfectly on training data, that doesn’t mean it’s genuinely good—it could just be overfitting. The oracle’s perfect record is not necessarily meaningful if we don’t know how many people were sent different letters. Random success is not the same as true predictive power. 
+
+<br>
+
+##### 1.2. Why is simpler better? 
+
+
