@@ -34,14 +34,14 @@ What if $h$ has real-valued parameters, like in a high-order polynomial? For exa
 However, there are exceptions. Some models may look complex in form but actually come from a small hypothesis set. A good example is the [Support Vector Machine](https://isopink.github.io/SVM/).
 
 
-<이미지1>
+![image1](./image1.png)
 
 Despite its complex-looking decision boundary, it’s defined by a relatively small number of support vectors—so it belongs to a small class of hypotheses. Let us discuss one more funny puzzle about exceptions. 
 
 Imagine receiving a letter each week predicting the outcome of a football game—win or lose. We follow the predictions, and week after week, they are always correct. After five weeks of perfect predictions, the sender asks us to pay 50 dollars to keep receiving them. Should we trust them?
 
 
-<이미지2>
+![image1](./image1.png)
 
 
 This puzzle presents that exact scenario. On the figure above, we see sequences of $0$s and $1$s. Each of them represent a set of weekly predictions. Each row corresponds to a different person receiving the predictions. The $0$ or $1$ at the end shows whether the person’s predictions were correct over the five weeks.
