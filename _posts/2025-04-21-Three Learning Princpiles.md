@@ -139,7 +139,7 @@ $$
 
 <br>
 
-These transformations help capture nonlinear relationships and can make otherwise inseparable data become linearly separable in the new space. However, the problem arises when we try to simplify the representation after looking at the data and manually choose $\mathb{z}$. This may seem better because the [VC dimension](https://isopink.github.io/VC-Dimension/) becomes $3$, but in doing so, we are no longer letting the data guide the process. Instead, the user is unknowingly learning from the data. Now, let us move on to the second example. 
+These transformations help capture nonlinear relationships and can make otherwise inseparable data become linearly separable in the new space. However, the problem arises when we try to simplify the representation after looking at the data and manually choose $\mathbf{z}$. This may seem better because the [VC dimension](https://isopink.github.io/VC-Dimension/) becomes $3$, but in doing so, we are no longer letting the data guide the process. Instead, the user is unknowingly learning from the data. Now, let us move on to the second example. 
 
 <br>
 
