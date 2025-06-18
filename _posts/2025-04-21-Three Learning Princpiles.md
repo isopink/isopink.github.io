@@ -108,3 +108,62 @@ To address this, one common strategy is to reweight or resample the training dat
 
 However, if there are regions in the input space where the training distribution assigns zero probability ($P = 0$) while the testing distribution assigns a positive probability ($P > 0$), then no amount of reweighting will help, because the model has simply never seen any data from that region. 
 
+--- 
+
+#### 3. Data Snooping 
+
+One of the most important principles in machine learning is that if a dataset has influenced any part of the learning process, it can no longer be used to reliably assess the outcome. This includes not only training but also model selection, feature engineering, and hyperparameter tuning. 
+
+Once the dataset is involved in these stages, it becomes biased and cannot provide an objective evaluation of model performance. Despite its simplicity, this principle is frequently violated in practice. Many practitioners unknowingly allow information from the evaluation set to leak into the training process, leading to over-optimistic results and poor generalization. Let us look at three examples to understand the data snooping clearly. 
+
+![image1](./image1.png)
+
+We already discussed this example in [Lecture 3](https://isopink.github.io/Linear-Model-L/) and [Lecture 9](https://isopink.github.io/Linear-Model-ll/). It is about nnlinear transforms, which are commonly used to map input data into a higher-dimensional feature space where linear models may perform better. Consider we are given an input ($x_1, x_2$). We can defince trasformed feature vectors such as: 
+
+<br> $$ \mathbf{z} = (1, x_1, x_2, x_1 x_2, x_1^2, x_2^2) $$ <br>
+
+Other simple transforms include: 
+
+<br> $$ \mathbf{z} = (1, x_1^2, x_2^2) \quad \text{or} \quad \mathbf{z} = \left(1, x_1^2 + x_2^2\right) $$ <br>
+
+These transformations help capture nonlinear relationships and can make otherwise inseparable data become linearly separable in the new space. However, the problem arises when we try to simplify the representation after looking at the data and manually choose $\mathbf[z}$. This may seem better because the [VC dimension](https://isopink.github.io/VC-Dimension/) becomes $3$, but in doing so, we are no longer letting the data guide the process. Instead, the user is unknowingly learning from the data. Now, let us move on to the second example. 
+
+In this example, the goal is to predict the return of the US Dollar relative to the British Pound using past return values. More formally, the model attempts to learn a function of the form:
+
+<br>
+
+$$
+(\Delta r_{-20}, \Delta r_{-19}, \ldots, \Delta r_{-1}) \longrightarrow \Delta r_0 
+$$
+
+<br>
+
+At first glance, the setup seems valid. The data is normalized, then randomly split into a training set and a test set:
+
+<br>
+
+$$
+\mathcal{D}_{\text{train}}, \quad \mathcal{D}_{\text{test}} 
+$$
+
+<br>
+A model is trained on $\mathcal{D}_\text{train}$ and its performance is evaluated on  $\mathcal{D}_\text{test}$. And result looks like this: 
+
+![image1](./image1.png)
+
+However, a subtle but serious mistake introduces data snooping, and it occurs during normalization. The mistake lies in computing normalization statistics from the entire dataset, instead of from the training data alone. Specifically, the mean $\mu$ and standard deviation $\sigma$ used for normalization were calculated using both training and testing:
+
+<br> 
+
+$$ x_{\text{normalized}} = \frac{x - \mu}{\sigma} $$ 
+
+<br>
+
+This means that the model indirectly "saw" the test data during preprocessing, because the test data influenced the transformation applied to the inputs. This violates the fundamental principle of generalization:
+
+<br> 
+$$ \text{If a dataset has affected any step in the learning process, it cannot be used to assess the outcome.} $$ 
+<br>
+
+Although the model did not use $\mathcal{D}_{\text{test}}$ labels, it still incorporated test set information into the learning pipeline — a clear case of data snooping.
+
