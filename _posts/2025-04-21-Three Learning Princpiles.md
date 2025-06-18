@@ -112,21 +112,38 @@ However, if there are regions in the input space where the training distribution
 
 #### 3. Data Snooping 
 
-One of the most important principles in machine learning is that if a dataset has influenced any part of the learning process, it can no longer be used to reliably assess the outcome. This includes not only training but also model selection, feature engineering, and hyperparameter tuning. 
+One of the most important principles in machine learning is that if a dataset has influenced any part of the learning process, it can no longer be used to reliably assess the outcome. This includes not only training but also model selection, feature engineering, and hyperparameter tuning. Despite its simplicity, this principle is frequently violated in practice. Many practitioners unknowingly allow information from the evaluation set to leak into the training process, leading to over-optimistic results and poor generalization. Let us look at three examples to understand the data snooping clearly. 
 
-Once the dataset is involved in these stages, it becomes biased and cannot provide an objective evaluation of model performance. Despite its simplicity, this principle is frequently violated in practice. Many practitioners unknowingly allow information from the evaluation set to leak into the training process, leading to over-optimistic results and poor generalization. Let us look at three examples to understand the data snooping clearly. 
+<br>
+
+##### 3.1. Nonlinear model selection
 
 ![image1](./image1.png)
 
 We already discussed this example in [Lecture 3](https://isopink.github.io/Linear-Model-L/) and [Lecture 9](https://isopink.github.io/Linear-Model-ll/). It is about nnlinear transforms, which are commonly used to map input data into a higher-dimensional feature space where linear models may perform better. Consider we are given an input ($x_1, x_2$). We can defince trasformed feature vectors such as: 
 
-<br> $$ \mathbf{z} = (1, x_1, x_2, x_1 x_2, x_1^2, x_2^2) $$ <br>
+<br>
+
+$$
+\mathbf{z} = (1, x_1, x_2, x_1 x_2, x_1^2, x_2^2) 
+$$
+
+<br>
 
 Other simple transforms include: 
 
-<br> $$ \mathbf{z} = (1, x_1^2, x_2^2) \quad \text{or} \quad \mathbf{z} = \left(1, x_1^2 + x_2^2\right) $$ <br>
+<br>
 
-These transformations help capture nonlinear relationships and can make otherwise inseparable data become linearly separable in the new space. However, the problem arises when we try to simplify the representation after looking at the data and manually choose $\mathbf[z}$. This may seem better because the [VC dimension](https://isopink.github.io/VC-Dimension/) becomes $3$, but in doing so, we are no longer letting the data guide the process. Instead, the user is unknowingly learning from the data. Now, let us move on to the second example. 
+$$ \mathbf{z} = (1, x_1^2, x_2^2) \quad \text{or} \quad \mathbf{z} = \left(1, x_1^2 + x_2^2\right) 
+$$
+
+<br>
+
+These transformations help capture nonlinear relationships and can make otherwise inseparable data become linearly separable in the new space. However, the problem arises when we try to simplify the representation after looking at the data and manually choose $\mathb{z}$. This may seem better because the [VC dimension](https://isopink.github.io/VC-Dimension/) becomes $3$, but in doing so, we are no longer letting the data guide the process. Instead, the user is unknowingly learning from the data. Now, let us move on to the second example. 
+
+<br>
+
+##### 3.2. Financial forecasting
 
 In this example, the goal is to predict the return of the US Dollar relative to the British Pound using past return values. More formally, the model attempts to learn a function of the form:
 
@@ -147,23 +164,35 @@ $$
 $$
 
 <br>
-A model is trained on $\mathcal{D}_\text{train}$ and its performance is evaluated on  $\mathcal{D}_\text{test}$. And result looks like this: 
 
-![image1](./image1.png)
+After traininig and testing, the predicted cumulative profit is shown below: 
 
-However, a subtle but serious mistake introduces data snooping, and it occurs during normalization. The mistake lies in computing normalization statistics from the entire dataset, instead of from the training data alone. Specifically, the mean $\mu$ and standard deviation $\sigma$ used for normalization were calculated using both training and testing:
+![image1](./image1.png) 
 
-<br> 
+However, the actual result was this: 
 
-$$ x_{\text{normalized}} = \frac{x - \mu}{\sigma} $$ 
+![image1](./image1.png) 
+
+It seems there was mistakes, and it occurs during normalization. The mistake lies in computing normalization statistics from the entire dataset, instead of from the training data alone. Specifically, the mean $\mu$ and standard deviation $\sigma$ used for normalization were calculated using both training and testing.
+
+This means that the model indirectly "saw" the test data during preprocessing, because the test data influenced the transformation applied to the inputs. Although the model did not use $\mathcal{D}_{\text{test}}$ labels, it still incorporated test set information into the learning pipeline. 
+
+This leads us to the broader issue of Data Snooping, also known as reuse of a data set. It refers to the mistake of using the same data repeatedly while trying different models or strategies. When we try enough models on the same dataset, one of them is bound to perform well. However, not because it generalizes well, but because it accidentally fits that specific data. 
+
+As the saying goes, “If you torture the data long enough, it will confess.” Even indirect exposure — like reading that "SVM works well" — can be data snooping, since such insights may stem from the same dataset. The core issue is overfitting to that particular data, which undermines true performance evaluation. Now, let us look at the final example.
 
 <br>
 
-This means that the model indirectly "saw" the test data during preprocessing, because the test data influenced the transformation applied to the inputs. This violates the fundamental principle of generalization:
+##### 3.3. Buy and Hold
 
-<br> 
-$$ \text{If a dataset has affected any step in the learning process, it cannot be used to assess the outcome.} $$ 
+Another example of data snooping bias arises when evaluating long-term investment strategies like "buy and hold." Suppose we use 50 years of historical stock data and test this strategy using all currently traded companies in the S&P 500. If we assume we strictly followed the buy-and-hold approach with those companies, we would likely conclude that it yields great profit.
+
+However, this introduces a serious sampling bias. We are only looking at companies that survived and are still traded today. Companies that failed, merged, or were delisted over the decades are excluded, making the strategy appear far more successful than it actually is. This is a classic case of bias via data snooping, where the selection of data itself is influenced by the outcome. 
+
 <br>
 
-Although the model did not use $\mathcal{D}_{\text{test}}$ labels, it still incorporated test set information into the learning pipeline — a clear case of data snooping.
+##### Remedy
 
+To deal with these data snooping, there are two main remedies. First, we can try to avoid data snooping altogether by maintaining strict discipline throughout the experimental process. This includes properly separating training, validation, and test sets, and never using test data in model selection or preprocessing steps.
+
+Second, if some form of contamination has already occurred, we should account for data snooping by estimating how much data leakage may have influenced the results. This involves critically re-evaluating model performance and, if possible, using techniques like nested cross-validation or fresh, untouched datasets to reassess generalization.
