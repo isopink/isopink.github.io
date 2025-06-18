@@ -195,4 +195,4 @@ However, this introduces a serious sampling bias. We are only looking at compani
 
 To deal with these data snooping, there are two main remedies. First, we can try to avoid data snooping altogether by maintaining strict discipline throughout the experimental process. This includes properly separating training, validation, and test sets, and never using test data in model selection or preprocessing steps.
 
-Second, if some form of contamination has already occurred, we should account for data snooping by estimating how much data leakage may have influenced the results. This involves critically re-evaluating model performance and, if possible, using techniques like nested cross-validation or fresh, untouched datasets to reassess generalization.
+Second, if some form of contamination has already occurred, we should account for data snooping by estimating how much data leakage may have influenced the results. This involves critically re-evaluating model performance and, if possible, using techniques like [cross-validation](https://isopink.github.io/Validaition/) or fresh, untouched datasets to reassess generalization.
