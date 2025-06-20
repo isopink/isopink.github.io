@@ -1,7 +1,7 @@
 /* ==========================================================================
    Contrast skin
    ========================================================================== */
-
+ 
 /* Colors */
 $background-color : #fff !default;
 $text-color: #000 !default;
@@ -9,13 +9,13 @@ $muted-text-color: $text-color !default;
 $primary-color: #b60000 !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
 $footer-background-color: #000 !default;
-$link-color: #0066cc !default;
+$link-color: #0066cc !default; // 밝은 파랑
 $link-color-hover: darken(#0066cc, 10%) !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
-/* base16 syntax colors */
+/* contrast syntax highlighting (base16) */
 $base00: #000000 !default;
 $base01: #242422 !default;
 $base02: #484844 !default;
@@ -45,54 +45,43 @@ $base0f: #b18a3d !default;
 }
 
 .page__footer {
-  color: #fff !important;
+  color: #fff !important; // override
 }
 
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa {
+.page__footer-follow .social-icons .svg-inline--fa  {
   color: inherit;
 }
 
 /* ==========================================================================
-   Improved Code Block Styling (Light Background)
+   Code block customization for light background (high contrast)
    ========================================================================== */
-.highlight,
-pre.highlight {
-  background-color: #f4f4f4 !important;
-  color: #1a1a1a !important;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.highlight, pre.highlight {
+  background-color: #f8f8f8 !important;
+  color: #2d2d2d !important;
+  border-radius: 5px;
   padding: 1em;
   overflow-x: auto;
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 0.95em;
 }
 
-code,
-pre,
-pre code {
-  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
-  font-weight: 500;
-}
-
-.highlight .c  { color: #6a737d; font-style: italic; }   /* Comment */
-.highlight .k  { color: #d73a49; font-weight: bold; }    /* Keyword */
-.highlight .s  { color: #032f62; }                       /* String */
-.highlight .o  { color: #005cc5; }                       /* Operator */
-.highlight .n  { color: #24292e; }                       /* Name/Identifier */
-.highlight .mi { color: #e36209; }                       /* Number */
-.highlight .p  { color: #393a34; }                       /* Punctuation */
-.highlight .nb { color: #24292e; font-weight: bold; }    /* Built-in */
+.highlight .c     { color: #999988; font-style: italic; } /* Comment */
+.highlight .k     { color: #005cc5; font-weight: bold; }  /* Keyword */
+.highlight .s     { color: #d73a49; }                     /* String */
+.highlight .o     { color: #d73a49; }                     /* Operator */
+.highlight .n     { color: #24292e; }                     /* Name/identifiers */
+.highlight .mi    { color: #005cc5; }                     /* Integer */
+.highlight .p     { color: #444; }                        /* Punctuation */
+.highlight .nt    { color: #22863a; }                     /* Tags (HTML) */
+.highlight .na    { color: #6f42c1; }                     /* Attributes */
+.highlight .nb    { color: #24292e; font-weight: bold; }  /* Builtin */
 
 code {
   background-color: #f4f4f4;
   color: #e83e8c;
 }
 
-/* ==========================================================================
-   Link Styling
-   ========================================================================== */
-
+// 글 제목 링크는 검정색으로 유지
 .archive__item-title a,
 h1 a,
 h2 a {
@@ -105,6 +94,7 @@ h2 a {
   }
 }
 
+// 본문 내용 안의 일반 링크는 파란색
 .page__content a {
   color: #0066cc !important;
   text-decoration: none;
@@ -115,18 +105,20 @@ h2 a {
   }
 }
 
+
 .pagination--pager {
   background-color: #fff !important;
   color: $text-color !important;
 
   &:hover {
-    background-color: #fff !important;
-    color: mix(#fff, $text-color, 80%) !important;
+    background-color: #fff !important; // 연회색 배경
+    color: mix(#fff, $text-color, 80%) !important; // 검정 글자 유지
     text-decoration: none !important;
   }
 }
 
-.MathJax,
-mjx-container {
+.MathJax, mjx-container {
   font-size: 0.85em !important;
 }
+
+지금 이렇게 되어있음
