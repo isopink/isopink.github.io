@@ -1,15 +1,15 @@
 ---
 layout : single
-title : "[Implement] Perceptron to XOR"
+title : Simple perceptron implementation
 ---
 
-In this time, we are going to implement a few simple perceptrons to the XOR gate. If you need a more theoretical depth, please watch my [earlier post](https://isopink.github.io/Neural-Network/). The discussion will proceed in the following four parts: 
+In this time, we are going to implement a few simple perceptrons to the XOR gate. If you need more theoretical depth, please look at my [earlier post](https://isopink.github.io/Neural-Network/). Also, I hope readers have already had a knowledge of Python and some libraries. The discussion will proceed in the following four parts: 
 
-1. And Gate 
+1. AND Gate 
 
-2. Nand Gate
+2. NAND Gate
 
-3. Or Gate 
+3. OR Gate 
 
 4. XOR Gate 
 
@@ -45,10 +45,10 @@ We want to define weights and bias, $(w_1, w_2, b)$ which satisfy the AND gate. 
 import numpy as np
 
 def AND(x1, x2):
-    x = np.array([x1, x2])
-    w = np.array([0.5, 0.5])
-    b = -0.7
-    tmp = np.sum(w*x) + b
+    X = np.array([x1, x2])
+    W = np.array([0.5, 0.5])
+    bias = -0.7
+    tmp = np.sum(X*W) + bias
 
     if tmp <= 0:
         return 0
@@ -58,4 +58,114 @@ def AND(x1, x2):
 
 --- 
 
-#### 2. Or gate
+#### 2. NAND gate
+
+The NAND gate is the opposite of the AND gate. It outputs $0$ only when both inputs are $1$, whereas the AND gate outputs $1$ only when both inputs are $1$. Here is a comparison of their truth tables:
+
+
+|  $x_1$ |  $x_2$ | AND($x_1$, $x_2$) | NAND($x_1$, $x_2$)  |
+|:---:|:---:|:-----------:|:-------------:|
+|  0  |  0  |      0      |       1       |
+|  0  |  1  |      0      |       1       |
+|  1  |  0  |      0      |       1       |
+|  1  |  1  |      1      |       0       |
+
+The goal is same as the AND gate. We want to find out optiaml weights and bias to implement this table. This can be obtained simply by changing the sign, while fixing the absolute value of the weight and bias of the AND gate. Now we can implement this as below: 
+
+```python
+import numpy as np 
+
+def NAND(x1, x2):
+    X = np.array([x1,x2])
+    W = np.array([-0.5, -0.5])
+    bias = 0.7
+    tmp = np.sum(X*W) + bias
+
+    if temp <= 0:
+        return 0
+
+    else:
+        return 1
+```
+
+--- 
+
+#### 3. OR gate
+
+The OR gate outputs 1 if at least one of the input signals is $1$. The truth table is as follows:
+
+| $x_1$ | $x_2$ | OR($x_1$, $x_2$) |
+|:----:|:----:|:-------------:|
+|  0   |  0   |      0      |
+|  0   |  1   |      1      |
+|  1   |  0   |      1      |
+|  1   |  1   |      1      |
+
+This table can also be implemented using a single perceptron with two inputs and same formalization. A set of weights and bias that satisfy the OR gate is: $(w_1, w_2, b) = (0.5, 0.5, -0.2)$. Here's the corresponding Python implementation:
+
+```python
+import numpy as np
+
+def OR(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.2
+    tmp = np.sum(w*x) + b
+
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+```
+---
+
+#### 4. XOR Gate
+
+If you're not yet familiar with the basics, I highly recommend checking out my previous post on [Neural Networks](https://isopink.github.io/Neural-Network/) before diving into the XOR gate implementation. The XOR (Exclusive OR) gate outputs $1$ only when the two inputs are different. The truth table is as follows:
+
+| $x_1$ | $x_2$ | XOR($x_1$, $x_2$) |
+|:----:|:----:|:---------------:|
+|  0   |  0   |        0        |
+|  0   |  1   |        1        |
+|  1   |  0   |        1        |
+|  1   |  1   |        0        |
+
+XOR is not linearly separable, which means we cannot implement it using a single-layer perceptron. Instead, we can build it by combining AND, OR and NAND gate which are linearly separable. One common implementation uses the following logic:
+
+<br>
+
+$$
+\text{XOR}(x_1, x_2) = \text{AND}(\text{NAND}(x_1, x_2), \text{OR}(x_1, x_2))
+$$
+
+<br>
+
+Here's a possible implementation using previously defined gates:
+
+```python
+import numpy as np
+
+def NAND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([-0.5, -0.5])
+    b = 0.7
+    return 1 if np.sum(w*x) + b > 0 else 0
+
+def OR(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.2
+    return 1 if np.sum(w*x) + b > 0 else 0
+
+def AND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.7
+    return 1 if np.sum(w*x) + b > 0 else 0
+
+def XOR(x1, x2):
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    y = AND(s1, s2)
+    return y
+```
