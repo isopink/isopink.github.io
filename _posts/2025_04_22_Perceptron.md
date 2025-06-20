@@ -1,6 +1,6 @@
 ---
 layout : single
-title : Simple perceptron implementation
+title : "[Implement] Perceptron to XOR"
 ---
 
 In this time, we are going to implement a few simple perceptrons to the XOR gate. If you need more theoretical depth, please look at my [earlier post](https://isopink.github.io/Neural-Network/). The discussion will proceed in the following four parts: 
