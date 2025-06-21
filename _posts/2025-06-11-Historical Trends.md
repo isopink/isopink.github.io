@@ -25,7 +25,7 @@ In the beginning, researchers were inspired by how the brain works. They made si
 
 In the 1980s, a new wave called connectionism became popular. It focused on using many simple units together and training them with a method called backpropagation. These models were more powerful, but they still had limits and eventually lost popularity. Following figure shows how artificial networks became more connected, closer to real brains.
 
-![solution](/assets/images/ht_2.svg)
+![solution](/assets/images/ht_3.svg)
 
 ##### 1.3. Deep Learning (2006–Now)
 
@@ -41,7 +41,7 @@ The third wave started in 2006. Thanks to better computers and more data, deep l
 
 As the world became more digital, we got much more data. From small datasets like MNIST to big ones like ImageNet, deep learning models could now learn better patterns. Following figure shows how much bigger datasets have gotten over time.
 
-![solution](/assets/images/ht_3.svg)
+![solution](/assets/images/ht_2.svg)
 
 ##### 2.2. More Compute
 
