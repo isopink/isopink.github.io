@@ -14,6 +14,7 @@ In this time, We will discuss the rest of [Linear Model](https://isopink.github.
 4. Gradient Descent
 
 5. Stochastic Gradient Descent
+
 ---
 
 #### 1. Review of nonlinear transforms 
