@@ -296,6 +296,6 @@ $$
 
 SGD behaves like batch gradient descent on average, though it's noisier due to randomness. Over time, these fluctuations cancel out. There are some advantages of SGD. One major advantage of SGD is its faster computation. Unlike batch gradient descent, which uses all data points to compute the gradient, SGD uses only one data point per update, making each step much quicker.  
 
-![solution](/assets/images/lm_8.svg) 
+Another benefit is its randomness, which helps escape local minima. Real-world loss surfaces are often bumpy, and SGD's noisy updates give it a chance to jump out of bad spots and find better solutions. The following figure illustrates it as below: 
 
-Another benefit is its randomness, which helps escape local minima. Real-world loss surfaces are often bumpy, and SGD's noisy updates give it a chance to jump out of bad spots and find better solutions. 
+![solution](/assets/images/lm_8.svg) 
