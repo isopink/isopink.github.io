@@ -170,7 +170,7 @@ The implied pointwise error measure is $e(h(\mathbf{x}_n), y_n) = \ln(1 + e^{-y_
 
 Unlike the $E_{\text{in}}(\mathbf{w})$ of linear regression, $E_{\text{in}}(\mathbf{w})$ of Logistic regression is not a closed - form. We cannot calculate the proper weight vector analytically. Instead, we have iterative solution. We now introduce the new algorithm, Gradient Descent. 
 
-Gradient Descent is a method to minimize functions like $E_{in}(w)$, which can be viewed as an error surface. Like a ball rolling downhill, the algorithm follows the slope to reduce the error. However, it may end up in a local minimum depending on the starting point.
+Gradient Descent is a method to minimize functions like $E_{\text{in}}(\mathbf{w)$, which can be viewed as an error surface. Like a ball rolling downhill, the algorithm follows the slope to reduce the error. However, it may end up in a local minimum depending on the starting point.
 
 ![solution](/assets/images/lm_6.svg) 
 
