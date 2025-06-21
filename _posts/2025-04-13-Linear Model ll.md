@@ -20,17 +20,15 @@ In this time, We will discuss the rest of [Linear Model](https://isopink.github.
 
 We studied nonlinear transformations in [Lecture 3](https://isopink.github.io/Linear-Model-L/), but we didn’t cover everything. Therefore, we would like to add a few more points about nonlinear transformations. 
 
-![solution](/assets/images/lm_1.svg) 
-
 When data isn’t linearly separable, we often apply a feature transform to map $x$ to $\mathcal{Z}$-space. But this increases dimensionality, raising the VC dimension and making generalization harder. So, it’s not always a good idea. Let’s look at two examples.
 
 ![solution](/assets/images/lm_2.svg) 
 
 <br>
 
-##### 1.1. Case 1
+##### 1.1. First case
 
-The first case offers two choices: accept some $E_\text{in}$ with a linear model, or transform to a higher dimension to make the error zero. 
+First case offers two choices: accept some $E_\text{in}$ with a linear model, or transform to a higher dimension to make the error zero. 
 
 ![solution](/assets/images/lm_3.svg) 
 
@@ -38,11 +36,11 @@ We can clearly recognize that transform to a higher-dimension is a disaster. We 
 
 <br>
 
-##### 1.2. Case 2
+##### 1.2. Second case
 
 ![solution](/assets/images/lm_4.svg) 
 
-The second case is definitely non separable. There is no choice but to transform to a higher-dimension. We can think of all possible quadratic curves in $\mathcal{X}$ and describe this feature transform $z=\Phi$ as: 
+The Second case is definitely non separable. There is no choice but to transform to a higher-dimension. We can think of all possible quadratic curves in $\mathcal{X}$ and describe this feature transform $z=\Phi$ as: 
 
 <br>
 
@@ -171,9 +169,7 @@ The implied pointwise error measure is $e(h(\mathbf{x}_n), y_n) = \ln(1 + e^{-y_
 
 Unlike the $E_{\text{in}}(\mathbf{w})$ of linear regression, $E_{\text{in}}(\mathbf{w})$ of Logistic regression is not a closed - form. We cannot calculate the proper weight vector analytically. Instead, we have iterative solution. We now introduce the new algorithm, Gradient Descent. 
 
-![solution](/assets/images/lm_5.svg)
-
-Gradient descent is a method to minimize functions like $E_{in}(w)$, which can be viewed as an error surface. Like a ball rolling downhill, the algorithm follows the slope to reduce the error. However, it may end up in a local minimum depending on the starting point.
+Gradient Descent is a method to minimize functions like $E_{in}(w)$, which can be viewed as an error surface. Like a ball rolling downhill, the algorithm follows the slope to reduce the error. However, it may end up in a local minimum depending on the starting point.
 
 ![solution](/assets/images/lm_6.svg) 
 
