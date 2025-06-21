@@ -26,7 +26,7 @@ When data isn’t linearly separable, we often apply a feature transform to map 
 
 <br>
 
-##### 1.1. First case
+##### 1.1. Case 1
 
 First case offers two choices: accept some $E_\text{in}$ with a linear model, or transform to a higher dimension to make the error zero. 
 
@@ -36,7 +36,7 @@ We can clearly recognize that transform to a higher-dimension is a disaster. We 
 
 <br>
 
-##### 1.2. Second case
+##### 1.2. Case 2
 
 ![solution](/assets/images/lm_4.svg) 
 
