@@ -45,18 +45,25 @@ code {
   font-size: 0.95em;
 }
 
-/* 줄마다 흐릿한 박스 제거 */
-.highlight .line,
+/* 완전한 줄 배경 박스 제거 */
+.highlight,
+pre.highlight,
+.highlight pre,
+.highlight code,
 .highlight code span,
-.highlight span {
+.highlight .line,
+.highlight span,
+.highlight td,
+.highlight tr {
   background: none !important;
-  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
+  display: inline !important;
   filter: none !important;
   mix-blend-mode: normal !important;
+  opacity: 1 !important;
 }
 
 /* 토큰 스타일 - igopro 테마 기준 */
