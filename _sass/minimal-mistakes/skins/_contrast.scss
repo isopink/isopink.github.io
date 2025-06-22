@@ -56,33 +56,80 @@ $base0f: #b18a3d !default;
 /* ==========================================================================
    Code block customization for light background (high contrast)
    ========================================================================== */
-.highlight, pre.highlight {
-  background-color: #1e1e1e !important;  // 어두운 배경 (VS Code 스타일)
-  color: #d4d4d4 !important;             // 기본 텍스트 색상
-  border-radius: 5px;
+// Code blocks
+.highlight,
+pre.highlight {
+  background-color: $base00 !important;
+  color: $base05 !important;
+  border-radius: 0.25em;
   padding: 1em;
   overflow-x: auto;
   font-size: 0.95em;
+  line-height: 1.5;
 }
 
-// 인라인 코드
+// Inline code
 code {
-  background-color: #2d2d2d !important;
-  color: #dcdcaa !important;
+  background-color: $base01;
+  color: $base0d; // usually blue
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
 }
 
-// 하이라이팅 색상들
-.highlight .c     { color: #6a9955; font-style: italic; } // Comment
-.highlight .k     { color: #569cd6; font-weight: bold; }  // Keyword
-.highlight .s     { color: #d69d85; }                     // String
-.highlight .o     { color: #c586c0; }                     // Operator
-.highlight .n     { color: #9cdcfe; }                     // Name/identifiers
-.highlight .mi    { color: #b5cea8; }                     // Integer
-.highlight .p     { color: #d4d4d4; }                     // Punctuation
-.highlight .nt    { color: #4ec9b0; }                     // HTML tag
-.highlight .na    { color: #dcdcaa; }                     // Attribute
-.highlight .nb    { color: #c586c0; font-weight: bold; }  // Builtin
-
+// Rouge token styles
+.highlight .c     { color: $base03; font-style: italic; } // Comment
+.highlight .err   { color: $base08; background-color: $base00; } // Error
+.highlight .k     { color: $base0e; } // Keyword
+.highlight .o     { color: $base0c; } // Operator
+.highlight .cm    { color: $base03; font-style: italic; }
+.highlight .cp    { color: $base0e; }
+.highlight .c1    { color: $base03; font-style: italic; }
+.highlight .cs    { color: $base03; font-style: italic; }
+.highlight .gd    { color: $base08; }
+.highlight .ge    { font-style: italic; }
+.highlight .gh    { color: $base0d; font-weight: bold; }
+.highlight .gi    { color: $base0b; }
+.highlight .gp    { color: $base04; }
+.highlight .gs    { font-weight: bold; }
+.highlight .gu    { color: $base0d; font-weight: bold; }
+.highlight .gt    { color: $base08; }
+.highlight .kc    { color: $base0e; }
+.highlight .kd    { color: $base0e; }
+.highlight .kn    { color: $base0c; }
+.highlight .kp    { color: $base0e; }
+.highlight .kr    { color: $base0e; }
+.highlight .kt    { color: $base0a; }
+.highlight .m     { color: $base09; }
+.highlight .s     { color: $base0b; }
+.highlight .na    { color: $base0d; }
+.highlight .nb    { color: $base05; }
+.highlight .nc    { color: $base0a; }
+.highlight .no    { color: $base08; }
+.highlight .nd    { color: $base0d; }
+.highlight .ni    { color: $base0c; }
+.highlight .ne    { color: $base08; }
+.highlight .nf    { color: $base0d; }
+.highlight .nl    { color: $base0d; }
+.highlight .nn    { color: $base0a; }
+.highlight .nt    { color: $base08; }
+.highlight .nv    { color: $base0e; }
+.highlight .ow    { color: $base0c; }
+.highlight .w     { color: $base05; }
+.highlight .mf    { color: $base09; }
+.highlight .mh    { color: $base09; }
+.highlight .mi    { color: $base09; }
+.highlight .mo    { color: $base09; }
+.highlight .sb    { color: $base0b; }
+.highlight .sc    { color: $base0b; }
+.highlight .sd    { color: $base0b; }
+.highlight .s2    { color: $base0b; }
+.highlight .se    { color: $base0b; }
+.highlight .sh    { color: $base0b; }
+.highlight .si    { color: $base0b; }
+.highlight .sx    { color: $base0b; }
+.highlight .sr    { color: $base0b; }
+.highlight .s1    { color: $base0b; }
+.highlight .ss    { color: $base0b; }
 
 // 글 제목 링크는 검정색으로 유지
 .archive__item-title a,
