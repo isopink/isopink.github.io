@@ -98,9 +98,7 @@ The $\tanh$ function is nearly linear near $0$ and saturates at ±1 for large in
 
 ![solution](/assets/images/nn_8.svg)
 
-Layers are labeled by $\ell = 0, 1, \dots, L$. Each layer $\ell$ contains $d^{(\ell)}$ regular nodes and one bias node (index $0$), which always outputs $1$.
-
-We use superscript $^{(\ell)}$ to indicate layer index. The bias node is similar to the convention $x_0 = 1$ in linear models. A neural network is defined by its layer sizes $\mathbf{d} = [d^{(0)}, d^{(1)}, \dots, d^{(L)}]$, where $d^{(\ell)}$ is the number of (non-bias) nodes in layer $\ell$. A specific model $h$ is chosen by setting the weights between layers. 
+Layers are labeled by $\ell = 0, 1, \dots, L$. Each layer $\ell$ contains $d^{(\ell)}$ regular nodes and one bias node (index $0$), which always outputs $1$. We use superscript $^{(\ell)}$ to indicate layer index. The bias node is similar to the convention $x_0 = 1$ in linear models. A neural network is defined by its layer sizes $\mathbf{d} = [d^{(0)}, d^{(1)}, \dots, d^{(L)}]$, where $d^{(\ell)}$ is the number of (non-bias) nodes in layer $\ell$. A specific model $h$ is chosen by setting the weights between layers. 
 
 ![solution](/assets/images/nn_9.svg)
 
@@ -170,10 +168,6 @@ $$
 $$
 
 <br>
-
-Here are the summary figure: 
-
-![solution](/assets/images/nn_11.svg)
 
 If we want to compute $ E_{\text{in}} $, all we need is $ h(\mathbf{x}_n) $ and $ y_n $. For the sum of squares: 
 
