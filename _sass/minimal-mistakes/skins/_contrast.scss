@@ -20,44 +20,47 @@ $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
    Custom clean dark code block style (igopro-inspired)
 ========================================================================== */
 
-/* 전체 코드 블럭 스타일 */
+/* ==========================================================================
+   Custom GitHub-Light Style Code Block
+========================================================================== */
+
+/* 전체 코드 블럭 */
 .highlight,
 pre.highlight {
-  background-color: #1d1f21 !important;   // 다크 배경
-  color: #c5c8c6 !important;              // 기본 텍스트 색상
-  padding: 0.5em !important;              // 내부 여백 최소화
-  border: none !important;               // 테두리 제거
-  border-radius: 0 !important;           // 둥근 모서리 제거
+  background-color: #f6f8fa !important;  // GitHub Light 배경
+  color: #24292e !important;             // 기본 글자색
+  font-family: SFMono-Regular, Consolas, Menlo, monospace;
+  font-size: 0.95em;
+  line-height: 1.6;
+  padding: 1em;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
   overflow-x: auto;
-  font-size: 0.95em;
-  line-height: 1.5;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
-/* 인라인 코드 스타일 */
+/* 인라인 코드 */
 code {
-  background-color: #2e2e2e !important;   // 어두운 배경
-  color: #fba922 !important;              // 노란 텍스트
-  padding: 0.1em 0.3em !important;
-  border: none !important;
-  border-radius: 0 !important;
-  font-family: SFMono-Regular, Menlo, monospace;
+  background-color: rgba(175, 184, 193, 0.2);
+  color: #e83e8c;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
   font-size: 0.95em;
+  font-family: SFMono-Regular, Consolas, Menlo, monospace;
 }
 
-/* 완전한 줄 배경 박스 제거 */
+/* 줄마다 흐릿한 박스 제거 */
 .highlight,
-pre.highlight,
 .highlight pre,
 .highlight code,
 .highlight code span,
-.highlight .line,
 .highlight span,
+.highlight .line,
 .highlight td,
 .highlight tr {
   background: none !important;
-  border: none !important;
   box-shadow: none !important;
+  border: none !important;
   padding: 0 !important;
   margin: 0 !important;
   display: inline !important;
@@ -66,15 +69,17 @@ pre.highlight,
   opacity: 1 !important;
 }
 
-/* 토큰 스타일 - igopro 테마 기준 */
-.highlight .k     { color: #cc99cc; font-weight: bold; }  // keyword
-.highlight .s     { color: #7ec699; }                     // string
-.highlight .c     { color: #999999; font-style: italic; } // comment
-.highlight .n     { color: #f8f8f2; }                     // name
-.highlight .nf    { color: #6699cc; }                     // function
-.highlight .o     { color: #f2777a; }                     // operator
-.highlight .mi    { color: #fba922; }                     // number
-.highlight .p     { color: #c5c8c6; }                     // punctuation
+/* Rouge 토큰 스타일 (GitHub Light 기준) */
+.highlight .k     { color: #d73a49; font-weight: bold; } // keyword
+.highlight .s     { color: #032f62; }                    // string
+.highlight .c     { color: #6a737d; font-style: italic; } // comment
+.highlight .n     { color: #24292e; }                    // name
+.highlight .nf    { color: #005cc5; }                    // function
+.highlight .o     { color: #d73a49; }                    // operator
+.highlight .mi    { color: #005cc5; }                    // number
+.highlight .p     { color: #24292e; }                    // punctuation
+.highlight .nb    { color: #24292e; font-weight: bold; } // builtin
+
 
 
 .page__content {
