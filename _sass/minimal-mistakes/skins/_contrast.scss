@@ -16,25 +16,47 @@ $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
 
+/* ==========================================================================
+   Custom clean dark code block style (igopro-inspired)
+========================================================================== */
+
+/* 전체 코드 블럭 스타일 */
 .highlight,
 pre.highlight {
-  background-color: #1d1f21 !important;
-  color: #c5c8c6 !important;
-  border-radius: 6px;
-  padding: 1em;
+  background-color: #1d1f21 !important;   // 다크 배경
+  color: #c5c8c6 !important;              // 기본 텍스트 색상
+  padding: 0.5em !important;              // 내부 여백 최소화
+  border: none !important;               // 테두리 제거
+  border-radius: 0 !important;           // 둥근 모서리 제거
   overflow-x: auto;
   font-size: 0.95em;
   line-height: 1.5;
-  border: 1px solid #444;
+  box-shadow: none !important;
 }
 
+/* 인라인 코드 스타일 */
 code {
-  background-color: #2e2e2e;
-  color: #fba922;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
+  background-color: #2e2e2e !important;   // 어두운 배경
+  color: #fba922 !important;              // 노란 텍스트
+  padding: 0.1em 0.3em !important;
+  border: none !important;
+  border-radius: 0 !important;
   font-family: SFMono-Regular, Menlo, monospace;
   font-size: 0.95em;
+}
+
+/* 줄마다 흐릿한 박스 제거 */
+.highlight .line,
+.highlight code span,
+.highlight span {
+  background: none !important;
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
 /* 토큰 스타일 - igopro 테마 기준 */
@@ -46,6 +68,7 @@ code {
 .highlight .o     { color: #f2777a; }                     // operator
 .highlight .mi    { color: #fba922; }                     // number
 .highlight .p     { color: #c5c8c6; }                     // punctuation
+
 
 .page__content {
   .notice,
