@@ -57,29 +57,32 @@ $base0f: #b18a3d !default;
    Code block customization for light background (high contrast)
    ========================================================================== */
 .highlight, pre.highlight {
-  background-color: #f8f8f8 !important;
-  color: #2d2d2d !important;
+  background-color: #1e1e1e !important;  // 어두운 배경 (VS Code 스타일)
+  color: #d4d4d4 !important;             // 기본 텍스트 색상
   border-radius: 5px;
   padding: 1em;
   overflow-x: auto;
   font-size: 0.95em;
 }
 
-.highlight .c     { color: #999988; font-style: italic; } /* Comment */
-.highlight .k     { color: #005cc5; font-weight: bold; }  /* Keyword */
-.highlight .s     { color: #d73a49; }                     /* String */
-.highlight .o     { color: #d73a49; }                     /* Operator */
-.highlight .n     { color: #24292e; }                     /* Name/identifiers */
-.highlight .mi    { color: #005cc5; }                     /* Integer */
-.highlight .p     { color: #444; }                        /* Punctuation */
-.highlight .nt    { color: #22863a; }                     /* Tags (HTML) */
-.highlight .na    { color: #6f42c1; }                     /* Attributes */
-.highlight .nb    { color: #24292e; font-weight: bold; }  /* Builtin */
-
+// 인라인 코드
 code {
-  background-color: #f4f4f4;
-  color: #e83e8c;
+  background-color: #2d2d2d !important;
+  color: #dcdcaa !important;
 }
+
+// 하이라이팅 색상들
+.highlight .c     { color: #6a9955; font-style: italic; } // Comment
+.highlight .k     { color: #569cd6; font-weight: bold; }  // Keyword
+.highlight .s     { color: #d69d85; }                     // String
+.highlight .o     { color: #c586c0; }                     // Operator
+.highlight .n     { color: #9cdcfe; }                     // Name/identifiers
+.highlight .mi    { color: #b5cea8; }                     // Integer
+.highlight .p     { color: #d4d4d4; }                     // Punctuation
+.highlight .nt    { color: #4ec9b0; }                     // HTML tag
+.highlight .na    { color: #dcdcaa; }                     // Attribute
+.highlight .nb    { color: #c586c0; font-weight: bold; }  // Builtin
+
 
 // 글 제목 링크는 검정색으로 유지
 .archive__item-title a,
