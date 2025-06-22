@@ -53,34 +53,50 @@ $base0f: #b18a3d !default;
   color: inherit;
 }
 
-/* code block */
-.highlight, pre.highlight {
-  background-color: #fdfdfd !important;
-  color: #333 !important;
-  border-radius: 5px;
+/* -------------------------------------
+   GitHub Light Code Block Style
+------------------------------------- */
+.highlight,
+pre.highlight {
+  background-color: #f6f8fa !important;
+  color: #24292e !important;
+  border-radius: 6px;
   padding: 1em;
   overflow-x: auto;
   font-size: 0.95em;
   line-height: 1.5;
+  box-shadow: none;
+  border: 1px solid #d0d7de;
 }
 
 code {
-  background-color: #f5f5f5;
+  background-color: rgba(175, 184, 193, 0.2);
   color: #e83e8c;
-  padding: 0.15em 0.3em;
+  padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.95em;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-/* Rouge Token 스타일 */
-.highlight .k     { color: #005cc5; font-weight: bold; }  // Keyword
-.highlight .s     { color: #d73a49; }                     // String
-.highlight .n     { color: #24292e; }                     // Variable
-.highlight .o     { color: #d73a49; }                     // Operator
-.highlight .c     { color: #6a737d; font-style: italic; } // Comment
-.highlight .p     { color: #444; }                        // Punctuation
-.highlight .nf    { color: #6f42c1; }                     // Function name
-.highlight .nb    { color: #24292e; font-weight: bold; }  // Builtin
+/* Remove weird background boxes from lines/tokens */
+.highlight .line,
+.highlight code span {
+  background: none !important;
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Rouge token styles (GitHub Light) */
+.highlight .k     { color: #d73a49; font-weight: bold; } // keyword
+.highlight .s     { color: #032f62; }                    // string
+.highlight .c     { color: #6a737d; font-style: italic; } // comment
+.highlight .o     { color: #d73a49; }                    // operator
+.highlight .n     { color: #24292e; }                    // name/identifier
+.highlight .nf    { color: #005cc5; }                    // function
+.highlight .nb    { color: #24292e; font-weight: bold; } // built-in
+.highlight .p     { color: #24292e; }                    // punctuation
+
 
 
 // 글 제목 링크는 검정색으로 유지
