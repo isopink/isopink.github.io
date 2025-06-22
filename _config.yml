@@ -204,7 +204,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge 
 rouge:
-  theme: thankful_eyes  # 또는 thankful_eyes, colorful 등
+  theme: base16  # 또는 thankful_eyes, colorful 등
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
