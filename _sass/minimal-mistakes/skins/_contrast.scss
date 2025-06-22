@@ -15,6 +15,38 @@ $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
+
+.highlight,
+pre.highlight {
+  background-color: #1d1f21 !important;
+  color: #c5c8c6 !important;
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 0.95em;
+  line-height: 1.5;
+  border: 1px solid #444;
+}
+
+code {
+  background-color: #2e2e2e;
+  color: #fba922;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: SFMono-Regular, Menlo, monospace;
+  font-size: 0.95em;
+}
+
+/* 토큰 스타일 - igopro 테마 기준 */
+.highlight .k     { color: #cc99cc; font-weight: bold; }  // keyword
+.highlight .s     { color: #7ec699; }                     // string
+.highlight .c     { color: #999999; font-style: italic; } // comment
+.highlight .n     { color: #f8f8f2; }                     // name
+.highlight .nf    { color: #6699cc; }                     // function
+.highlight .o     { color: #f2777a; }                     // operator
+.highlight .mi    { color: #fba922; }                     // number
+.highlight .p     { color: #c5c8c6; }                     // punctuation
+
 .page__content {
   .notice,
   .notice--primary,
