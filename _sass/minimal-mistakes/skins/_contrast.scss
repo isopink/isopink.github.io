@@ -1,7 +1,7 @@
 /* ==========================================================================
    Contrast skin
    ========================================================================== */
- 
+
 /* Colors */
 $background-color : #fff !default;
 $text-color: #000 !default;
@@ -9,7 +9,7 @@ $muted-text-color: $text-color !default;
 $primary-color: #b60000 !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
 $footer-background-color: #000 !default;
-$link-color: #0066cc !default; // 밝은 파랑
+$link-color: #0066cc !default;
 $link-color-hover: darken(#0066cc, 10%) !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
@@ -45,11 +45,11 @@ $base0f: #b18a3d !default;
 }
 
 .page__footer {
-  color: #fff !important; // override
+  color: #fff !important;
 }
 
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa  {
+.page__footer-follow .social-icons .svg-inline--fa {
   color: inherit;
 }
 
@@ -79,12 +79,17 @@ code {
 }
 
 /* Remove weird background boxes from lines/tokens */
+.highlight span,
 .highlight .line,
 .highlight code span {
   background: none !important;
   display: inline !important;
   padding: 0 !important;
   margin: 0 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+  mix-blend-mode: normal !important;
 }
 
 /* Rouge token styles (GitHub Light) */
@@ -97,7 +102,9 @@ code {
 .highlight .nb    { color: #24292e; font-weight: bold; } // built-in
 .highlight .p     { color: #24292e; }                    // punctuation
 
-
+/* -------------------------------------
+   기타 스타일
+------------------------------------- */
 
 // 글 제목 링크는 검정색으로 유지
 .archive__item-title a,
@@ -123,18 +130,18 @@ h2 a {
   }
 }
 
-
 .pagination--pager {
   background-color: #fff !important;
   color: $text-color !important;
 
   &:hover {
-    background-color: #fff !important; // 연회색 배경
-    color: mix(#fff, $text-color, 80%) !important; // 검정 글자 유지
+    background-color: #fff !important;
+    color: mix(#fff, $text-color, 80%) !important;
     text-decoration: none !important;
   }
 }
 
-.MathJax, mjx-container {
+.MathJax,
+mjx-container {
   font-size: 0.85em !important;
 }
