@@ -72,21 +72,21 @@ Finally, since $h_1 = \text{sign}(\mathbf{w}_1^\top \mathbf{x})$ and $h_2 = \tex
 
 ![solution](/assets/images/nn_5.svg) 
 
-This problem can be solved in three steps, each called a *layer* in neural networks. Since the data flows forward only, it forms a *feedforward* structure. Also, because more layers are used between the input and output to implement $f$ compared to a single perceptron, we call it a multilayer perceptron (MLP).
+In conclusion, this problem can be solved in three steps, each called a layer in neural networks. Since the data flows forward only, it forms a feedforward structure. Also, because more layers are used between the input and output to implement $f$ compared to a single perceptron, we call it a multilayer perceptron (MLP). It can solve problems that a single perceptron cannot. For example, a circle can’t be represented by a single line, but we can approximate it using multiple perceptrons to form polygon shapes. This situation is illustrated below:
 
 ![solution](/assets/images/nn_6.svg)
 
-Neural networks can solve problems that a single perceptron cannot. For example, a circle can’t be represented by a single line, but we can approximate it using multiple perceptrons to form polygon shapes. The more perceptrons we use, the closer we get to the target shape. However, adding more perceptrons increases the number of weights and the model’s complexity, which makes generalization harder and optimization more difficult.
+The more perceptrons we use, the closer we get to the target shape. However, adding more perceptrons increases the number of weights and the model’s complexity, which makes generalization harder and optimization more difficult. Once you fix the size of the MLP, you learn the weights on every link by fitting the data. Let’s consider the single perceptron:
 
-![solution](/assets/images/nn_6.svg)
-
-Once you fix the size of the MLP, you learn the weights on every link by fitting the data. Let’s consider the single perceptron:
+<br>
 
 $$
 h(\mathbf{x}) = \theta(\mathbf{w}^\top \mathbf{x}).
 $$
 
-When using $\theta(s) = \text{sign}(s)$, learning the weights is difficult because the sign function is not smooth. This makes optimization hard, especially in MLPs. To address this, we use a smooth approximation like $\tanh(x)$ instead of $\text{sign}(x)$.
+<br>
+
+When using $\theta(s) = \text{sign}(s)$, learning the weights is difficult because the sign function is not smooth. This makes optimization hard, especially in MLPs. To address this, we use a smooth approximation like $\tanh(x)$ instead of $\text{sign}(x)$. We compare those functions as below: 
 
 ![solution](/assets/images/nn_7.svg)
 
