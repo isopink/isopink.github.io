@@ -1,29 +1,24 @@
 ---
 layout: single
-title: Linear Algebra (1)
+title: Matrices and Their Properties
 ---
 
-In this post, we will introduce the basics of linear algebra.  
-The contents of this post are organized as follows:
+Matrices play a central role in linear algebra. They can be used to represent systems of linear equations in a compact form, and they also represent linear functions (linear mappings). Before discussing these applications, let us first define what a matrix is and what operations can be performed with matrices. The contents of this post are organized as follows: 
 
-1. Systems of Linear Equations  
-2. Matrices  
-3. Solving Systems of Linear Equations  
-4. Vector Spaces  
-
----
-
-# Matrices and Their Properties
-
-Matrices play a central role in linear algebra.  
-They can be used to represent systems of linear equations in a compact form, and they also represent linear functions (linear mappings).  
-Before discussing these applications, let us first define what a matrix is and what operations can be performed with matrices.
+1. Definition of a Matrix  
+2. Matrix Addition and Multiplication
+3. Identity Matrix
+4. Properties of Matrix Multiplication
+5. Inverese and Transpose
+6. Symmetric Matrix
+7. Multiplication by a Scalar
+8. Linear Systems as Matrices
 
 ---
 
-## 2.2 Matrices
+## 1. Definition of a Matrix  
 
-### Definition 2.1 (Matrix)
+### Definition 1.1 (Matrix)
 
 With $m, n \in \mathbb{N}$, a real-valued $(m,n)$-matrix $A$ is an $m \times n$-tuple of elements $a_{ij}$, $i = 1, \dots, m, \; j = 1, \dots, n$, which is ordered according to a rectangular scheme consisting of $m$ rows and $n$ columns:
 
@@ -42,7 +37,7 @@ By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are calle
 
 ---
 
-### 2.2.1 Matrix Addition and Multiplication
+## 2. Matrix Addition and Multiplication
 
 The sum of two matrices $A \in \mathbb{R}^{m \times n}, \; B \in \mathbb{R}^{m \times n}$ is defined element-wise:
 
@@ -71,9 +66,7 @@ $$
 
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
----
-
-### Example 2.3  
+##### Example
 
 For 
 
@@ -114,9 +107,11 @@ Clearly, $AB \neq BA$.
 
 ---
 
-### Definition 2.2 (Identity Matrix)
+## 3. Identity Matrix 
 
-The **identity matrix** $I_n \in \mathbb{R}^{n \times n}$ is defined as
+### Definition 3.1 (Identity Matrix)
+
+The identity matrix $I_n \in \mathbb{R}^{n \times n}$ is defined as
 
 $$
 I_n =
@@ -128,9 +123,7 @@ I_n =
 \end{bmatrix}.
 $$
 
----
-
-### Properties of Matrix Multiplication
+## 4. Properties of Matrix Multiplication
 
 1. **Associativity**:  
    $$
@@ -149,9 +142,10 @@ $$
 
 ---
 
-### 2.2.2 Inverse and Transpose
+## 5.1 Inverse and Transpose
 
-**Definition 2.3 (Inverse).**  
+### Definition 5.1 (Inverse).
+
 For a square matrix $A \in \mathbb{R}^{n \times n}$, if there exists a matrix $B \in \mathbb{R}^{n \times n}$ such that  
 
 $$
