@@ -21,7 +21,9 @@ Systems of linear equations play a central part of linear algebra. Many problems
 
 <br>
 
-##### Example 1.1
+##### 1.1 General Example
+
+<br>
 
 A company produces products $N_1, \dots, N_n$ for which resources $R_1, \dots, R_m$ are required.  
 To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$.
@@ -56,7 +58,9 @@ where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$. Equation (1.3) is the ge
 
 <br>
 
-##### Example 1.2
+##### 1.2 Singular Example
+
+<br>
 
 The system of linear equations  
 
@@ -108,6 +112,8 @@ x_1 - x_2 + 2x_3 &= 2 \quad (2) \\
 \tag{1.6}
 $$
 
+<br>
+
 Since (1)+(2)=(3), we can omit the third equation (*redundancy*).  
 From (1) and (2), we get $2x_1 = 5 - 3x_3$ and $2x_2 = 1 + x_3$.  
 
@@ -119,9 +125,74 @@ such that any triplet
 $$
 \left( \tfrac{5}{2} - \tfrac{3}{2}a, \; \tfrac{1}{2} + \tfrac{1}{2}a, \; a \right), 
 \quad a \in \mathbb{R}
-\tag{2.7}
+\tag{1.7}
 $$
 
 <br>
 
 is a solution of the system of linear equations, i.e., we obtain a solution set that contains *infinitely many* solutions.  
+
+<br>
+
+##### 1.3. Compact Notation 
+
+<br>
+
+For a systematic approach to solving systems of linear equations, we will introduce a useful compact notation.  
+We collect the coefficients $a_{ij}$ into vectors and collect the vectors into matrices.  
+In other words, we write the system from (2.3) in the following form:
+
+$$
+x_1 
+\begin{bmatrix}
+a_{11} \\
+\vdots \\
+a_{m1}
+\end{bmatrix}
++ x_2
+\begin{bmatrix}
+a_{12} \\
+\vdots \\
+a_{m2}
+\end{bmatrix}
++ \cdots + x_n
+\begin{bmatrix}
+a_{1n} \\
+\vdots \\
+a_{mn}
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1 \\
+\vdots \\
+b_m
+\end{bmatrix}
+\tag{2.9}
+$$
+
+---
+
+$$
+\Longleftrightarrow
+\begin{bmatrix}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1 \\
+\vdots \\
+b_m
+\end{bmatrix}
+\tag{2.10}
+$$
+
+In the following, we will have a close look at these *matrices* and define computation rules.  
+We will return to solving linear equations in Section 2.3.
+
