@@ -138,9 +138,9 @@ is a solution of the system of linear equations, i.e., we obtain a solution set 
 
 <br>
 
-For a systematic approach to solving systems of linear equations, we will introduce a useful compact notation.  
-We collect the coefficients $a_{ij}$ into vectors and collect the vectors into matrices.  
-In other words, we write the system from (2.3) in the following form:
+For a systematic approach to solving systems of linear equations, we will introduce a useful compact notation. 
+We collect the coefficients $a_{ij}$ into vectors and collect the vectors into matrices. 
+In other words, we write the system from (1.3) in the following form:
 
 $$
 x_1 
@@ -170,7 +170,7 @@ b_m
 \tag{2.9}
 $$
 
----
+<br>
 
 $$
 \Longleftrightarrow
@@ -193,6 +193,7 @@ b_m
 \tag{2.10}
 $$
 
-In the following, we will have a close look at these *matrices* and define computation rules.  
-We will return to solving linear equations in Section 2.3.
+<br>
+
+In the following, we will have a close look at these *matrices* and define computation rules. We will return to solving linear equations soon.
 
