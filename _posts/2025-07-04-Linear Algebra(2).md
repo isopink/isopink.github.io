@@ -64,11 +64,11 @@ $$
 
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
-<br>
+<div class="example-box">
 
-##### Example 2.1 (Commutativity)
+**Example 2.1 (Commutativity)**  
 
-For 
+For  
 
 $$
 A = \begin{bmatrix}
@@ -84,7 +84,7 @@ B = \begin{bmatrix}
 \end{bmatrix} \in \mathbb{R}^{3 \times 2},
 $$
 
-we obtain
+we obtain  
 
 $$
 AB = \begin{bmatrix}
@@ -94,7 +94,7 @@ AB = \begin{bmatrix}
 \end{bmatrix} \in \mathbb{R}^{3 \times 2},
 $$
 
-while
+while  
 
 $$
 BA = \begin{bmatrix}
@@ -104,6 +104,8 @@ BA = \begin{bmatrix}
 $$
 
 Clearly, $AB \neq BA$.
+
+</div>
 
 ## 3. Identity Matrix 
 
