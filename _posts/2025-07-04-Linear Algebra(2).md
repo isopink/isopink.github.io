@@ -1,33 +1,31 @@
 ---
-layout : single
-title : Linear Algebra (1)
---- 
+layout: single
+title: Linear Algebra (1)
+---
 
-In this post, we will introduce the basics of linear lagebra. The contents are organized as follows: 
+In this post, we will introduce the basics of linear algebra.  
+The contents of this post are organized as follows:
 
-1. Systems of Linear Equations
-
-2. Matrices
-
-3. Solving Systems of Linear Equations 
-
-4. Vector Spaces
+1. Systems of Linear Equations  
+2. Matrices  
+3. Solving Systems of Linear Equations  
+4. Vector Spaces  
 
 ---
 
 # Matrices and Their Properties
 
-Matrices play a central role in linear algebra. They can be used to compactly represent systems of linear equations, but they also represent linear functions (linear mappings). Before we discuss these applications, let us first define what a matrix is and what operations we can perform with matrices.
+Matrices play a central role in linear algebra.  
+They can be used to represent systems of linear equations in a compact form, and they also represent linear functions (linear mappings).  
+Before discussing these applications, let us first define what a matrix is and what operations can be performed with matrices.
 
 ---
 
-#### 2.2 Matrices
+## 2.2 Matrices
 
 ### Definition 2.1 (Matrix)
 
 With $m, n \in \mathbb{N}$, a real-valued $(m,n)$-matrix $A$ is an $m \times n$-tuple of elements $a_{ij}$, $i = 1, \dots, m, \; j = 1, \dots, n$, which is ordered according to a rectangular scheme consisting of $m$ rows and $n$ columns:
-
-<br>
 
 $$
 A =
@@ -40,15 +38,13 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \quad a_{ij} \in \mathbb{R}.
 $$
 
-<br>
-
 By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are called *columns*.  
+
+---
 
 ### 2.2.1 Matrix Addition and Multiplication
 
 The sum of two matrices $A \in \mathbb{R}^{m \times n}, \; B \in \mathbb{R}^{m \times n}$ is defined element-wise:
-
-<br>
 
 $$
 A + B :=
@@ -60,38 +56,26 @@ a_{m1} + b_{m1} & \cdots & a_{mn} + b_{mn}
 \in \mathbb{R}^{m \times n}.
 $$
 
-<br>
-
 For multiplication, the elements $c_{ij}$ of $C = AB$ are given by:
-
-<br>
 
 $$
 c_{ij} = \sum_{l=1}^n a_{il} b_{lj}, 
 \quad i = 1, \dots, m, \; j = 1, \dots, k.
 $$
 
-<br>
-
 In compact notation:
-
-<br>
 
 $$
 A_{m \times n} \cdot B_{n \times k} = C_{m \times k}.
 $$
 
-<br>
-
-Matrix multiplication is **not commutative**, i.e. $AB \neq BA$ in general.
+Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
 ---
 
 ### Example 2.3  
 
 For 
-
-<br>
 
 $$
 A = \begin{bmatrix}
@@ -107,11 +91,7 @@ B = \begin{bmatrix}
 \end{bmatrix} \in \mathbb{R}^{3 \times 2},
 $$
 
-<br>
-
 we obtain
-
-<br>
 
 $$
 AB = \begin{bmatrix}
@@ -121,11 +101,7 @@ AB = \begin{bmatrix}
 \end{bmatrix} \in \mathbb{R}^{3 \times 2},
 $$
 
-<br>
-
 while
-
-<br>
 
 $$
 BA = \begin{bmatrix}
@@ -134,15 +110,13 @@ BA = \begin{bmatrix}
 \end{bmatrix} \in \mathbb{R}^{2 \times 3}.
 $$
 
-<br>
-
 Clearly, $AB \neq BA$.
+
+---
 
 ### Definition 2.2 (Identity Matrix)
 
 The **identity matrix** $I_n \in \mathbb{R}^{n \times n}$ is defined as
-
-<br>
 
 $$
 I_n =
@@ -154,7 +128,7 @@ I_n =
 \end{bmatrix}.
 $$
 
-<br>
+---
 
 ### Properties of Matrix Multiplication
 
@@ -163,44 +137,36 @@ $$
    \forall A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p}, C \in \mathbb{R}^{p \times q}: \quad (AB)C = A(BC).
    $$
 
-<br>
-
 2. **Distributivity**:  
    $$
    (A + B)C = AC + BC, \quad A(B + C) = AB + AC.
    $$
-
-<br>
 
 3. **Identity**:  
    $$
    \forall A \in \mathbb{R}^{m \times n}: \quad I_m A = A I_n = A.
    $$
 
-<br>
+---
 
 ### 2.2.2 Inverse and Transpose
 
 **Definition 2.3 (Inverse).**  
 For a square matrix $A \in \mathbb{R}^{n \times n}$, if there exists a matrix $B \in \mathbb{R}^{n \times n}$ such that  
 
-<br>
-
 $$
 AB = I_n = BA,
 $$  
-
-<br>
 
 then $B$ is called the **inverse** of $A$ and is denoted $A^{-1}$.
 
 Not every matrix has an inverse. If it does, it is called *regular/invertible*. Otherwise, it is *singular/non-invertible*.  
 
+---
+
 **Example 2.4 (Inverse Matrix).**  
 
 Let  
-
-<br>
 
 $$
 A = \begin{bmatrix}
@@ -216,17 +182,14 @@ B = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-<br>
+Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
-Then $AB = I = BA$, i.e. $A$ and $B$ are inverses of each other.
-
+---
 
 **Definition 2.4 (Transpose).**  
 For $A \in \mathbb{R}^{m \times n}$, the transpose $A^T \in \mathbb{R}^{n \times m}$ is given by $a^T_{ij} = a_{ji}$.  
 
-Important properties:
-
-<br>
+Some important properties are:
 
 $$
 (AB)^T = B^T A^T, 
@@ -234,14 +197,12 @@ $$
 \quad (A^{-1})^T = (A^T)^{-1}.
 $$
 
-<br>
+---
 
 **Definition 2.5 (Symmetric Matrix).**  
 A matrix $A \in \mathbb{R}^{n \times n}$ is symmetric if $A = A^T$.
 
 Example of a symmetric matrix:
-
-<br>
 
 $$
 \begin{bmatrix}
@@ -251,19 +212,15 @@ $$
 \end{bmatrix}.
 $$
 
-<br>
+---
 
 ### 2.2.3 Multiplication by a Scalar
 
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
 
-<br>
-
 $$
 (\lambda C)_{ij} = \lambda c_{ij}.
 $$
-
-<br>
 
 Properties:  
 
@@ -271,11 +228,11 @@ Properties:
 - $(\lambda C)^T = \lambda C^T$  
 - $\lambda (B + C) = \lambda B + \lambda C$  
 
+---
+
 ### Example 2.5 (Distributivity)
 
 If  
-
-<br>
 
 $$
 C = \begin{bmatrix}
@@ -284,11 +241,7 @@ C = \begin{bmatrix}
 \end{bmatrix},
 $$
 
-<br>
-
 then  
-
-<br>
 
 $$
 (\lambda + \psi) C =
@@ -300,13 +253,11 @@ $$
 \lambda C + \psi C.
 $$
 
-<br>
+---
 
 ### 2.2.4 Compact Representations of Systems of Linear Equations
 
 If we consider the system
-
-<br>
 
 $$
 \begin{aligned}
@@ -316,11 +267,7 @@ $$
 \end{aligned}
 $$
 
-<br>
-
 we can write it compactly as
-
-<br>
 
 $$
 \begin{bmatrix}
@@ -340,8 +287,6 @@ x_3
 2
 \end{bmatrix}.
 $$
-
-<br>
 
 This is the matrix form $Ax = b$.
 
