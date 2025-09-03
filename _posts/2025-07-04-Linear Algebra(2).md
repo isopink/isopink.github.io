@@ -64,6 +64,8 @@ $$
 
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
+<br>
+
 ##### Example 2.1 (Commutativity)
 
 For 
@@ -150,6 +152,8 @@ then $B$ is called the **inverse** of $A$ and is denoted $A^{-1}$.
 
 Not every matrix has an inverse. If it does, it is called *regular/invertible*. Otherwise, it is *singular/non-invertible*.  
 
+<br>
+
 ##### Example 5.1 (Inverse Matrix)
 
 Let  
@@ -169,6 +173,8 @@ B = \begin{bmatrix}
 $$
 
 Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
+
+<br>
 
 ### Definition 5.2 (Transpose)
 
@@ -212,9 +218,9 @@ Properties:
 - $(\lambda C)^T = \lambda C^T$  
 - $\lambda (B + C) = \lambda B + \lambda C$  
 
----
+<br>
 
-### Example 7.1 (Distributivity)
+##### Example 7.1 (Distributivity)
 
 If  
 
@@ -237,9 +243,7 @@ $$
 \lambda C + \psi C.
 $$
 
----
-
-## 8.1 Compact Representations of Systems of Linear Equations
+## 8. Linear Systems as Matrices
 
 If we consider the system
 
