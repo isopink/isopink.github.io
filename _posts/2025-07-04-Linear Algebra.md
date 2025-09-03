@@ -47,7 +47,9 @@ $$
 
 <br>
 
-where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$. Equation (2.3) is the general form of a *system of linear equations*, and  
-$x_1, \dots, x_n$ are the *unknowns* of this system.  
+where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$. 
 
-Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (2.3) is a *solution* of the linear equation system.
+<br>
+
+
+Equation (2.3) is the general form of a *system of linear equations*, and $x_1, \dots, x_n$ are the *unknowns* of this system. Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (2.3) is a *solution* of the linear equation system.
