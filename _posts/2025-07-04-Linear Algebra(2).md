@@ -65,14 +65,7 @@ $$
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
 
-> **Example 2.1 (Commutativity)**  
->  
-> For  
-> $$
-> A = \begin{bmatrix}
-> 1 & 2 & 3 \\
-> 2 & 3 & 1 \\
-> 3 & 2 & 1<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
 **Example 2.1 (Commutativity)**  
 
@@ -110,7 +103,6 @@ $$
 Clearly, $AB \neq BA$.
 
 </div>
-
 
 
 ## 3. Identity Matrix 
