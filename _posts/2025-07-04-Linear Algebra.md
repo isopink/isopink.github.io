@@ -19,7 +19,7 @@ In this post, we will introduce the basics of linear lagebra. The contents are o
 
 Systems of linear equations play a central part of linear algebra. Many problems can be formulated as systems of linear equations, and linear algebra gives us the tools for solving them.
 
-## Example 2.1
+## Example 1.1
 
 A company produces products $N_1, \dots, N_n$ for which resources $R_1, \dots, R_m$ are required.  
 To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$.
