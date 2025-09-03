@@ -14,7 +14,7 @@ Matrices play a central role in linear algebra. They can be used to represent sy
 7. Multiplication by a Scalar
 8. Linear Systems as Matrices
 
----
+<br>
 
 ## 1. Definition of a Matrix  
 
@@ -34,8 +34,6 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 $$
 
 By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are called *columns*.  
-
----
 
 ## 2. Matrix Addition and Multiplication
 
@@ -66,7 +64,7 @@ $$
 
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
-##### Example
+##### Example 2.1 (Commutativity)
 
 For 
 
@@ -105,8 +103,6 @@ $$
 
 Clearly, $AB \neq BA$.
 
----
-
 ## 3. Identity Matrix 
 
 ### Definition 3.1 (Identity Matrix)
@@ -140,9 +136,7 @@ $$
    \forall A \in \mathbb{R}^{m \times n}: \quad I_m A = A I_n = A.
    $$
 
----
-
-## 5.1 Inverse and Transpose
+## 5. Inverse and Transpose
 
 ### Definition 5.1 (Inverse).
 
@@ -156,9 +150,7 @@ then $B$ is called the **inverse** of $A$ and is denoted $A^{-1}$.
 
 Not every matrix has an inverse. If it does, it is called *regular/invertible*. Otherwise, it is *singular/non-invertible*.  
 
----
-
-**Example 2.4 (Inverse Matrix).**  
+##### Example 5.1 (Inverse Matrix)
 
 Let  
 
@@ -178,9 +170,8 @@ $$
 
 Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
----
+### Definition 5.2 (Transpose)
 
-**Definition 2.4 (Transpose).**  
 For $A \in \mathbb{R}^{m \times n}$, the transpose $A^T \in \mathbb{R}^{n \times m}$ is given by $a^T_{ij} = a_{ji}$.  
 
 Some important properties are:
@@ -191,9 +182,10 @@ $$
 \quad (A^{-1})^T = (A^T)^{-1}.
 $$
 
----
+## 6. Symmetric Matrix
 
-**Definition 2.5 (Symmetric Matrix).**  
+### Definition 6.1 (Symmetric Matrix)  
+
 A matrix $A \in \mathbb{R}^{n \times n}$ is symmetric if $A = A^T$.
 
 Example of a symmetric matrix:
@@ -206,9 +198,7 @@ $$
 \end{bmatrix}.
 $$
 
----
-
-### 2.2.3 Multiplication by a Scalar
+## 7. Multiplication by a Scalar
 
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
 
@@ -224,7 +214,7 @@ Properties:
 
 ---
 
-### Example 2.5 (Distributivity)
+### Example 7.1 (Distributivity)
 
 If  
 
@@ -249,7 +239,7 @@ $$
 
 ---
 
-### 2.2.4 Compact Representations of Systems of Linear Equations
+## 8.1 Compact Representations of Systems of Linear Equations
 
 If we consider the system
 
@@ -283,5 +273,3 @@ x_3
 $$
 
 This is the matrix form $Ax = b$.
-
----
