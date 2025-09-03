@@ -167,7 +167,6 @@ b_1 \\
 \vdots \\
 b_m
 \end{bmatrix}
-\tag{2.9}
 $$
 
 <br>
@@ -190,7 +189,6 @@ b_1 \\
 \vdots \\
 b_m
 \end{bmatrix}
-\tag{2.10}
 $$
 
 <br>
