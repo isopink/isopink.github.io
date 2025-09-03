@@ -72,36 +72,45 @@ Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 > A = \begin{bmatrix}
 > 1 & 2 & 3 \\
 > 2 & 3 & 1 \\
-> 3 & 2 & 1
-> \end{bmatrix} \in \mathbb{R}^{3 \times 3}, 
-> \quad 
-> B = \begin{bmatrix}
-> 0 & 2 \\
-> 1 & 0 \\
-> 1 & 1
-> \end{bmatrix} \in \mathbb{R}^{3 \times 2},
-> $$
->
-> we obtain  
->
-> $$
-> AB = \begin{bmatrix}
-> 5 & 5 \\
-> 5 & 7 \\
-> 3 & 7
-> \end{bmatrix} \in \mathbb{R}^{3 \times 2},
-> $$
->
-> while  
->
-> $$
-> BA = \begin{bmatrix}
-> 2 & 2 & 6 \\
-> 1 & 2 & 3
-> \end{bmatrix} \in \mathbb{R}^{2 \times 3}.
-> $$
->
-> Clearly, $AB \neq BA$.
+> 3 & 2 & 1<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
+
+**Example 2.1 (Commutativity)**  
+
+For  
+
+$$
+A = \begin{bmatrix}
+1 & 2 & 3 \\
+2 & 3 & 1 \\
+3 & 2 & 1
+\end{bmatrix}, 
+\quad 
+B = \begin{bmatrix}
+0 & 2 \\
+1 & 0 \\
+1 & 1
+\end{bmatrix},
+$$
+
+we obtain  
+
+$$
+AB = \begin{bmatrix}
+5 & 5 \\
+5 & 7 \\
+3 & 7
+\end{bmatrix}, 
+\quad
+BA = \begin{bmatrix}
+2 & 2 & 6 \\
+1 & 2 & 3
+\end{bmatrix}.
+$$  
+
+Clearly, $AB \neq BA$.
+
+</div>
+
 
 
 ## 3. Identity Matrix 
