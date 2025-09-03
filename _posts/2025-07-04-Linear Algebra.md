@@ -21,21 +21,20 @@ Systems of linear equations play a central part of linear algebra. Many problems
 
 ## Example 1.1
 
-A company produces products $N_1, \dots, N_n$ for which resources $R_1, \dots, R_m$ are required.  
-To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$.
+A company produces products $N_1, \dots, N_n$ for which resources $R_1, \dots, R_m$ are required. To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$. The objective is to find an optimal production plan, i.e., a plan of how many units $x_j$ of product $N_j$ should be produced if a total of $b_i$ units of resource $R_i$ are available and (ideally) no resources are left over. If we produce $x_1, \dots, x_n$ units of the corresponding products, we need a total of
 
-The objective is to find an optimal production plan, i.e., a plan of how many units $x_j$ of product $N_j$ should be produced if a total of $b_i$ units of resource $R_i$ are available and (ideally) no resources are left over.
-
-If we produce $x_1, \dots, x_n$ units of the corresponding products, we need a total of
+<br>
 
 $$
 a_{i1}x_1 + \cdots + a_{in}x_n
 \tag{2.2}
 $$
 
-many units of resource $R_i$.  
+<br>
 
-An optimal production plan $(x_1, \dots, x_n) \in \mathbb{R}^n$ therefore has to satisfy the following system of equations:
+many units of resource $R_i$. An optimal production plan $(x_1, \dots, x_n) \in \mathbb{R}^n$ therefore has to satisfy the following system of equations:
+
+<br>
 
 $$
 \begin{aligned}
@@ -46,9 +45,9 @@ a_{m1}x_1 + \cdots + a_{mn}x_n &= b_m
 \tag{2.3}
 $$
 
-where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$.
+<br>
 
-Equation (2.3) is the general form of a *system of linear equations*, and  
+where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$. Equation (2.3) is the general form of a *system of linear equations*, and  
 $x_1, \dots, x_n$ are the *unknowns* of this system.  
 
 Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (2.3) is a *solution* of the linear equation system.
