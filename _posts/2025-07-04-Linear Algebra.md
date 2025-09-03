@@ -19,15 +19,14 @@ In this post, we will introduce the basics of linear lagebra. The contents are o
 
 Systems of linear equations play a central part of linear algebra. Many problems can be formulated as systems of linear equations, and linear algebra gives us the tools for solving them.
 
-<div class="math-box">
-
-## Example 1.1
+## Example 2.1
 
 A company produces products $N_1, \dots, N_n$ for which resources $R_1, \dots, R_m$ are required.  
-To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$.  
-The objective is to find an optimal production plan, i.e., a plan of how many units $x_j$ of product $N_j$ should be produced if a total of $b_i$ units of resource $R_i$ are available and (ideally) no resources are left over.  
+To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$.
 
-If we produce $x_1, \dots, x_n$ units of the corresponding products, we need a total of:
+The objective is to find an optimal production plan, i.e., a plan of how many units $x_j$ of product $N_j$ should be produced if a total of $b_i$ units of resource $R_i$ are available and (ideally) no resources are left over.
+
+If we produce $x_1, \dots, x_n$ units of the corresponding products, we need a total of
 
 $$
 a_{i1}x_1 + \cdots + a_{in}x_n
@@ -35,6 +34,7 @@ a_{i1}x_1 + \cdots + a_{in}x_n
 $$
 
 many units of resource $R_i$.  
+
 An optimal production plan $(x_1, \dots, x_n) \in \mathbb{R}^n$ therefore has to satisfy the following system of equations:
 
 $$
@@ -48,8 +48,7 @@ $$
 
 where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$.
 
-</div>
+Equation (2.3) is the general form of a *system of linear equations*, and  
+$x_1, \dots, x_n$ are the *unknowns* of this system.  
 
-
-
-Equation (2.3) is the general form of a *system of linear equations*, and $x_1, \dots, x_n$ are the *unknowns* of this system. Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (2.3) is a *solution* of the linear equation system.
+Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (2.3) is a *solution* of the linear equation system.
