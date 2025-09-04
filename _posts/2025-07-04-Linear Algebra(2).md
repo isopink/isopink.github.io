@@ -67,10 +67,6 @@ Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-Example 2.1 (Commutativity)
-
-<br>
-
 For  
 
 $$
@@ -158,10 +154,6 @@ Not every matrix has an inverse. If it does, it is called *regular/invertible*. 
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-Example 5.1 (Inverse Matrix)
-
-<br>
-
 Let  
 
 $$
@@ -227,10 +219,6 @@ Properties:
 - $\lambda (B + C) = \lambda B + \lambda C$  
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
-
-Example 7.1 (Distributivity)
-
-<br>
 
 If  
 
