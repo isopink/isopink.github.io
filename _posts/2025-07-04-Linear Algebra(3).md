@@ -42,8 +42,7 @@ x_1 \\ x_2 \\ x_3 \\ x_4
 =
 \begin{bmatrix}
 42 \\ 8
-\end{bmatrix}.
-\tag{1.1}
+\end{bmatrix}
 $$
 
 The system has two equations and four unknowns. Therefore, in general we would expect infinitely many solutions. This system of equations is in a particularly easy form, where the first two columns consist of a $1$ and a $0$.  
@@ -54,8 +53,7 @@ $$
 b = 
 \begin{bmatrix} 42 \\ 8 \end{bmatrix}
 = 42 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-+ 8 \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
-\tag{1.2}
++ 8 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
 $$
 
 Therefore, a solution is $[42, 8, 0, 0]^T$. This solution is called a **particular solution** or **special solution**.  
@@ -67,8 +65,7 @@ For instance, by using the third column we can express:
 $$
 \begin{bmatrix} 8 \\ 2 \end{bmatrix}
 = 8 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-+ 2 \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
-\tag{1.3}
++ 2 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
 $$
 
 Thus,
@@ -81,8 +78,7 @@ $$
 \begin{bmatrix}
 8 \\ 2 \\ -1 \\ 0
 \end{bmatrix}
-= 0.
-\tag{1.4}
+= 0
 $$
 
 Similarly, with the fourth column:
@@ -95,8 +91,7 @@ $$
 \begin{bmatrix}
 -4 \\ 12 \\ 0 \\ 1
 \end{bmatrix}
-= 0.
-\tag{1.5}
+= 0
 $$
 
 Thus the general solution is
@@ -106,21 +101,16 @@ x \in \mathbb{R}^4 : x =
 \begin{bmatrix} 42 \\ 8 \\ 0 \\ 0 \end{bmatrix}
 + \lambda_1 \begin{bmatrix} 8 \\ 2 \\ -1 \\ 0 \end{bmatrix}
 + \lambda_2 \begin{bmatrix} -4 \\ 12 \\ 0 \\ 1 \end{bmatrix},
-\quad \lambda_1, \lambda_2 \in \mathbb{R}.
-\tag{1.6}
+\quad \lambda_1, \lambda_2 \in \mathbb{R}
 $$
 
-<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
+The general approach we followed consisted of three steps: 
 
-The general approach we followed consisted of three steps:
-
-1. Find a particular solution to $Ax=b$.  
-2. Find all solutions to $Ax=0$.  
+1. Find a particular solution to $Ax=b$.
+2. Find all solutions to $Ax=0$.
 3. Combine the solutions from steps 1 and 2 to get the general solution.  
 
 Neither the general nor the particular solution is unique.  
-
-</div>
 
 ---
 
@@ -130,9 +120,9 @@ Key to solving a system of linear equations are **elementary transformations** t
 
 - Exchange of two equations (rows in the matrix).  
 - Multiplication of an equation (row) with a constant $\lambda \in \mathbb{R} \setminus \{0\}$.  
-- Addition of two equations (rows).  
+- Addition of two equations (rows).
 
----
+<br>
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;"> 
 
@@ -143,9 +133,8 @@ $$
 -2x_1 + 4x_2 - 2x_3 - x_4 + x_5 &= -3 \\
 4x_1 + 8x_2 + 3x_3 - 3x_4 + 2x_5 &= 0 \\
 x_1 - 2x_2 + x_3 - 3x_4 + 4x_5 &= 1 \\
-x_1 - 2x_2 - 3x_4 + 4x_5 &= a .
+x_1 - 2x_2 - 3x_4 + 4x_5 &= a 
 \end{aligned}
-\tag{2.1}
 $$
 
 We build the augmented matrix $[A|b]$:
@@ -168,14 +157,12 @@ $$
 0 & 0 & 0 & 0 & 1 & -a \\
 0 & 0 & 0 & 0 & 0 & a+1
 \end{bmatrix}
-\tag{2.2}
 $$
 
 Only for $a=-1$ the system is solvable. A particular solution is
 
 $$
-x = \begin{bmatrix} 2 \\ 0 \\ -1 \\ 0 \\ 1 \end{bmatrix}.
-\tag{2.3}
+x = \begin{bmatrix} 2 \\ 0 \\ -1 \\ 0 \\ 1 \end{bmatrix}
 $$
 
 The general solution is
@@ -185,16 +172,17 @@ x \in \mathbb{R}^5 :
 x = \begin{bmatrix} 2 \\ 0 \\ -1 \\ 0 \\ 1 \end{bmatrix}
 + \lambda_1 \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}
 + \lambda_2 \begin{bmatrix} 0 \\ 1 \\ 0 \\ 2 \\ 1 \end{bmatrix},
-\quad \lambda_1, \lambda_2 \in \mathbb{R}.
-\tag{2.4}
+\quad \lambda_1, \lambda_2 \in \mathbb{R}
 $$
 
 </div>
 
----
+<br>
 
-**Definition 2.6 (Row-Echelon Form).**  
+◦ **Definition (Row-Echelon Form)**  
+
 A matrix is in row-echelon form if:
+
 - All rows that contain only zeros are at the bottom.  
 - In each non-zero row, the first non-zero entry (pivot) lies to the right of the pivot in the row above.  
 - The pivot is the only nonzero entry in its column.  
