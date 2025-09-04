@@ -3,7 +3,7 @@ layout : single
 title : Solving Systems of Linear Equations
 ---
 
-In the earlier post[https://isopink.github.io/Linear-Algebra/], we introduced the general form of an equation system, i.e.,
+In the [earlier post](https://isopink.github.io/Linear-Algebra/), we introduced the general form of an equation system, i.e.,
 
 $$
 \begin{aligned}
@@ -15,10 +15,14 @@ $$
 
 where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$ are known constants and $x_j$ are unknowns, $i=1,\dots,m$, $j=1,\dots,n$.  
 
-Thus far, we saw that matrices can be used as a compact way of representing systems of linear equations so that we can write $Ax=b$, see this post[https://isopink.github.io/Linear-Algebra(2)/]. Moreover, we defined basic matrix operations, such as addition and multiplication of matrices. In the following, we will focus on solving systems of linear equations and provide an algorithm for finding the inverse of a matrix. The table of contents are organized as follows: 
+Thus far, we saw that matrices can be used as a compact way of representing systems of linear equations so that we can write $Ax=b$, see this [post](https://isopink.github.io/Linear-Algebra(2)/). Moreover, we defined basic matrix operations, such as addition and multiplication of matrices. In the following, we will focus on solving systems of linear equations and provide an algorithm for finding the inverse of a matrix. The table of contents are organized as follows: 
 
 1. Particular and General Solution
 2. Elementary Transformations
+3. The Minus-1 Trick
+4. Calculating the Inverse
+5. Algorithms for Solving Linear System
+
 ---
 
 ### 1. Particular and General Solution
