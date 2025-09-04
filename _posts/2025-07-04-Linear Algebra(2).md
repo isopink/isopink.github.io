@@ -174,6 +174,8 @@ Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
 </div>
 
+<br>
+
 ◦ **Definition (Transpose)**
 
 For $A \in \mathbb{R}^{m \times n}$, the transpose $A^T \in \mathbb{R}^{n \times m}$ is given by $a^T_{ij} = a_{ji}$.  
