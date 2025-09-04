@@ -15,7 +15,9 @@ Matrices play a central role in linear algebra. They can be used to represent sy
 8. Linear Systems as Matrices
 
 ---
-### 1. Definition of a Matrix  
+### 1. Definition of a Matrix 
+
+<br>
 
 **Definition (Matrix)**
 
@@ -37,6 +39,8 @@ By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are calle
 ---
 
 ### 2. Matrix Addition and Multiplication
+
+<br>
 
 The sum of two matrices $A \in \mathbb{R}^{m \times n}, \; B \in \mathbb{R}^{m \times n}$ is defined element-wise:
 
@@ -103,7 +107,9 @@ Clearly, $AB \neq BA$.
 </div>
 
 ---
-### 3. Identity Matrix 
+### 3. Identity Matrix
+
+<br>
 
 **Definition (Identity Matrix)**
 
@@ -122,6 +128,8 @@ $$
 ---
 ### 4. Properties of Matrix Multiplication
 
+<br>
+
 1. **Associativity**:  
    $$
    \forall A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p}, C \in \mathbb{R}^{p \times q}: \quad (AB)C = A(BC)
@@ -139,6 +147,8 @@ $$
 
 ---
 ### 5. Inverse and Transpose
+
+<br>
 
 **Definition (Inverse)**
 
@@ -187,7 +197,10 @@ $$
 $$
 
 ---
+
 ### 6. Symmetric Matrix
+
+<br>
 
 **Definition (Symmetric Matrix)**
 
@@ -205,6 +218,8 @@ $$
 
 ---
 ### 7. Multiplication by a Scalar
+
+<br>
 
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
 
@@ -245,6 +260,8 @@ $$
 
 ---
 ### 8. Linear Systems as Matrices
+
+<br>
 
 If we consider the system
 
