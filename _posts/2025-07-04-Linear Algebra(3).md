@@ -1,11 +1,9 @@
 ---
 layout : single
-title : Linear Algebra (2) - Solving Systems of Linear Equations
+title : Solving Systems of Linear Equations
 ---
 
-# 2.3 Solving Systems of Linear Equations
-
-In (2.3), we introduced the general form of an equation system, i.e.,
+In the earlier post[https://isopink.github.io/Linear-Algebra/], we introduced the general form of an equation system, i.e.,
 
 $$
 \begin{aligned}
@@ -13,16 +11,17 @@ a_{11}x_1 + \cdots + a_{1n}x_n &= b_1 \\
 \vdots \quad & \vdots \\
 a_{m1}x_1 + \cdots + a_{mn}x_n &= b_m ,
 \end{aligned}
-\tag{2.37}
 $$
 
 where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$ are known constants and $x_j$ are unknowns, $i=1,\dots,m$, $j=1,\dots,n$.  
 
-Thus far, we saw that matrices can be used as a compact way of representing systems of linear equations so that we can write $Ax=b$, see (2.10). Moreover, we defined basic matrix operations, such as addition and multiplication of matrices. In the following, we will focus on solving systems of linear equations and provide an algorithm for finding the inverse of a matrix.
+Thus far, we saw that matrices can be used as a compact way of representing systems of linear equations so that we can write $Ax=b$, see this post[https://isopink.github.io/Linear-Algebra(2)/]. Moreover, we defined basic matrix operations, such as addition and multiplication of matrices. In the following, we will focus on solving systems of linear equations and provide an algorithm for finding the inverse of a matrix. The table of contents are organized as follows: 
 
+1. Particular and General Solution
+2. Elementary Transformations
 ---
 
-## 2.3.1 Particular and General Solution
+### 1. Particular and General Solution
 
 Before discussing how to generally solve systems of linear equations, let us have a look at an example. Consider the system of equations
 
@@ -38,7 +37,7 @@ x_1 \\ x_2 \\ x_3 \\ x_4
 \begin{bmatrix}
 42 \\ 8
 \end{bmatrix}.
-\tag{2.38}
+\tag{1.1}
 $$
 
 The system has two equations and four unknowns. Therefore, in general we would expect infinitely many solutions. This system of equations is in a particularly easy form, where the first two columns consist of a $1$ and a $0$.  
@@ -50,7 +49,7 @@ b =
 \begin{bmatrix} 42 \\ 8 \end{bmatrix}
 = 42 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
 + 8 \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
-\tag{2.39}
+\tag{1.2}
 $$
 
 Therefore, a solution is $[42, 8, 0, 0]^T$. This solution is called a **particular solution** or **special solution**.  
@@ -63,7 +62,7 @@ $$
 \begin{bmatrix} 8 \\ 2 \end{bmatrix}
 = 8 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
 + 2 \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
-\tag{2.40}
+\tag{1.3}
 $$
 
 Thus,
@@ -77,7 +76,7 @@ $$
 8 \\ 2 \\ -1 \\ 0
 \end{bmatrix}
 = 0.
-\tag{2.41}
+\tag{1.4}
 $$
 
 Similarly, with the fourth column:
@@ -91,7 +90,7 @@ $$
 -4 \\ 12 \\ 0 \\ 1
 \end{bmatrix}
 = 0.
-\tag{2.42}
+\tag{1.5}
 $$
 
 Thus the general solution is
@@ -102,12 +101,11 @@ x \in \mathbb{R}^4 : x =
 + \lambda_1 \begin{bmatrix} 8 \\ 2 \\ -1 \\ 0 \end{bmatrix}
 + \lambda_2 \begin{bmatrix} -4 \\ 12 \\ 0 \\ 1 \end{bmatrix},
 \quad \lambda_1, \lambda_2 \in \mathbb{R}.
-\tag{2.43}
+\tag{1.6}
 $$
 
----
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-**Remark.**  
 The general approach we followed consisted of three steps:
 
 1. Find a particular solution to $Ax=b$.  
@@ -116,9 +114,11 @@ The general approach we followed consisted of three steps:
 
 Neither the general nor the particular solution is unique.  
 
+</div>
+
 ---
 
-## 2.3.2 Elementary Transformations
+### 2. Elementary Transformations
 
 Key to solving a system of linear equations are **elementary transformations** that keep the solution set the same but transform the system into a simpler form:
 
@@ -128,9 +128,7 @@ Key to solving a system of linear equations are **elementary transformations** t
 
 ---
 
-<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
-
-**Example 2.6**  
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;"> 
 
 For $a \in \mathbb{R}$, consider
 
@@ -141,10 +139,10 @@ $$
 x_1 - 2x_2 + x_3 - 3x_4 + 4x_5 &= 1 \\
 x_1 - 2x_2 - 3x_4 + 4x_5 &= a .
 \end{aligned}
-\tag{2.44}
+\tag{2.1}
 $$
 
-We build the **augmented matrix** $[A|b]$:
+We build the augmented matrix $[A|b]$:
 
 $$
 \begin{bmatrix}
@@ -152,7 +150,7 @@ $$
 4 & 8 & 3 & -3 & 2 & 0 \\
 1 & -2 & 1 & -3 & 4 & 1 \\
 1 & -2 & 0 & -3 & 4 & a
-\end{bmatrix}.
+\end{bmatrix}
 $$
 
 Applying row swaps and transformations, we eventually obtain the row-echelon form (REF):
@@ -163,18 +161,18 @@ $$
 0 & 0 & 1 & -3 & 2 & 1 \\
 0 & 0 & 0 & 0 & 1 & -a \\
 0 & 0 & 0 & 0 & 0 & a+1
-\end{bmatrix}.
-\tag{2.45}
+\end{bmatrix}
+\tag{2.2}
 $$
 
 Only for $a=-1$ the system is solvable. A particular solution is
 
 $$
 x = \begin{bmatrix} 2 \\ 0 \\ -1 \\ 0 \\ 1 \end{bmatrix}.
-\tag{2.46}
+\tag{2.3}
 $$
 
-The **general solution** is
+The general solution is
 
 $$
 x \in \mathbb{R}^5 : 
@@ -182,7 +180,7 @@ x = \begin{bmatrix} 2 \\ 0 \\ -1 \\ 0 \\ 1 \end{bmatrix}
 + \lambda_1 \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}
 + \lambda_2 \begin{bmatrix} 0 \\ 1 \\ 0 \\ 2 \\ 1 \end{bmatrix},
 \quad \lambda_1, \lambda_2 \in \mathbb{R}.
-\tag{2.47}
+\tag{2.4}
 $$
 
 </div>
