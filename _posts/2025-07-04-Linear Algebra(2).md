@@ -68,7 +68,7 @@ Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-**Example 2.1 (Commutativity)**
+Example 2.1 (Commutativity) 
 
 For  
 
@@ -180,7 +180,7 @@ $$
 
 Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
-<\div>
+</div>
 
 #### Definition 5.2 (Transpose)
 
