@@ -50,6 +50,8 @@ where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$.
 
 </div>
 
+<br>
+
 Equation (1.3) is the general form of a *system of linear equations*, and $x_1, \dots, x_n$ are the *unknowns* of this system. Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (1.3) is a *solution* of the linear equation system. 
 
 ---
@@ -129,6 +131,8 @@ $$
 is a solution of the system of linear equations, i.e., we obtain a solution set that contains *infinitely many* solutions.  
 
 </div>
+
+<br>
 
 In general, for a real-valued system of linear equations we obtain either no, exactly one, or infinitely many solutions. 
 
