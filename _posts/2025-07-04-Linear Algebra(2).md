@@ -15,7 +15,6 @@ Matrices play a central role in linear algebra. They can be used to represent sy
 8. Linear Systems as Matrices
 
 ---
-
 ### 1. Definition of a Matrix  
 
 #### Definition 1.1 (Matrix)
@@ -106,7 +105,6 @@ Clearly, $AB \neq BA$.
 </div>
 
 ---
-
 ### 3. Identity Matrix 
 
 #### Definition 3.1 (Identity Matrix)
@@ -124,7 +122,6 @@ I_n =
 $$
 
 ---
-
 ### 4. Properties of Matrix Multiplication
 
 1. **Associativity**:  
@@ -143,7 +140,6 @@ $$
    $$
 
 ---
-
 ### 5. Inverse and Transpose
 
 #### Definition 5.1 (Inverse).
@@ -195,7 +191,6 @@ $$
 $$
 
 ---
-
 ### 6. Symmetric Matrix
 
 #### Definition 6.1 (Symmetric Matrix)  
@@ -213,7 +208,6 @@ $$
 $$
 
 ---
-
 ### 7. Multiplication by a Scalar
 
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
@@ -256,7 +250,6 @@ $$
 </div>
 
 ---
-
 ### 8. Linear Systems as Matrices
 
 If we consider the system
