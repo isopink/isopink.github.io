@@ -17,7 +17,7 @@ Matrices play a central role in linear algebra. They can be used to represent sy
 ---
 ### 1. Definition of a Matrix  
 
-#### Definition 1.1 (Matrix)
+#### Definition (Matrix)
 
 With $m, n \in \mathbb{N}$, a real-valued $(m,n)$-matrix $A$ is an $m \times n$-tuple of elements $a_{ij}$, $i = 1, \dots, m, \; j = 1, \dots, n$, which is ordered according to a rectangular scheme consisting of $m$ rows and $n$ columns:
 
@@ -67,7 +67,9 @@ Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-Example 2.1 (Commutativity) 
+Example 2.1 (Commutativity)
+
+<br>
 
 For  
 
@@ -107,7 +109,7 @@ Clearly, $AB \neq BA$.
 ---
 ### 3. Identity Matrix 
 
-#### Definition 3.1 (Identity Matrix)
+#### Definition (Identity Matrix)
 
 The identity matrix $I_n \in \mathbb{R}^{n \times n}$ is defined as
 
@@ -156,7 +158,9 @@ Not every matrix has an inverse. If it does, it is called *regular/invertible*. 
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-**Example 5.1 (Inverse Matrix)**
+Example 5.1 (Inverse Matrix)
+
+<br>
 
 Let  
 
@@ -224,7 +228,9 @@ Properties:
 
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-**Example 7.1 (Distributivity)**
+Example 7.1 (Distributivity)
+
+<br>
 
 If  
 
