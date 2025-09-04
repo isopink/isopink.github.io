@@ -29,7 +29,7 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{bmatrix}, 
-\quad a_{ij} \in \mathbb{R}.
+\quad a_{ij} \in \mathbb{R}
 $$
 
 By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are called *columns*.  
@@ -47,20 +47,20 @@ a_{11} + b_{11} & \cdots & a_{1n} + b_{1n} \\
 \vdots & \ddots & \vdots \\
 a_{m1} + b_{m1} & \cdots & a_{mn} + b_{mn}
 \end{bmatrix}
-\in \mathbb{R}^{m \times n}.
+\in \mathbb{R}^{m \times n}
 $$
 
 For multiplication, the elements $c_{ij}$ of $C = AB$ are given by:
 
 $$
 c_{ij} = \sum_{l=1}^n a_{il} b_{lj}, 
-\quad i = 1, \dots, m, \; j = 1, \dots, k.
+\quad i = 1, \dots, m, \; j = 1, \dots, k
 $$
 
 In compact notation:
 
 $$
-A_{m \times n} \cdot B_{n \times k} = C_{m \times k}.
+A_{m \times n} \cdot B_{n \times k} = C_{m \times k}
 $$
 
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
@@ -97,7 +97,7 @@ AB = \begin{bmatrix}
 BA = \begin{bmatrix}
 2 & 2 & 6 \\
 1 & 2 & 3
-\end{bmatrix}.
+\end{bmatrix}
 $$  
 
 Clearly, $AB \neq BA$.
@@ -118,7 +118,7 @@ I_n =
 0 & 1 & \cdots & 0 \\
 \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & \cdots & 1
-\end{bmatrix}.
+\end{bmatrix}
 $$
 
 ---
@@ -126,23 +126,23 @@ $$
 
 1. **Associativity**:  
    $$
-   \forall A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p}, C \in \mathbb{R}^{p \times q}: \quad (AB)C = A(BC).
+   \forall A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p}, C \in \mathbb{R}^{p \times q}: \quad (AB)C = A(BC)
    $$
 
 2. **Distributivity**:  
    $$
-   (A + B)C = AC + BC, \quad A(B + C) = AB + AC.
+   (A + B)C = AC + BC, \quad A(B + C) = AB + AC
    $$
 
 3. **Identity**:  
    $$
-   \forall A \in \mathbb{R}^{m \times n}: \quad I_m A = A I_n = A.
+   \forall A \in \mathbb{R}^{m \times n}: \quad I_m A = A I_n = A
    $$
 
 ---
 ### 5. Inverse and Transpose
 
-#### Definition 5.1 (Inverse).
+#### Definition (Inverse)
 
 For a square matrix $A \in \mathbb{R}^{n \times n}$, if there exists a matrix $B \in \mathbb{R}^{n \times n}$ such that  
 
@@ -178,7 +178,7 @@ Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
 </div>
 
-#### Definition 5.2 (Transpose)
+#### Definition (Transpose)
 
 For $A \in \mathbb{R}^{m \times n}$, the transpose $A^T \in \mathbb{R}^{n \times m}$ is given by $a^T_{ij} = a_{ji}$.  
 
@@ -187,13 +187,13 @@ Some important properties are:
 $$
 (AB)^T = B^T A^T, 
 \quad (A^T)^T = A,
-\quad (A^{-1})^T = (A^T)^{-1}.
+\quad (A^{-1})^T = (A^T)^{-1}
 $$
 
 ---
 ### 6. Symmetric Matrix
 
-#### Definition 6.1 (Symmetric Matrix)  
+#### Definition (Symmetric Matrix)
 
 A matrix $A \in \mathbb{R}^{n \times n}$ is symmetric if $A = A^T$.
 
@@ -204,7 +204,7 @@ $$
 1 & 0 & 0 \\
 0 & 1 & 1 \\
 0 & 1 & 0
-\end{bmatrix}.
+\end{bmatrix}
 $$
 
 ---
@@ -213,7 +213,7 @@ $$
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
 
 $$
-(\lambda C)_{ij} = \lambda c_{ij}.
+(\lambda C)_{ij} = \lambda c_{ij}
 $$
 
 Properties:  
@@ -244,7 +244,7 @@ $$
 (\lambda + \psi)3 & (\lambda + \psi)4
 \end{bmatrix}
 =
-\lambda C + \psi C.
+\lambda C + \psi C
 $$
 
 </div>
