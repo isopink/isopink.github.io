@@ -14,11 +14,11 @@ Matrices play a central role in linear algebra. They can be used to represent sy
 7. Multiplication by a Scalar
 8. Linear Systems as Matrices
 
-<br>
+---
 
-## 1. Definition of a Matrix  
+### 1. Definition of a Matrix  
 
-### Definition 1.1 (Matrix)
+#### Definition 1.1 (Matrix)
 
 With $m, n \in \mathbb{N}$, a real-valued $(m,n)$-matrix $A$ is an $m \times n$-tuple of elements $a_{ij}$, $i = 1, \dots, m, \; j = 1, \dots, n$, which is ordered according to a rectangular scheme consisting of $m$ rows and $n$ columns:
 
@@ -35,7 +35,9 @@ $$
 
 By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are called *columns*.  
 
-## 2. Matrix Addition and Multiplication
+---
+
+### 2. Matrix Addition and Multiplication
 
 The sum of two matrices $A \in \mathbb{R}^{m \times n}, \; B \in \mathbb{R}^{m \times n}$ is defined element-wise:
 
@@ -64,10 +66,9 @@ $$
 
 Matrix multiplication is **not commutative**, i.e., in general $AB \neq BA$.
 
-
 <div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-**Example 2.1 (Commutativity)**  
+**Example 2.1 (Commutativity)**
 
 For  
 
@@ -104,10 +105,11 @@ Clearly, $AB \neq BA$.
 
 </div>
 
+---
 
-## 3. Identity Matrix 
+### 3. Identity Matrix 
 
-### Definition 3.1 (Identity Matrix)
+#### Definition 3.1 (Identity Matrix)
 
 The identity matrix $I_n \in \mathbb{R}^{n \times n}$ is defined as
 
@@ -121,7 +123,9 @@ I_n =
 \end{bmatrix}.
 $$
 
-## 4. Properties of Matrix Multiplication
+---
+
+### 4. Properties of Matrix Multiplication
 
 1. **Associativity**:  
    $$
@@ -138,9 +142,11 @@ $$
    \forall A \in \mathbb{R}^{m \times n}: \quad I_m A = A I_n = A.
    $$
 
-## 5. Inverse and Transpose
+---
 
-### Definition 5.1 (Inverse).
+### 5. Inverse and Transpose
+
+#### Definition 5.1 (Inverse).
 
 For a square matrix $A \in \mathbb{R}^{n \times n}$, if there exists a matrix $B \in \mathbb{R}^{n \times n}$ such that  
 
@@ -152,9 +158,9 @@ then $B$ is called the **inverse** of $A$ and is denoted $A^{-1}$.
 
 Not every matrix has an inverse. If it does, it is called *regular/invertible*. Otherwise, it is *singular/non-invertible*.  
 
-<br>
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-##### Example 5.1 (Inverse Matrix)
+**Example 5.1 (Inverse Matrix)**
 
 Let  
 
@@ -174,9 +180,9 @@ $$
 
 Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
-<br>
+<\div>
 
-### Definition 5.2 (Transpose)
+#### Definition 5.2 (Transpose)
 
 For $A \in \mathbb{R}^{m \times n}$, the transpose $A^T \in \mathbb{R}^{n \times m}$ is given by $a^T_{ij} = a_{ji}$.  
 
@@ -188,9 +194,11 @@ $$
 \quad (A^{-1})^T = (A^T)^{-1}.
 $$
 
-## 6. Symmetric Matrix
+---
 
-### Definition 6.1 (Symmetric Matrix)  
+### 6. Symmetric Matrix
+
+#### Definition 6.1 (Symmetric Matrix)  
 
 A matrix $A \in \mathbb{R}^{n \times n}$ is symmetric if $A = A^T$.
 
@@ -204,7 +212,9 @@ $$
 \end{bmatrix}.
 $$
 
-## 7. Multiplication by a Scalar
+---
+
+### 7. Multiplication by a Scalar
 
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
 
@@ -218,9 +228,9 @@ Properties:
 - $(\lambda C)^T = \lambda C^T$  
 - $\lambda (B + C) = \lambda B + \lambda C$  
 
-<br>
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
-##### Example 7.1 (Distributivity)
+**Example 7.1 (Distributivity)**
 
 If  
 
@@ -243,7 +253,11 @@ $$
 \lambda C + \psi C.
 $$
 
-## 8. Linear Systems as Matrices
+</div>
+
+---
+
+### 8. Linear Systems as Matrices
 
 If we consider the system
 
@@ -276,4 +290,4 @@ x_3
 \end{bmatrix}.
 $$
 
-This is the matrix form $Ax = b$.
+This is the matrix form $Ax = b$. 
