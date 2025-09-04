@@ -1,29 +1,21 @@
 ---
 layout : single
-title : Linear Algebra (1)
+title : Systems of Linear Equations
 --- 
 
-In this post, we will introduce the basics of linear lagebra. The contents are organized as follows: 
+Systems of linear equations play a central part of linear algebra. Many problems can be formulated as systems of linear equations, and linear algebra gives us the tools for solving them.The contents are organized as follows: 
 
-1. Systems of Linear Equations
+1. General Example
 
-2. Matrices
+2. Singular Example
 
-3. Solving Systems of Linear Equations 
-
-4. Vector Spaces
+3. Compact Notation 
 
 ---
 
-#### 1. Systems of Linear Eqautions 
+### 1. General Example
 
-Systems of linear equations play a central part of linear algebra. Many problems can be formulated as systems of linear equations, and linear algebra gives us the tools for solving them.
-
-<br>
-
-##### 1.1 General Example
-
-<br>
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
 A company produces products $N_1, \dots, N_n$ for which resources $R_1, \dots, R_m$ are required.  
 To produce a unit of product $N_j$, $a_{ij}$ units of resource $R_i$ are needed, where $i = 1, \dots, m$ and $j = 1, \dots, n$.
@@ -54,13 +46,17 @@ $$
 
 <br>
 
-where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$. Equation (1.3) is the general form of a *system of linear equations*, and $x_1, \dots, x_n$ are the *unknowns* of this system. Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (1.3) is a *solution* of the linear equation system.
+where $a_{ij} \in \mathbb{R}$ and $b_i \in \mathbb{R}$. 
 
-<br>
+</div>
 
-##### 1.2 Singular Example
+Equation (1.3) is the general form of a *system of linear equations*, and $x_1, \dots, x_n$ are the *unknowns* of this system. Every $n$-tuple $(x_1, \dots, x_n) \in \mathbb{R}^n$ that satisfies (1.3) is a *solution* of the linear equation system. 
 
-<br>
+---
+
+### 2. Singular Example
+
+<div style="border: 2px solid #ddd; padding: 15px; border-radius: 6px; background: #fafafa;">
 
 The system of linear equations  
 
@@ -132,11 +128,13 @@ $$
 
 is a solution of the system of linear equations, i.e., we obtain a solution set that contains *infinitely many* solutions.  
 
-<br>
+</div>
 
-##### 1.3. Compact Notation 
+In general, for a real-valued system of linear equations we obtain either no, exactly one, or infinitely many solutions. 
 
-<br>
+---
+
+### 3. Compact Notation 
 
 For a systematic approach to solving systems of linear equations, we will introduce a useful compact notation. 
 We collect the coefficients $a_{ij}$ into vectors and collect the vectors into matrices. 
