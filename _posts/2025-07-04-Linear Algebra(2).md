@@ -17,9 +17,7 @@ Matrices play a central role in linear algebra. They can be used to represent sy
 ---
 ### 1. Definition of a Matrix 
 
-<br>
-
-**Definition (Matrix)**
+◦ **Definition (Matrix)**
 
 With $m, n \in \mathbb{N}$, a real-valued $(m,n)$-matrix $A$ is an $m \times n$-tuple of elements $a_{ij}$, $i = 1, \dots, m, \; j = 1, \dots, n$, which is ordered according to a rectangular scheme consisting of $m$ rows and $n$ columns:
 
@@ -39,8 +37,6 @@ By convention, $(1,n)$-matrices are called *rows* and $(m,1)$-matrices are calle
 ---
 
 ### 2. Matrix Addition and Multiplication
-
-<br>
 
 The sum of two matrices $A \in \mathbb{R}^{m \times n}, \; B \in \mathbb{R}^{m \times n}$ is defined element-wise:
 
@@ -109,9 +105,7 @@ Clearly, $AB \neq BA$.
 ---
 ### 3. Identity Matrix
 
-<br>
-
-**Definition (Identity Matrix)**
+◦ **Definition (Identity Matrix)**
 
 The identity matrix $I_n \in \mathbb{R}^{n \times n}$ is defined as
 
@@ -127,8 +121,6 @@ $$
 
 ---
 ### 4. Properties of Matrix Multiplication
-
-<br>
 
 1. **Associativity**:  
    $$
@@ -148,9 +140,7 @@ $$
 ---
 ### 5. Inverse and Transpose
 
-<br>
-
-**Definition (Inverse)**
+◦ **Definition (Inverse)**
 
 For a square matrix $A \in \mathbb{R}^{n \times n}$, if there exists a matrix $B \in \mathbb{R}^{n \times n}$ such that  
 
@@ -184,7 +174,7 @@ Then $AB = I = BA$, i.e., $A$ and $B$ are inverses of each other.
 
 </div>
 
-**Definition (Transpose)**
+◦ **Definition (Transpose)**
 
 For $A \in \mathbb{R}^{m \times n}$, the transpose $A^T \in \mathbb{R}^{n \times m}$ is given by $a^T_{ij} = a_{ji}$.  
 
@@ -200,9 +190,7 @@ $$
 
 ### 6. Symmetric Matrix
 
-<br>
-
-**Definition (Symmetric Matrix)**
+◦ **Definition (Symmetric Matrix)**
 
 A matrix $A \in \mathbb{R}^{n \times n}$ is symmetric if $A = A^T$.
 
@@ -217,9 +205,8 @@ $$
 $$
 
 ---
-### 7. Multiplication by a Scalar
 
-<br>
+### 7. Multiplication by a Scalar
 
 For $\lambda \in \mathbb{R}$ and $C \in \mathbb{R}^{m \times n}$,  
 
